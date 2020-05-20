@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:07 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Fri May  8 15:01:19 2020
+# Process ID: 26645
+# Current directory: /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/Blatt01/Vivado_WORK/Tutorial/Tutorial_Project/project_1/project_1.runs/synth_1
+# Command line: vivado -log ArmDataReplication.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ArmDataReplication.tcl
+# Log file: /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/Blatt01/Vivado_WORK/Tutorial/Tutorial_Project/project_1/project_1.runs/synth_1/ArmDataReplication.vds
+# Journal file: /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/Blatt01/Vivado_WORK/Tutorial/Tutorial_Project/project_1/project_1.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source ArmDataReplication.tcl -notrace
