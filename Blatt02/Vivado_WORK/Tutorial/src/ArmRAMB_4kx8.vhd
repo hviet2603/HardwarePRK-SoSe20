@@ -2,6 +2,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.math_real.ceil;
 use ieee.math_real.log2;
+use ieee.numeric_std.all;
 
 
 entity ArmRAMB_4kx8 is
@@ -20,9 +21,31 @@ end entity ArmRAMB_4kx8;
 
 
 architecture behavioral of ArmRAMB_4kx8 is
+    type RAM_BLOCK is array (0 to SIZE-1) of std_logic_vector(WIDTH-1 downto 0);
+    signal ram: RAM_BLOCK;
 
 begin
-
+    PORT_A: process(RAM_CLK) is
+    begin
+        if rising_edge(RAM_CLK) then
+            if ENA = '1' then
+                DOA <= ram(to_integer(unsigned(ADDRA)));
+            end if;
+        end if;
+    end process PORT_A;
+    
+    PORT_B: process(RAM_CLK) is
+    begin
+        if rising_edge(RAM_CLK) then
+            if ENB = '1' then
+                DOB <= ram(to_integer(unsigned(ADDRB)));
+                if (WEB = '1') then
+                    ram(to_integer(unsigned(ADDRB))) <= DIB;
+                end if;
+            end if;
+        end if;
+    end process PORT_B;
+    
 end architecture behavioral;
 		
 
