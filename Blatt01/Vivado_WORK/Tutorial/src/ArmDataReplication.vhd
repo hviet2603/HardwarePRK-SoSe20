@@ -27,8 +27,7 @@ end entity ArmDataReplication;
 
 architecture behave of ArmDataReplication is
 begin
-    DRP_OUTPUT <= DRP_INPUT(15 downto 0) & DRP_INPUT(15 downto 0)                                               when DRP_DMAS = DMAS_HWORD else
-                  DRP_INPUT(7 downto 0) & DRP_INPUT(7 downto 0) & DRP_INPUT(7 downto 0) & DRP_INPUT(7 downto 0) when DRP_DMAS = DMAS_BYTE else
-                  DRP_INPUT;
-    
+	DRP_OUTPUT <= DRP_INPUT(15 downto 0) & DRP_INPUT(15 downto 0) when DRP_DMAS = DMAS_HWORD else 
+        	      DRP_INPUT(7 downto 0) & DRP_INPUT(7 downto 0) & DRP_INPUT(7 downto 0) & DRP_INPUT(7 downto 0) when DRP_DMAS = DMAS_BYTE else
+        	      DRP_INPUT;
 end architecture behave;
