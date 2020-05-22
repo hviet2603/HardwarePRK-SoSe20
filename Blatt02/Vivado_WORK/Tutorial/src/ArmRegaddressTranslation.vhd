@@ -64,16 +64,15 @@ is
             elsif EXT_ADDRESS = "1110" then ADDR := "11100";
             else                            ADDR := '0' & EXT_ADDRESS;
             end if;
-        else                            --UNDEFINED
+        elsif THIS_MODE = UNDEFINED then --UNDEFINED
             if    EXT_ADDRESS = "1101" then ADDR := "11101";
             elsif EXT_ADDRESS = "1110" then ADDR := "11110";
             else                            ADDR := '0' & EXT_ADDRESS;   
             end if;
+	else ADDR:="00000";--invalid MODE
         end if;
     end if;
-    if    EXT_ADDRESS(3) = 'U' then ADDR := "00000";
-    elsif EXT_ADDRESS(3) = 'X' then ADDR := "00000";
-    else 
+    if IS_X(EXT_ADDRESS) then return "00000";
     end if;
 	return ADDR;			
 

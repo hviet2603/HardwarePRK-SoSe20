@@ -21,30 +21,24 @@ end entity ArmRAMB_4kx8;
 
 
 architecture behavioral of ArmRAMB_4kx8 is
-    type RAM_BLOCK is array (0 to SIZE-1) of std_logic_vector(WIDTH-1 downto 0);
-    signal ram: RAM_BLOCK;
-
+    type RAM_array is array(0 to SIZE-1) of std_logic_vector(WIDTH-1 downto 0);
+	signal RAM: RAM_array;
+	
 begin
-    PORT_A: process(RAM_CLK) is
-    begin
-        if rising_edge(RAM_CLK) then
-            if ENA = '1' then
-                DOA <= ram(to_integer(unsigned(ADDRA)));
-            end if;
-        end if;
-    end process PORT_A;
-    
-    PORT_B: process(RAM_CLK) is
-    begin
-        if rising_edge(RAM_CLK) then
-            if ENB = '1' then
-                DOB <= ram(to_integer(unsigned(ADDRB)));
-                if (WEB = '1') then
-                    ram(to_integer(unsigned(ADDRB))) <= DIB;
-                end if;
-            end if;
-        end if;
-    end process PORT_B;
+	process (RAM_CLK) 
+	begin
+		if rising_edge(RAM_CLK) then
+			if ENA ='1' then
+				DOA <= RAM(to_integer(unsigned(ADDRA)));
+			end if;
+			if ENB ='1' then 
+				DOB <= RAM(to_integer(unsigned(ADDRB)));
+				if WEB='1' then
+					RAM(to_integer(unsigned(ADDRB))) <= DIB;
+				end if;
+			end if;
+		end if;
+	end process;
     
 end architecture behavioral;
 		

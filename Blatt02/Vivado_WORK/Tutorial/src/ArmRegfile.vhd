@@ -91,7 +91,7 @@ begin
     begin
         if (rising_edge(REF_CLK)) then
             if (REF_RST = '1') then 
-                reg <= (others => x"00000000");
+                reg <= (others => (others => '0'));
             else
                 if (REF_W_PORT_PC_ENABLE) then
                     reg (15) <= REF_W_PORT_PC_DATA;
