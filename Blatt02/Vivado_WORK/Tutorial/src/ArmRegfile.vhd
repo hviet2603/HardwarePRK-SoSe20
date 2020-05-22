@@ -93,13 +93,13 @@ begin
             if (REF_RST = '1') then 
                 reg <= (others => (others => '0'));
             else
-                if (REF_W_PORT_PC_ENABLE) then
+                if (REF_W_PORT_PC_ENABLE ='1') then
                     reg (15) <= REF_W_PORT_PC_DATA;
                 end if;
-                if (REF_W_PORT_B_ENABLE) then
+                if (REF_W_PORT_B_ENABLE ='1') then
                     reg(to_integer(unsigned(REF_W_PORT_B_ADDR))) <= REF_W_PORT_B_DATA;
                 end if;
-                if (REF_W_PORT_A_ENABLE) then
+                if (REF_W_PORT_A_ENABLE = '1') then
                     reg(to_integer(unsigned(REF_W_PORT_A_ADDR))) <= REF_W_PORT_A_DATA;
                 end if;
             end if;

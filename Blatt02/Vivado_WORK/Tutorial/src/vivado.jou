@@ -1,0 +1,44 @@
+#-----------------------------------------------------------
+# Vivado v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:07 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Fri May 22 13:10:36 2020
+# Process ID: 21809
+# Current directory: /afs/tu-berlin.de/home/h/hungbui7698/irb-ubuntu/HWP/HardwarePRK-SoSe20/Blatt02/Vivado_WORK/Tutorial/src
+# Command line: vivado
+# Log file: /afs/tu-berlin.de/home/h/hungbui7698/irb-ubuntu/HWP/HardwarePRK-SoSe20/Blatt02/Vivado_WORK/Tutorial/src/vivado.log
+# Journal file: /afs/tu-berlin.de/home/h/hungbui7698/irb-ubuntu/HWP/HardwarePRK-SoSe20/Blatt02/Vivado_WORK/Tutorial/src/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /afs/tu-berlin.de/home/h/hungbui7698/irb-ubuntu/HWP/HardwarePRK-SoSe20/Blatt02/Vivado_WORK/Tutorial/Blatt02/Blatt02.xpr
+update_compile_order -fileset sources_1
+add_files -norecurse /afs/tu-berlin.de/home/h/hungbui7698/irb-ubuntu/HWP/HardwarePRK-SoSe20/Blatt02/Vivado_WORK/Tutorial/src/ArmRegfile.vhd
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top ArmRegfile [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+wait_on_run synth_1
+add_files -norecurse /afs/tu-berlin.de/home/h/hungbui7698/irb-ubuntu/HWP/HardwarePRK-SoSe20/Blatt02/Vivado_WORK/Tutorial/src/ArmGlobalProbes.vhd
+update_compile_order -fileset sources_1
+add_files -norecurse /afs/tu-berlin.de/home/h/hungbui7698/irb-ubuntu/HWP/HardwarePRK-SoSe20/Blatt02/Vivado_WORK/Tutorial/src/ArmConfiguration.vhd
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+wait_on_run synth_1
+add_files -norecurse /afs/tu-berlin.de/home/h/hungbui7698/irb-ubuntu/HWP/HardwarePRK-SoSe20/Blatt02/Vivado_WORK/Tutorial/src/ArmRAMB_4kx8.vhd
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top ArmRAMB_4kx8 [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+wait_on_run synth_1
