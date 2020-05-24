@@ -1,0 +1,9 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"ArmRegaddressTranslation_tb_func_synth.vhd" \
+"../../../../../../../src/ArmRegaddressTranslation_tb.vhd" \
+"../../../../../../../src/ArmRAMB_4kx8_tb.vhd" \
+"../../../../../../../src/ArmRegfile_tb.vhd" \
+
+# Do not sort compile order
+nosort

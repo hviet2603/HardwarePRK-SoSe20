@@ -1,0 +1,15 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../../src/ArmTypes.vhd" \
+"../../../../../../src/ArmFilePaths.vhd" \
+"../../../../../../src/ArmGlobalProbes.vhd" \
+"../../../../../../src/ArmConfiguration.vhd" \
+"../../../../../../src/ArmRAMB_4kx8.vhd" \
+"../../../../../../src/ArmRegfile.vhd" \
+"../../../../../../src/ArmRegaddressTranslation.vhd" \
+"../../../../../../src/ArmRegaddressTranslation_tb.vhd" \
+"../../../../../../src/ArmRAMB_4kx8_tb.vhd" \
+"../../../../../../src/ArmRegfile_tb.vhd" \
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,11 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt02/Vivado_WORK/Tutorial/src/ArmTypes.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt02/Vivado_WORK/Tutorial/src/ArmFilePaths.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt02/Vivado_WORK/Tutorial/src/ArmGlobalProbes.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt02/Vivado_WORK/Tutorial/src/ArmConfiguration.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt02/Vivado_WORK/Tutorial/src/ArmRAMB_4kx8.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ArmRAMB_4kx8
+INFO: [VRFC 10-163] Analyzing VHDL file "/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt02/Vivado_WORK/Tutorial/src/ArmRegfile.vhd" into library xil_defaultlib
+ERROR: [VRFC 10-149] 'armregaddresstranslation' is not compiled in library xil_defaultlib [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt02/Vivado_WORK/Tutorial/src/ArmRegfile.vhd:10]
+INFO: [VRFC 10-307] analyzing entity ArmRegfile
+ERROR: [VRFC 10-1504] unit armregfile ignored due to previous errors [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt02/Vivado_WORK/Tutorial/src/ArmRegfile.vhd:18]
+INFO: [VRFC 10-240] VHDL file /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt02/Vivado_WORK/Tutorial/src/ArmRegfile.vhd ignored due to errors

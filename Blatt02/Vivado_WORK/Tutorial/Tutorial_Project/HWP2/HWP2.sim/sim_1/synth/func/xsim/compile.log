@@ -1,0 +1,9 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt02/Vivado_WORK/Tutorial/Tutorial_Project/HWP2/HWP2.sim/sim_1/synth/func/xsim/ArmRegaddressTranslation_tb_func_synth.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ArmRAMB_4kx8
+INFO: [VRFC 10-163] Analyzing VHDL file "/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt02/Vivado_WORK/Tutorial/src/ArmRegaddressTranslation_tb.vhd" into library xil_defaultlib
+ERROR: [VRFC 10-149] 'armtypes' is not compiled in library xil_defaultlib [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt02/Vivado_WORK/Tutorial/src/ArmRegaddressTranslation_tb.vhd:12]
+ERROR: [VRFC 10-149] 'armregaddresstranslation' is not compiled in library xil_defaultlib [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt02/Vivado_WORK/Tutorial/src/ArmRegaddressTranslation_tb.vhd:13]
+INFO: [VRFC 10-307] analyzing entity unit_under_test
+ERROR: [VRFC 10-91] mode is not declared [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt02/Vivado_WORK/Tutorial/src/ArmRegaddressTranslation_tb.vhd:22]
+ERROR: [VRFC 10-1504] unit unit_under_test ignored due to previous errors [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt02/Vivado_WORK/Tutorial/src/ArmRegaddressTranslation_tb.vhd:21]
+INFO: [VRFC 10-240] VHDL file /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt02/Vivado_WORK/Tutorial/src/ArmRegaddressTranslation_tb.vhd ignored due to errors

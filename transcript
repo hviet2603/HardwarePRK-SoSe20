@@ -1,0 +1,398 @@
+# //  Questa Sim-64
+# //  Version 10.2c_5 linux_x86_64 Nov 19 2013
+# //
+# //  Copyright 1991-2013 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+project open /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt02/Vivado_WORK/Tutorial/project2.mpf
+# Loading project project2
+vsim work.armregaddresstranslation_tb
+# vsim work.armregaddresstranslation_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.armtypes(body)
+# Loading work.armregaddresstranslation(body)
+# Loading work.armconfiguration
+# Loading work.armfilepaths(body)
+# Loading work.tb_tools(body)
+# Loading work.armregaddresstranslation_tb(testbench)
+# Loading work.unit_under_test(behave)
+run -all
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 0 ps  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Test 1: Erzeugen aller 31 notwendigen Kombinationen von Betriebsmodus und virtueller Registeradresse um alle 31 physischen ARM-Register anzusprechen. Die von der Adressabbildung erzeugten physischen Adressen werden gespeichert. Am Ende des ersten Tests muessen 31 unterschiedliche pysische Adressen erzeugt worden sein. Zusaetzlich wird sichergestellt, dass in den Modi User und System fuer jede virtuelle dieselbe physische Adresse erzeugt wird.
+#    Time: 0 ps  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 0 ps  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: USER      
+#    Time: 0 ps  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: SYSTEM    
+#    Time: 32 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: FIQ       
+#    Time: 64 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: SUPERVISOR
+#    Time: 78 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: IRQ       
+#    Time: 82 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: ABORT     
+#    Time: 86 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: UNDEFINED 
+#    Time: 90 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 95 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Ermittelte Adressabbildung:
+#    Time: 95 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: phy. Adresse	<=	 Modus; 	 virt. Adresse
+#    Time: 95 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 95 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: 00000 (0) 	<=	USER      ; 	0000 (0)
+#    Time: 95 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: 00001 (1) 	<=	USER      ; 	0001 (1)
+#    Time: 95 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: 00010 (2) 	<=	USER      ; 	0010 (2)
+#    Time: 95 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: 00011 (3) 	<=	USER      ; 	0011 (3)
+#    Time: 95 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: 00100 (4) 	<=	USER      ; 	0100 (4)
+#    Time: 95 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: 00101 (5) 	<=	USER      ; 	0101 (5)
+#    Time: 95 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: 00110 (6) 	<=	USER      ; 	0110 (6)
+#    Time: 95 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: 00111 (7) 	<=	USER      ; 	0111 (7)
+#    Time: 95 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: 01000 (8) 	<=	USER      ; 	1000 (8)
+#    Time: 95 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: 01001 (9) 	<=	USER      ; 	1001 (9)
+#    Time: 95 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: 01010 (10) 	<=	USER      ; 	1010 (10)
+#    Time: 95 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: 01011 (11) 	<=	USER      ; 	1011 (11)
+#    Time: 95 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: 01100 (12) 	<=	USER      ; 	1100 (12)
+#    Time: 95 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: 01101 (13) 	<=	USER      ; 	1101 (13)
+#    Time: 95 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: 01110 (14) 	<=	USER      ; 	1110 (14)
+#    Time: 95 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: 01111 (15) 	<=	USER      ; 	1111 (15)
+#    Time: 95 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: 10000 (16) 	<=	FIQ       ; 	1000 (8)
+#    Time: 95 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: 10001 (17) 	<=	FIQ       ; 	1001 (9)
+#    Time: 95 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: 10010 (18) 	<=	FIQ       ; 	1010 (10)
+#    Time: 95 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: 10011 (19) 	<=	FIQ       ; 	1011 (11)
+#    Time: 95 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: 10100 (20) 	<=	FIQ       ; 	1100 (12)
+#    Time: 95 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: 10101 (21) 	<=	FIQ       ; 	1101 (13)
+#    Time: 95 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: 10110 (22) 	<=	FIQ       ; 	1110 (14)
+#    Time: 95 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: 10111 (23) 	<=	IRQ       ; 	1101 (13)
+#    Time: 95 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: 11000 (24) 	<=	IRQ       ; 	1110 (14)
+#    Time: 95 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: 11001 (25) 	<=	SUPERVISOR; 	1101 (13)
+#    Time: 95 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: 11010 (26) 	<=	SUPERVISOR; 	1110 (14)
+#    Time: 95 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: 11011 (27) 	<=	ABORT     ; 	1101 (13)
+#    Time: 95 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: 11100 (28) 	<=	ABORT     ; 	1110 (14)
+#    Time: 95 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: 11101 (29) 	<=	UNDEFINED ; 	1101 (13)
+#    Time: 95 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: 11110 (30) 	<=	UNDEFINED ; 	1110 (14)
+#    Time: 95 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: 11111 (31) 	<=	?????     ; 	 ????
+#    Time: 95 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 95 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Es wurden 31 physische Adressen erzeugt, Test 1 erfolgreich.
+#    Time: 95 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 95 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Test 2: Test auf Wirkung des USER-Bits. In allen validen Betriebsmodi werden alle virt. Registeradressen gemeinsam mit gesetztem USER-Bit erzeugt. Die physische Adresse muss identisch sein mit der Abbildung derselben virtuellen Adresse im USER-Modus (viele der Kombinationen aus Betriebsmodus und Registeradresse verweisen natuerlich auch ohne USER-Bit auf dieselbe physische Adresse wie im USER-Modus).
+#    Time: 95 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 95 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: USER      
+#    Time: 95 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: SYSTEM    
+#    Time: 127 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: FIQ       
+#    Time: 159 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: SUPERVISOR
+#    Time: 191 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: IRQ       
+#    Time: 223 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: ABORT     
+#    Time: 255 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: UNDEFINED 
+#    Time: 287 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 319 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 319 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Test 2 erfolgreich.
+#    Time: 319 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 319 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Test 3: Abbildung _aller_ moeglich binaeren Parameterkombinationen inkl. nicht erlaubter Modus-Codes durch die Abbildungsfunktion. Die physische Adresse muss dabei immer binaer erzeugt werden (kein X,Z,U,W,L).
+#    Time: 319 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 319 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 1343 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Test 3 erfolreich
+#    Time: 1343 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 1343 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Test 4: Ueberpruefung ob bestimmte Register (z.B.: PC) immer auf gleiche Adresse abgebildet werden.
+#    Time: 1343 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Ueberpruefe PC
+#    Time: 1343 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: USER       physische Adresse: 01111
+#    Time: 1344 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: SYSTEM     physische Adresse: 01111
+#    Time: 1346 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: FIQ        physische Adresse: 01111
+#    Time: 1348 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: SUPERVISOR physische Adresse: 01111
+#    Time: 1350 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: IRQ        physische Adresse: 01111
+#    Time: 1352 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: ABORT      physische Adresse: 01111
+#    Time: 1354 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: UNDEFINED  physische Adresse: 01111
+#    Time: 1356 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Ueberpruefe R0
+#    Time: 1357 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: USER       physische Adresse: 00000
+#    Time: 1358 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: SYSTEM     physische Adresse: 00000
+#    Time: 1360 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: FIQ        physische Adresse: 00000
+#    Time: 1362 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: SUPERVISOR physische Adresse: 00000
+#    Time: 1364 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: IRQ        physische Adresse: 00000
+#    Time: 1366 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: ABORT      physische Adresse: 00000
+#    Time: 1368 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: UNDEFINED  physische Adresse: 00000
+#    Time: 1370 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Ueberpruefe R1
+#    Time: 1371 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: USER       physische Adresse: 00001
+#    Time: 1372 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: SYSTEM     physische Adresse: 00001
+#    Time: 1374 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: FIQ        physische Adresse: 00001
+#    Time: 1376 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: SUPERVISOR physische Adresse: 00001
+#    Time: 1378 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: IRQ        physische Adresse: 00001
+#    Time: 1380 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: ABORT      physische Adresse: 00001
+#    Time: 1382 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: UNDEFINED  physische Adresse: 00001
+#    Time: 1384 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Ueberpruefe R2
+#    Time: 1385 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: USER       physische Adresse: 00010
+#    Time: 1386 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: SYSTEM     physische Adresse: 00010
+#    Time: 1388 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: FIQ        physische Adresse: 00010
+#    Time: 1390 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: SUPERVISOR physische Adresse: 00010
+#    Time: 1392 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: IRQ        physische Adresse: 00010
+#    Time: 1394 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: ABORT      physische Adresse: 00010
+#    Time: 1396 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: UNDEFINED  physische Adresse: 00010
+#    Time: 1398 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Ueberpruefe R3
+#    Time: 1399 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: USER       physische Adresse: 00011
+#    Time: 1400 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: SYSTEM     physische Adresse: 00011
+#    Time: 1402 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: FIQ        physische Adresse: 00011
+#    Time: 1404 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: SUPERVISOR physische Adresse: 00011
+#    Time: 1406 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: IRQ        physische Adresse: 00011
+#    Time: 1408 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: ABORT      physische Adresse: 00011
+#    Time: 1410 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: UNDEFINED  physische Adresse: 00011
+#    Time: 1412 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Ueberpruefe R4
+#    Time: 1413 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: USER       physische Adresse: 00100
+#    Time: 1414 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: SYSTEM     physische Adresse: 00100
+#    Time: 1416 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: FIQ        physische Adresse: 00100
+#    Time: 1418 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: SUPERVISOR physische Adresse: 00100
+#    Time: 1420 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: IRQ        physische Adresse: 00100
+#    Time: 1422 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: ABORT      physische Adresse: 00100
+#    Time: 1424 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: UNDEFINED  physische Adresse: 00100
+#    Time: 1426 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Ueberpruefe R5
+#    Time: 1427 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: USER       physische Adresse: 00101
+#    Time: 1428 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: SYSTEM     physische Adresse: 00101
+#    Time: 1430 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: FIQ        physische Adresse: 00101
+#    Time: 1432 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: SUPERVISOR physische Adresse: 00101
+#    Time: 1434 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: IRQ        physische Adresse: 00101
+#    Time: 1436 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: ABORT      physische Adresse: 00101
+#    Time: 1438 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: UNDEFINED  physische Adresse: 00101
+#    Time: 1440 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Ueberpruefe R6
+#    Time: 1441 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: USER       physische Adresse: 00110
+#    Time: 1442 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: SYSTEM     physische Adresse: 00110
+#    Time: 1444 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: FIQ        physische Adresse: 00110
+#    Time: 1446 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: SUPERVISOR physische Adresse: 00110
+#    Time: 1448 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: IRQ        physische Adresse: 00110
+#    Time: 1450 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: ABORT      physische Adresse: 00110
+#    Time: 1452 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: UNDEFINED  physische Adresse: 00110
+#    Time: 1454 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Ueberpruefe R7
+#    Time: 1455 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: USER       physische Adresse: 00111
+#    Time: 1456 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: SYSTEM     physische Adresse: 00111
+#    Time: 1458 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: FIQ        physische Adresse: 00111
+#    Time: 1460 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: SUPERVISOR physische Adresse: 00111
+#    Time: 1462 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: IRQ        physische Adresse: 00111
+#    Time: 1464 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: ABORT      physische Adresse: 00111
+#    Time: 1466 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: UNDEFINED  physische Adresse: 00111
+#    Time: 1468 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Ueberpruefe R8
+#    Time: 1469 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: USER       physische Adresse: 01000
+#    Time: 1470 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: SYSTEM     physische Adresse: 01000
+#    Time: 1472 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: SUPERVISOR physische Adresse: 01000
+#    Time: 1474 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: IRQ        physische Adresse: 01000
+#    Time: 1476 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: ABORT      physische Adresse: 01000
+#    Time: 1478 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: UNDEFINED  physische Adresse: 01000
+#    Time: 1480 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Ueberpruefe R9
+#    Time: 1481 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: USER       physische Adresse: 01001
+#    Time: 1482 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: SYSTEM     physische Adresse: 01001
+#    Time: 1484 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: SUPERVISOR physische Adresse: 01001
+#    Time: 1486 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: IRQ        physische Adresse: 01001
+#    Time: 1488 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: ABORT      physische Adresse: 01001
+#    Time: 1490 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: UNDEFINED  physische Adresse: 01001
+#    Time: 1492 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Ueberpruefe R10
+#    Time: 1493 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: USER       physische Adresse: 01010
+#    Time: 1494 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: SYSTEM     physische Adresse: 01010
+#    Time: 1496 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: SUPERVISOR physische Adresse: 01010
+#    Time: 1498 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: IRQ        physische Adresse: 01010
+#    Time: 1500 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: ABORT      physische Adresse: 01010
+#    Time: 1502 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: UNDEFINED  physische Adresse: 01010
+#    Time: 1504 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Ueberpruefe R11
+#    Time: 1505 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: USER       physische Adresse: 01011
+#    Time: 1506 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: SYSTEM     physische Adresse: 01011
+#    Time: 1508 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: SUPERVISOR physische Adresse: 01011
+#    Time: 1510 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: IRQ        physische Adresse: 01011
+#    Time: 1512 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: ABORT      physische Adresse: 01011
+#    Time: 1514 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: UNDEFINED  physische Adresse: 01011
+#    Time: 1516 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Ueberpruefe R12
+#    Time: 1517 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: USER       physische Adresse: 01100
+#    Time: 1518 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: SYSTEM     physische Adresse: 01100
+#    Time: 1520 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: SUPERVISOR physische Adresse: 01100
+#    Time: 1522 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: IRQ        physische Adresse: 01100
+#    Time: 1524 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: ABORT      physische Adresse: 01100
+#    Time: 1526 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Modus: UNDEFINED  physische Adresse: 01100
+#    Time: 1528 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Test 4 erfolgreich
+#    Time: 1529 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Test 5: Pruefe ob stets definierte Werte (also '0' oder '1') zurueck gegeben werden
+#    Time: 1529 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 1529 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Test 5 erfolgreich
+#    Time: 1541 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 1541 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 1541 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: Gesamtpunktzahl (max. 4 Punkte = 1 Punkt (Test 1) + 1 Punkt (Tests 2 und 3) + 1 Punkt (Test 4) + 1 Punkt (Test 5)): 4 Punkte
+#    Time: 1541 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 1541 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 1541 ns  Iteration: 0  Instance: /armregaddresstranslation_tb
+# ** Failure:  EOT (END OF TEST) - Diese Fehlermeldung stoppt den Simulator unabhaengig von tatsaechlich aufgetretenen Fehlern!
+#    Time: 1541 ns  Iteration: 0  Process: /armregaddresstranslation_tb/test File: ./src/ArmRegaddressTranslation_tb.vhd
+# Break in Process test at ./src/ArmRegaddressTranslation_tb.vhd line 529

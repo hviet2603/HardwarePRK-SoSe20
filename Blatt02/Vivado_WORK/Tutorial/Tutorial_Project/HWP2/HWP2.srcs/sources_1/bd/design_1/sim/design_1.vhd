@@ -1,0 +1,9 @@
+--Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------
+--Tool Version: Vivado v.2017.3 (lin64) Build 2018833 Wed Oct  4 19:58:07 MDT 2017
+--Date        : Sun May 24 08:06:25 2020
+--Host        : borrasca-ubu running 64-bit Ubuntu 18.04.4 LTS
+--Command     : generate_target design_1.bd
+--Design      : design_1
+--Purpose     : IP block netlist
+----------------------------------------------------------------------------------

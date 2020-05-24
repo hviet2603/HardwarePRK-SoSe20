@@ -20,365 +20,365 @@ F./src/ArmConfiguration.vhd
 l0
 L20
 V8ZzlimU_zNC][g_e:9lh=0
-!s100 35POJ0<GDAWPhfL3FlY?63
 Z7 OL;C;10.2c_5;57
 33
 Z8 !s110 1588885038
-!i10b 1
 Z9 !s108 1588885038.463381
 Z10 !s90 -reportprogress|300|-work|./work/|./src/ArmConfiguration.vhd|./src/ArmDataReplication.vhd|./src/ArmDataReplication_tb.vhd|./src/ArmFilePaths.vhd|./src/ArmInstructionAddressRegister.vhd|./src/ArmInstructionAddressRegister_tb.vhd|./src/ArmRamBuffer.vhd|./src/ArmTypes.vhd|./src/TB_Tools.vhd|
 Z11 !s107 ./src/TB_Tools.vhd|./src/ArmTypes.vhd|./src/ArmRamBuffer.vhd|./src/ArmInstructionAddressRegister_tb.vhd|./src/ArmInstructionAddressRegister.vhd|./src/ArmFilePaths.vhd|./src/ArmDataReplication_tb.vhd|./src/ArmDataReplication.vhd|./src/ArmConfiguration.vhd|
-!i111 1
 Z12 o-work ./work/
 Z13 tExplicit 1
+!s100 35POJ0<GDAWPhfL3FlY?63
+!i10b 1
+!i111 1
 Earmdatareplication
-Z14 w1588842900
+Z14 w1590094489
 R1
 R3
 Z15 DPx4 ieee 14 std_logic_1164 0 22 1bm?@Gd;P>[>_lN8Do9gP3
-R6
-Z16 8./src/ArmDataReplication.vhd
-Z17 F./src/ArmDataReplication.vhd
+Z16 d/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt01/Vivado_WORK/Tutorial
+Z17 8./src/ArmDataReplication.vhd
+Z18 F./src/ArmDataReplication.vhd
 l0
 L21
 VEa8b3W3l@jnzdh]ZQ[O4b1
-!s100 fk;oOCJ7Ra7[C=1>NBiHX1
 R7
 33
-R8
-!i10b 1
-R9
-R10
-R11
-!i111 1
+Z19 !s110 1590094831
+Z20 !s108 1590094831.456260
+Z21 !s90 -reportprogress|300|-work|./work/|./src/ArmDataReplication.vhd|
+Z22 !s107 ./src/ArmDataReplication.vhd|
 R12
 R13
+!s100 fk;oOCJ7Ra7[C=1>NBiHX1
+!i10b 1
+!i111 1
 Abehave
 R1
 R3
 R15
-Z18 DEx4 work 18 armdatareplication 0 22 Ea8b3W3l@jnzdh]ZQ[O4b1
+DEx4 work 18 armdatareplication 0 22 Ea8b3W3l@jnzdh]ZQ[O4b1
 l29
 L28
-Z19 VWR4?b1[=8`=Uj7aniSYHZ2
-Z20 !s100 <zRVneBKf16ARhTzN4AM=3
+VPXeV>a?6XbgE;6Jf6IEeb2
 R7
 33
-R8
-!i10b 1
-R9
-R10
-R11
-!i111 1
+R19
+R20
+R21
+R22
 R12
 R13
+!s100 S>MDijB27;PH595aXJL]l1
+!i10b 1
+!i111 1
 Earmdatareplication_tb
 R5
 R1
-Z21 DPx4 ieee 18 std_logic_unsigned 0 22 @_jbHPR7i^Jh?`2fDCO`m3
-Z22 DPx4 ieee 15 std_logic_arith 0 22 I`lKR?Ob>E^B_e2VdVLiQ0
-Z23 DPx4 ieee 16 std_logic_textio 0 22 E=LR>a2bb_I?VV>QDdAdh3
+Z23 DPx4 ieee 18 std_logic_unsigned 0 22 @_jbHPR7i^Jh?`2fDCO`m3
+Z24 DPx4 ieee 15 std_logic_arith 0 22 I`lKR?Ob>E^B_e2VdVLiQ0
+Z25 DPx4 ieee 16 std_logic_textio 0 22 E=LR>a2bb_I?VV>QDdAdh3
 R15
 R3
 R6
-Z24 8./src/ArmDataReplication_tb.vhd
-Z25 F./src/ArmDataReplication_tb.vhd
+Z26 8./src/ArmDataReplication_tb.vhd
+Z27 F./src/ArmDataReplication_tb.vhd
 l0
 L10
 VaB?01WL=Tid0daGQeIHHh2
-!s100 KI@NEl<m66d6R@cZ@CDfU2
 R7
 33
 R8
-!i10b 1
 R9
 R10
 R11
-!i111 1
 R12
 R13
+!s100 KI@NEl<m66d6R@cZ@CDfU2
+!i10b 1
+!i111 1
 Atestbench_arch
 R1
-R21
-R22
 R23
+R24
+R25
 R15
 R3
-Z26 DEx4 work 21 armdatareplication_tb 0 22 aB?01WL=Tid0daGQeIHHh2
+DEx4 work 21 armdatareplication_tb 0 22 aB?01WL=Tid0daGQeIHHh2
 l32
 L13
-Z27 VbZU7k@lSk_5zgB7INbL9k2
-Z28 !s100 DX;iPfV@c5P?IK2aBZAg00
+VbZU7k@lSk_5zgB7INbL9k2
 R7
 33
 R8
-!i10b 1
 R9
 R10
 R11
-!i111 1
 R12
 R13
+!s100 DX;iPfV@c5P?IK2aBZAg00
+!i10b 1
+!i111 1
 Parmfilepaths
-Z29 w1588841861
+Z28 w1588841861
 R6
-Z30 8./src/ArmFilePaths.vhd
-Z31 F./src/ArmFilePaths.vhd
+Z29 8./src/ArmFilePaths.vhd
+Z30 F./src/ArmFilePaths.vhd
 l0
 L1
 VB;CLm`]@k3]X`33`1O=VP3
-!s100 8oaLANeO_V=V]l_jz>l]o2
 R7
 33
 R8
-!i10b 1
 R9
 R10
 R11
-!i111 1
 R12
 R13
+!s100 8oaLANeO_V=V]l_jz>l]o2
+!i10b 1
+!i111 1
 Bbody
-Z32 DPx4 work 12 armfilepaths 0 22 B;CLm`]@k3]X`33`1O=VP3
+Z31 DPx4 work 12 armfilepaths 0 22 B;CLm`]@k3]X`33`1O=VP3
 l0
 L8
-Z33 V:KDda@KOQR3;9f3NFBRIA1
-Z34 !s100 WJG<MiEm`bgnS@D:zISW:2
+V:KDda@KOQR3;9f3NFBRIA1
 R7
 33
 R8
-!i10b 1
 R9
 R10
 R11
-!i111 1
 R12
 R13
 nbody
+!s100 WJG<MiEm`bgnS@D:zISW:2
+!i10b 1
+!i111 1
 Earminstructionaddressregister
-Z35 w1588884985
+Z32 w1590094495
 R1
-Z36 DPx4 ieee 11 numeric_std 0 22 WES[o8HS0jHV[MIXQk2Ha1
+Z33 DPx4 ieee 11 numeric_std 0 22 WES[o8HS0jHV[MIXQk2Ha1
 R3
 R15
-R6
-Z37 8./src/ArmInstructionAddressRegister.vhd
-Z38 F./src/ArmInstructionAddressRegister.vhd
+R16
+Z34 8./src/ArmInstructionAddressRegister.vhd
+Z35 F./src/ArmInstructionAddressRegister.vhd
 l0
 L16
 V46JkIgZn1jaXBn1U4Tb[M3
 !s100 [z>J;jlGFg`>Ah7=k>3HW2
 R7
 33
-R8
+Z36 !s110 1590094854
 !i10b 1
-R9
-R10
-R11
+Z37 !s108 1590094854.649067
+Z38 !s90 -reportprogress|300|-work|./work/|./src/ArmInstructionAddressRegister.vhd|
+Z39 !s107 ./src/ArmInstructionAddressRegister.vhd|
 !i111 1
 R12
 R13
 Abehave
 R1
-R36
+R33
 R3
 R15
-Z39 DEx4 work 29 arminstructionaddressregister 0 22 46JkIgZn1jaXBn1U4Tb[M3
-l60
+Z40 DEx4 work 29 arminstructionaddressregister 0 22 46JkIgZn1jaXBn1U4Tb[M3
+l59
 L38
-V1M^KVJ@?6;@e_<RSV7eKf2
-!s100 HJ8OLMZj68^YoGU9z9CG62
+V]Y@J0do9I?OIXFk>3aiK<3
+!s100 UR?MXESJLUGOWJ0HE9C@B0
 R7
 33
-R8
+R36
 !i10b 1
-R9
-R10
-R11
+R37
+R38
+R39
 !i111 1
 R12
 R13
 Earminstructionaddressregister_tb
-Z40 w1588884241
-R32
-R23
-Z41 DPx4 work 8 tb_tools 0 22 kb8U95ZF54@A>gS0]W5]80
-Z42 DPx4 work 16 armconfiguration 0 22 8ZzlimU_zNC][g_e:9lh=0
+Z41 w1588884241
+R31
+R25
+Z42 DPx4 work 8 tb_tools 0 22 kb8U95ZF54@A>gS0]W5]80
+Z43 DPx4 work 16 armconfiguration 0 22 8ZzlimU_zNC][g_e:9lh=0
 R1
-R36
+R33
 R3
 R15
 R6
-Z43 8./src/ArmInstructionAddressRegister_tb.vhd
-Z44 F./src/ArmInstructionAddressRegister_tb.vhd
+Z44 8./src/ArmInstructionAddressRegister_tb.vhd
+Z45 F./src/ArmInstructionAddressRegister_tb.vhd
 l0
 L24
 VC:9A3gMDZS=WPeAc;9@Ki0
-!s100 XTdENO=@T<6[T?C]bko311
 R7
 33
 R8
-!i10b 1
 R9
 R10
 R11
-!i111 1
 R12
 R13
+!s100 XTdENO=@T<6[T?C]bko311
+!i10b 1
+!i111 1
 Abehavior
-R32
-R23
-R41
+R31
+R25
 R42
+R43
 R1
-R36
+R33
 R3
 R15
-Z45 DEx4 work 32 arminstructionaddressregister_tb 0 22 C:9A3gMDZS=WPeAc;9@Ki0
+DEx4 work 32 arminstructionaddressregister_tb 0 22 C:9A3gMDZS=WPeAc;9@Ki0
 l69
 L27
-Z46 Vbg5CmEbab15V8FeF_DGkk3
-Z47 !s100 :SiJH=KjTR@A=0N57:YSU2
+Vbg5CmEbab15V8FeF_DGkk3
 R7
 33
 R8
-!i10b 1
 R9
 R10
 R11
-!i111 1
 R12
 R13
+!s100 :SiJH=KjTR@A=0N57:YSU2
+!i10b 1
+!i111 1
 Earmrambuffer
-Z48 w1588868713
-R36
+Z46 w1588868713
+R33
 R3
 R15
 R6
-Z49 8./src/ArmRamBuffer.vhd
-Z50 F./src/ArmRamBuffer.vhd
+Z47 8./src/ArmRamBuffer.vhd
+Z48 F./src/ArmRamBuffer.vhd
 l0
 L13
 V0>O9dGCRV?2Ng<1H@QRWl3
-!s100 Mg25=T96B?JCOJJBP;WV70
 R7
 33
 R8
-!i10b 1
 R9
 R10
 R11
-!i111 1
 R12
 R13
+!s100 Mg25=T96B?JCOJJBP;WV70
+!i10b 1
+!i111 1
 Abehavioral
-R36
+R33
 R3
 R15
-Z51 DEx4 work 12 armrambuffer 0 22 0>O9dGCRV?2Ng<1H@QRWl3
+DEx4 work 12 armrambuffer 0 22 0>O9dGCRV?2Ng<1H@QRWl3
 l30
 L27
-Z52 V`VB4G:^M`86Lb>EHnDDQe0
-Z53 !s100 oR_8Yfdj4NWld`3W142Z60
+V`VB4G:^M`86Lb>EHnDDQe0
 R7
 33
 R8
-!i10b 1
 R9
 R10
 R11
-!i111 1
 R12
 R13
+!s100 oR_8Yfdj4NWld`3W142Z60
+!i10b 1
+!i111 1
 Parmtypes
 R3
 R4
-R29
+R28
 R6
-Z54 8./src/ArmTypes.vhd
-Z55 F./src/ArmTypes.vhd
+Z49 8./src/ArmTypes.vhd
+Z50 F./src/ArmTypes.vhd
 l0
 L11
 V]^V=Zm_OHmJCVZ>6X8CZ?1
-!s100 3h7cSYlT9?Y0ZonFG2C=@1
 R7
 33
 b1
 R8
-!i10b 1
 R9
 R10
 R11
-!i111 1
 R12
 R13
+!s100 3h7cSYlT9?Y0ZonFG2C=@1
+!i10b 1
+!i111 1
 Bbody
 R1
 R3
 R4
 l0
 L413
-Z56 V_1bC;H0CNk?O949EW6]Ef1
-Z57 !s100 5lWP:KmD=fJkIhzQOLmWz0
+V_1bC;H0CNk?O949EW6]Ef1
 R7
 33
 R8
-!i10b 1
 R9
 R10
 R11
-!i111 1
 R12
 R13
 nbody
+!s100 5lWP:KmD=fJkIhzQOLmWz0
+!i10b 1
+!i111 1
 Ptb_tools
-R32
-R42
+R31
+R43
 R1
-R23
+R25
 R2
 R4
 R3
-R29
+R28
 R6
-Z58 8./src/TB_Tools.vhd
-Z59 F./src/TB_Tools.vhd
+Z51 8./src/TB_Tools.vhd
+Z52 F./src/TB_Tools.vhd
 l0
 L34
 Vkb8U95ZF54@A>gS0]W5]80
-!s100 KC<2mondh@>VaoP61n]dm0
 R7
 33
 b1
 R8
-!i10b 1
 R9
 R10
 R11
-!i111 1
 R12
 R13
+!s100 KC<2mondh@>VaoP61n]dm0
+!i10b 1
+!i111 1
 Bbody
-R41
-R32
 R42
+R31
+R43
 R1
-R23
+R25
 R2
 R4
 R3
 l0
 L164
-Z60 V[f4kmkX`D;LPJS=K6SNbS1
-Z61 !s100 C[X60FXPhT4Eg_4k]T[Wh1
+V[f4kmkX`D;LPJS=K6SNbS1
 R7
 33
 R8
-!i10b 1
 R9
 R10
 R11
-!i111 1
 R12
 R13
 nbody
+!s100 C[X60FXPhT4Eg_4k]T[Wh1
+!i10b 1
+!i111 1
