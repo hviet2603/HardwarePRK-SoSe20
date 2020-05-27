@@ -9,6 +9,9 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
+library work;
+use work.ArmRAMB_4kx8.all;
+
 entity ArmRAMB_4kx32 is
 	generic(
 --------------------------------------------------------------------------------
