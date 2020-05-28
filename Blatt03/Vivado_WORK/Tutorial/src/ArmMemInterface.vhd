@@ -8,9 +8,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 library work;
-use work.ArmConfiguration.all;
-use work.ArmRAMB_4kx32.all;
-use work.armtypes.all;
+use work.all;
 
 entity ArmMemInterface is
 	generic(
