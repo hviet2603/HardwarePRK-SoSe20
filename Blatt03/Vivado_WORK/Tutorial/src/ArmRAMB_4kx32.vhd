@@ -34,21 +34,21 @@ end entity ArmRAMB_4kx32;
 
 architecture behavioral of ArmRAMB_4kx32 is
     signal i: integer;
-    type DOA_reg_array is array(0 to 3) of std_logic_vector(7 downto 0);
-    type DOB_reg_array is array(0 to 3) of std_logic_vector(7 downto 0);
-    type DIB_byte_array is array(0 to 3) of std_logic_vector(7 downto 0);
-	signal DOA_reg: DOA_reg_array;
-	signal DOB_reg: DOB_reg_array;
-	signal DIB_byte: DIB_byte_array;
+    type DOA_reg_array is array(3 downto 0) of std_logic_vector(7 downto 0);
+    type DOB_reg_array is array(3 downto 0) of std_logic_vector(7 downto 0);
+    type DIB_byte_array is array(3 downto 0) of std_logic_vector(7 downto 0);
+    signal DOA_reg: DOA_reg_array;
+    signal DOB_reg: DOB_reg_array;
+    signal DIB_byte: DIB_byte_array;
 
 begin
-		DIB_byte(0) <= DIB(31 downto 24);
-		DIB_byte(1) <= DIB(23 downto 16);
-		DIB_byte(2) <= DIB(15 downto 8);
-		DIB_byte(3) <= DIB(7 downto 0);
+	DIB_byte(3) <= DIB(31 downto 24);
+	DIB_byte(2) <= DIB(23 downto 16);
+	DIB_byte(1) <= DIB(15 downto 8);
+	DIB_byte(0) <= DIB(7 downto 0);
 		
-		ArmRAMB_32: for i = 0 to 3 generate
-                ArmRAMB_8: work.ArmRAMB_4kx8 
+	ArmRAMB_32: for i in 3 downto 0 generate
+                ArmRAMB_8: entity work.ArmRAMB_4kx8 
                 generic map (
                     WIDTH => 8,
                     SIZE => 4096
@@ -62,11 +62,11 @@ begin
                     DIB => DIB_byte(i),
                     DOB => DOB_reg(i),
                     ENB => ENB,
-                    WEB => WEB(i)
+                    WEB => WEB(3-i)
                 );
         end generate ArmRAMB_32;
         
-        DOA <= DOA_reg(0) & DOA_reg(1) & DOA_reg(2) & DOA_reg(3);
-        DOB <= DOB_reg(0) & DOB_reg(1) & DOB_reg(2) & DOB_reg(3);
+        DOA <= DOA_reg(3) & DOA_reg(2) & DOA_reg(1) & DOA_reg(0);
+        DOB <= DOB_reg(3) & DOB_reg(2) & DOB_reg(1) & DOB_reg(0);
 
 end architecture behavioral;
