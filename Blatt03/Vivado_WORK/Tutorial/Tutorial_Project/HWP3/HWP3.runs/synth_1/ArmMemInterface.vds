@@ -1,0 +1,363 @@
+#-----------------------------------------------------------
+# Vivado v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:07 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Wed Jun  3 15:04:51 2020
+# Process ID: 11706
+# Current directory: /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt03/Vivado_WORK/Tutorial/Tutorial_Project/HWP3/HWP3.runs/synth_1
+# Command line: vivado -log ArmMemInterface.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ArmMemInterface.tcl
+# Log file: /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt03/Vivado_WORK/Tutorial/Tutorial_Project/HWP3/HWP3.runs/synth_1/ArmMemInterface.vds
+# Journal file: /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt03/Vivado_WORK/Tutorial/Tutorial_Project/HWP3/HWP3.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source ArmMemInterface.tcl -notrace
+Command: synth_design -top ArmMemInterface -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 11728 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 1242.027 ; gain = 72.000 ; free physical = 27758 ; free virtual = 32619
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'ArmMemInterface' [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt03/Vivado_WORK/Tutorial/src/ArmMemInterface.vhd:39]
+	Parameter SELECT_LINES bound to: 1 - type: integer 
+	Parameter EXTERNAL_ADDRESS_DECODING_INSTRUCTION bound to: 0 - type: bool 
+INFO: [Synth 8-638] synthesizing module 'ArmRAMB_4kx32' [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt03/Vivado_WORK/Tutorial/src/ArmRAMB_4kx32.vhd:35]
+	Parameter SELECT_LINES bound to: 1 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'ArmRAMB_4kx8' [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt03/Vivado_WORK/Tutorial/src/ArmRAMB_4kx8.vhd:23]
+	Parameter WIDTH bound to: 8 - type: integer 
+	Parameter SIZE bound to: 4096 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'ArmRAMB_4kx8' (1#1) [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt03/Vivado_WORK/Tutorial/src/ArmRAMB_4kx8.vhd:23]
+INFO: [Synth 8-256] done synthesizing module 'ArmRAMB_4kx32' (2#1) [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt03/Vivado_WORK/Tutorial/src/ArmRAMB_4kx32.vhd:35]
+INFO: [Synth 8-256] done synthesizing module 'ArmMemInterface' (3#1) [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt03/Vivado_WORK/Tutorial/src/ArmMemInterface.vhd:39]
+WARNING: [Synth 8-3331] design ArmMemInterface has unconnected port DA[31]
+WARNING: [Synth 8-3331] design ArmMemInterface has unconnected port DA[30]
+WARNING: [Synth 8-3331] design ArmMemInterface has unconnected port DA[29]
+WARNING: [Synth 8-3331] design ArmMemInterface has unconnected port DA[28]
+WARNING: [Synth 8-3331] design ArmMemInterface has unconnected port DA[27]
+WARNING: [Synth 8-3331] design ArmMemInterface has unconnected port DA[26]
+WARNING: [Synth 8-3331] design ArmMemInterface has unconnected port DA[25]
+WARNING: [Synth 8-3331] design ArmMemInterface has unconnected port DA[24]
+WARNING: [Synth 8-3331] design ArmMemInterface has unconnected port DA[23]
+WARNING: [Synth 8-3331] design ArmMemInterface has unconnected port DA[22]
+WARNING: [Synth 8-3331] design ArmMemInterface has unconnected port DA[21]
+WARNING: [Synth 8-3331] design ArmMemInterface has unconnected port DA[20]
+WARNING: [Synth 8-3331] design ArmMemInterface has unconnected port DA[19]
+WARNING: [Synth 8-3331] design ArmMemInterface has unconnected port DA[18]
+WARNING: [Synth 8-3331] design ArmMemInterface has unconnected port DA[17]
+WARNING: [Synth 8-3331] design ArmMemInterface has unconnected port DA[16]
+WARNING: [Synth 8-3331] design ArmMemInterface has unconnected port DA[15]
+WARNING: [Synth 8-3331] design ArmMemInterface has unconnected port DA[14]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 1284.559 ; gain = 114.531 ; free physical = 27769 ; free virtual = 32634
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:14 . Memory (MB): peak = 1284.559 ; gain = 114.531 ; free physical = 27768 ; free virtual = 32633
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/HWPTI_Master.xdc]
+Finished Parsing XDC File [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/HWPTI_Master.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1630.156 ; gain = 0.000 ; free physical = 27490 ; free virtual = 32395
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:28 ; elapsed = 00:00:49 . Memory (MB): peak = 1630.156 ; gain = 460.129 ; free physical = 27554 ; free virtual = 32460
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:28 ; elapsed = 00:00:49 . Memory (MB): peak = 1630.156 ; gain = 460.129 ; free physical = 27554 ; free virtual = 32460
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:49 . Memory (MB): peak = 1630.156 ; gain = 460.129 ; free physical = 27556 ; free virtual = 32462
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:28 ; elapsed = 00:00:50 . Memory (MB): peak = 1630.156 ; gain = 460.129 ; free physical = 27548 ; free virtual = 32453
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 8     
++---RAMs : 
+	              32K Bit         RAMs := 4     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module ArmMemInterface 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module ArmRAMB_4kx8 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 2     
++---RAMs : 
+	              32K Bit         RAMs := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3331] design ArmMemInterface has unconnected port DA[31]
+WARNING: [Synth 8-3331] design ArmMemInterface has unconnected port DA[30]
+WARNING: [Synth 8-3331] design ArmMemInterface has unconnected port DA[29]
+WARNING: [Synth 8-3331] design ArmMemInterface has unconnected port DA[28]
+WARNING: [Synth 8-3331] design ArmMemInterface has unconnected port DA[27]
+WARNING: [Synth 8-3331] design ArmMemInterface has unconnected port DA[26]
+WARNING: [Synth 8-3331] design ArmMemInterface has unconnected port DA[25]
+WARNING: [Synth 8-3331] design ArmMemInterface has unconnected port DA[24]
+WARNING: [Synth 8-3331] design ArmMemInterface has unconnected port DA[23]
+WARNING: [Synth 8-3331] design ArmMemInterface has unconnected port DA[22]
+WARNING: [Synth 8-3331] design ArmMemInterface has unconnected port DA[21]
+WARNING: [Synth 8-3331] design ArmMemInterface has unconnected port DA[20]
+WARNING: [Synth 8-3331] design ArmMemInterface has unconnected port DA[19]
+WARNING: [Synth 8-3331] design ArmMemInterface has unconnected port DA[18]
+WARNING: [Synth 8-3331] design ArmMemInterface has unconnected port DA[17]
+WARNING: [Synth 8-3331] design ArmMemInterface has unconnected port DA[16]
+WARNING: [Synth 8-3331] design ArmMemInterface has unconnected port DA[15]
+WARNING: [Synth 8-3331] design ArmMemInterface has unconnected port DA[14]
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:51 . Memory (MB): peak = 1630.156 ; gain = 460.129 ; free physical = 27532 ; free virtual = 32445
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping  Report (see note below)
++--------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name   | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++--------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|ArmRAMB_4kx8: | RAM_reg    | 4 K x 8(READ_FIRST)    | W | R | 4 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
+|ArmRAMB_4kx8: | RAM_reg    | 4 K x 8(READ_FIRST)    | W | R | 4 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
+|ArmRAMB_4kx8: | RAM_reg    | 4 K x 8(READ_FIRST)    | W | R | 4 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
+|ArmRAMB_4kx8: | RAM_reg    | 4 K x 8(READ_FIRST)    | W | R | 4 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
++--------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The tale above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:01:01 . Memory (MB): peak = 1630.156 ; gain = 460.129 ; free physical = 27389 ; free virtual = 32318
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:01:01 . Memory (MB): peak = 1630.156 ; gain = 460.129 ; free physical = 27389 ; free virtual = 32318
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping  Report
++--------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name   | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++--------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|ArmRAMB_4kx8: | RAM_reg    | 4 K x 8(READ_FIRST)    | W | R | 4 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
+|ArmRAMB_4kx8: | RAM_reg    | 4 K x 8(READ_FIRST)    | W | R | 4 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
+|ArmRAMB_4kx8: | RAM_reg    | 4 K x 8(READ_FIRST)    | W | R | 4 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
+|ArmRAMB_4kx8: | RAM_reg    | 4 K x 8(READ_FIRST)    | W | R | 4 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
++--------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4480] The timing for the instance RAM_BLOCK/ArmRAMB_32[3].ArmRAMB_8/RAM_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance RAM_BLOCK/ArmRAMB_32[3].ArmRAMB_8/RAM_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance RAM_BLOCK/ArmRAMB_32[2].ArmRAMB_8/RAM_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance RAM_BLOCK/ArmRAMB_32[2].ArmRAMB_8/RAM_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance RAM_BLOCK/ArmRAMB_32[1].ArmRAMB_8/RAM_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance RAM_BLOCK/ArmRAMB_32[1].ArmRAMB_8/RAM_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance RAM_BLOCK/ArmRAMB_32[0].ArmRAMB_8/RAM_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance RAM_BLOCK/ArmRAMB_32[0].ArmRAMB_8/RAM_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:01:01 . Memory (MB): peak = 1630.156 ; gain = 460.129 ; free physical = 27389 ; free virtual = 32318
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:36 ; elapsed = 00:01:01 . Memory (MB): peak = 1630.156 ; gain = 460.129 ; free physical = 27389 ; free virtual = 32317
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:36 ; elapsed = 00:01:01 . Memory (MB): peak = 1630.156 ; gain = 460.129 ; free physical = 27389 ; free virtual = 32317
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:36 ; elapsed = 00:01:01 . Memory (MB): peak = 1630.156 ; gain = 460.129 ; free physical = 27389 ; free virtual = 32317
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:36 ; elapsed = 00:01:01 . Memory (MB): peak = 1630.156 ; gain = 460.129 ; free physical = 27389 ; free virtual = 32317
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:36 ; elapsed = 00:01:01 . Memory (MB): peak = 1630.156 ; gain = 460.129 ; free physical = 27389 ; free virtual = 32317
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:36 ; elapsed = 00:01:01 . Memory (MB): peak = 1630.156 ; gain = 460.129 ; free physical = 27389 ; free virtual = 32317
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     1|
+|2     |LUT1     |     3|
+|3     |LUT2     |     1|
+|4     |LUT3     |     1|
+|5     |LUT4     |     1|
+|6     |LUT5     |     4|
+|7     |LUT6     |     3|
+|8     |RAMB36E1 |     4|
+|9     |IBUF     |    82|
+|10    |OBUFT    |    66|
++------+---------+------+
+
+Report Instance Areas: 
++------+------------------------------+---------------+------+
+|      |Instance                      |Module         |Cells |
++------+------------------------------+---------------+------+
+|1     |top                           |               |   166|
+|2     |  RAM_BLOCK                   |ArmRAMB_4kx32  |     8|
+|3     |    \ArmRAMB_32[0].ArmRAMB_8  |ArmRAMB_4kx8   |     2|
+|4     |    \ArmRAMB_32[1].ArmRAMB_8  |ArmRAMB_4kx8_0 |     2|
+|5     |    \ArmRAMB_32[2].ArmRAMB_8  |ArmRAMB_4kx8_1 |     2|
+|6     |    \ArmRAMB_32[3].ArmRAMB_8  |ArmRAMB_4kx8_2 |     2|
++------+------------------------------+---------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:36 ; elapsed = 00:01:01 . Memory (MB): peak = 1630.156 ; gain = 460.129 ; free physical = 27389 ; free virtual = 32317
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 18 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:34 . Memory (MB): peak = 1630.156 ; gain = 114.531 ; free physical = 27443 ; free virtual = 32372
+Synthesis Optimization Complete : Time (s): cpu = 00:00:36 ; elapsed = 00:01:01 . Memory (MB): peak = 1630.156 ; gain = 460.129 ; free physical = 27450 ; free virtual = 32379
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 86 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+25 Infos, 36 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:37 ; elapsed = 00:01:03 . Memory (MB): peak = 1630.156 ; gain = 473.500 ; free physical = 27456 ; free virtual = 32364
+INFO: [Common 17-1381] The checkpoint '/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt03/Vivado_WORK/Tutorial/Tutorial_Project/HWP3/HWP3.runs/synth_1/ArmMemInterface.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file ArmMemInterface_utilization_synth.rpt -pb ArmMemInterface_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.23 . Memory (MB): peak = 1654.168 ; gain = 0.000 ; free physical = 27457 ; free virtual = 32366
+INFO: [Common 17-206] Exiting Vivado at Wed Jun  3 15:06:04 2020...
