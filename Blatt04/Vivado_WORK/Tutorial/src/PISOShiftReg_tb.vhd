@@ -1,19 +1,25 @@
 library ieee;
 use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use std.textio.all;
+
+library work;
+use work.TB_Tools.all;
 
 entity PISOShiftReg_tb is
 end PISOShiftReg_tb;
 
 architecture testbench of PISOShiftReg_tb is
-    constant test_width : integer :=   ; --STUDENT: SET TO ARBITRARY VALUE THAT FITS YOUR TESTDATA
+    constant test_width : integer :=  8; --STUDENT: SET TO ARBITRARY VALUE THAT FITS YOUR TESTDATA
 
-    signal tb_in       : std_logic_vector(test_width-1 downto 0);
+    signal tb_in       : std_logic_vector(test_width-1 downto 0) := "01011010";
     signal tb_out      : std_logic;
     signal tb_load     : std_logic;
     signal tb_last_bit : std_logic;
 
     signal clk : std_logic;
     signal ce  : std_logic;
+    signal counter: integer := 0;
 
     component PISOShiftReg
         generic ( WIDTH : integer);
@@ -60,16 +66,25 @@ architecture testbench of PISOShiftReg_tb is
 
     --STUDENT: INSERT TESTBENCH CODE HERE (SIGNAL ASSIGNMENTS ETC.)
     load_gen: process
-        tb_load <= '1';
+    begin
+	wait for 200 ns;
+	tb_load <= '1';
         wait for 10 ns;
         tb_load <= '0';
-        wait;
+        wait; 
     end process load_gen;
     
     test: process
-        wait 1 ns;
-        report "Output: " & D_OUT severity note;
-        wait 9 ns;
+    begin
+	if counter = 0 then
+		wait for 200 ns;
+	end if;
+        if counter <= test_width - 1 then
+		report "Check " & SL_TO_STRING(tb_out) severity note;
+		--report "Check " & SL_TO_STRING(tb_last_bit) severity note;
+		counter <= counter + 1;
+	end if;
+        wait for 10 ns;
     end process test;
         
 

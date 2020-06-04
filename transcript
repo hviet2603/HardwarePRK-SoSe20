@@ -8,21 +8,31 @@
 # //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
 # //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
 # //
-project open /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt03/Vivado_WORK/Tutorial/project3
-# Loading project project3
-vcom -work ./work/ ./src/ArmMemInterface.vhd
+project open /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt04/Vivado_WORK/Tutorial/project4
+# Loading project project4
+vcom -work ./work/ ./src/PISOShiftReg.vhd
 # QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
+# -- Compiling entity PISOShiftReg
+# -- Compiling architecture behavioral of PISOShiftReg
+vcom -work ./work/ ./src/PISOShiftReg_tb.vhd
+# QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
 # -- Loading package ArmTypes
 # -- Loading package ArmConfiguration
-# -- Compiling entity ArmMemInterface
-# -- Compiling architecture behave of ArmMemInterface
-# -- Loading entity ArmRAMB_4kx32
-vsim -voptargs=+acc work.armmeminterface_tb
-# vsim -voptargs=+acc work.armmeminterface_tb 
+# -- Loading package ArmFilePaths
+# -- Loading package TB_Tools
+# -- Compiling entity PISOShiftReg_tb
+# -- Compiling architecture testbench of PISOShiftReg_tb
+vsim -voptargs=+acc work.pisoshiftreg_tb
+# vsim -voptargs=+acc work.pisoshiftreg_tb 
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -32,1072 +42,39 @@ vsim -voptargs=+acc work.armmeminterface_tb
 # Loading work.armconfiguration
 # Loading work.armfilepaths(body)
 # Loading work.tb_tools(body)
-# Loading work.armmeminterface_tb(behave)
-# Loading work.armmeminterface(behave)
-# Loading ieee.math_real(body)
-# Loading work.armramb_4kx32(behavioral)
-# Loading work.armramb_4kx8(behavioral)
+# Loading work.pisoshiftreg_tb(testbench)
+# Loading work.pisoshiftreg(behavioral)
+# ** Warning: (vsim-8683) Uninitialized out port /pisoshiftreg_tb/uut/LAST_BIT has no driver.
+# This port will contribute value (U) to the signal network.
 run -all
-# ** Note: Start der Simulation...
-#    Time: 0 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Hinweis: Alle Instruktionsadressen sind 30 Bit breit, in der Waveform des Simulators erscheinen Wort-Adressen. Datenadressen sind 32 Bit breit, in der Waveform erscheinen Byte-Adressen!
-#    Time: 0 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 0 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Die Testfaelle 1 bis 7 testen mit regulaeren Zugriffsmustern die Grundfunktionalitaet des Speichers.
-#    Time: 1050 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Getestet wird das Schreiben zufaelliger Testdaten ueber den Datenbus in den Speicher.
-#    Time: 1050 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Anschliessend werden die Testdaten ueber beide Speicherbusse parallel gelesen und mit mit einem Referenzspeicher verglichen.
-#    Time: 1050 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 1050 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 1050 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Testcase 1: word (	Wortzugriffe			)
-#    Time: 1050 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 0 und Testcase word
-#    Time: 410920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 1 und Testcase word
-#    Time: 411120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 2 und Testcase word
-#    Time: 411320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 3 und Testcase word
-#    Time: 411520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 4 und Testcase word
-#    Time: 411720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 5 und Testcase word
-#    Time: 411920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 6 und Testcase word
-#    Time: 412120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 7 und Testcase word
-#    Time: 412320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 8 und Testcase word
-#    Time: 412520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 9 und Testcase word
-#    Time: 412720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 1230120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 0 und Testcase word
-#    Time: 1230120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	10110001011000101100101000000000
-#    Time: 1230120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 1230120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 1230120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 0 und Testcase word
-#    Time: 1230120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	10110001011000101100101000000000
-#    Time: 1230120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 1230120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 1230320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 1 und Testcase word
-#    Time: 1230320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	10100011011000101100010110010100
-#    Time: 1230320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 1230320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 1230320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 1 und Testcase word
-#    Time: 1230320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	10100011011000101100010110010100
-#    Time: 1230320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 1230320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 1230520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 2 und Testcase word
-#    Time: 1230520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	01001101010001101100010110001011
-#    Time: 1230520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 1230520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 1230520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 2 und Testcase word
-#    Time: 1230520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	01001101010001101100010110001011
-#    Time: 1230520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 1230520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 1230720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 3 und Testcase word
-#    Time: 1230720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	01110010100110101000110110001011
-#    Time: 1230720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 1230720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 1230720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 3 und Testcase word
-#    Time: 1230720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	01110010100110101000110110001011
-#    Time: 1230720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 1230720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 1230920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 4 und Testcase word
-#    Time: 1230920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	11100000111001010011010100011011
-#    Time: 1230920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 1230920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 1230920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 4 und Testcase word
-#    Time: 1230920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	11100000111001010011010100011011
-#    Time: 1230920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 1230920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 2049153333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Fehler nur waehrend des zweiten Lesedurchgangs aufgetreten. Moegliche Ursache: Write-Enablesignale werden bei Lesezugriffen nicht auf 0 gesetzt
-#    Time: 2049153333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 2049153333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: 10 ABORT-Fehler wurden detailliert aufgefuehrt, weitere nur protokolliert
-#    Time: 2049153333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: 10 Speicherzugriffsfehler wurden detailliert aufgefuehrt, weitere nur protokolliert
-#    Time: 2049153333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartete Abortsignale trotz gueltiger Zugriffsadressen sind aufgetreten in 8192 Faellen
-#    Time: 2049153333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Error: Fehler in Testcase 1
-#    Time: 2049153333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Fehler in Testcase 1
-#    Time: 2049153333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 2049153333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 2049153333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Testcase 2: hw_0 (	Zugriffe auf niederwertiges Halbwort	)
-#    Time: 2049153333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 0 und Testcase hw_0
-#    Time: 2459020 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 1 und Testcase hw_0
-#    Time: 2459220 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 2 und Testcase hw_0
-#    Time: 2459420 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 3 und Testcase hw_0
-#    Time: 2459620 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 4 und Testcase hw_0
-#    Time: 2459820 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 5 und Testcase hw_0
-#    Time: 2460020 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 6 und Testcase hw_0
-#    Time: 2460220 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 7 und Testcase hw_0
-#    Time: 2460420 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 8 und Testcase hw_0
-#    Time: 2460620 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 9 und Testcase hw_0
-#    Time: 2460820 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 3278220 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 0 und Testcase hw_0
-#    Time: 3278220 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZZZZZZZZZ1101101100101100
-#    Time: 3278220 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 3278220 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 3278220 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 0 und Testcase hw_0
-#    Time: 3278220 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZZZZZZZZZ1101101100101100
-#    Time: 3278220 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 3278220 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 3278420 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 1 und Testcase hw_0
-#    Time: 3278420 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZZZZZZZZZ1100011110110110
-#    Time: 3278420 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 3278420 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 3278420 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 1 und Testcase hw_0
-#    Time: 3278420 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZZZZZZZZZ1100011110110110
-#    Time: 3278420 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 3278420 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 3278620 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 2 und Testcase hw_0
-#    Time: 3278620 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZZZZZZZZZ0010011110001111
-#    Time: 3278620 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 3278620 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 3278620 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 2 und Testcase hw_0
-#    Time: 3278620 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZZZZZZZZZ0010011110001111
-#    Time: 3278620 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 3278620 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 3278820 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 3 und Testcase hw_0
-#    Time: 3278820 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZZZZZZZZZ1000101001001111
-#    Time: 3278820 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 3278820 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 3278820 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 3 und Testcase hw_0
-#    Time: 3278820 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZZZZZZZZZ1000101001001111
-#    Time: 3278820 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 3278820 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 3279020 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 4 und Testcase hw_0
-#    Time: 3279020 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZZZZZZZZZ0011011100010100
-#    Time: 3279020 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 3279020 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 3279020 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 4 und Testcase hw_0
-#    Time: 3279020 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZZZZZZZZZ0011011100010100
-#    Time: 3279020 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 3279020 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 4097253333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Fehler nur waehrend des zweiten Lesedurchgangs aufgetreten. Moegliche Ursache: Write-Enablesignale werden bei Lesezugriffen nicht auf 0 gesetzt
-#    Time: 4097253333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 4097253333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: 10 ABORT-Fehler wurden detailliert aufgefuehrt, weitere nur protokolliert
-#    Time: 4097253333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: 10 Speicherzugriffsfehler wurden detailliert aufgefuehrt, weitere nur protokolliert
-#    Time: 4097253333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartete Abortsignale trotz gueltiger Zugriffsadressen sind aufgetreten in 8192 Faellen
-#    Time: 4097253333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Error: Fehler in Testcase 2
-#    Time: 4097253333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Fehler in Testcase 2
-#    Time: 4097253333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 4097253333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 4097253333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Testcase 3: hw_1 (	Zugriffe auf das hochwertige Halbwort	)
-#    Time: 4097253333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 0 und Testcase hw_1
-#    Time: 4507120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 1 und Testcase hw_1
-#    Time: 4507320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 2 und Testcase hw_1
-#    Time: 4507520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 3 und Testcase hw_1
-#    Time: 4507720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 4 und Testcase hw_1
-#    Time: 4507920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 5 und Testcase hw_1
-#    Time: 4508120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 6 und Testcase hw_1
-#    Time: 4508320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 7 und Testcase hw_1
-#    Time: 4508520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 8 und Testcase hw_1
-#    Time: 4508720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 9 und Testcase hw_1
-#    Time: 4508920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 5326320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 0 und Testcase hw_1
-#    Time: 5326320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	0000110100001011ZZZZZZZZZZZZZZZZ
-#    Time: 5326320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 5326320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 5326320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 0 und Testcase hw_1
-#    Time: 5326320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	0000110100001011ZZZZZZZZZZZZZZZZ
-#    Time: 5326320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 5326320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 5326520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 1 und Testcase hw_1
-#    Time: 5326520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	1110111000011010ZZZZZZZZZZZZZZZZ
-#    Time: 5326520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 5326520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 5326520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 1 und Testcase hw_1
-#    Time: 5326520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	1110111000011010ZZZZZZZZZZZZZZZZ
-#    Time: 5326520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 5326520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 5326720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 2 und Testcase hw_1
-#    Time: 5326720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	1101011111011100ZZZZZZZZZZZZZZZZ
-#    Time: 5326720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 5326720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 5326720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 2 und Testcase hw_1
-#    Time: 5326720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	1101011111011100ZZZZZZZZZZZZZZZZ
-#    Time: 5326720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 5326720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 5326920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 3 und Testcase hw_1
-#    Time: 5326920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	1000001110101111ZZZZZZZZZZZZZZZZ
-#    Time: 5326920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 5326920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 5326920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 3 und Testcase hw_1
-#    Time: 5326920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	1000001110101111ZZZZZZZZZZZZZZZZ
-#    Time: 5326920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 5326920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 5327120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 4 und Testcase hw_1
-#    Time: 5327120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	1000001100000111ZZZZZZZZZZZZZZZZ
-#    Time: 5327120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 5327120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 5327120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 4 und Testcase hw_1
-#    Time: 5327120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	1000001100000111ZZZZZZZZZZZZZZZZ
-#    Time: 5327120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 5327120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 6145353333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Fehler nur waehrend des zweiten Lesedurchgangs aufgetreten. Moegliche Ursache: Write-Enablesignale werden bei Lesezugriffen nicht auf 0 gesetzt
-#    Time: 6145353333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 6145353333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: 10 ABORT-Fehler wurden detailliert aufgefuehrt, weitere nur protokolliert
-#    Time: 6145353333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: 10 Speicherzugriffsfehler wurden detailliert aufgefuehrt, weitere nur protokolliert
-#    Time: 6145353333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartete Abortsignale trotz gueltiger Zugriffsadressen sind aufgetreten in 8192 Faellen
-#    Time: 6145353333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Error: Fehler in Testcase 3
-#    Time: 6145353333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Fehler in Testcase 3
-#    Time: 6145353333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 6145353333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 6145353333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Testcase 4: byte_0 (	Zugriffe auf das niederwertigste Byte	)
-#    Time: 6145353333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 0 und Testcase byte_0
-#    Time: 6555220 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 1 und Testcase byte_0
-#    Time: 6555420 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 2 und Testcase byte_0
-#    Time: 6555620 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 3 und Testcase byte_0
-#    Time: 6555820 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 4 und Testcase byte_0
-#    Time: 6556020 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 5 und Testcase byte_0
-#    Time: 6556220 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 6 und Testcase byte_0
-#    Time: 6556420 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 7 und Testcase byte_0
-#    Time: 6556620 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 8 und Testcase byte_0
-#    Time: 6556820 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 9 und Testcase byte_0
-#    Time: 6557020 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 7374420 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 0 und Testcase byte_0
-#    Time: 7374420 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZ01000100
-#    Time: 7374420 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 7374420 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 7374420 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 0 und Testcase byte_0
-#    Time: 7374420 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZ01000100
-#    Time: 7374420 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 7374420 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 7374620 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 1 und Testcase byte_0
-#    Time: 7374620 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZ10000100
-#    Time: 7374620 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 7374620 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 7374620 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 1 und Testcase byte_0
-#    Time: 7374620 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZ10000100
-#    Time: 7374620 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 7374620 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 7374820 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 2 und Testcase byte_0
-#    Time: 7374820 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZ00010011
-#    Time: 7374820 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 7374820 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 7374820 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 2 und Testcase byte_0
-#    Time: 7374820 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZ00010011
-#    Time: 7374820 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 7374820 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 7375020 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 3 und Testcase byte_0
-#    Time: 7375020 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZ10110010
-#    Time: 7375020 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 7375020 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 7375020 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 3 und Testcase byte_0
-#    Time: 7375020 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZ10110010
-#    Time: 7375020 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 7375020 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 7375220 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 4 und Testcase byte_0
-#    Time: 7375220 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZ00100001
-#    Time: 7375220 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 7375220 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 7375220 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 4 und Testcase byte_0
-#    Time: 7375220 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZ00100001
-#    Time: 7375220 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 7375220 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 8193453333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Fehler nur waehrend des zweiten Lesedurchgangs aufgetreten. Moegliche Ursache: Write-Enablesignale werden bei Lesezugriffen nicht auf 0 gesetzt
-#    Time: 8193453333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 8193453333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: 10 ABORT-Fehler wurden detailliert aufgefuehrt, weitere nur protokolliert
-#    Time: 8193453333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: 10 Speicherzugriffsfehler wurden detailliert aufgefuehrt, weitere nur protokolliert
-#    Time: 8193453333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartete Abortsignale trotz gueltiger Zugriffsadressen sind aufgetreten in 8192 Faellen
-#    Time: 8193453333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Error: Fehler in Testcase 4
-#    Time: 8193453333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Fehler in Testcase 4
-#    Time: 8193453333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 8193453333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 8193453333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Testcase 5: byte_1 (	Zugriffe auf das zweite Byte		)
-#    Time: 8193453333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 0 und Testcase byte_1
-#    Time: 8603320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 1 und Testcase byte_1
-#    Time: 8603520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 2 und Testcase byte_1
-#    Time: 8603720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 3 und Testcase byte_1
-#    Time: 8603920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 4 und Testcase byte_1
-#    Time: 8604120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 5 und Testcase byte_1
-#    Time: 8604320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 6 und Testcase byte_1
-#    Time: 8604520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 7 und Testcase byte_1
-#    Time: 8604720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 8 und Testcase byte_1
-#    Time: 8604920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 9 und Testcase byte_1
-#    Time: 8605120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 9422520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 0 und Testcase byte_1
-#    Time: 9422520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZZZZZZZZZ00000101ZZZZZZZZ
-#    Time: 9422520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 9422520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 9422520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 0 und Testcase byte_1
-#    Time: 9422520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZZZZZZZZZ00000101ZZZZZZZZ
-#    Time: 9422520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 9422520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 9422720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 1 und Testcase byte_1
-#    Time: 9422720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZZZZZZZZZ11000010ZZZZZZZZ
-#    Time: 9422720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 9422720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 9422720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 1 und Testcase byte_1
-#    Time: 9422720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZZZZZZZZZ11000010ZZZZZZZZ
-#    Time: 9422720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 9422720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 9422920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 2 und Testcase byte_1
-#    Time: 9422920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZZZZZZZZZ01110011ZZZZZZZZ
-#    Time: 9422920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 9422920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 9422920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 2 und Testcase byte_1
-#    Time: 9422920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZZZZZZZZZ01110011ZZZZZZZZ
-#    Time: 9422920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 9422920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 9423120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 3 und Testcase byte_1
-#    Time: 9423120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZZZZZZZZZ10110010ZZZZZZZZ
-#    Time: 9423120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 9423120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 9423120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 3 und Testcase byte_1
-#    Time: 9423120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZZZZZZZZZ10110010ZZZZZZZZ
-#    Time: 9423120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 9423120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 9423320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 4 und Testcase byte_1
-#    Time: 9423320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZZZZZZZZZ11110011ZZZZZZZZ
-#    Time: 9423320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 9423320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 9423320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 4 und Testcase byte_1
-#    Time: 9423320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZZZZZZZZZ11110011ZZZZZZZZ
-#    Time: 9423320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 9423320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 10241553333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Fehler nur waehrend des zweiten Lesedurchgangs aufgetreten. Moegliche Ursache: Write-Enablesignale werden bei Lesezugriffen nicht auf 0 gesetzt
-#    Time: 10241553333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 10241553333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: 10 ABORT-Fehler wurden detailliert aufgefuehrt, weitere nur protokolliert
-#    Time: 10241553333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: 10 Speicherzugriffsfehler wurden detailliert aufgefuehrt, weitere nur protokolliert
-#    Time: 10241553333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartete Abortsignale trotz gueltiger Zugriffsadressen sind aufgetreten in 8192 Faellen
-#    Time: 10241553333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Error: Fehler in Testcase 5
-#    Time: 10241553333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Fehler in Testcase 5
-#    Time: 10241553333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 10241553333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 10241553333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Testcase 6: byte_2 (	Zugriffe auf das dritte Byte		)
-#    Time: 10241553333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 0 und Testcase byte_2
-#    Time: 10651420 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 1 und Testcase byte_2
-#    Time: 10651620 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 2 und Testcase byte_2
-#    Time: 10651820 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 3 und Testcase byte_2
-#    Time: 10652020 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 4 und Testcase byte_2
-#    Time: 10652220 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 5 und Testcase byte_2
-#    Time: 10652420 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 6 und Testcase byte_2
-#    Time: 10652620 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 7 und Testcase byte_2
-#    Time: 10652820 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 8 und Testcase byte_2
-#    Time: 10653020 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 9 und Testcase byte_2
-#    Time: 10653220 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 11470620 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 0 und Testcase byte_2
-#    Time: 11470620 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZ10111000ZZZZZZZZZZZZZZZZ
-#    Time: 11470620 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 11470620 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 11470620 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 0 und Testcase byte_2
-#    Time: 11470620 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZ10111000ZZZZZZZZZZZZZZZZ
-#    Time: 11470620 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 11470620 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 11470820 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 1 und Testcase byte_2
-#    Time: 11470820 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZ01000011ZZZZZZZZZZZZZZZZ
-#    Time: 11470820 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 11470820 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 11470820 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 1 und Testcase byte_2
-#    Time: 11470820 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZ01000011ZZZZZZZZZZZZZZZZ
-#    Time: 11470820 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 11470820 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 11471020 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 2 und Testcase byte_2
-#    Time: 11471020 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZ11111100ZZZZZZZZZZZZZZZZ
-#    Time: 11471020 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 11471020 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 11471020 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 2 und Testcase byte_2
-#    Time: 11471020 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZ11111100ZZZZZZZZZZZZZZZZ
-#    Time: 11471020 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 11471020 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 11471220 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 3 und Testcase byte_2
-#    Time: 11471220 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZ10001111ZZZZZZZZZZZZZZZZ
-#    Time: 11471220 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 11471220 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 11471220 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 3 und Testcase byte_2
-#    Time: 11471220 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZ10001111ZZZZZZZZZZZZZZZZ
-#    Time: 11471220 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 11471220 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 11471420 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 4 und Testcase byte_2
-#    Time: 11471420 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZ01000101ZZZZZZZZZZZZZZZZ
-#    Time: 11471420 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 11471420 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 11471420 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 4 und Testcase byte_2
-#    Time: 11471420 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZ01000101ZZZZZZZZZZZZZZZZ
-#    Time: 11471420 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 11471420 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 12289653333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Fehler nur waehrend des zweiten Lesedurchgangs aufgetreten. Moegliche Ursache: Write-Enablesignale werden bei Lesezugriffen nicht auf 0 gesetzt
-#    Time: 12289653333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 12289653333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: 10 ABORT-Fehler wurden detailliert aufgefuehrt, weitere nur protokolliert
-#    Time: 12289653333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: 10 Speicherzugriffsfehler wurden detailliert aufgefuehrt, weitere nur protokolliert
-#    Time: 12289653333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartete Abortsignale trotz gueltiger Zugriffsadressen sind aufgetreten in 8192 Faellen
-#    Time: 12289653333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Error: Fehler in Testcase 6
-#    Time: 12289653333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Fehler in Testcase 6
-#    Time: 12289653333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 12289653333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 12289653333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Testcase 7: byte_3 (	Zugriffe auf das am hoechsten wertige Byte	)
-#    Time: 12289653333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 0 und Testcase byte_3
-#    Time: 12699520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 1 und Testcase byte_3
-#    Time: 12699720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 2 und Testcase byte_3
-#    Time: 12699920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 3 und Testcase byte_3
-#    Time: 12700120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 4 und Testcase byte_3
-#    Time: 12700320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 5 und Testcase byte_3
-#    Time: 12700520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 6 und Testcase byte_3
-#    Time: 12700720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 7 und Testcase byte_3
-#    Time: 12700920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 8 und Testcase byte_3
-#    Time: 12701120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei ueberpruefendem Lesezugriff an Adresse 9 und Testcase byte_3
-#    Time: 12701320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 13518720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 0 und Testcase byte_3
-#    Time: 13518720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	01101110ZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 13518720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 13518720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 13518720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 0 und Testcase byte_3
-#    Time: 13518720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	01101110ZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 13518720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 13518720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 13518920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 1 und Testcase byte_3
-#    Time: 13518920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	01000100ZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 13518920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 13518920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 13518920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 1 und Testcase byte_3
-#    Time: 13518920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	01000100ZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 13518920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 13518920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 13519120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 2 und Testcase byte_3
-#    Time: 13519120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	01011100ZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 13519120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 13519120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 13519120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 2 und Testcase byte_3
-#    Time: 13519120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	01011100ZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 13519120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 13519120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 13519320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 3 und Testcase byte_3
-#    Time: 13519320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	10011100ZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 13519320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 13519320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 13519320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 3 und Testcase byte_3
-#    Time: 13519320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	10011100ZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 13519320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 13519320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 13519520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 4 und Testcase byte_3
-#    Time: 13519520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	10011101ZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 13519520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 13519520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 13519520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 4 und Testcase byte_3
-#    Time: 13519520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	10011101ZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 13519520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 13519520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 14337753333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Fehler nur waehrend des zweiten Lesedurchgangs aufgetreten. Moegliche Ursache: Write-Enablesignale werden bei Lesezugriffen nicht auf 0 gesetzt
-#    Time: 14337753333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 14337753333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: 10 ABORT-Fehler wurden detailliert aufgefuehrt, weitere nur protokolliert
-#    Time: 14337753333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: 10 Speicherzugriffsfehler wurden detailliert aufgefuehrt, weitere nur protokolliert
-#    Time: 14337753333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartete Abortsignale trotz gueltiger Zugriffsadressen sind aufgetreten in 8192 Faellen
-#    Time: 14337753333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Error: Fehler in Testcase 7
-#    Time: 14337753333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Fehler in Testcase 7
-#    Time: 14337753333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 14337753333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 14337753333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Testcase : 8: Lesen des gesamten Speichers mit Wortzugriffen mit unterschiedlichen Adressen auf beiden Ports.
-#    Time: 14337753333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Die Adressen werden gerade gegenlaeufig fuer beide Ports veraendert
-#    Time: 14337753333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei Zugriff auf Adresse 16383
-#    Time: 14337925 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei Zugriff auf Adresse 16379
-#    Time: 14338025 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei Zugriff auf Adresse 16375
-#    Time: 14338125 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei Zugriff auf Adresse 16371
-#    Time: 14338225 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei Zugriff auf Adresse 16367
-#    Time: 14338325 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei Zugriff auf Adresse 16363
-#    Time: 14338425 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei Zugriff auf Adresse 16359
-#    Time: 14338525 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei Zugriff auf Adresse 16355
-#    Time: 14338625 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartetes IABORT bei Zugriff auf Adresse 16351
-#    Time: 14338725 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Unerwartete Abortsignale trotz gueltiger Zugriffsadressen sind aufgetreten in 4096 Faellen
-#    Time: 14747425 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Testcase 8 korrekt.
-#    Time: 14747425 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 14747425 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 14747425 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Testcase : 9: Gleichzeitig lesender und schreibender Zugriff auf die gleiche Speicheradresse ueber beide Ports.
-#    Time: 14747425 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Im Takt, in dem das neue Datum geschrieben wird, ist noch das alte Datum am Ausgang des Speichers sichtbar (write-after-read)
-#    Time: 14747425 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Error: 'X' in ID oder DDOUT erkannt. Weitere Fehler dieser Art werden protokolliert aber nicht gemeldet.
-#    Time: 14747600 ns  Iteration: 4  Instance: /armmeminterface_tb
-# ** Note: Testcase 9 korrekt.
-#    Time: 14747625 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 14747625 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 14747625 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Testcase 10: Schreiben in die jeweils unterste Zelle jeder Speicherzeile (Adressen 0 und 2048) bei deaktiviertem ENABLE-Signal mit allen moeglichen Zugriffsarten (Wort, Halbwort_0, ...)
-#    Time: 14747660 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Die Schreibzugriffe duerfen keine Wirkung haben.
-#    Time: 14747660 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Error: 'X' in ID oder DDOUT erkannt. Weitere Fehler dieser Art werden protokolliert aber nicht gemeldet.
-#    Time: 14747660 ns  Iteration: 2  Instance: /armmeminterface_tb
-# ** Note: Testcase 10 korrekt.
-#    Time: 14753260 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 14753260 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 14753260 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Testcase 11: Instruktionsseitiges Lesen an Adressen ausserhalb des Instruktionsspeicherbereichs.
-#    Time: 14753260 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Getestet werden die Adressen 16384 und 2**31, IABORT muss den Zugriffsfehler anzeigen.
-#    Time: 14753260 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: IABORT trotz gueltiger Adresse ausgeloest.
-#    Time: 14753560 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Error: Fehler in Testcase 11
-#    Time: 14753760 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Fehler in Testcase 11
-#    Time: 14753760 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 14753760 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 14753760 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Testcase 12: Test auf Tristate an ID, DDOUT, IABORT und DABORT fuer DDE = 0, IDE = 0
-#    Time: 14753760 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: ID nicht im Tristate
-#    Time: 14753975 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: DDOUT nicht im Tristate
-#    Time: 14753975 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Error: Fehler in Testcase 12
-#    Time: 14754010 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Fehler in Testcase 12
-#    Time: 14754010 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 14754010 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 14754010 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Testcase 13: Test auf Tristate an DDOUT fuer (DDE = 1 und DnRW = 1), zeitgleich IDE = 0
-#    Time: 14754010 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: ID nicht im Tristate
-#    Time: 14754175 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: DDOUT nicht im Tristate
-#    Time: 14754175 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Error: Fehler in Testcase 13
-#    Time: 14754210 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Fehler in Testcase 13
-#    Time: 14754210 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 14754210 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 14754210 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Testcase 14: Test auf Erkennung unausgerichteter Daten.
-#    Time: 14754210 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Ein Zugriffsversuch auf nicht ausgerichtete Daten wird durch DABORT angezeigt, das Datum an der abgerundeten Wortadresse muss dennoch gelesen werden.
-#    Time: 14754210 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Testcase 14 korrekt.
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: ...Simulation beendet
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Fehler in Testcases:
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Testcase 1: 	Wortzugriffe			: 8192
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Testcase 2: 	Zugriffe auf niederwertiges Halbwort	: 8192
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Testcase 3: 	Zugriffe auf das hochwertige Halbwort	: 8192
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Testcase 4: 	Zugriffe auf das niederwertigste Byte	: 8192
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Testcase 5: 	Zugriffe auf das zweite Byte		: 8192
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Testcase 6: 	Zugriffe auf das dritte Byte		: 8192
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Testcase 7: 	Zugriffe auf das am hoechsten wertige Byte	: 8192
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Testcase 8: 	Lesen des vollstaendigen Speichers, unterschiedliche Adressen an beiden Ports: 0
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Testcase 9: 	Test des write-after-read-Verhaltens	: 0
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Testcase 10: 	Schreibzugriffe bei deaktiviertem Enable-Signal	: 0
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Testcase 11: 	Test auf Ueberpruefung der Instruktionsadresse durch die Speicherschnittstelle: 1
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Testcase 12: 	Test auf Tristate aller Ausgaenge bei deaktivierten Enablesignalen und Schreibzugriff: 2
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Testcase 13: 	Test auf Tristate des Datenausgangs bei Schreibzugriff auf Datenschnittstelle: 2
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Testcase 14: 	Test auf Misalignementerkennung			: 0
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Testcase 15: 	Anzahl fehlerhafter Abortsignale waehrend der Tests	: 61440
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: erzielte Punkte:
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Basisfunktionalitaet (Testcases 1 bis 10): 		0/3
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Auswertung der Instruktionsadresse (Testcase 11): 	0/1
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erkennung fehlerhafter Datenausrichtung (Testcase 14): 	1/1
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Test auf Tristateausgaenge (Testcases 12,13): 		0/1
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Punktabzug wegen unerwarteter ABORT-Signale waehrend regulaerer Tests:	1
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Punktabzug wegen 'X' in ID oder DDOUT:		1
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Gesamtpunktzahl: 					0/6
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Error: Funktionstest nicht bestanden
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Funktionstest nicht bestanden
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Failure:  EOT (END OF TEST) - Diese Fehlermeldung stoppt den Simulator unabhaengig von tatsaechlich aufgetretenen Fehlern!
-#    Time: 14754775 ns  Iteration: 0  Process: /armmeminterface_tb/tb File: ./src/ArmMemInterface_tb.vhd
-# Break in Process tb at ./src/ArmMemInterface_tb.vhd line 844
-vcom -work ./work/ ./src/ArmMemInterface.vhd
+# ** Note: Check U
+#    Time: 0 ps  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Check U
+#    Time: 10 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Check U
+#    Time: 20 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Check U
+#    Time: 30 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Check U
+#    Time: 40 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Check U
+#    Time: 50 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Check U
+#    Time: 60 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Check U
+#    Time: 70 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# Break key hit 
+# Break in Process clk_gen at ./src/PISOShiftReg_tb.vhd line 42
+vcom -work ./work/ ./src/PISOShiftReg.vhd
 # QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
-# -- Loading package ArmTypes
-# -- Loading package ArmConfiguration
-# -- Compiling entity ArmMemInterface
-# -- Compiling architecture behave of ArmMemInterface
-# -- Loading entity ArmRAMB_4kx32
-vsim -voptargs=+acc work.armmeminterface_tb
-# vsim -voptargs=+acc work.armmeminterface_tb 
+# -- Compiling entity PISOShiftReg
+# -- Compiling architecture behavioral of PISOShiftReg
+vsim -voptargs=+acc work.pisoshiftreg_tb
+# vsim -voptargs=+acc work.pisoshiftreg_tb 
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -1107,864 +84,143 @@ vsim -voptargs=+acc work.armmeminterface_tb
 # Loading work.armconfiguration
 # Loading work.armfilepaths(body)
 # Loading work.tb_tools(body)
-# Loading work.armmeminterface_tb(behave)
-# Loading work.armmeminterface(behave)
-# Loading ieee.math_real(body)
-# Loading work.armramb_4kx32(behavioral)
-# Loading work.armramb_4kx8(behavioral)
+# Loading work.pisoshiftreg_tb(testbench)
+# Loading work.pisoshiftreg(behavioral)
+# ** Warning: (vsim-8683) Uninitialized out port /pisoshiftreg_tb/uut/LAST_BIT has no driver.
+# This port will contribute value (U) to the signal network.
+vcom -work ./work/ ./src/PISOShiftReg_tb.vhd
+# QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package ArmTypes
+# -- Loading package ArmConfiguration
+# -- Loading package ArmFilePaths
+# -- Loading package TB_Tools
+# -- Compiling entity PISOShiftReg_tb
+# -- Compiling architecture testbench of PISOShiftReg_tb
+vsim -voptargs=+acc work.pisoshiftreg_tb
+# vsim -voptargs=+acc work.pisoshiftreg_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.armtypes(body)
+# Loading work.armconfiguration
+# Loading work.armfilepaths(body)
+# Loading work.tb_tools(body)
+# Loading work.pisoshiftreg_tb(testbench)
+# Loading work.pisoshiftreg(behavioral)
+# ** Warning: (vsim-8683) Uninitialized out port /pisoshiftreg_tb/uut/LAST_BIT has no driver.
+# This port will contribute value (U) to the signal network.
 run -all
-# ** Note: Start der Simulation...
-#    Time: 0 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Hinweis: Alle Instruktionsadressen sind 30 Bit breit, in der Waveform des Simulators erscheinen Wort-Adressen. Datenadressen sind 32 Bit breit, in der Waveform erscheinen Byte-Adressen!
-#    Time: 0 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 0 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Die Testfaelle 1 bis 7 testen mit regulaeren Zugriffsmustern die Grundfunktionalitaet des Speichers.
-#    Time: 1050 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Getestet wird das Schreiben zufaelliger Testdaten ueber den Datenbus in den Speicher.
-#    Time: 1050 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Anschliessend werden die Testdaten ueber beide Speicherbusse parallel gelesen und mit mit einem Referenzspeicher verglichen.
-#    Time: 1050 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 1050 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 1050 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Testcase 1: word (	Wortzugriffe			)
-#    Time: 1050 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 1230120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 0 und Testcase word
-#    Time: 1230120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	10110001011000101100101000000000
-#    Time: 1230120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 1230120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 1230120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 0 und Testcase word
-#    Time: 1230120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	10110001011000101100101000000000
-#    Time: 1230120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 1230120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 1230320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 1 und Testcase word
-#    Time: 1230320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	10100011011000101100010110010100
-#    Time: 1230320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 1230320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 1230320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 1 und Testcase word
-#    Time: 1230320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	10100011011000101100010110010100
-#    Time: 1230320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 1230320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 1230520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 2 und Testcase word
-#    Time: 1230520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	01001101010001101100010110001011
-#    Time: 1230520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 1230520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 1230520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 2 und Testcase word
-#    Time: 1230520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	01001101010001101100010110001011
-#    Time: 1230520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 1230520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 1230720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 3 und Testcase word
-#    Time: 1230720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	01110010100110101000110110001011
-#    Time: 1230720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 1230720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 1230720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 3 und Testcase word
-#    Time: 1230720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	01110010100110101000110110001011
-#    Time: 1230720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 1230720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 1230920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 4 und Testcase word
-#    Time: 1230920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	11100000111001010011010100011011
-#    Time: 1230920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 1230920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 1230920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 4 und Testcase word
-#    Time: 1230920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	11100000111001010011010100011011
-#    Time: 1230920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 1230920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 2049153333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Fehler nur waehrend des zweiten Lesedurchgangs aufgetreten. Moegliche Ursache: Write-Enablesignale werden bei Lesezugriffen nicht auf 0 gesetzt
-#    Time: 2049153333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 2049153333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: 10 Speicherzugriffsfehler wurden detailliert aufgefuehrt, weitere nur protokolliert
-#    Time: 2049153333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Error: Fehler in Testcase 1
-#    Time: 2049153333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Fehler in Testcase 1
-#    Time: 2049153333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 2049153333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 2049153333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Testcase 2: hw_0 (	Zugriffe auf niederwertiges Halbwort	)
-#    Time: 2049153333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 3278220 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 0 und Testcase hw_0
-#    Time: 3278220 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZZZZZZZZZ1101101100101100
-#    Time: 3278220 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 3278220 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 3278220 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 0 und Testcase hw_0
-#    Time: 3278220 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZZZZZZZZZ1101101100101100
-#    Time: 3278220 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 3278220 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 3278420 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 1 und Testcase hw_0
-#    Time: 3278420 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZZZZZZZZZ1100011110110110
-#    Time: 3278420 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 3278420 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 3278420 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 1 und Testcase hw_0
-#    Time: 3278420 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZZZZZZZZZ1100011110110110
-#    Time: 3278420 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 3278420 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 3278620 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 2 und Testcase hw_0
-#    Time: 3278620 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZZZZZZZZZ0010011110001111
-#    Time: 3278620 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 3278620 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 3278620 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 2 und Testcase hw_0
-#    Time: 3278620 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZZZZZZZZZ0010011110001111
-#    Time: 3278620 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 3278620 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 3278820 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 3 und Testcase hw_0
-#    Time: 3278820 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZZZZZZZZZ1000101001001111
-#    Time: 3278820 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 3278820 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 3278820 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 3 und Testcase hw_0
-#    Time: 3278820 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZZZZZZZZZ1000101001001111
-#    Time: 3278820 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 3278820 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 3279020 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 4 und Testcase hw_0
-#    Time: 3279020 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZZZZZZZZZ0011011100010100
-#    Time: 3279020 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 3279020 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 3279020 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 4 und Testcase hw_0
-#    Time: 3279020 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZZZZZZZZZ0011011100010100
-#    Time: 3279020 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 3279020 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 4097253333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Fehler nur waehrend des zweiten Lesedurchgangs aufgetreten. Moegliche Ursache: Write-Enablesignale werden bei Lesezugriffen nicht auf 0 gesetzt
-#    Time: 4097253333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 4097253333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: 10 Speicherzugriffsfehler wurden detailliert aufgefuehrt, weitere nur protokolliert
-#    Time: 4097253333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Error: Fehler in Testcase 2
-#    Time: 4097253333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Fehler in Testcase 2
-#    Time: 4097253333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 4097253333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 4097253333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Testcase 3: hw_1 (	Zugriffe auf das hochwertige Halbwort	)
-#    Time: 4097253333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 5326320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 0 und Testcase hw_1
-#    Time: 5326320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	0000110100001011ZZZZZZZZZZZZZZZZ
-#    Time: 5326320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 5326320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 5326320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 0 und Testcase hw_1
-#    Time: 5326320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	0000110100001011ZZZZZZZZZZZZZZZZ
-#    Time: 5326320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 5326320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 5326520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 1 und Testcase hw_1
-#    Time: 5326520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	1110111000011010ZZZZZZZZZZZZZZZZ
-#    Time: 5326520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 5326520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 5326520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 1 und Testcase hw_1
-#    Time: 5326520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	1110111000011010ZZZZZZZZZZZZZZZZ
-#    Time: 5326520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 5326520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 5326720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 2 und Testcase hw_1
-#    Time: 5326720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	1101011111011100ZZZZZZZZZZZZZZZZ
-#    Time: 5326720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 5326720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 5326720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 2 und Testcase hw_1
-#    Time: 5326720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	1101011111011100ZZZZZZZZZZZZZZZZ
-#    Time: 5326720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 5326720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 5326920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 3 und Testcase hw_1
-#    Time: 5326920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	1000001110101111ZZZZZZZZZZZZZZZZ
-#    Time: 5326920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 5326920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 5326920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 3 und Testcase hw_1
-#    Time: 5326920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	1000001110101111ZZZZZZZZZZZZZZZZ
-#    Time: 5326920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 5326920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 5327120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 4 und Testcase hw_1
-#    Time: 5327120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	1000001100000111ZZZZZZZZZZZZZZZZ
-#    Time: 5327120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 5327120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 5327120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 4 und Testcase hw_1
-#    Time: 5327120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	1000001100000111ZZZZZZZZZZZZZZZZ
-#    Time: 5327120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 5327120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 6145353333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Fehler nur waehrend des zweiten Lesedurchgangs aufgetreten. Moegliche Ursache: Write-Enablesignale werden bei Lesezugriffen nicht auf 0 gesetzt
-#    Time: 6145353333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 6145353333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: 10 Speicherzugriffsfehler wurden detailliert aufgefuehrt, weitere nur protokolliert
-#    Time: 6145353333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Error: Fehler in Testcase 3
-#    Time: 6145353333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Fehler in Testcase 3
-#    Time: 6145353333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 6145353333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 6145353333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Testcase 4: byte_0 (	Zugriffe auf das niederwertigste Byte	)
-#    Time: 6145353333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 7374420 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 0 und Testcase byte_0
-#    Time: 7374420 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZ01000100
-#    Time: 7374420 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 7374420 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 7374420 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 0 und Testcase byte_0
-#    Time: 7374420 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZ01000100
-#    Time: 7374420 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 7374420 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 7374620 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 1 und Testcase byte_0
-#    Time: 7374620 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZ10000100
-#    Time: 7374620 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 7374620 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 7374620 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 1 und Testcase byte_0
-#    Time: 7374620 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZ10000100
-#    Time: 7374620 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 7374620 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 7374820 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 2 und Testcase byte_0
-#    Time: 7374820 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZ00010011
-#    Time: 7374820 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 7374820 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 7374820 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 2 und Testcase byte_0
-#    Time: 7374820 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZ00010011
-#    Time: 7374820 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 7374820 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 7375020 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 3 und Testcase byte_0
-#    Time: 7375020 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZ10110010
-#    Time: 7375020 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 7375020 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 7375020 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 3 und Testcase byte_0
-#    Time: 7375020 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZ10110010
-#    Time: 7375020 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 7375020 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 7375220 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 4 und Testcase byte_0
-#    Time: 7375220 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZ00100001
-#    Time: 7375220 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 7375220 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 7375220 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 4 und Testcase byte_0
-#    Time: 7375220 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZ00100001
-#    Time: 7375220 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 7375220 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 8193453333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Fehler nur waehrend des zweiten Lesedurchgangs aufgetreten. Moegliche Ursache: Write-Enablesignale werden bei Lesezugriffen nicht auf 0 gesetzt
-#    Time: 8193453333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 8193453333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: 10 Speicherzugriffsfehler wurden detailliert aufgefuehrt, weitere nur protokolliert
-#    Time: 8193453333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Error: Fehler in Testcase 4
-#    Time: 8193453333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Fehler in Testcase 4
-#    Time: 8193453333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 8193453333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 8193453333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Testcase 5: byte_1 (	Zugriffe auf das zweite Byte		)
-#    Time: 8193453333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 9422520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 0 und Testcase byte_1
-#    Time: 9422520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZZZZZZZZZ00000101ZZZZZZZZ
-#    Time: 9422520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 9422520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 9422520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 0 und Testcase byte_1
-#    Time: 9422520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZZZZZZZZZ00000101ZZZZZZZZ
-#    Time: 9422520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 9422520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 9422720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 1 und Testcase byte_1
-#    Time: 9422720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZZZZZZZZZ11000010ZZZZZZZZ
-#    Time: 9422720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 9422720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 9422720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 1 und Testcase byte_1
-#    Time: 9422720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZZZZZZZZZ11000010ZZZZZZZZ
-#    Time: 9422720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 9422720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 9422920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 2 und Testcase byte_1
-#    Time: 9422920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZZZZZZZZZ01110011ZZZZZZZZ
-#    Time: 9422920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 9422920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 9422920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 2 und Testcase byte_1
-#    Time: 9422920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZZZZZZZZZ01110011ZZZZZZZZ
-#    Time: 9422920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 9422920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 9423120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 3 und Testcase byte_1
-#    Time: 9423120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZZZZZZZZZ10110010ZZZZZZZZ
-#    Time: 9423120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 9423120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 9423120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 3 und Testcase byte_1
-#    Time: 9423120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZZZZZZZZZ10110010ZZZZZZZZ
-#    Time: 9423120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 9423120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 9423320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 4 und Testcase byte_1
-#    Time: 9423320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZZZZZZZZZ11110011ZZZZZZZZ
-#    Time: 9423320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 9423320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 9423320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 4 und Testcase byte_1
-#    Time: 9423320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZZZZZZZZZ11110011ZZZZZZZZ
-#    Time: 9423320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 9423320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 10241553333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Fehler nur waehrend des zweiten Lesedurchgangs aufgetreten. Moegliche Ursache: Write-Enablesignale werden bei Lesezugriffen nicht auf 0 gesetzt
-#    Time: 10241553333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 10241553333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: 10 Speicherzugriffsfehler wurden detailliert aufgefuehrt, weitere nur protokolliert
-#    Time: 10241553333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Error: Fehler in Testcase 5
-#    Time: 10241553333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Fehler in Testcase 5
-#    Time: 10241553333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 10241553333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 10241553333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Testcase 6: byte_2 (	Zugriffe auf das dritte Byte		)
-#    Time: 10241553333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 11470620 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 0 und Testcase byte_2
-#    Time: 11470620 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZ10111000ZZZZZZZZZZZZZZZZ
-#    Time: 11470620 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 11470620 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 11470620 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 0 und Testcase byte_2
-#    Time: 11470620 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZ10111000ZZZZZZZZZZZZZZZZ
-#    Time: 11470620 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 11470620 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 11470820 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 1 und Testcase byte_2
-#    Time: 11470820 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZ01000011ZZZZZZZZZZZZZZZZ
-#    Time: 11470820 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 11470820 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 11470820 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 1 und Testcase byte_2
-#    Time: 11470820 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZ01000011ZZZZZZZZZZZZZZZZ
-#    Time: 11470820 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 11470820 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 11471020 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 2 und Testcase byte_2
-#    Time: 11471020 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZ11111100ZZZZZZZZZZZZZZZZ
-#    Time: 11471020 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 11471020 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 11471020 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 2 und Testcase byte_2
-#    Time: 11471020 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZ11111100ZZZZZZZZZZZZZZZZ
-#    Time: 11471020 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 11471020 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 11471220 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 3 und Testcase byte_2
-#    Time: 11471220 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZ10001111ZZZZZZZZZZZZZZZZ
-#    Time: 11471220 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 11471220 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 11471220 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 3 und Testcase byte_2
-#    Time: 11471220 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZ10001111ZZZZZZZZZZZZZZZZ
-#    Time: 11471220 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 11471220 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 11471420 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 4 und Testcase byte_2
-#    Time: 11471420 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZ01000101ZZZZZZZZZZZZZZZZ
-#    Time: 11471420 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 11471420 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 11471420 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 4 und Testcase byte_2
-#    Time: 11471420 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	ZZZZZZZZ01000101ZZZZZZZZZZZZZZZZ
-#    Time: 11471420 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 11471420 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 12289653333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Fehler nur waehrend des zweiten Lesedurchgangs aufgetreten. Moegliche Ursache: Write-Enablesignale werden bei Lesezugriffen nicht auf 0 gesetzt
-#    Time: 12289653333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 12289653333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: 10 Speicherzugriffsfehler wurden detailliert aufgefuehrt, weitere nur protokolliert
-#    Time: 12289653333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Error: Fehler in Testcase 6
-#    Time: 12289653333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Fehler in Testcase 6
-#    Time: 12289653333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 12289653333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 12289653333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Testcase 7: byte_3 (	Zugriffe auf das am hoechsten wertige Byte	)
-#    Time: 12289653333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 13518720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 0 und Testcase byte_3
-#    Time: 13518720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	01101110ZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 13518720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 13518720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 13518720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 0 und Testcase byte_3
-#    Time: 13518720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	01101110ZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 13518720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 13518720 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 13518920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 1 und Testcase byte_3
-#    Time: 13518920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	01000100ZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 13518920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 13518920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 13518920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 1 und Testcase byte_3
-#    Time: 13518920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	01000100ZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 13518920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 13518920 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 13519120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 2 und Testcase byte_3
-#    Time: 13519120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	01011100ZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 13519120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 13519120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 13519120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 2 und Testcase byte_3
-#    Time: 13519120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	01011100ZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 13519120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 13519120 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 13519320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 3 und Testcase byte_3
-#    Time: 13519320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	10011100ZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 13519320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 13519320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 13519320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 3 und Testcase byte_3
-#    Time: 13519320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	10011100ZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 13519320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 13519320 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Datenbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 13519520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 4 und Testcase byte_3
-#    Time: 13519520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	10011101ZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 13519520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 13519520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Instruktionsbus-Datenausgang des Speichers und Referenzspeicher stimmen nicht ueberein.
-#    Time: 13519520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Adresse: 4 und Testcase byte_3
-#    Time: 13519520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erwartetes Datum: 	10011101ZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 13519520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: gelesenes Datum: 	ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-#    Time: 13519520 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 14337753333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Fehler nur waehrend des zweiten Lesedurchgangs aufgetreten. Moegliche Ursache: Write-Enablesignale werden bei Lesezugriffen nicht auf 0 gesetzt
-#    Time: 14337753333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 14337753333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: 10 Speicherzugriffsfehler wurden detailliert aufgefuehrt, weitere nur protokolliert
-#    Time: 14337753333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Error: Fehler in Testcase 7
-#    Time: 14337753333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Fehler in Testcase 7
-#    Time: 14337753333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 14337753333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 14337753333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Testcase : 8: Lesen des gesamten Speichers mit Wortzugriffen mit unterschiedlichen Adressen auf beiden Ports.
-#    Time: 14337753333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Die Adressen werden gerade gegenlaeufig fuer beide Ports veraendert
-#    Time: 14337753333 ps  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Testcase 8 korrekt.
-#    Time: 14747425 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 14747425 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 14747425 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Testcase : 9: Gleichzeitig lesender und schreibender Zugriff auf die gleiche Speicheradresse ueber beide Ports.
-#    Time: 14747425 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Im Takt, in dem das neue Datum geschrieben wird, ist noch das alte Datum am Ausgang des Speichers sichtbar (write-after-read)
-#    Time: 14747425 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Error: 'X' in ID oder DDOUT erkannt. Weitere Fehler dieser Art werden protokolliert aber nicht gemeldet.
-#    Time: 14747600 ns  Iteration: 4  Instance: /armmeminterface_tb
-# ** Note: Testcase 9 korrekt.
-#    Time: 14747625 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 14747625 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 14747625 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Testcase 10: Schreiben in die jeweils unterste Zelle jeder Speicherzeile (Adressen 0 und 2048) bei deaktiviertem ENABLE-Signal mit allen moeglichen Zugriffsarten (Wort, Halbwort_0, ...)
-#    Time: 14747660 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Die Schreibzugriffe duerfen keine Wirkung haben.
-#    Time: 14747660 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Error: 'X' in ID oder DDOUT erkannt. Weitere Fehler dieser Art werden protokolliert aber nicht gemeldet.
-#    Time: 14747660 ns  Iteration: 2  Instance: /armmeminterface_tb
-# ** Note: Testcase 10 korrekt.
-#    Time: 14753260 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 14753260 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 14753260 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Testcase 11: Instruktionsseitiges Lesen an Adressen ausserhalb des Instruktionsspeicherbereichs.
-#    Time: 14753260 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Getestet werden die Adressen 16384 und 2**31, IABORT muss den Zugriffsfehler anzeigen.
-#    Time: 14753260 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Testcase 11 korrekt.
-#    Time: 14753760 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 14753760 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 14753760 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Testcase 12: Test auf Tristate an ID, DDOUT, IABORT und DABORT fuer DDE = 0, IDE = 0
-#    Time: 14753760 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: ID nicht im Tristate
-#    Time: 14753975 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: DDOUT nicht im Tristate
-#    Time: 14753975 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Error: Fehler in Testcase 12
-#    Time: 14754010 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Fehler in Testcase 12
-#    Time: 14754010 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 14754010 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 14754010 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Testcase 13: Test auf Tristate an DDOUT fuer (DDE = 1 und DnRW = 1), zeitgleich IDE = 0
-#    Time: 14754010 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: ID nicht im Tristate
-#    Time: 14754175 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: DDOUT nicht im Tristate
-#    Time: 14754175 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Error: Fehler in Testcase 13
-#    Time: 14754210 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Fehler in Testcase 13
-#    Time: 14754210 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 14754210 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 14754210 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Testcase 14: Test auf Erkennung unausgerichteter Daten.
-#    Time: 14754210 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Ein Zugriffsversuch auf nicht ausgerichtete Daten wird durch DABORT angezeigt, das Datum an der abgerundeten Wortadresse muss dennoch gelesen werden.
-#    Time: 14754210 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Testcase 14 korrekt.
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: ...Simulation beendet
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Fehler in Testcases:
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Testcase 1: 	Wortzugriffe			: 8192
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Testcase 2: 	Zugriffe auf niederwertiges Halbwort	: 8192
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Testcase 3: 	Zugriffe auf das hochwertige Halbwort	: 8192
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Testcase 4: 	Zugriffe auf das niederwertigste Byte	: 8192
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Testcase 5: 	Zugriffe auf das zweite Byte		: 8192
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Testcase 6: 	Zugriffe auf das dritte Byte		: 8192
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Testcase 7: 	Zugriffe auf das am hoechsten wertige Byte	: 8192
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Testcase 8: 	Lesen des vollstaendigen Speichers, unterschiedliche Adressen an beiden Ports: 0
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Testcase 9: 	Test des write-after-read-Verhaltens	: 0
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Testcase 10: 	Schreibzugriffe bei deaktiviertem Enable-Signal	: 0
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Testcase 11: 	Test auf Ueberpruefung der Instruktionsadresse durch die Speicherschnittstelle: 0
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Testcase 12: 	Test auf Tristate aller Ausgaenge bei deaktivierten Enablesignalen und Schreibzugriff: 2
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Testcase 13: 	Test auf Tristate des Datenausgangs bei Schreibzugriff auf Datenschnittstelle: 2
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Testcase 14: 	Test auf Misalignementerkennung			: 0
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Testcase 15: 	Anzahl fehlerhafter Abortsignale waehrend der Tests	: 0
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: erzielte Punkte:
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Basisfunktionalitaet (Testcases 1 bis 10): 		0/3
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Auswertung der Instruktionsadresse (Testcase 11): 	1/1
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Erkennung fehlerhafter Datenausrichtung (Testcase 14): 	1/1
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Test auf Tristateausgaenge (Testcases 12,13): 		0/1
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Punktabzug wegen 'X' in ID oder DDOUT:		1
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Gesamtpunktzahl: 					1/6
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Error: Funktionstest nicht bestanden
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: Funktionstest nicht bestanden
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 14754775 ns  Iteration: 0  Instance: /armmeminterface_tb
-# ** Failure:  EOT (END OF TEST) - Diese Fehlermeldung stoppt den Simulator unabhaengig von tatsaechlich aufgetretenen Fehlern!
-#    Time: 14754775 ns  Iteration: 0  Process: /armmeminterface_tb/tb File: ./src/ArmMemInterface_tb.vhd
-# Break in Process tb at ./src/ArmMemInterface_tb.vhd line 844
-# Window cannot be closed because the modal window "Quit Vsim" is still open.
-# Window cannot be closed because the modal window "Quit Vsim" is still open.
+# ** Note: Check U
+#    Time: 10 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Check U
+#    Time: 20 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Check 1
+#    Time: 30 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Check 1
+#    Time: 40 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Check 1
+#    Time: 50 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Check 1
+#    Time: 60 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Check 1
+#    Time: 70 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Check 1
+#    Time: 80 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# Break key hit 
+# Break in Process clk_gen at ./src/PISOShiftReg_tb.vhd line 42
+vcom -work ./work/ ./src/PISOShiftReg_tb.vhd
+# QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package ArmTypes
+# -- Loading package ArmConfiguration
+# -- Loading package ArmFilePaths
+# -- Loading package TB_Tools
+# -- Compiling entity PISOShiftReg_tb
+# -- Compiling architecture testbench of PISOShiftReg_tb
+vcom -work ./work/ ./src/PISOShiftReg.vhd
+# QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity PISOShiftReg
+# -- Compiling architecture behavioral of PISOShiftReg
+vsim -voptargs=+acc work.pisoshiftreg_tb
+# vsim -voptargs=+acc work.pisoshiftreg_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.armtypes(body)
+# Loading work.armconfiguration
+# Loading work.armfilepaths(body)
+# Loading work.tb_tools(body)
+# Loading work.pisoshiftreg_tb(testbench)
+# Loading work.pisoshiftreg(behavioral)
+# ** Warning: (vsim-8683) Uninitialized out port /pisoshiftreg_tb/uut/LAST_BIT has no driver.
+# This port will contribute value (U) to the signal network.
+run -all
+# ** Note: Check U
+#    Time: 50 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Check U
+#    Time: 60 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Check 1
+#    Time: 70 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Check 1
+#    Time: 80 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Check 1
+#    Time: 90 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Check 1
+#    Time: 100 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Check 0
+#    Time: 110 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Check 0
+#    Time: 120 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# Break key hit 
+# Simulation stop requested.
+vsim -voptargs=+acc work.pisoshiftreg_tb
+# vsim -voptargs=+acc work.pisoshiftreg_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.armtypes(body)
+# Loading work.armconfiguration
+# Loading work.armfilepaths(body)
+# Loading work.tb_tools(body)
+# Loading work.pisoshiftreg_tb(testbench)
+# Loading work.pisoshiftreg(behavioral)
+# ** Warning: (vsim-8683) Uninitialized out port /pisoshiftreg_tb/uut/LAST_BIT has no driver.
+# This port will contribute value (U) to the signal network.
+run -all
+# ** Note: Check U
+#    Time: 50 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Check U
+#    Time: 60 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Check 1
+#    Time: 70 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Check 1
+#    Time: 80 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Check 1
+#    Time: 90 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Check 1
+#    Time: 100 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Check 0
+#    Time: 110 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Check 0
+#    Time: 120 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# Break key hit 
+# Simulation stop requested.
