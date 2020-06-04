@@ -59,6 +59,18 @@ architecture testbench of PISOShiftReg_tb is
     );
 
     --STUDENT: INSERT TESTBENCH CODE HERE (SIGNAL ASSIGNMENTS ETC.)
-
+    load_gen: process
+        tb_load <= '1';
+        wait for 10 ns;
+        tb_load <= '0';
+        wait;
+    end process load_gen;
+    
+    test: process
+        wait 1 ns;
+        report "Output: " & D_OUT severity note;
+        wait 9 ns;
+    end process test;
+        
 
 end testbench;
