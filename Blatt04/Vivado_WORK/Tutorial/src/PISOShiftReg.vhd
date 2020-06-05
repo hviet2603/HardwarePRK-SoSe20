@@ -30,15 +30,15 @@ begin
 shiftRegister: process(CLK, CLK_EN) is 
 begin
 
-if (CLK_EN = '1') then
-    if (rising_edge(CLK)) then
+if (rising_edge(CLK)) then
+    LAST_BIT <= '0';
+    if (CLK_EN = '1') then
 	-- Erster Schreibzugriff
         if (LOAD = '1') then
-	    LAST_BIT <= '0';
             for i in WIDTH-1 downto 0 loop
                 D_reg(i) <= D_IN(i);
             end loop;
-	end if;
+	    end if;
 	-- Schiebvorgang
         if (LOAD = '0') then
             for i in WIDTH-counter-2 downto 0 loop    
@@ -48,11 +48,11 @@ if (CLK_EN = '1') then
                 D_reg(i) <= '0';
             end loop;
             if counter < WIDTH-1 then 
-		counter <= counter + 1; 
-	    end if;
-	    if counter = WIDTH-1 then
-		LAST_BIT <= '1';
-	    end if;
+                counter <= counter + 1; 
+            end if;
+            if counter = WIDTH-1 then
+                LAST_BIT <= '1';
+            end if;
         end if;
     end if;
 end if; 

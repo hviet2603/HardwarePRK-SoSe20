@@ -11,6 +11,7 @@ use ieee.std_logic_1164.all;
 library work;
 	use work.ArmTypes.all;
 	use work.ArmConfiguration.all;
+	use work.all;
 
 --------------------------------------------------------------------------------
 --  Funktionsweise der Schnittstellenkomponente zum Datenbus: 
@@ -388,9 +389,79 @@ end block RS232_RECEIVER;
 
 -- RS232_TRM_REG ist 8 Bit gross
 RS232_TRANSMITTER : block is
-
+    type ZUSTAENDE is (Z0,Z1);
+    signal ZUSTAND: ZUSTAENDE := Z0;
+    signal FOLGEZUSTAND: ZUSTAENDE;
+    signal data: std_logic_vector(9 downto 0) :=  '1' & RS232_TRM_REG & '0';
+    signal last_bit: std_logic;
+    signal clock_enable: std_logic;
+    signal load: std_logic;
+        
     begin
-
+    ZUSTANDSUEBERGANG: process (SYS_CLK, SYS_RST)
+    begin
+        if (rising_edge(SYS_CLK)) then
+            if (SYS_RST = '1') then
+                ZUSTAND <= Z0;
+            else
+                ZUSTAND <= FOLGEZUSTAND;
+            end if;
+        end if;
+    end process ZUSTANDSUEBERGANG;
+    
+    FOLGEZUSTANDSBERECHNUNG: process (START_TRANSMISSION, last_bit, ZUSTAND)
+    begin
+        case ZUSTAND is
+            when Z0 =>      if START_TRANSMISSION = '1' then FOLGEZUSTAND = Z1; 
+                            else FOLGEZUSTAND = Z0;
+                            end if;
+            when others =>  if last_bit = '1' then FOLGEZUSTAND = Z0; 
+                            else FOLGEZUSTAND = Z1;
+                            end if;
+        end case;
+    end process FOLGEZUSTANDSBERECHNUNG;
+    
+    AUSGABEBERECHNUNG: process (START_TRANSMISSION, last_bit, ZUSTAND)
+    begin
+        if (ZUSTAND = Z0 and START_TRANSMISSION = '1') then
+            TRANSMITTER_BUSY = '1';
+        elsif (ZUSTAND = Z0 and START_TRANSMISSION = '0') then
+            TRANSMITTER_BUSY = '0';
+        elsif (ZUSTAND = Z1 and last_bit = '1') then
+            TRANSMITTER_BUSY = '0';
+        else
+            TRANSMITTER_BUSY = '1';
+        end if;
+    end process AUSGABEBERECHNUNG;
+    
+    PISO_SHIFT_REG: entity work.PISOShiftReg
+    generic map (WIDTH => 10)
+    port map (
+        CLK => SYS_CLK,
+        CLK_EN => clock_enable,
+        LOAD => load,
+        D_IN => data,
+        D_OUT => RS232_TXD,
+        LAST_BIT => last_bit
+    );
+    
+    clk_en_gen: process 
+    begin
+        clock_enable <= '1';
+        wait for ARM_SYS_CLK_PERIOD;
+        clock_enable <= '0';
+        wait for RS232_DELAY_TIME - ARM_SYS_CLK_PERIOD;
+    end process clk_en_gen;
+    
+    load_gen: process
+    begin 
+        wait until START_TRANSMISSION = '1';
+        load <= '1';
+        wait for RS232_DELAY_TIME;
+        load <= '0';
+    end process load_gen;
+    
+    
 end block RS232_TRANSMITTER;
 
 end architecture behave;
