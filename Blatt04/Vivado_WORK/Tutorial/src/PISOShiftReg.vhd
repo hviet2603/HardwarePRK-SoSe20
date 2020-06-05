@@ -32,15 +32,15 @@ begin
 
 if (CLK_EN = '1') then
     if (rising_edge(CLK)) then
+	-- Erster Schreibzugriff
         if (LOAD = '1') then
+	    LAST_BIT <= '0';
             for i in WIDTH-1 downto 0 loop
                 D_reg(i) <= D_IN(i);
             end loop;
-	    --D_OUT <= '1';
-            --D_OUT <= D_IN(0);
-	    D_OUT <= D_reg(0);
-	    --LAST_BIT <= D_reg(0);
-        else
+	end if;
+	-- Schiebvorgang
+        if (LOAD = '0') then
             for i in WIDTH-counter-2 downto 0 loop    
                 D_reg(i) <= D_reg(i+1);
             end loop;
@@ -50,17 +50,16 @@ if (CLK_EN = '1') then
             if counter < WIDTH-1 then 
 		counter <= counter + 1; 
 	    end if;
-	    --D_OUT <= '1';
-	    --D_OUT <= D_IN(0);
-            D_OUT <= D_reg(0);
-	    --LAST_BIT <= D_reg(0);
+	    if counter = WIDTH-1 then
+		LAST_BIT <= '1';
+	    end if;
         end if;
     end if;
 end if; 
 
 end process shiftRegister;
 
-
+D_OUT <= D_REG(0); 
 
 
 end architecture behavioral;

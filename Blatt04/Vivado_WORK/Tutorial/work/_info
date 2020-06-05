@@ -109,7 +109,7 @@ nbody
 !i10b 1
 !i111 1
 Episoshiftreg
-Z22 w1591301246
+Z22 w1591307076
 Z23 DPx4 ieee 11 numeric_std 0 22 WES[o8HS0jHV[MIXQk2Ha1
 R1
 R14
@@ -121,8 +121,8 @@ L9
 V>1V^e@]LNYK2lbUzE8a2l1
 R3
 33
-Z26 !s110 1591301350
-Z27 !s108 1591301350.909501
+Z26 !s110 1591307501
+Z27 !s108 1591307501.336267
 Z28 !s90 -reportprogress|300|-work|./work/|./src/PISOShiftReg.vhd|
 Z29 !s107 ./src/PISOShiftReg.vhd|
 Z30 o-work ./work/
@@ -137,8 +137,7 @@ R14
 DEx4 work 12 pisoshiftreg 0 22 >1V^e@]LNYK2lbUzE8a2l1
 l28
 L23
-VHaao0:jMi>o2d2`4kdYaT2
-!s100 9hJnoofCz7hdbn6>ha7;l0
+V43edNhoTF;>bbIIA_gGl?2
 R3
 33
 R26
@@ -147,10 +146,11 @@ R28
 R29
 R30
 R5
+!s100 c[IQ^>c1ZW5JBhm=>9iWj3
 !i10b 1
 !i111 1
 Episoshiftreg_tb
-Z31 w1591301332
+Z31 w1591359001
 R13
 Z32 DPx4 work 16 armconfiguration 0 22 zRdJA<b6WE5IYPKiWHAmU0
 R21
@@ -168,9 +168,9 @@ VId<if@>LlDQ2`n]jWaGfj3
 !s100 _iOMK3O?cD44dEk2F6@4<2
 R3
 33
-Z37 !s110 1591301356
+Z37 !s110 1591359034
 !i10b 1
-Z38 !s108 1591301356.106380
+Z38 !s108 1591359034.423514
 Z39 !s90 -reportprogress|300|-work|./work/|./src/PISOShiftReg_tb.vhd|
 Z40 !s107 ./src/PISOShiftReg_tb.vhd|
 !i111 1
@@ -188,8 +188,8 @@ R14
 Z41 DEx4 work 15 pisoshiftreg_tb 0 22 Id<if@>LlDQ2`n]jWaGfj3
 l36
 L12
-VS9KYf:R6FD67^5=h6:6bG0
-!s100 PZ03LiH81WdmkMeKDJLJ:2
+VZ1M;AzMhk<B4oiLGV21@J0
+!s100 WJ8?@a2a7lMWfhcTB`T2e3
 R3
 33
 R37

@@ -12,7 +12,7 @@ end PISOShiftReg_tb;
 architecture testbench of PISOShiftReg_tb is
     constant test_width : integer :=  8; --STUDENT: SET TO ARBITRARY VALUE THAT FITS YOUR TESTDATA
 
-    signal tb_in       : std_logic_vector(test_width-1 downto 0) := "01011010";
+    signal tb_in       : std_logic_vector(test_width-1 downto 0) := "10001011";
     signal tb_out      : std_logic;
     signal tb_load     : std_logic;
     signal tb_last_bit : std_logic;
@@ -67,24 +67,40 @@ architecture testbench of PISOShiftReg_tb is
     --STUDENT: INSERT TESTBENCH CODE HERE (SIGNAL ASSIGNMENTS ETC.)
     load_gen: process
     begin
-	wait for 200 ns;
+	-- Init
+	tb_load <= 'U';
+	wait for 10 ns;
+	-- erster Schreibzugriff
 	tb_load <= '1';
         wait for 10 ns;
+	-- Schiebvorgang
         tb_load <= '0';
-        wait; 
+	wait; 
     end process load_gen;
     
     test: process
     begin
 	if counter = 0 then
-		wait for 200 ns;
+		wait for 10 ns;
 	end if;
+	-- Register in Betrieb
         if counter <= test_width - 1 then
-		report "Check " & SL_TO_STRING(tb_out) severity note;
-		--report "Check " & SL_TO_STRING(tb_last_bit) severity note;
+		wait for 2 ns;
+		report "Das " & integer'image(counter+1) & ".Bit ist: " & SL_TO_STRING(tb_out) severity note;
 		counter <= counter + 1;
 	end if;
-        wait for 10 ns;
+	if counter = test_width then
+		report "Das letzte Bit wird uebertragen" severity note;
+		wait for 2 ns; 
+		if (tb_last_bit = '1') then
+			report "Das LAST_BIT Signal wurde gesetzt" severity note;
+		else 
+			report "Das LAST_BIT Signal wurde nicht gesetzt" severity note;
+		end if;
+		report "-----END OF TEST-----" severity failure;
+	end if;
+
+        wait for 8 ns;
     end process test;
         
 
