@@ -9,8 +9,33 @@
 # //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
 # //
 project open /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt04/Vivado_WORK/Tutorial/project4
+# reading modelsim.ini
 # Loading project project4
-vcom -work ./work/ ./src/*.vhd
+vlib work
+# ** Error: (vlib-35) Failed to create directory "work".
+# File exists. (errno = EEXIST)
+vmap work work
+# Modifying /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt04/Vivado_WORK/Tutorial/project4.mpf
+vcom -work ./work/ ./src/ArmConfiguration.vhd
+# QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# ** Error: (vcom-11) Could not find work.armtypes.
+# ** Error: ./src/ArmConfiguration.vhd(18): (vcom-1195) Cannot find expanded name "work.ArmTypes".
+# ** Error: ./src/ArmConfiguration.vhd(18): Unknown expanded name.
+# ** Error: ./src/ArmConfiguration.vhd(20): VHDL Compiler exiting
+# /afs/tu-berlin.de/units/Fak_IV/aes/tools/mentor/questasim/linux_x86_64/vcom failed.
+vcom -work ./work/ ./src/ArmTypes.vhd
+# QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package ArmTypes
+# -- Compiling package body ArmTypes
+# -- Loading package ArmTypes
+vcom -work ./work/ ./src/ArmConfiguration.vhd
 # QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -18,26 +43,23 @@ vcom -work ./work/ ./src/*.vhd
 # -- Loading package NUMERIC_STD
 # -- Loading package ArmTypes
 # -- Compiling package ArmConfiguration
-# -- Compiling package ArmFilePaths
-# -- Compiling package body ArmFilePaths
-# -- Loading package ArmFilePaths
+vcom -work ./work/ ./src/ArmRS232Interface.vhd
+# QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package ArmTypes
+# -- Loading package NUMERIC_STD
 # -- Loading package ArmConfiguration
 # -- Compiling entity ArmRS232Interface
 # -- Compiling architecture behave of ArmRS232Interface
 # ** Error: (vcom-11) Could not find work.armwaitstategenasync.
 # ** Error: ./src/ArmRS232Interface.vhd(223): (vcom-1195) Cannot find expanded name "work.ArmWaitStateGenAsync".
 # ** Error: ./src/ArmRS232Interface.vhd(223): Unknown expanded name.
-# ** Error: ./src/ArmRS232Interface.vhd(415): near "=": expecting <= or :=
-# ** Error: ./src/ArmRS232Interface.vhd(416): near "=": expecting <= or :=
-# ** Error: ./src/ArmRS232Interface.vhd(418): near "=": expecting <= or :=
-# ** Error: ./src/ArmRS232Interface.vhd(419): near "=": expecting <= or :=
-# ** Error: ./src/ArmRS232Interface.vhd(427): near "=": expecting <= or :=
-# ** Error: ./src/ArmRS232Interface.vhd(429): near "=": expecting <= or :=
-# ** Error: ./src/ArmRS232Interface.vhd(431): near "=": expecting <= or :=
-# ** Error: ./src/ArmRS232Interface.vhd(433): near "=": expecting <= or :=
-# -- Loading entity PISOShiftReg
-# ** Warning: [9] ./src/ArmRS232Interface.vhd(395): (vcom-1013) Initial value of "data" depends on value of signal "REGISTER_SET".
-# ** Error: ./src/ArmRS232Interface.vhd(467): VHDL Compiler exiting
+# ** Error: (vcom-11) Could not find work.armwaitstategenasync.
+# ** Error: ./src/ArmRS232Interface.vhd(410): (vcom-1195) Cannot find expanded name "work.ArmWaitStateGenAsync".
+# ** Error: ./src/ArmRS232Interface.vhd(410): Unknown expanded name.
+# ** Error: ./src/ArmRS232Interface.vhd(502): VHDL Compiler exiting
 # /afs/tu-berlin.de/units/Fak_IV/aes/tools/mentor/questasim/linux_x86_64/vcom failed.
 vcom -work ./work/ ./src/ArmWaitStateGenAsync.vhd
 # QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
@@ -47,63 +69,50 @@ vcom -work ./work/ ./src/ArmWaitStateGenAsync.vhd
 # -- Loading package NUMERIC_STD
 # -- Compiling entity ArmWaitStateGenAsync
 # -- Compiling architecture behave of ArmWaitStateGenAsync
-vcom -work ./work/ ./src/*.vhd
+vcom -work ./work/ ./src/ArmRS232Interface.vhd
+# QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package ArmTypes
+# -- Loading package NUMERIC_STD
+# -- Loading package ArmConfiguration
+# -- Compiling entity ArmRS232Interface
+# -- Compiling architecture behave of ArmRS232Interface
+# -- Loading entity ArmWaitStateGenAsync
+vcom -work ./work/ ./src/ArmRS232Interface_tb.vhd
 # QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
-# -- Loading package ArmTypes
-# -- Compiling package ArmConfiguration
-# -- Compiling package ArmFilePaths
-# -- Compiling package body ArmFilePaths
-# -- Loading package ArmFilePaths
-# -- Loading package ArmConfiguration
-# -- Compiling entity ArmRS232Interface
-# -- Compiling architecture behave of ArmRS232Interface
-# -- Loading entity ArmWaitStateGenAsync
-# ** Error: ./src/ArmRS232Interface.vhd(415): near "=": expecting <= or :=
-# ** Error: ./src/ArmRS232Interface.vhd(416): near "=": expecting <= or :=
-# ** Error: ./src/ArmRS232Interface.vhd(418): near "=": expecting <= or :=
-# ** Error: ./src/ArmRS232Interface.vhd(419): near "=": expecting <= or :=
-# ** Error: ./src/ArmRS232Interface.vhd(427): near "=": expecting <= or :=
-# ** Error: ./src/ArmRS232Interface.vhd(429): near "=": expecting <= or :=
-# ** Error: ./src/ArmRS232Interface.vhd(431): near "=": expecting <= or :=
-# ** Error: ./src/ArmRS232Interface.vhd(433): near "=": expecting <= or :=
-# -- Loading entity PISOShiftReg
-# ** Warning: [9] ./src/ArmRS232Interface.vhd(395): (vcom-1013) Initial value of "data" depends on value of signal "REGISTER_SET".
-# ** Error: ./src/ArmRS232Interface.vhd(467): VHDL Compiler exiting
-# /afs/tu-berlin.de/units/Fak_IV/aes/tools/mentor/questasim/linux_x86_64/vcom failed.
-vcom -work ./work/ ./src/*.vhd
-# QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package ArmTypes
-# -- Compiling package ArmConfiguration
-# -- Compiling package ArmFilePaths
-# -- Compiling package body ArmFilePaths
-# -- Loading package ArmFilePaths
-# -- Loading package ArmConfiguration
-# -- Compiling entity ArmRS232Interface
-# -- Compiling architecture behave of ArmRS232Interface
-# -- Loading entity ArmWaitStateGenAsync
-# -- Loading entity PISOShiftReg
-# ** Warning: [9] ./src/ArmRS232Interface.vhd(395): (vcom-1013) Initial value of "data" depends on value of signal "REGISTER_SET".
-# ** Error: (vcom-13) Recompile work.tb_tools because work.armconfiguration has changed.
+# ** Error: (vcom-11) Could not find work.tb_tools.
 # ** Error: ./src/ArmRS232Interface_tb.vhd(22): (vcom-1195) Cannot find expanded name "work.TB_TOOLS".
 # ** Error: ./src/ArmRS232Interface_tb.vhd(22): Unknown expanded name.
+# -- Loading package ArmTypes
+# -- Loading package ArmConfiguration
 # ** Error: ./src/ArmRS232Interface_tb.vhd(26): VHDL Compiler exiting
 # /afs/tu-berlin.de/units/Fak_IV/aes/tools/mentor/questasim/linux_x86_64/vcom failed.
-vcom -work ./work/ ./src/ArmConfiguration.vhd
+vcom -work ./work/ ./src/TB_Tools.vhd
 # QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
 # -- Loading package ArmTypes
-# -- Compiling package ArmConfiguration
+# -- Loading package ArmConfiguration
+# ** Error: (vcom-11) Could not find work.armfilepaths.
+# ** Error: ./src/TB_Tools.vhd(32): (vcom-1195) Cannot find expanded name "work.ArmFilePaths".
+# ** Error: ./src/TB_Tools.vhd(32): Unknown expanded name.
+# ** Error: ./src/TB_Tools.vhd(34): VHDL Compiler exiting
+# /afs/tu-berlin.de/units/Fak_IV/aes/tools/mentor/questasim/linux_x86_64/vcom failed.
+vcom -work ./work/ ./src/ArmFilePaths.vhd
+# QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
+# -- Loading package STANDARD
+# -- Compiling package ArmFilePaths
+# -- Compiling package body ArmFilePaths
+# -- Loading package ArmFilePaths
 vcom -work ./work/ ./src/TB_Tools.vhd
 # QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
 # -- Loading package STANDARD
@@ -119,19 +128,6 @@ vcom -work ./work/ ./src/TB_Tools.vhd
 # ** Warning: ./src/TB_Tools.vhd(153): (vcom-1236) Shared variables must be of a protected type.
 # -- Compiling package body TB_Tools
 # -- Loading package TB_Tools
-vcom -work ./work/ ./src/ArmRS232Interface.vhd
-# QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package ArmTypes
-# -- Loading package NUMERIC_STD
-# -- Loading package ArmConfiguration
-# -- Compiling entity ArmRS232Interface
-# -- Compiling architecture behave of ArmRS232Interface
-# -- Loading entity ArmWaitStateGenAsync
-# -- Loading entity PISOShiftReg
-# ** Warning: [9] ./src/ArmRS232Interface.vhd(395): (vcom-1013) Initial value of "data" depends on value of signal "REGISTER_SET".
 vcom -work ./work/ ./src/ArmRS232Interface_tb.vhd
 # QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
 # -- Loading package STANDARD
@@ -145,22 +141,6 @@ vcom -work ./work/ ./src/ArmRS232Interface_tb.vhd
 # -- Loading package TB_Tools
 # -- Compiling entity ArmRS232Interface_tb
 # -- Compiling architecture behave of ArmRS232Interface_tb
-vcom -work ./work/ ./src/ArmConfiguration.vhd
-# QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package ArmTypes
-# -- Compiling package ArmConfiguration
-vcom -work ./work/ ./src/ArmTypes.vhd
-# QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling package ArmTypes
-# -- Compiling package body ArmTypes
-# -- Loading package ArmTypes
 vcom -work ./work/ ./src/PISOShiftReg.vhd
 # QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
 # -- Loading package STANDARD
@@ -175,60 +155,230 @@ vcom -work ./work/ ./src/PISOShiftReg_tb.vhd
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
-# ** Error: (vcom-13) Recompile work.tb_tools because work.armtypes has changed.
-# ** Error: ./src/PISOShiftReg_tb.vhd(7): (vcom-1195) Cannot find expanded name "work.TB_Tools".
-# ** Error: ./src/PISOShiftReg_tb.vhd(7): Unknown expanded name.
-# ** Error: ./src/PISOShiftReg_tb.vhd(9): VHDL Compiler exiting
-# /afs/tu-berlin.de/units/Fak_IV/aes/tools/mentor/questasim/linux_x86_64/vcom failed.
-vcom -work ./work/ ./src/PISOShiftReg_tb.vhd
-# QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# ** Error: (vcom-13) Recompile work.tb_tools because work.armtypes has changed.
-# ** Error: ./src/PISOShiftReg_tb.vhd(7): (vcom-1195) Cannot find expanded name "work.TB_Tools".
-# ** Error: ./src/PISOShiftReg_tb.vhd(7): Unknown expanded name.
-# ** Error: ./src/PISOShiftReg_tb.vhd(9): VHDL Compiler exiting
-# /afs/tu-berlin.de/units/Fak_IV/aes/tools/mentor/questasim/linux_x86_64/vcom failed.
-vcom -work ./work/ ./src/ArmTypes.vhd
-# QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling package ArmTypes
-# -- Compiling package body ArmTypes
-# -- Loading package ArmTypes
-vcom -work ./work/ ./src/PISOShiftReg_tb.vhd
-# QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# ** Error: (vcom-13) Recompile work.tb_tools because work.armtypes has changed.
-# ** Error: ./src/PISOShiftReg_tb.vhd(7): (vcom-1195) Cannot find expanded name "work.TB_Tools".
-# ** Error: ./src/PISOShiftReg_tb.vhd(7): Unknown expanded name.
-# ** Error: ./src/PISOShiftReg_tb.vhd(9): VHDL Compiler exiting
-# /afs/tu-berlin.de/units/Fak_IV/aes/tools/mentor/questasim/linux_x86_64/vcom failed.
-vcom -work ./work/ ./src/TB_Tools.vhd
-# QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
 # -- Loading package std_logic_textio
 # -- Loading package ArmTypes
-# ** Error: (vcom-13) Recompile work.armconfiguration because work.armtypes has changed.
-# ** Error: ./src/TB_Tools.vhd(29): (vcom-1195) Cannot find expanded name "work.ArmConfiguration".
-# ** Error: ./src/TB_Tools.vhd(29): Unknown expanded name.
+# -- Loading package ArmConfiguration
 # -- Loading package ArmFilePaths
-# ** Error: ./src/TB_Tools.vhd(34): VHDL Compiler exiting
-# /afs/tu-berlin.de/units/Fak_IV/aes/tools/mentor/questasim/linux_x86_64/vcom failed.
-vsim -voptargs=+acc work.pisoshiftreg_tb
-# vsim -voptargs=+acc work.pisoshiftreg_tb 
+# -- Loading package TB_Tools
+# -- Compiling entity PISOShiftReg_tb
+# -- Compiling architecture testbench of PISOShiftReg_tb
+vsim -voptargs=+acc work.armrs232interface_tb
+# vsim -voptargs=+acc work.armrs232interface_tb 
 # Loading std.standard
-# ** Error: (vsim-13) Recompile work.tb_tools because work.armtypes has changed.
-# ** Error: (vsim-13) Recompile work.pisoshiftreg_tb because work.armtypes has changed.
-# ** Error: (vsim-13) Recompile work.pisoshiftreg_tb(testbench) because work.armtypes has changed.
-# Error loading design
-# Window cannot be closed because the modal window "Quit Vsim" is still open.
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.armtypes(body)
+# Loading work.armconfiguration
+# Loading work.armfilepaths(body)
+# Loading work.tb_tools(body)
+# Loading work.armrs232interface_tb(behave)
+# Loading work.armrs232interface(behave)
+# Loading work.armwaitstategenasync(behave)
+run -all
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 0 ps  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Test der seriellen Schnittstelle (Transmitter).
+#    Time: 0 ps  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Ueber den Datenbus werden Testdaten in das RS232_INTERFACE geschrieben, die Ausgaben auf der TXD-Leitung ausgewertet und bzgl. Korrektheit und Zeitanforderungen ueberprueft
+#    Time: 0 ps  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Das Signal CURRENT_RECEIVED_VALUE, sichtbar in der ModelSim-Waveform, enthaelt die jeweils von der seriellen Leitung gelesenen Bits, bis zum Empfang des letzten Bits sind unbekannte Werte hier normal. Das letzte Empfangene Bit ist das Stoppbit
+#    Time: 0 ps  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Zusaetzlich erfolgt die Ausgabe der gemessenen oder abgeschaetzten Dauer jeden Bits einer Uebertragung in der Form:
+#    Time: 0 ps  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Startbit | Bit 0 | Bit 1 | ... Bit 6 | Bit 7 | Stoppbit |
+#    Time: 0 ps  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Die Dauer des Stoppbits wird bis zum Ende des aktuellen Tests oder zum Auftreten der nachsten fallenden Flanke auf RS232_TXD gemessen
+#    Time: 0 ps  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 0 ps  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 785 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Testdatensatz: 0
+#    Time: 785 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17525 ps*10^3 | 
+#    Time: 175175 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Transitionen: 2; Erwartet: 2
+#    Time: 175175 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 175385 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Testdatensatz: 1
+#    Time: 175385 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17525 ps*10^3 | 
+#    Time: 349775 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Transitionen: 6; Erwartet: 6
+#    Time: 349775 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 349985 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Testdatensatz: 2
+#    Time: 349985 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: 17400 ps*10^3 | 17300 ps*10^3 | 17300 ps*10^3 | 17300 ps*10^3 | 17300 ps*10^3 | 17300 ps*10^3 | 17300 ps*10^3 | 17300 ps*10^3 | 17300 ps*10^3 | 18325 ps*10^3 | 
+#    Time: 524375 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Transitionen: 2; Erwartet: 2
+#    Time: 524375 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 524585 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Testdatensatz: 3
+#    Time: 524585 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17300 ps*10^3 | 17625 ps*10^3 | 
+#    Time: 698975 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Transitionen: 8; Erwartet: 8
+#    Time: 698975 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 699185 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Testdatensatz: 4
+#    Time: 699185 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17525 ps*10^3 | 
+#    Time: 873575 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Transitionen: 10; Erwartet: 10
+#    Time: 873575 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 873785 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Testdatensatz: 5
+#    Time: 873785 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17525 ps*10^3 | 
+#    Time: 1048175 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Transitionen: 6; Erwartet: 6
+#    Time: 1048175 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 1048385 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Testdatensatz: 6
+#    Time: 1048385 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17525 ps*10^3 | 
+#    Time: 1222775 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Transitionen: 6; Erwartet: 6
+#    Time: 1222775 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 1222985 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Testdatensatz: 7
+#    Time: 1222985 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17300 ps*10^3 | 17625 ps*10^3 | 
+#    Time: 1397375 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Transitionen: 8; Erwartet: 8
+#    Time: 1397375 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 1397585 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Testdatensatz: 8
+#    Time: 1397585 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17300 ps*10^3 | 17625 ps*10^3 | 
+#    Time: 1571975 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Transitionen: 4; Erwartet: 4
+#    Time: 1571975 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 1572185 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Testdatensatz: 9
+#    Time: 1572185 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 52025 ps*10^3 | 
+#    Time: 1781075 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Transitionen: 4; Erwartet: 4
+#    Time: 1781075 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Auswertung der Simulationsergebnisse:
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 0:
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 1:
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 2:
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 3:
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 4:
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 5:
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 6:
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 7:
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 8:
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 9:
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Keine Blockade der Seriellen Schnittstelle aufgetreten: 1 Punkt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Keine Datenfehler aufgetreten: 2 Punkte
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Keine Timingfehler aufgetreten: 2 Punkte
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Keine Transitionsfehler aufgetreten: 1 Punkte
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Gesamtpunktzahl: 6/6
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Funktionspruefung bestanden
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Simulation beendet.
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Failure:  EOT (END OF TEST) - Diese Fehlermeldung stoppt den Simulator unabhaengig von tatsaechlich aufgetretenen Fehlern!
+#    Time: 1781076 ns  Iteration: 0  Process: /armrs232interface_tb/tb File: ./src/ArmRS232Interface_tb.vhd
+# Break in Process tb at ./src/ArmRS232Interface_tb.vhd line 260
