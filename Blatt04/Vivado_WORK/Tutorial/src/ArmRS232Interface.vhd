@@ -389,22 +389,17 @@ end block RS232_RECEIVER;
 
 -- RS232_TRM_REG ist 8 Bit gross
 RS232_TRANSMITTER : block is
-    -- Signals to keep the current state.
     type RS232_TRM_STATE_TYPE is (TRM_IDLE, TRM_START, TRM_SHIFT, TRM_STOP);
     signal TRM_STATE, TRM_NEXT_STATE : RS232_TRM_STATE_TYPE := TRM_IDLE;
 
-    -- Shift registers to contain the data that will be sent via the RX232_TXD line
-    signal TRM_DATA, TRM_DATA_REG : std_logic_vector(7 downto 0) := "00000000";
-    signal TRM_COUNT, TRM_COUNT_REG : integer := 0;
-
-    -- Wsg signals to send with a constant baud rate
-    signal WSG_START, WSG_START_REG : std_logic;
-    signal WSG_WAIT : std_logic;
+    signal TRM_DATA, TRM_DATA_REG : std_logic_vector(7 downto 0):=(others => '0');
+    signal TRM_COUNTER, TRM_COUNTER_REG : integer := 0;
+    signal WSG_START, WSG_START_REG, WSG_WAIT : std_logic;
+--  WSG_WAIT wird von der Statemachine nur gelesen
     signal WSG_DELAY, WSG_DELAY_REG: std_logic_vector(31 downto 0); 
     
-    -- Constants for the logical start / stop bit value and wsg delay
-    constant TXD_START_BIT : std_logic := '0';
-    constant TXD_STOP_BIT : std_logic := '1';
+    constant START_BIT : std_logic := '0';
+    constant STOP_BIT : std_logic := '1';
     
 begin
 	WSG : entity work.ArmWaitStateGenAsync(BEHAVE)
@@ -419,81 +414,81 @@ begin
             WSG_WAIT => WSG_WAIT
         );
 
-   
+   --  Setzen des Zustandsregisters und Synchronisationsregister (in einem Prozess)
     SET_NEXT_STATE_AND_REG: process (SYS_CLK) begin
 		if rising_edge(SYS_CLK) then
 			if SYS_RST = '1' then
+				TRM_STATE <= TRM_IDLE;
 				WSG_START_REG <= '0';
 				WSG_DELAY_REG <= std_logic_vector(RS232_START_DELAY);
 				TRM_DATA_REG <= (others => '0');
-				TRM_COUNT_REG <= 0;
-				TRM_STATE <= TRM_IDLE;
+				TRM_COUNTER_REG <= 0;
 			else
+				TRM_STATE <= TRM_NEXT_STATE;
 				WSG_START_REG <= WSG_START;
 				WSG_DELAY_REG <= WSG_DELAY;
 				TRM_DATA_REG <= TRM_DATA;
-				TRM_COUNT_REG <= TRM_COUNT;
-				TRM_STATE <= TRM_NEXT_STATE;
+				TRM_COUNTER_REG <= TRM_COUNTER;
 			end if;
 		end if;	
     end process SET_NEXT_STATE_AND_REG;
 
-    SET_OUTPUT_AND_NEXT_STATE : process (TRM_STATE, START_TRANSMISSION, RS232_TRM_REG, WSG_WAIT, TRM_DATA_REG, TRM_COUNT_REG) begin
+    SET_OUTPUT_AND_NEXT_STATE : process (TRM_STATE, START_TRANSMISSION, RS232_TRM_REG, WSG_WAIT, TRM_DATA_REG, TRM_COUNTER_REG) begin
+	--  Ausgangssignale die durch die FSM gesetzt und in jedem Zustand definiert
+	--  werden muessen:
+	--      TRM_NEXT_STATE
+	--      WSG_START
+	--      TRM_DATA    
+	--      WSG_DELAY
+	--	TRM_COUNTER
+------------------------------------------------------------------
         --  Defaultwerte:   
-		TRM_NEXT_STATE <= TRM_STATE;
-		WSG_START <= '0'; 
-		WSG_DELAY <= std_logic_vector(RS232_DELAY);
-		TRM_DATA  <= TRM_DATA_REG; 
-		TRM_COUNT <= TRM_COUNT_REG; 
-		RS232_TXD <= TXD_STOP_BIT; 
-		 
+		TRM_NEXT_STATE <= TRM_STATE; 
+		WSG_START <= '0'; --0 gesetz für den Fall, der im letzten Clock
+		TRM_DATA  <= TRM_DATA_REG;
+		WSG_DELAY <= std_logic_vector(RS232_DELAY); 
+		TRM_COUNTER <= TRM_COUNTER_REG; 
+		RS232_TXD <= STOP_BIT; --für besondere Falls ist direkt im Case geesetzt(SHIFT) sonst immer 1
+		TRANSMITTER_BUSY <= '1'; --für besondere Falls ist direkt im Case geesetzt(IDLE) sonst immer 1 
 
         case TRM_STATE is
             when TRM_IDLE =>
-                if START_TRANSMISSION = '1' then
-                    TRANSMITTER_BUSY <= '1';
+                if START_TRANSMISSION = '1' then -- nächste Zustand, Daten wird gespeichert                
                     TRM_NEXT_STATE <= TRM_START;
                     TRM_DATA <= RS232_TRM_REG(7 downto 0);
                     WSG_START <= '1';
                 else
-                    TRANSMITTER_BUSY <= '0';
+                    TRANSMITTER_BUSY <= '0'; --nichts passiert
                 end if;
 		
             when TRM_START =>
-                TRANSMITTER_BUSY <= '1';
-
-                if WSG_WAIT = '0' then
-                    TRM_NEXT_STATE <= TRM_SHIFT;
-                    TRM_COUNT <= 0;
+                if WSG_WAIT = '0' then--warte auf WSG
+                    TRM_NEXT_STATE <= TRM_SHIFT; -- nächste Zustand(SHIFT)
+                    TRM_COUNTER <= 0;--reset COUNTER 
                     WSG_START <= '1';
                 end if;
-		
-                RS232_TXD <= TXD_START_BIT;
+                RS232_TXD <= START_BIT; --Ausgabe des StartBITS
 
-            when TRM_SHIFT =>
-                TRANSMITTER_BUSY <= '1';
-
-                if WSG_WAIT = '0' then
+            when TRM_SHIFT => --Bits recht vershieben 
+                if WSG_WAIT = '0' then --Warte auf WSG
 		    WSG_START <= '1';
-                    if TRM_COUNT_REG = 7 then	
+                    if TRM_COUNTER_REG = 7 then -- FERTIG, nächste Zustand (STOP)	
 			TRM_NEXT_STATE <= TRM_STOP;
-                    else
-			TRM_COUNT <= TRM_COUNT_REG + 1;
-                        TRM_DATA <= '0' & TRM_DATA_REG(7 downto 1);		
+                    else  
+			TRM_COUNTER <= TRM_COUNTER_REG + 1; --COUNTER steigt
+                        TRM_DATA <= '0' & TRM_DATA_REG(7 downto 1); --weiter schieben,		
                     end if;
                 end if;
-
-                RS232_TXD <= TRM_DATA_REG(0);
+                RS232_TXD <= TRM_DATA_REG(0); --niederwertiges Bit
 
             when TRM_STOP =>
-                TRANSMITTER_BUSY <= '1';
-                if WSG_WAIT = '0' then
+                if WSG_WAIT = '0' then --Warte auf WSG dann zurück zum IDLE .
                     TRM_NEXT_STATE <= TRM_IDLE;
                 end if;
 	    
-	    when others => 
+	    when others => --für AUSNAHME ,..
+		TRANSMITTER_BUSY <= '0';
 		TRM_NEXT_STATE <= TRM_IDLE;
-		WSG_START <= '0';
 		WSG_DELAY <= std_logic_vector(RS232_START_DELAY);
         end case;
 	end process SET_OUTPUT_AND_NEXT_STATE;
