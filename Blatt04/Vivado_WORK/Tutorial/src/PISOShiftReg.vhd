@@ -38,7 +38,7 @@ if (rising_edge(CLK)) then
             for i in WIDTH-1 downto 0 loop
                 D_reg(i) <= D_IN(i);
             end loop;
-	    end if;
+	end if;
 	-- Schiebvorgang
         if (LOAD = '0') then
             for i in WIDTH-counter-2 downto 0 loop    
