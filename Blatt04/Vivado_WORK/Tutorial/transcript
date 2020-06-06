@@ -1,0 +1,1921 @@
+# //  Questa Sim-64
+# //  Version 10.2c_5 linux_x86_64 Nov 19 2013
+# //
+# //  Copyright 1991-2013 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+vcom -work ./work/ ./src/*.vhd
+# QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package ArmTypes
+# -- Compiling package ArmConfiguration
+# -- Compiling package ArmFilePaths
+# -- Compiling package body ArmFilePaths
+# -- Loading package ArmFilePaths
+# -- Loading package ArmConfiguration
+# -- Compiling entity ArmRS232Interface
+# -- Compiling architecture behave of ArmRS232Interface
+# -- Loading entity ArmWaitStateGenAsync
+# -- Loading package std_logic_textio
+# -- Loading package ArmFilePaths
+# -- Loading package TB_Tools
+# -- Compiling entity ArmRS232Interface_tb
+# -- Compiling architecture behave of ArmRS232Interface_tb
+# -- Compiling package ArmTypes
+# -- Compiling package body ArmTypes
+# -- Loading package ArmTypes
+# -- Compiling entity ArmWaitStateGenAsync
+# -- Compiling architecture behave of ArmWaitStateGenAsync
+# -- Compiling entity PISOShiftReg
+# -- Compiling architecture behavioral of PISOShiftReg
+# -- Loading package ArmTypes
+# -- Loading package ArmConfiguration
+# -- Loading package TB_Tools
+# -- Compiling entity PISOShiftReg_tb
+# -- Compiling architecture testbench of PISOShiftReg_tb
+# -- Compiling package TB_Tools
+# ** Warning: ./src/TB_Tools.vhd(152): (vcom-1236) Shared variables must be of a protected type.
+# ** Warning: ./src/TB_Tools.vhd(153): (vcom-1236) Shared variables must be of a protected type.
+# -- Compiling package body TB_Tools
+# -- Loading package TB_Tools
+vsim work.armrs232interface_tb
+# vsim work.armrs232interface_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.armtypes(body)
+# Loading work.armconfiguration
+# Loading work.armfilepaths(body)
+# Loading work.tb_tools(body)
+# Loading work.armrs232interface_tb(behave)
+# Loading work.armrs232interface(behave)
+# Loading work.armwaitstategenasync(behave)
+run -all
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 0 ps  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Test der seriellen Schnittstelle (Transmitter).
+#    Time: 0 ps  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Ueber den Datenbus werden Testdaten in das RS232_INTERFACE geschrieben, die Ausgaben auf der TXD-Leitung ausgewertet und bzgl. Korrektheit und Zeitanforderungen ueberprueft
+#    Time: 0 ps  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Das Signal CURRENT_RECEIVED_VALUE, sichtbar in der ModelSim-Waveform, enthaelt die jeweils von der seriellen Leitung gelesenen Bits, bis zum Empfang des letzten Bits sind unbekannte Werte hier normal. Das letzte Empfangene Bit ist das Stoppbit
+#    Time: 0 ps  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Zusaetzlich erfolgt die Ausgabe der gemessenen oder abgeschaetzten Dauer jeden Bits einer Uebertragung in der Form:
+#    Time: 0 ps  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Startbit | Bit 0 | Bit 1 | ... Bit 6 | Bit 7 | Stoppbit |
+#    Time: 0 ps  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Die Dauer des Stoppbits wird bis zum Ende des aktuellen Tests oder zum Auftreten der nachsten fallenden Flanke auf RS232_TXD gemessen
+#    Time: 0 ps  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 0 ps  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 785 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Testdatensatz: 0
+#    Time: 785 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: 18366 ps*10^3 | 18366 ps*10^3 | 18366 ps*10^3 | 18366 ps*10^3 | 18366 ps*10^3 | 18366 ps*10^3 | 18366 ps*10^3 | 18366 ps*10^3 | 18366 ps*10^3 | 26125 ps*10^3 | 
+#    Time: 192475 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Transitionen: 2; Erwartet: 2
+#    Time: 192475 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 192685 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Testdatensatz: 1
+#    Time: 192685 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Error: Empfangenes Datum enspricht nicht dem Testwert.
+#    Time: 365950 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Empfangenes Datum enspricht nicht dem Testwert.
+#    Time: 365950 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: 	Empfangen: 	01000110
+#    Time: 365950 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: 	Testwert: 	00100011
+#    Time: 365950 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: 26100 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 26125 ps*10^3 | 
+#    Time: 384375 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Zeitanforderungen fuer das Startbit nicht erfuellt: erwartete Dauer: 17361 ns, ermittelt: 26100 ps*10^3 | 
+#    Time: 384375 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Transitionen: 6; Erwartet: 6
+#    Time: 384375 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 384585 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Testdatensatz: 2
+#    Time: 384585 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Error: Empfangenes Datum enspricht nicht dem Testwert.
+#    Time: 557850 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Empfangenes Datum enspricht nicht dem Testwert.
+#    Time: 557850 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: 	Empfangen: 	11111110
+#    Time: 557850 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: 	Testwert: 	11111111
+#    Time: 557850 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: 26100 ps*10^3 | 17300 ps*10^3 | 17300 ps*10^3 | 17300 ps*10^3 | 17300 ps*10^3 | 17300 ps*10^3 | 17300 ps*10^3 | 17300 ps*10^3 | 17300 ps*10^3 | 26925 ps*10^3 | 
+#    Time: 576275 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Zeitanforderungen fuer das Startbit nicht erfuellt: erwartete Dauer: 17361 ns, ermittelt: 26100 ps*10^3 | 
+#    Time: 576275 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Transitionen: 2; Erwartet: 2
+#    Time: 576275 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 576485 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Testdatensatz: 3
+#    Time: 576485 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Error: Empfangenes Datum enspricht nicht dem Testwert.
+#    Time: 749750 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Empfangenes Datum enspricht nicht dem Testwert.
+#    Time: 749750 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: 	Empfangen: 	01010100
+#    Time: 749750 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: 	Testwert: 	10101010
+#    Time: 749750 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: 21750 ps*10^3 | 21750 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17300 ps*10^3 | 26225 ps*10^3 | 
+#    Time: 768175 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Zeitanforderungen fuer das Startbit nicht erfuellt: erwartete Dauer: 17361 ns, ermittelt: 21750 ps*10^3 | 
+#    Time: 768175 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Zeitanforderungen fuer Bit 1 nicht erfuellt: erwartete Dauer: 17361 ns, ermittelt: 21750 ps*10^3 | 
+#    Time: 768175 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Transitionen: 8; Erwartet: 8
+#    Time: 768175 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 768385 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Testdatensatz: 4
+#    Time: 768385 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Error: Empfangenes Datum enspricht nicht dem Testwert.
+#    Time: 941650 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Empfangenes Datum enspricht nicht dem Testwert.
+#    Time: 941650 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: 	Empfangen: 	10101010
+#    Time: 941650 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: 	Testwert: 	01010101
+#    Time: 941650 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: 26100 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 26125 ps*10^3 | 
+#    Time: 960075 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Zeitanforderungen fuer das Startbit nicht erfuellt: erwartete Dauer: 17361 ns, ermittelt: 26100 ps*10^3 | 
+#    Time: 960075 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Transitionen: 10; Erwartet: 10
+#    Time: 960075 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 960285 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Testdatensatz: 5
+#    Time: 960285 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Error: Empfangenes Datum enspricht nicht dem Testwert.
+#    Time: 1133550 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Empfangenes Datum enspricht nicht dem Testwert.
+#    Time: 1133550 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: 	Empfangen: 	00100100
+#    Time: 1133550 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: 	Testwert: 	00010010
+#    Time: 1133550 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: 21750 ps*10^3 | 21750 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 26125 ps*10^3 | 
+#    Time: 1151975 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Zeitanforderungen fuer das Startbit nicht erfuellt: erwartete Dauer: 17361 ns, ermittelt: 21750 ps*10^3 | 
+#    Time: 1151975 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Zeitanforderungen fuer Bit 1 nicht erfuellt: erwartete Dauer: 17361 ns, ermittelt: 21750 ps*10^3 | 
+#    Time: 1151975 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Transitionen: 6; Erwartet: 6
+#    Time: 1151975 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 1152185 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Testdatensatz: 6
+#    Time: 1152185 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Error: Empfangenes Datum enspricht nicht dem Testwert.
+#    Time: 1325450 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Empfangenes Datum enspricht nicht dem Testwert.
+#    Time: 1325450 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: 	Empfangen: 	00100010
+#    Time: 1325450 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: 	Testwert: 	00010001
+#    Time: 1325450 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: 26100 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 26125 ps*10^3 | 
+#    Time: 1343875 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Zeitanforderungen fuer das Startbit nicht erfuellt: erwartete Dauer: 17361 ns, ermittelt: 26100 ps*10^3 | 
+#    Time: 1343875 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Transitionen: 6; Erwartet: 6
+#    Time: 1343875 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 1344085 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Testdatensatz: 7
+#    Time: 1344085 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Error: Empfangenes Datum enspricht nicht dem Testwert.
+#    Time: 1517350 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Empfangenes Datum enspricht nicht dem Testwert.
+#    Time: 1517350 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: 	Empfangen: 	01010110
+#    Time: 1517350 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: 	Testwert: 	10101011
+#    Time: 1517350 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: 26100 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17300 ps*10^3 | 26225 ps*10^3 | 
+#    Time: 1535775 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Zeitanforderungen fuer das Startbit nicht erfuellt: erwartete Dauer: 17361 ns, ermittelt: 26100 ps*10^3 | 
+#    Time: 1535775 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Transitionen: 8; Erwartet: 8
+#    Time: 1535775 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 1535985 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Testdatensatz: 8
+#    Time: 1535985 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Error: Empfangenes Datum enspricht nicht dem Testwert.
+#    Time: 1709250 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Empfangenes Datum enspricht nicht dem Testwert.
+#    Time: 1709250 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: 	Empfangen: 	00000010
+#    Time: 1709250 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: 	Testwert: 	10000001
+#    Time: 1709250 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: 26100 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17300 ps*10^3 | 26225 ps*10^3 | 
+#    Time: 1727675 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Zeitanforderungen fuer das Startbit nicht erfuellt: erwartete Dauer: 17361 ns, ermittelt: 26100 ps*10^3 | 
+#    Time: 1727675 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Transitionen: 4; Erwartet: 4
+#    Time: 1727675 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 1727885 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Testdatensatz: 9
+#    Time: 1727885 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Error: Empfangenes Datum enspricht nicht dem Testwert.
+#    Time: 1901150 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Empfangenes Datum enspricht nicht dem Testwert.
+#    Time: 1901150 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: 	Empfangen: 	11111100
+#    Time: 1901150 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: 	Testwert: 	01111110
+#    Time: 1901150 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: 21750 ps*10^3 | 21750 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 43325 ps*10^3 | 
+#    Time: 1936775 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Zeitanforderungen fuer das Startbit nicht erfuellt: erwartete Dauer: 17361 ns, ermittelt: 21750 ps*10^3 | 
+#    Time: 1936775 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Zeitanforderungen fuer Bit 1 nicht erfuellt: erwartete Dauer: 17361 ns, ermittelt: 21750 ps*10^3 | 
+#    Time: 1936775 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Transitionen: 4; Erwartet: 4
+#    Time: 1936775 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Auswertung der Simulationsergebnisse:
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 0:
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum korrekt
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing korrekt
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen korrekt
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 1:
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum nicht korrekt
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing nicht korrekt
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen korrekt
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 2:
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum nicht korrekt
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing nicht korrekt
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen korrekt
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 3:
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum nicht korrekt
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing nicht korrekt
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen korrekt
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 4:
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum nicht korrekt
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing nicht korrekt
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen korrekt
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 5:
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum nicht korrekt
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing nicht korrekt
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen korrekt
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 6:
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum nicht korrekt
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing nicht korrekt
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen korrekt
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 7:
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum nicht korrekt
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing nicht korrekt
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen korrekt
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 8:
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum nicht korrekt
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing nicht korrekt
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen korrekt
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 9:
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum nicht korrekt
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing nicht korrekt
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen korrekt
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Keine Blockade der Seriellen Schnittstelle aufgetreten: 1 Punkt
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datenfehler aufgetreten: -2 Punkte
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Timingfehler aufgetreten: -2 Punkte
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Keine Transitionsfehler aufgetreten: 1 Punkte
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Gesamtpunktzahl: 2/6
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Funktionspruefung nicht bestanden
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Error: Funktionspruefung nicht bestanden
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Simulation beendet.
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Failure:  EOT (END OF TEST) - Diese Fehlermeldung stoppt den Simulator unabhaengig von tatsaechlich aufgetretenen Fehlern!
+#    Time: 1936776 ns  Iteration: 0  Process: /armrs232interface_tb/tb File: ./src/ArmRS232Interface_tb.vhd
+# Break in Process tb at ./src/ArmRS232Interface_tb.vhd line 260
+quit -sim
+vcom -work ./work/ ./src/*.vhd
+# QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package ArmTypes
+# -- Compiling package ArmConfiguration
+# -- Compiling package ArmFilePaths
+# -- Compiling package body ArmFilePaths
+# -- Loading package ArmFilePaths
+# -- Loading package ArmConfiguration
+# -- Compiling entity ArmRS232Interface
+# -- Compiling architecture behave of ArmRS232Interface
+# -- Loading entity ArmWaitStateGenAsync
+# -- Loading package std_logic_textio
+# -- Loading package ArmFilePaths
+# -- Loading package TB_Tools
+# -- Compiling entity ArmRS232Interface_tb
+# -- Compiling architecture behave of ArmRS232Interface_tb
+# -- Compiling package ArmTypes
+# -- Compiling package body ArmTypes
+# -- Loading package ArmTypes
+# -- Compiling entity ArmWaitStateGenAsync
+# -- Compiling architecture behave of ArmWaitStateGenAsync
+# -- Compiling entity PISOShiftReg
+# -- Compiling architecture behavioral of PISOShiftReg
+# -- Loading package ArmTypes
+# -- Loading package ArmConfiguration
+# -- Loading package TB_Tools
+# -- Compiling entity PISOShiftReg_tb
+# -- Compiling architecture testbench of PISOShiftReg_tb
+# -- Compiling package TB_Tools
+# ** Warning: ./src/TB_Tools.vhd(152): (vcom-1236) Shared variables must be of a protected type.
+# ** Warning: ./src/TB_Tools.vhd(153): (vcom-1236) Shared variables must be of a protected type.
+# -- Compiling package body TB_Tools
+# -- Loading package TB_Tools
+vsim work.armrs232interface_tb
+# vsim work.armrs232interface_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.armtypes(body)
+# Loading work.armconfiguration
+# Loading work.armfilepaths(body)
+# Loading work.tb_tools(body)
+# Loading work.armrs232interface_tb(behave)
+# Loading work.armrs232interface(behave)
+# Loading work.armwaitstategenasync(behave)
+run -all
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 0 ps  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Test der seriellen Schnittstelle (Transmitter).
+#    Time: 0 ps  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Ueber den Datenbus werden Testdaten in das RS232_INTERFACE geschrieben, die Ausgaben auf der TXD-Leitung ausgewertet und bzgl. Korrektheit und Zeitanforderungen ueberprueft
+#    Time: 0 ps  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Das Signal CURRENT_RECEIVED_VALUE, sichtbar in der ModelSim-Waveform, enthaelt die jeweils von der seriellen Leitung gelesenen Bits, bis zum Empfang des letzten Bits sind unbekannte Werte hier normal. Das letzte Empfangene Bit ist das Stoppbit
+#    Time: 0 ps  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Zusaetzlich erfolgt die Ausgabe der gemessenen oder abgeschaetzten Dauer jeden Bits einer Uebertragung in der Form:
+#    Time: 0 ps  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Startbit | Bit 0 | Bit 1 | ... Bit 6 | Bit 7 | Stoppbit |
+#    Time: 0 ps  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Die Dauer des Stoppbits wird bis zum Ende des aktuellen Tests oder zum Auftreten der nachsten fallenden Flanke auf RS232_TXD gemessen
+#    Time: 0 ps  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 0 ps  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 785 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Testdatensatz: 0
+#    Time: 785 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: 18366 ps*10^3 | 18366 ps*10^3 | 18366 ps*10^3 | 18366 ps*10^3 | 18366 ps*10^3 | 18366 ps*10^3 | 18366 ps*10^3 | 18366 ps*10^3 | 18366 ps*10^3 | 26125 ps*10^3 | 
+#    Time: 192475 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Transitionen: 2; Erwartet: 2
+#    Time: 192475 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 192685 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Testdatensatz: 1
+#    Time: 192685 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Error: Empfangenes Datum enspricht nicht dem Testwert.
+#    Time: 365950 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Empfangenes Datum enspricht nicht dem Testwert.
+#    Time: 365950 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: 	Empfangen: 	01000110
+#    Time: 365950 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: 	Testwert: 	00100011
+#    Time: 365950 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: 26100 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 26125 ps*10^3 | 
+#    Time: 384375 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Zeitanforderungen fuer das Startbit nicht erfuellt: erwartete Dauer: 17361 ns, ermittelt: 26100 ps*10^3 | 
+#    Time: 384375 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Transitionen: 6; Erwartet: 6
+#    Time: 384375 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 384585 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Testdatensatz: 2
+#    Time: 384585 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Error: Empfangenes Datum enspricht nicht dem Testwert.
+#    Time: 557850 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Empfangenes Datum enspricht nicht dem Testwert.
+#    Time: 557850 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: 	Empfangen: 	11111110
+#    Time: 557850 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: 	Testwert: 	11111111
+#    Time: 557850 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: 26100 ps*10^3 | 17300 ps*10^3 | 17300 ps*10^3 | 17300 ps*10^3 | 17300 ps*10^3 | 17300 ps*10^3 | 17300 ps*10^3 | 17300 ps*10^3 | 17300 ps*10^3 | 26925 ps*10^3 | 
+#    Time: 576275 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Zeitanforderungen fuer das Startbit nicht erfuellt: erwartete Dauer: 17361 ns, ermittelt: 26100 ps*10^3 | 
+#    Time: 576275 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Transitionen: 2; Erwartet: 2
+#    Time: 576275 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 576485 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Testdatensatz: 3
+#    Time: 576485 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Error: Empfangenes Datum enspricht nicht dem Testwert.
+#    Time: 749750 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Empfangenes Datum enspricht nicht dem Testwert.
+#    Time: 749750 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: 	Empfangen: 	01010100
+#    Time: 749750 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: 	Testwert: 	10101010
+#    Time: 749750 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: 21750 ps*10^3 | 21750 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17300 ps*10^3 | 26225 ps*10^3 | 
+#    Time: 768175 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Zeitanforderungen fuer das Startbit nicht erfuellt: erwartete Dauer: 17361 ns, ermittelt: 21750 ps*10^3 | 
+#    Time: 768175 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Zeitanforderungen fuer Bit 1 nicht erfuellt: erwartete Dauer: 17361 ns, ermittelt: 21750 ps*10^3 | 
+#    Time: 768175 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Transitionen: 8; Erwartet: 8
+#    Time: 768175 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 768385 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Testdatensatz: 4
+#    Time: 768385 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Error: Empfangenes Datum enspricht nicht dem Testwert.
+#    Time: 941650 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Empfangenes Datum enspricht nicht dem Testwert.
+#    Time: 941650 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: 	Empfangen: 	10101010
+#    Time: 941650 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: 	Testwert: 	01010101
+#    Time: 941650 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: 26100 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 26125 ps*10^3 | 
+#    Time: 960075 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Zeitanforderungen fuer das Startbit nicht erfuellt: erwartete Dauer: 17361 ns, ermittelt: 26100 ps*10^3 | 
+#    Time: 960075 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Transitionen: 10; Erwartet: 10
+#    Time: 960075 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 960285 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Testdatensatz: 5
+#    Time: 960285 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Error: Empfangenes Datum enspricht nicht dem Testwert.
+#    Time: 1133550 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Empfangenes Datum enspricht nicht dem Testwert.
+#    Time: 1133550 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: 	Empfangen: 	00100100
+#    Time: 1133550 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: 	Testwert: 	00010010
+#    Time: 1133550 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: 21750 ps*10^3 | 21750 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 26125 ps*10^3 | 
+#    Time: 1151975 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Zeitanforderungen fuer das Startbit nicht erfuellt: erwartete Dauer: 17361 ns, ermittelt: 21750 ps*10^3 | 
+#    Time: 1151975 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Zeitanforderungen fuer Bit 1 nicht erfuellt: erwartete Dauer: 17361 ns, ermittelt: 21750 ps*10^3 | 
+#    Time: 1151975 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Transitionen: 6; Erwartet: 6
+#    Time: 1151975 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 1152185 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Testdatensatz: 6
+#    Time: 1152185 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Error: Empfangenes Datum enspricht nicht dem Testwert.
+#    Time: 1325450 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Empfangenes Datum enspricht nicht dem Testwert.
+#    Time: 1325450 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: 	Empfangen: 	00100010
+#    Time: 1325450 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: 	Testwert: 	00010001
+#    Time: 1325450 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: 26100 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 26125 ps*10^3 | 
+#    Time: 1343875 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Zeitanforderungen fuer das Startbit nicht erfuellt: erwartete Dauer: 17361 ns, ermittelt: 26100 ps*10^3 | 
+#    Time: 1343875 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Transitionen: 6; Erwartet: 6
+#    Time: 1343875 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 1344085 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Testdatensatz: 7
+#    Time: 1344085 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Error: Empfangenes Datum enspricht nicht dem Testwert.
+#    Time: 1517350 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Empfangenes Datum enspricht nicht dem Testwert.
+#    Time: 1517350 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: 	Empfangen: 	01010110
+#    Time: 1517350 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: 	Testwert: 	10101011
+#    Time: 1517350 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: 26100 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17300 ps*10^3 | 26225 ps*10^3 | 
+#    Time: 1535775 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Zeitanforderungen fuer das Startbit nicht erfuellt: erwartete Dauer: 17361 ns, ermittelt: 26100 ps*10^3 | 
+#    Time: 1535775 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Transitionen: 8; Erwartet: 8
+#    Time: 1535775 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 1535985 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Testdatensatz: 8
+#    Time: 1535985 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Error: Empfangenes Datum enspricht nicht dem Testwert.
+#    Time: 1709250 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Empfangenes Datum enspricht nicht dem Testwert.
+#    Time: 1709250 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: 	Empfangen: 	00000010
+#    Time: 1709250 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: 	Testwert: 	10000001
+#    Time: 1709250 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: 26100 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17300 ps*10^3 | 26225 ps*10^3 | 
+#    Time: 1727675 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Zeitanforderungen fuer das Startbit nicht erfuellt: erwartete Dauer: 17361 ns, ermittelt: 26100 ps*10^3 | 
+#    Time: 1727675 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Transitionen: 4; Erwartet: 4
+#    Time: 1727675 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 1727885 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Testdatensatz: 9
+#    Time: 1727885 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Error: Empfangenes Datum enspricht nicht dem Testwert.
+#    Time: 1901150 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Empfangenes Datum enspricht nicht dem Testwert.
+#    Time: 1901150 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: 	Empfangen: 	11111100
+#    Time: 1901150 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: 	Testwert: 	01111110
+#    Time: 1901150 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: 21750 ps*10^3 | 21750 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 43325 ps*10^3 | 
+#    Time: 1936775 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Zeitanforderungen fuer das Startbit nicht erfuellt: erwartete Dauer: 17361 ns, ermittelt: 21750 ps*10^3 | 
+#    Time: 1936775 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Zeitanforderungen fuer Bit 1 nicht erfuellt: erwartete Dauer: 17361 ns, ermittelt: 21750 ps*10^3 | 
+#    Time: 1936775 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Transitionen: 4; Erwartet: 4
+#    Time: 1936775 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Auswertung der Simulationsergebnisse:
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 0:
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum korrekt
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing korrekt
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen korrekt
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 1:
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum nicht korrekt
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing nicht korrekt
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen korrekt
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 2:
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum nicht korrekt
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing nicht korrekt
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen korrekt
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 3:
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum nicht korrekt
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing nicht korrekt
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen korrekt
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 4:
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum nicht korrekt
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing nicht korrekt
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen korrekt
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 5:
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum nicht korrekt
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing nicht korrekt
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen korrekt
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 6:
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum nicht korrekt
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing nicht korrekt
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen korrekt
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 7:
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum nicht korrekt
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing nicht korrekt
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen korrekt
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 8:
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum nicht korrekt
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing nicht korrekt
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen korrekt
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 9:
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum nicht korrekt
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing nicht korrekt
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen korrekt
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Keine Blockade der Seriellen Schnittstelle aufgetreten: 1 Punkt
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datenfehler aufgetreten: -2 Punkte
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Timingfehler aufgetreten: -2 Punkte
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Keine Transitionsfehler aufgetreten: 1 Punkte
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Gesamtpunktzahl: 2/6
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Funktionspruefung nicht bestanden
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Error: Funktionspruefung nicht bestanden
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Simulation beendet.
+#    Time: 1936776 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Failure:  EOT (END OF TEST) - Diese Fehlermeldung stoppt den Simulator unabhaengig von tatsaechlich aufgetretenen Fehlern!
+#    Time: 1936776 ns  Iteration: 0  Process: /armrs232interface_tb/tb File: ./src/ArmRS232Interface_tb.vhd
+# Break in Process tb at ./src/ArmRS232Interface_tb.vhd line 260
+quit -sim
+vcom -work ./work/ ./src/*.vhd
+# QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package ArmTypes
+# -- Compiling package ArmConfiguration
+# -- Compiling package ArmFilePaths
+# -- Compiling package body ArmFilePaths
+# -- Loading package ArmFilePaths
+# -- Loading package ArmConfiguration
+# -- Compiling entity ArmRS232Interface
+# -- Compiling architecture behave of ArmRS232Interface
+# -- Loading entity ArmWaitStateGenAsync
+# ** Error: ./src/ArmRS232Interface.vhd(496): Integer literal 0 is not of type ieee.std_logic_1164.STD_LOGIC.
+# ** Error: ./src/ArmRS232Interface.vhd(502): VHDL Compiler exiting
+# /afs/tu-berlin.de/units/Fak_IV/aes/tools/mentor/questasim/linux_x86_64/vcom failed.
+vcom -work ./work/ ./src/*.vhd
+# QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package ArmTypes
+# -- Compiling package ArmConfiguration
+# -- Compiling package ArmFilePaths
+# -- Compiling package body ArmFilePaths
+# -- Loading package ArmFilePaths
+# -- Loading package ArmConfiguration
+# -- Compiling entity ArmRS232Interface
+# -- Compiling architecture behave of ArmRS232Interface
+# -- Loading entity ArmWaitStateGenAsync
+# -- Loading package std_logic_textio
+# -- Loading package ArmFilePaths
+# -- Loading package TB_Tools
+# -- Compiling entity ArmRS232Interface_tb
+# -- Compiling architecture behave of ArmRS232Interface_tb
+# -- Compiling package ArmTypes
+# -- Compiling package body ArmTypes
+# -- Loading package ArmTypes
+# -- Compiling entity ArmWaitStateGenAsync
+# -- Compiling architecture behave of ArmWaitStateGenAsync
+# -- Compiling entity PISOShiftReg
+# -- Compiling architecture behavioral of PISOShiftReg
+# -- Loading package ArmTypes
+# -- Loading package ArmConfiguration
+# -- Loading package TB_Tools
+# -- Compiling entity PISOShiftReg_tb
+# -- Compiling architecture testbench of PISOShiftReg_tb
+# -- Compiling package TB_Tools
+# ** Warning: ./src/TB_Tools.vhd(152): (vcom-1236) Shared variables must be of a protected type.
+# ** Warning: ./src/TB_Tools.vhd(153): (vcom-1236) Shared variables must be of a protected type.
+# -- Compiling package body TB_Tools
+# -- Loading package TB_Tools
+vsim work.armrs232interface_tb
+# vsim work.armrs232interface_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.armtypes(body)
+# Loading work.armconfiguration
+# Loading work.armfilepaths(body)
+# Loading work.tb_tools(body)
+# Loading work.armrs232interface_tb(behave)
+# Loading work.armrs232interface(behave)
+# Loading work.armwaitstategenasync(behave)
+run -all
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 0 ps  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Test der seriellen Schnittstelle (Transmitter).
+#    Time: 0 ps  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Ueber den Datenbus werden Testdaten in das RS232_INTERFACE geschrieben, die Ausgaben auf der TXD-Leitung ausgewertet und bzgl. Korrektheit und Zeitanforderungen ueberprueft
+#    Time: 0 ps  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Das Signal CURRENT_RECEIVED_VALUE, sichtbar in der ModelSim-Waveform, enthaelt die jeweils von der seriellen Leitung gelesenen Bits, bis zum Empfang des letzten Bits sind unbekannte Werte hier normal. Das letzte Empfangene Bit ist das Stoppbit
+#    Time: 0 ps  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Zusaetzlich erfolgt die Ausgabe der gemessenen oder abgeschaetzten Dauer jeden Bits einer Uebertragung in der Form:
+#    Time: 0 ps  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Startbit | Bit 0 | Bit 1 | ... Bit 6 | Bit 7 | Stoppbit |
+#    Time: 0 ps  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Die Dauer des Stoppbits wird bis zum Ende des aktuellen Tests oder zum Auftreten der nachsten fallenden Flanke auf RS232_TXD gemessen
+#    Time: 0 ps  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 0 ps  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 785 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Testdatensatz: 0
+#    Time: 785 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17525 ps*10^3 | 
+#    Time: 175175 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Transitionen: 2; Erwartet: 2
+#    Time: 175175 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 175385 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Testdatensatz: 1
+#    Time: 175385 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17525 ps*10^3 | 
+#    Time: 349775 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Transitionen: 6; Erwartet: 6
+#    Time: 349775 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 349985 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Testdatensatz: 2
+#    Time: 349985 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: 17400 ps*10^3 | 17300 ps*10^3 | 17300 ps*10^3 | 17300 ps*10^3 | 17300 ps*10^3 | 17300 ps*10^3 | 17300 ps*10^3 | 17300 ps*10^3 | 17300 ps*10^3 | 18325 ps*10^3 | 
+#    Time: 524375 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Transitionen: 2; Erwartet: 2
+#    Time: 524375 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 524585 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Testdatensatz: 3
+#    Time: 524585 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17300 ps*10^3 | 17625 ps*10^3 | 
+#    Time: 698975 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Transitionen: 8; Erwartet: 8
+#    Time: 698975 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 699185 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Testdatensatz: 4
+#    Time: 699185 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17525 ps*10^3 | 
+#    Time: 873575 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Transitionen: 10; Erwartet: 10
+#    Time: 873575 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 873785 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Testdatensatz: 5
+#    Time: 873785 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17525 ps*10^3 | 
+#    Time: 1048175 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Transitionen: 6; Erwartet: 6
+#    Time: 1048175 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 1048385 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Testdatensatz: 6
+#    Time: 1048385 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17525 ps*10^3 | 
+#    Time: 1222775 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Transitionen: 6; Erwartet: 6
+#    Time: 1222775 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 1222985 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Testdatensatz: 7
+#    Time: 1222985 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17300 ps*10^3 | 17625 ps*10^3 | 
+#    Time: 1397375 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Transitionen: 8; Erwartet: 8
+#    Time: 1397375 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 1397585 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Testdatensatz: 8
+#    Time: 1397585 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17300 ps*10^3 | 17625 ps*10^3 | 
+#    Time: 1571975 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Transitionen: 4; Erwartet: 4
+#    Time: 1571975 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 1572185 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Testdatensatz: 9
+#    Time: 1572185 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 52025 ps*10^3 | 
+#    Time: 1781075 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Transitionen: 4; Erwartet: 4
+#    Time: 1781075 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Auswertung der Simulationsergebnisse:
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 0:
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 1:
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 2:
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 3:
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 4:
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 5:
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 6:
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 7:
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 8:
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 9:
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Keine Blockade der Seriellen Schnittstelle aufgetreten: 1 Punkt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Keine Datenfehler aufgetreten: 2 Punkte
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Keine Timingfehler aufgetreten: 2 Punkte
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Keine Transitionsfehler aufgetreten: 1 Punkte
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Gesamtpunktzahl: 6/6
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Funktionspruefung bestanden
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Simulation beendet.
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Failure:  EOT (END OF TEST) - Diese Fehlermeldung stoppt den Simulator unabhaengig von tatsaechlich aufgetretenen Fehlern!
+#    Time: 1781076 ns  Iteration: 0  Process: /armrs232interface_tb/tb File: ./src/ArmRS232Interface_tb.vhd
+# Break in Process tb at ./src/ArmRS232Interface_tb.vhd line 260
+quit -sim
+vcom -work ./work/ ./src/*.vhd
+# QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package ArmTypes
+# -- Compiling package ArmConfiguration
+# -- Compiling package ArmFilePaths
+# -- Compiling package body ArmFilePaths
+# -- Loading package ArmFilePaths
+# -- Loading package ArmConfiguration
+# -- Compiling entity ArmRS232Interface
+# -- Compiling architecture behave of ArmRS232Interface
+# -- Loading entity ArmWaitStateGenAsync
+# ** Error: ./src/ArmRS232Interface.vhd(496): near "else": expecting END or WHEN
+# ** Error: ./src/ArmRS232Interface.vhd(500): near "when": expecting END
+# ** Error: ./src/ArmRS232Interface.vhd(504): near "case": expecting BLOCK
+# ** Error: ./src/ArmRS232Interface_tb.vhd(16): VHDL Compiler exiting
+# /afs/tu-berlin.de/units/Fak_IV/aes/tools/mentor/questasim/linux_x86_64/vcom failed.
+vcom -work ./work/ ./src/*.vhd
+# QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package ArmTypes
+# -- Compiling package ArmConfiguration
+# -- Compiling package ArmFilePaths
+# -- Compiling package body ArmFilePaths
+# -- Loading package ArmFilePaths
+# -- Loading package ArmConfiguration
+# -- Compiling entity ArmRS232Interface
+# -- Compiling architecture behave of ArmRS232Interface
+# -- Loading entity ArmWaitStateGenAsync
+# ** Error: ./src/ArmRS232Interface.vhd(496): near ";": expecting THEN
+# ** Error: ./src/ArmRS232Interface.vhd(500): near "when": expecting END
+# ** Error: ./src/ArmRS232Interface.vhd(504): near "case": expecting BLOCK
+# ** Error: ./src/ArmRS232Interface_tb.vhd(16): VHDL Compiler exiting
+# /afs/tu-berlin.de/units/Fak_IV/aes/tools/mentor/questasim/linux_x86_64/vcom failed.
+vcom -work ./work/ ./src/*.vhd
+# QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package ArmTypes
+# -- Compiling package ArmConfiguration
+# -- Compiling package ArmFilePaths
+# -- Compiling package body ArmFilePaths
+# -- Loading package ArmFilePaths
+# -- Loading package ArmConfiguration
+# -- Compiling entity ArmRS232Interface
+# -- Compiling architecture behave of ArmRS232Interface
+# -- Loading entity ArmWaitStateGenAsync
+# -- Loading package std_logic_textio
+# -- Loading package ArmFilePaths
+# -- Loading package TB_Tools
+# -- Compiling entity ArmRS232Interface_tb
+# -- Compiling architecture behave of ArmRS232Interface_tb
+# -- Compiling package ArmTypes
+# -- Compiling package body ArmTypes
+# -- Loading package ArmTypes
+# -- Compiling entity ArmWaitStateGenAsync
+# -- Compiling architecture behave of ArmWaitStateGenAsync
+# -- Compiling entity PISOShiftReg
+# -- Compiling architecture behavioral of PISOShiftReg
+# -- Loading package ArmTypes
+# -- Loading package ArmConfiguration
+# -- Loading package TB_Tools
+# -- Compiling entity PISOShiftReg_tb
+# -- Compiling architecture testbench of PISOShiftReg_tb
+# -- Compiling package TB_Tools
+# ** Warning: ./src/TB_Tools.vhd(152): (vcom-1236) Shared variables must be of a protected type.
+# ** Warning: ./src/TB_Tools.vhd(153): (vcom-1236) Shared variables must be of a protected type.
+# -- Compiling package body TB_Tools
+# -- Loading package TB_Tools
+vsim -voptargs=+acc work.armrs232interface_tb
+# vsim -voptargs=+acc work.armrs232interface_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.armtypes(body)
+# Loading work.armconfiguration
+# Loading work.armfilepaths(body)
+# Loading work.tb_tools(body)
+# Loading work.armrs232interface_tb(behave)
+# Loading work.armrs232interface(behave)
+# Loading work.armwaitstategenasync(behave)
+run -all
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 0 ps  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Test der seriellen Schnittstelle (Transmitter).
+#    Time: 0 ps  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Ueber den Datenbus werden Testdaten in das RS232_INTERFACE geschrieben, die Ausgaben auf der TXD-Leitung ausgewertet und bzgl. Korrektheit und Zeitanforderungen ueberprueft
+#    Time: 0 ps  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Das Signal CURRENT_RECEIVED_VALUE, sichtbar in der ModelSim-Waveform, enthaelt die jeweils von der seriellen Leitung gelesenen Bits, bis zum Empfang des letzten Bits sind unbekannte Werte hier normal. Das letzte Empfangene Bit ist das Stoppbit
+#    Time: 0 ps  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Zusaetzlich erfolgt die Ausgabe der gemessenen oder abgeschaetzten Dauer jeden Bits einer Uebertragung in der Form:
+#    Time: 0 ps  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Startbit | Bit 0 | Bit 1 | ... Bit 6 | Bit 7 | Stoppbit |
+#    Time: 0 ps  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Die Dauer des Stoppbits wird bis zum Ende des aktuellen Tests oder zum Auftreten der nachsten fallenden Flanke auf RS232_TXD gemessen
+#    Time: 0 ps  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 0 ps  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 785 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Testdatensatz: 0
+#    Time: 785 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Error: Empfangenes Datum enspricht nicht dem Testwert.
+#    Time: 36775 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Empfangenes Datum enspricht nicht dem Testwert.
+#    Time: 36775 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: 	Empfangen: 	UUUUUU11
+#    Time: 36775 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: 	Testwert: 	00000000
+#    Time: 36775 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: 3969 ps*10^3 | 3969 ps*10^3 | 3969 ps*10^3 | 3969 ps*10^3 | 3969 ps*10^3 | 3969 ps*10^3 | 3969 ps*10^3 | 3969 ps*10^3 | 3969 ps*10^3 | 0 ps*10^3 | 
+#    Time: 36775 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Zeitanforderungen fuer das Startbit nicht erfuellt: erwartete Dauer: 17361 ns, ermittelt: 3969 ps*10^3 | 
+#    Time: 36775 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Zeitanforderungen fuer Bit 1 nicht erfuellt: erwartete Dauer: 17361 ns, ermittelt: 3969 ps*10^3 | 
+#    Time: 36775 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Zeitanforderungen fuer Bit 2 nicht erfuellt: erwartete Dauer: 17361 ns, ermittelt: 3969 ps*10^3 | 
+#    Time: 36775 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Zeitanforderungen fuer Bit 3 nicht erfuellt: erwartete Dauer: 17361 ns, ermittelt: 3969 ps*10^3 | 
+#    Time: 36775 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Zeitanforderungen fuer Bit 4 nicht erfuellt: erwartete Dauer: 17361 ns, ermittelt: 3969 ps*10^3 | 
+#    Time: 36775 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Zeitanforderungen fuer Bit 5 nicht erfuellt: erwartete Dauer: 17361 ns, ermittelt: 3969 ps*10^3 | 
+#    Time: 36775 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Zeitanforderungen fuer Bit 6 nicht erfuellt: erwartete Dauer: 17361 ns, ermittelt: 3969 ps*10^3 | 
+#    Time: 36775 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Zeitanforderungen fuer Bit 7 nicht erfuellt: erwartete Dauer: 17361 ns, ermittelt: 3969 ps*10^3 | 
+#    Time: 36775 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Zeitanforderungen fuer Bit 8 nicht erfuellt: erwartete Dauer: 17361 ns, ermittelt: 3969 ps*10^3 | 
+#    Time: 36775 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Zeitanforderungen fuer das Stoppbit nicht erfuellt: erwartete Dauer: 17361 ns, ermittelt: 0 ps*10^3 | 
+#    Time: 36775 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Transitionen: 2; Erwartet: 2
+#    Time: 36775 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 36985 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Testdatensatz: 1
+#    Time: 36985 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Error: Empfangenes Datum enspricht nicht dem Testwert.
+#    Time: 72975 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Empfangenes Datum enspricht nicht dem Testwert.
+#    Time: 72975 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: 	Empfangen: 	UUUUUU11
+#    Time: 72975 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: 	Testwert: 	00100011
+#    Time: 72975 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Fehlerhafte Anzahl von Transitionen.
+#    Time: 72975 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Error: Fehlerhafte Anzahl von Transitionen.
+#    Time: 72975 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Transitionen: 2; Erwartet: 6
+#    Time: 72975 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 73185 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Testdatensatz: 2
+#    Time: 73185 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Error: Empfangenes Datum enspricht nicht dem Testwert.
+#    Time: 109175 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Empfangenes Datum enspricht nicht dem Testwert.
+#    Time: 109175 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: 	Empfangen: 	UUUUUU11
+#    Time: 109175 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: 	Testwert: 	11111111
+#    Time: 109175 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Transitionen: 2; Erwartet: 2
+#    Time: 109175 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 109385 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Testdatensatz: 3
+#    Time: 109385 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Error: Empfangenes Datum enspricht nicht dem Testwert.
+#    Time: 145375 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Empfangenes Datum enspricht nicht dem Testwert.
+#    Time: 145375 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: 	Empfangen: 	UUUUUU11
+#    Time: 145375 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: 	Testwert: 	10101010
+#    Time: 145375 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: 17400 ps*10^3 | 9400 ps*10^3 | 9400 ps*10^3 | 12066 ps*10^3 | 12066 ps*10^3 | 12066 ps*10^3 | 17500 ps*10^3 | 9112 ps*10^3 | 9112 ps*10^3 | 0 ps*10^3 | 
+#    Time: 145375 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Zeitanforderungen fuer Bit 1 nicht erfuellt: erwartete Dauer: 17361 ns, ermittelt: 9400 ps*10^3 | 
+#    Time: 145375 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Zeitanforderungen fuer Bit 2 nicht erfuellt: erwartete Dauer: 17361 ns, ermittelt: 9400 ps*10^3 | 
+#    Time: 145375 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Zeitanforderungen fuer Bit 3 nicht erfuellt: erwartete Dauer: 17361 ns, ermittelt: 12066 ps*10^3 | 
+#    Time: 145375 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Zeitanforderungen fuer Bit 4 nicht erfuellt: erwartete Dauer: 17361 ns, ermittelt: 12066 ps*10^3 | 
+#    Time: 145375 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Zeitanforderungen fuer Bit 5 nicht erfuellt: erwartete Dauer: 17361 ns, ermittelt: 12066 ps*10^3 | 
+#    Time: 145375 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Zeitanforderungen fuer Bit 7 nicht erfuellt: erwartete Dauer: 17361 ns, ermittelt: 9112 ps*10^3 | 
+#    Time: 145375 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Zeitanforderungen fuer Bit 8 nicht erfuellt: erwartete Dauer: 17361 ns, ermittelt: 9112 ps*10^3 | 
+#    Time: 145375 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Zeitanforderungen fuer das Stoppbit nicht erfuellt: erwartete Dauer: 17361 ns, ermittelt: 0 ps*10^3 | 
+#    Time: 145375 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Fehlerhafte Anzahl von Transitionen.
+#    Time: 145375 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Error: Fehlerhafte Anzahl von Transitionen.
+#    Time: 145375 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Transitionen: 2; Erwartet: 8
+#    Time: 145375 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 145585 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Testdatensatz: 4
+#    Time: 145585 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Error: Empfangenes Datum enspricht nicht dem Testwert.
+#    Time: 181575 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Empfangenes Datum enspricht nicht dem Testwert.
+#    Time: 181575 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: 	Empfangen: 	UUUUUU11
+#    Time: 181575 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: 	Testwert: 	01010101
+#    Time: 181575 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Fehlerhafte Anzahl von Transitionen.
+#    Time: 181575 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Error: Fehlerhafte Anzahl von Transitionen.
+#    Time: 181575 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Transitionen: 2; Erwartet: 10
+#    Time: 181575 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 181785 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Testdatensatz: 5
+#    Time: 181785 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Error: Empfangenes Datum enspricht nicht dem Testwert.
+#    Time: 217775 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Empfangenes Datum enspricht nicht dem Testwert.
+#    Time: 217775 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: 	Empfangen: 	UUUUUU11
+#    Time: 217775 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: 	Testwert: 	00010010
+#    Time: 217775 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Fehlerhafte Anzahl von Transitionen.
+#    Time: 217775 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Error: Fehlerhafte Anzahl von Transitionen.
+#    Time: 217775 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Transitionen: 2; Erwartet: 6
+#    Time: 217775 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 217985 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Testdatensatz: 6
+#    Time: 217985 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Error: Empfangenes Datum enspricht nicht dem Testwert.
+#    Time: 253975 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Empfangenes Datum enspricht nicht dem Testwert.
+#    Time: 253975 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: 	Empfangen: 	UUUUUU11
+#    Time: 253975 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: 	Testwert: 	00010001
+#    Time: 253975 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Fehlerhafte Anzahl von Transitionen.
+#    Time: 253975 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Error: Fehlerhafte Anzahl von Transitionen.
+#    Time: 253975 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Transitionen: 2; Erwartet: 6
+#    Time: 253975 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 254185 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Testdatensatz: 7
+#    Time: 254185 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Error: Empfangenes Datum enspricht nicht dem Testwert.
+#    Time: 290175 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Empfangenes Datum enspricht nicht dem Testwert.
+#    Time: 290175 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: 	Empfangen: 	UUUUUU11
+#    Time: 290175 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: 	Testwert: 	10101011
+#    Time: 290175 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Fehlerhafte Anzahl von Transitionen.
+#    Time: 290175 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Error: Fehlerhafte Anzahl von Transitionen.
+#    Time: 290175 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Transitionen: 2; Erwartet: 8
+#    Time: 290175 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 290385 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Testdatensatz: 8
+#    Time: 290385 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Error: Empfangenes Datum enspricht nicht dem Testwert.
+#    Time: 326375 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Empfangenes Datum enspricht nicht dem Testwert.
+#    Time: 326375 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: 	Empfangen: 	UUUUUU11
+#    Time: 326375 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: 	Testwert: 	10000001
+#    Time: 326375 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Fehlerhafte Anzahl von Transitionen.
+#    Time: 326375 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Error: Fehlerhafte Anzahl von Transitionen.
+#    Time: 326375 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Transitionen: 2; Erwartet: 4
+#    Time: 326375 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 326585 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Testdatensatz: 9
+#    Time: 326585 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Error: Empfangenes Datum enspricht nicht dem Testwert.
+#    Time: 499850 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Empfangenes Datum enspricht nicht dem Testwert.
+#    Time: 499850 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: 	Empfangen: 	11111111
+#    Time: 499850 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: 	Testwert: 	01111110
+#    Time: 499850 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Fehlerhafte Anzahl von Transitionen.
+#    Time: 535475 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Error: Fehlerhafte Anzahl von Transitionen.
+#    Time: 535475 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Transitionen: 2; Erwartet: 4
+#    Time: 535475 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 535476 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Auswertung der Simulationsergebnisse:
+#    Time: 535476 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 0:
+#    Time: 535476 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum nicht korrekt
+#    Time: 535476 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing nicht korrekt
+#    Time: 535476 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen korrekt
+#    Time: 535476 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 1:
+#    Time: 535476 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum nicht korrekt
+#    Time: 535476 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing nicht korrekt
+#    Time: 535476 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen nicht korrekt
+#    Time: 535476 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 2:
+#    Time: 535476 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum nicht korrekt
+#    Time: 535476 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing korrekt
+#    Time: 535476 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen korrekt
+#    Time: 535476 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 3:
+#    Time: 535476 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum nicht korrekt
+#    Time: 535476 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing korrekt
+#    Time: 535476 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen nicht korrekt
+#    Time: 535476 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 4:
+#    Time: 535476 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum nicht korrekt
+#    Time: 535476 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing korrekt
+#    Time: 535476 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen nicht korrekt
+#    Time: 535476 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 5:
+#    Time: 535476 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum nicht korrekt
+#    Time: 535476 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing korrekt
+#    Time: 535476 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen nicht korrekt
+#    Time: 535476 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 6:
+#    Time: 535476 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum nicht korrekt
+#    Time: 535476 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing korrekt
+#    Time: 535476 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen nicht korrekt
+#    Time: 535476 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 7:
+#    Time: 535476 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum nicht korrekt
+#    Time: 535476 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing korrekt
+#    Time: 535476 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen nicht korrekt
+#    Time: 535476 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 8:
+#    Time: 535476 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum nicht korrekt
+#    Time: 535476 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing korrekt
+#    Time: 535476 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen nicht korrekt
+#    Time: 535476 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 9:
+#    Time: 535476 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum nicht korrekt
+#    Time: 535476 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing korrekt
+#    Time: 535476 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen nicht korrekt
+#    Time: 535476 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 535476 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Keine Blockade der Seriellen Schnittstelle aufgetreten: 1 Punkt
+#    Time: 535476 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datenfehler aufgetreten: -2 Punkte
+#    Time: 535476 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Timingfehler aufgetreten: -2 Punkte
+#    Time: 535476 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Transitionsfehler aufgetreten: -1 Punkt
+#    Time: 535476 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 535476 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 535476 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Gesamtpunktzahl: 1/6
+#    Time: 535476 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Funktionspruefung nicht bestanden
+#    Time: 535476 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Error: Funktionspruefung nicht bestanden
+#    Time: 535476 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 535476 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Simulation beendet.
+#    Time: 535476 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Failure:  EOT (END OF TEST) - Diese Fehlermeldung stoppt den Simulator unabhaengig von tatsaechlich aufgetretenen Fehlern!
+#    Time: 535476 ns  Iteration: 0  Process: /armrs232interface_tb/tb File: ./src/ArmRS232Interface_tb.vhd
+# Break in Process tb at ./src/ArmRS232Interface_tb.vhd line 260
+quit -sim
+vcom -work ./work/ ./src/*.vhd
+# QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package ArmTypes
+# -- Compiling package ArmConfiguration
+# -- Compiling package ArmFilePaths
+# -- Compiling package body ArmFilePaths
+# -- Loading package ArmFilePaths
+# -- Loading package ArmConfiguration
+# -- Compiling entity ArmRS232Interface
+# -- Compiling architecture behave of ArmRS232Interface
+# -- Loading entity ArmWaitStateGenAsync
+# -- Loading package std_logic_textio
+# -- Loading package ArmFilePaths
+# -- Loading package TB_Tools
+# -- Compiling entity ArmRS232Interface_tb
+# -- Compiling architecture behave of ArmRS232Interface_tb
+# -- Compiling package ArmTypes
+# -- Compiling package body ArmTypes
+# -- Loading package ArmTypes
+# -- Compiling entity ArmWaitStateGenAsync
+# -- Compiling architecture behave of ArmWaitStateGenAsync
+# -- Compiling entity PISOShiftReg
+# -- Compiling architecture behavioral of PISOShiftReg
+# -- Loading package ArmTypes
+# -- Loading package ArmConfiguration
+# -- Loading package TB_Tools
+# -- Compiling entity PISOShiftReg_tb
+# -- Compiling architecture testbench of PISOShiftReg_tb
+# -- Compiling package TB_Tools
+# ** Warning: ./src/TB_Tools.vhd(152): (vcom-1236) Shared variables must be of a protected type.
+# ** Warning: ./src/TB_Tools.vhd(153): (vcom-1236) Shared variables must be of a protected type.
+# -- Compiling package body TB_Tools
+# -- Loading package TB_Tools
+vsim work.armrs232interface_tb
+# vsim work.armrs232interface_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.armtypes(body)
+# Loading work.armconfiguration
+# Loading work.armfilepaths(body)
+# Loading work.tb_tools(body)
+# Loading work.armrs232interface_tb(behave)
+# Loading work.armrs232interface(behave)
+# Loading work.armwaitstategenasync(behave)
+run -all
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 0 ps  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Test der seriellen Schnittstelle (Transmitter).
+#    Time: 0 ps  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Ueber den Datenbus werden Testdaten in das RS232_INTERFACE geschrieben, die Ausgaben auf der TXD-Leitung ausgewertet und bzgl. Korrektheit und Zeitanforderungen ueberprueft
+#    Time: 0 ps  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Das Signal CURRENT_RECEIVED_VALUE, sichtbar in der ModelSim-Waveform, enthaelt die jeweils von der seriellen Leitung gelesenen Bits, bis zum Empfang des letzten Bits sind unbekannte Werte hier normal. Das letzte Empfangene Bit ist das Stoppbit
+#    Time: 0 ps  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Zusaetzlich erfolgt die Ausgabe der gemessenen oder abgeschaetzten Dauer jeden Bits einer Uebertragung in der Form:
+#    Time: 0 ps  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Startbit | Bit 0 | Bit 1 | ... Bit 6 | Bit 7 | Stoppbit |
+#    Time: 0 ps  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Die Dauer des Stoppbits wird bis zum Ende des aktuellen Tests oder zum Auftreten der nachsten fallenden Flanke auf RS232_TXD gemessen
+#    Time: 0 ps  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 0 ps  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 785 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Testdatensatz: 0
+#    Time: 785 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Error: Empfangenes Datum enspricht nicht dem Testwert.
+#    Time: 174050 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Empfangenes Datum enspricht nicht dem Testwert.
+#    Time: 174050 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: 	Empfangen: 	11111111
+#    Time: 174050 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: 	Testwert: 	00000000
+#    Time: 174050 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Transitionen: 2; Erwartet: 2
+#    Time: 227075 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: 25113 ps*10^3 | 25113 ps*10^3 | 25113 ps*10^3 | 25113 ps*10^3 | 25113 ps*10^3 | 25113 ps*10^3 | 25113 ps*10^3 | 25113 ps*10^3 | 25113 ps*10^3 | 0 ps*10^3 | 
+#    Time: 227075 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Zeitanforderungen fuer das Startbit nicht erfuellt: erwartete Dauer: 17361 ns, ermittelt: 25113 ps*10^3 | 
+#    Time: 227075 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Zeitanforderungen fuer Bit 1 nicht erfuellt: erwartete Dauer: 17361 ns, ermittelt: 25113 ps*10^3 | 
+#    Time: 227075 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Zeitanforderungen fuer Bit 2 nicht erfuellt: erwartete Dauer: 17361 ns, ermittelt: 25113 ps*10^3 | 
+#    Time: 227075 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Zeitanforderungen fuer Bit 3 nicht erfuellt: erwartete Dauer: 17361 ns, ermittelt: 25113 ps*10^3 | 
+#    Time: 227075 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Zeitanforderungen fuer Bit 4 nicht erfuellt: erwartete Dauer: 17361 ns, ermittelt: 25113 ps*10^3 | 
+#    Time: 227075 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Zeitanforderungen fuer Bit 5 nicht erfuellt: erwartete Dauer: 17361 ns, ermittelt: 25113 ps*10^3 | 
+#    Time: 227075 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Zeitanforderungen fuer Bit 6 nicht erfuellt: erwartete Dauer: 17361 ns, ermittelt: 25113 ps*10^3 | 
+#    Time: 227075 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Zeitanforderungen fuer Bit 7 nicht erfuellt: erwartete Dauer: 17361 ns, ermittelt: 25113 ps*10^3 | 
+#    Time: 227075 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Zeitanforderungen fuer Bit 8 nicht erfuellt: erwartete Dauer: 17361 ns, ermittelt: 25113 ps*10^3 | 
+#    Time: 227075 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Zeitanforderungen fuer das Stoppbit nicht erfuellt: erwartete Dauer: 17361 ns, ermittelt: 0 ps*10^3 | 
+#    Time: 227075 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Error: RS232-Interface zeigt dauerhaft Blockade durch laufende Uebertragung an, Testdatum 1 wird uebersprungen.
+#    Time: 227285 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Error: RS232-Interface zeigt dauerhaft Blockade durch laufende Uebertragung an, Testdatum 2 wird uebersprungen.
+#    Time: 452485 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Error: RS232-Interface zeigt dauerhaft Blockade durch laufende Uebertragung an, Testdatum 3 wird uebersprungen.
+#    Time: 677685 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Error: RS232-Interface zeigt dauerhaft Blockade durch laufende Uebertragung an, Testdatum 4 wird uebersprungen.
+#    Time: 902885 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Error: RS232-Interface zeigt dauerhaft Blockade durch laufende Uebertragung an, Testdatum 5 wird uebersprungen.
+#    Time: 1128085 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Error: RS232-Interface zeigt dauerhaft Blockade durch laufende Uebertragung an, Testdatum 6 wird uebersprungen.
+#    Time: 1353285 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Error: RS232-Interface zeigt dauerhaft Blockade durch laufende Uebertragung an, Testdatum 7 wird uebersprungen.
+#    Time: 1578485 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Error: RS232-Interface zeigt dauerhaft Blockade durch laufende Uebertragung an, Testdatum 8 wird uebersprungen.
+#    Time: 1803685 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Error: RS232-Interface zeigt dauerhaft Blockade durch laufende Uebertragung an, Testdatum 9 wird uebersprungen.
+#    Time: 2028885 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 2236486 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Auswertung der Simulationsergebnisse:
+#    Time: 2236486 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 0:
+#    Time: 2236486 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum nicht korrekt
+#    Time: 2236486 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing nicht korrekt
+#    Time: 2236486 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen korrekt
+#    Time: 2236486 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 1:
+#    Time: 2236486 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum nicht korrekt
+#    Time: 2236486 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing korrekt
+#    Time: 2236486 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen nicht korrekt
+#    Time: 2236486 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 2:
+#    Time: 2236486 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum nicht korrekt
+#    Time: 2236486 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing korrekt
+#    Time: 2236486 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen nicht korrekt
+#    Time: 2236486 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 3:
+#    Time: 2236486 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum nicht korrekt
+#    Time: 2236486 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing korrekt
+#    Time: 2236486 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen nicht korrekt
+#    Time: 2236486 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 4:
+#    Time: 2236486 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum nicht korrekt
+#    Time: 2236486 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing korrekt
+#    Time: 2236486 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen nicht korrekt
+#    Time: 2236486 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 5:
+#    Time: 2236486 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum nicht korrekt
+#    Time: 2236486 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing korrekt
+#    Time: 2236486 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen nicht korrekt
+#    Time: 2236486 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 6:
+#    Time: 2236486 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum nicht korrekt
+#    Time: 2236486 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing korrekt
+#    Time: 2236486 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen nicht korrekt
+#    Time: 2236486 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 7:
+#    Time: 2236486 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum nicht korrekt
+#    Time: 2236486 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing korrekt
+#    Time: 2236486 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen nicht korrekt
+#    Time: 2236486 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 8:
+#    Time: 2236486 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum nicht korrekt
+#    Time: 2236486 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing korrekt
+#    Time: 2236486 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen nicht korrekt
+#    Time: 2236486 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 9:
+#    Time: 2236486 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum nicht korrekt
+#    Time: 2236486 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing korrekt
+#    Time: 2236486 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen nicht korrekt
+#    Time: 2236486 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 2236486 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Blockade der Seriellen Schnittstelle aufgetreten: -1 Punkt
+#    Time: 2236486 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datenfehler aufgetreten: -2 Punkte
+#    Time: 2236486 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Timingfehler aufgetreten: -2 Punkte
+#    Time: 2236486 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Transitionsfehler aufgetreten: -1 Punkt
+#    Time: 2236486 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 2236486 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 2236486 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Gesamtpunktzahl: 0/6
+#    Time: 2236486 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Funktionspruefung nicht bestanden
+#    Time: 2236486 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Error: Funktionspruefung nicht bestanden
+#    Time: 2236486 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 2236486 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Simulation beendet.
+#    Time: 2236486 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Failure:  EOT (END OF TEST) - Diese Fehlermeldung stoppt den Simulator unabhaengig von tatsaechlich aufgetretenen Fehlern!
+#    Time: 2236486 ns  Iteration: 0  Process: /armrs232interface_tb/tb File: ./src/ArmRS232Interface_tb.vhd
+# Break in Process tb at ./src/ArmRS232Interface_tb.vhd line 260
+quit -sim
+vcom -work ./work/ ./src/*.vhd
+# QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package ArmTypes
+# -- Compiling package ArmConfiguration
+# -- Compiling package ArmFilePaths
+# -- Compiling package body ArmFilePaths
+# -- Loading package ArmFilePaths
+# -- Loading package ArmConfiguration
+# -- Compiling entity ArmRS232Interface
+# -- Compiling architecture behave of ArmRS232Interface
+# -- Loading entity ArmWaitStateGenAsync
+# -- Loading package std_logic_textio
+# -- Loading package ArmFilePaths
+# -- Loading package TB_Tools
+# -- Compiling entity ArmRS232Interface_tb
+# -- Compiling architecture behave of ArmRS232Interface_tb
+# -- Compiling package ArmTypes
+# -- Compiling package body ArmTypes
+# -- Loading package ArmTypes
+# -- Compiling entity ArmWaitStateGenAsync
+# -- Compiling architecture behave of ArmWaitStateGenAsync
+# -- Compiling entity PISOShiftReg
+# -- Compiling architecture behavioral of PISOShiftReg
+# -- Loading package ArmTypes
+# -- Loading package ArmConfiguration
+# -- Loading package TB_Tools
+# -- Compiling entity PISOShiftReg_tb
+# -- Compiling architecture testbench of PISOShiftReg_tb
+# -- Compiling package TB_Tools
+# ** Warning: ./src/TB_Tools.vhd(152): (vcom-1236) Shared variables must be of a protected type.
+# ** Warning: ./src/TB_Tools.vhd(153): (vcom-1236) Shared variables must be of a protected type.
+# -- Compiling package body TB_Tools
+# -- Loading package TB_Tools
+vsim work.armrs232interface_tb
+# vsim work.armrs232interface_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.armtypes(body)
+# Loading work.armconfiguration
+# Loading work.armfilepaths(body)
+# Loading work.tb_tools(body)
+# Loading work.armrs232interface_tb(behave)
+# Loading work.armrs232interface(behave)
+# Loading work.armwaitstategenasync(behave)
+run -all
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 0 ps  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Test der seriellen Schnittstelle (Transmitter).
+#    Time: 0 ps  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Ueber den Datenbus werden Testdaten in das RS232_INTERFACE geschrieben, die Ausgaben auf der TXD-Leitung ausgewertet und bzgl. Korrektheit und Zeitanforderungen ueberprueft
+#    Time: 0 ps  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Das Signal CURRENT_RECEIVED_VALUE, sichtbar in der ModelSim-Waveform, enthaelt die jeweils von der seriellen Leitung gelesenen Bits, bis zum Empfang des letzten Bits sind unbekannte Werte hier normal. Das letzte Empfangene Bit ist das Stoppbit
+#    Time: 0 ps  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Zusaetzlich erfolgt die Ausgabe der gemessenen oder abgeschaetzten Dauer jeden Bits einer Uebertragung in der Form:
+#    Time: 0 ps  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Startbit | Bit 0 | Bit 1 | ... Bit 6 | Bit 7 | Stoppbit |
+#    Time: 0 ps  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Die Dauer des Stoppbits wird bis zum Ende des aktuellen Tests oder zum Auftreten der nachsten fallenden Flanke auf RS232_TXD gemessen
+#    Time: 0 ps  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 0 ps  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 785 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Testdatensatz: 0
+#    Time: 785 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17525 ps*10^3 | 
+#    Time: 175175 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Transitionen: 2; Erwartet: 2
+#    Time: 175175 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 175385 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Testdatensatz: 1
+#    Time: 175385 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17525 ps*10^3 | 
+#    Time: 349775 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Transitionen: 6; Erwartet: 6
+#    Time: 349775 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 349985 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Testdatensatz: 2
+#    Time: 349985 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: 17400 ps*10^3 | 17300 ps*10^3 | 17300 ps*10^3 | 17300 ps*10^3 | 17300 ps*10^3 | 17300 ps*10^3 | 17300 ps*10^3 | 17300 ps*10^3 | 17300 ps*10^3 | 18325 ps*10^3 | 
+#    Time: 524375 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Transitionen: 2; Erwartet: 2
+#    Time: 524375 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 524585 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Testdatensatz: 3
+#    Time: 524585 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17300 ps*10^3 | 17625 ps*10^3 | 
+#    Time: 698975 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Transitionen: 8; Erwartet: 8
+#    Time: 698975 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 699185 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Testdatensatz: 4
+#    Time: 699185 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17525 ps*10^3 | 
+#    Time: 873575 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Transitionen: 10; Erwartet: 10
+#    Time: 873575 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 873785 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Testdatensatz: 5
+#    Time: 873785 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17525 ps*10^3 | 
+#    Time: 1048175 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Transitionen: 6; Erwartet: 6
+#    Time: 1048175 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 1048385 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Testdatensatz: 6
+#    Time: 1048385 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17525 ps*10^3 | 
+#    Time: 1222775 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Transitionen: 6; Erwartet: 6
+#    Time: 1222775 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 1222985 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Testdatensatz: 7
+#    Time: 1222985 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17300 ps*10^3 | 17625 ps*10^3 | 
+#    Time: 1397375 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Transitionen: 8; Erwartet: 8
+#    Time: 1397375 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 1397585 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Testdatensatz: 8
+#    Time: 1397585 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17300 ps*10^3 | 17625 ps*10^3 | 
+#    Time: 1571975 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Transitionen: 4; Erwartet: 4
+#    Time: 1571975 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 1572185 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Testdatensatz: 9
+#    Time: 1572185 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 17400 ps*10^3 | 52025 ps*10^3 | 
+#    Time: 1781075 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: Transitionen: 4; Erwartet: 4
+#    Time: 1781075 ns  Iteration: 1  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Auswertung der Simulationsergebnisse:
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 0:
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 1:
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 2:
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 3:
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 4:
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 5:
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 6:
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 7:
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 8:
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Datensatz 9:
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Datum korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Timing korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note:  . 	Transitionen korrekt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Keine Blockade der Seriellen Schnittstelle aufgetreten: 1 Punkt
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Keine Datenfehler aufgetreten: 2 Punkte
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Keine Timingfehler aufgetreten: 2 Punkte
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Keine Transitionsfehler aufgetreten: 1 Punkte
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Gesamtpunktzahl: 6/6
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Funktionspruefung bestanden
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Note: Simulation beendet.
+#    Time: 1781076 ns  Iteration: 0  Instance: /armrs232interface_tb
+# ** Failure:  EOT (END OF TEST) - Diese Fehlermeldung stoppt den Simulator unabhaengig von tatsaechlich aufgetretenen Fehlern!
+#    Time: 1781076 ns  Iteration: 0  Process: /armrs232interface_tb/tb File: ./src/ArmRS232Interface_tb.vhd
+# Break in Process tb at ./src/ArmRS232Interface_tb.vhd line 260

@@ -389,79 +389,115 @@ end block RS232_RECEIVER;
 
 -- RS232_TRM_REG ist 8 Bit gross
 RS232_TRANSMITTER : block is
-    type ZUSTAENDE is (Z0,Z1);
-    signal ZUSTAND: ZUSTAENDE := Z0;
-    signal FOLGEZUSTAND: ZUSTAENDE;
-    signal data: std_logic_vector(9 downto 0) :=  '1' & RS232_TRM_REG & '0';
-    signal last_bit: std_logic;
-    signal clock_enable: std_logic;
-    signal load: std_logic;
-        
-    begin
-    ZUSTANDSUEBERGANG: process (SYS_CLK, SYS_RST)
-    begin
-        if (rising_edge(SYS_CLK)) then
-            if (SYS_RST = '1') then
-                ZUSTAND <= Z0;
-            else
-                ZUSTAND <= FOLGEZUSTAND;
-            end if;
-        end if;
-    end process ZUSTANDSUEBERGANG;
+    -- Signals to keep the current state.
+    type RS232_TRM_STATE_TYPE is (TRM_IDLE, TRM_START, TRM_SHIFT, TRM_STOP);
+    signal TRM_STATE, TRM_NEXT_STATE : RS232_TRM_STATE_TYPE := TRM_IDLE;
+
+    -- Shift registers to contain the data that will be sent via the RX232_TXD line
+    signal TRM_DATA, TRM_DATA_REG : std_logic_vector(7 downto 0) := "00000000";
+    signal TRM_COUNT, TRM_COUNT_REG : integer := 0;
+
+    -- Wsg signals to send with a constant baud rate
+    signal WSG_START, WSG_START_REG : std_logic;
+    signal WSG_WAIT : std_logic;
+    signal WSG_DELAY, WSG_DELAY_REG: std_logic_vector(31 downto 0); 
     
-    FOLGEZUSTANDSBERECHNUNG: process (START_TRANSMISSION, last_bit, ZUSTAND)
-    begin
-        case ZUSTAND is
-            when Z0 =>      if START_TRANSMISSION = '1' then FOLGEZUSTAND = Z1; 
-                            else FOLGEZUSTAND = Z0;
-                            end if;
-            when others =>  if last_bit = '1' then FOLGEZUSTAND = Z0; 
-                            else FOLGEZUSTAND = Z1;
-                            end if;
+    -- Constants for the logical start / stop bit value and wsg delay
+    constant TXD_START_BIT : std_logic := '0';
+    constant TXD_STOP_BIT : std_logic := '1';
+    
+begin
+	WSG : entity work.ArmWaitStateGenAsync(BEHAVE)
+        generic map (
+            COUNT_VALUE_WIDTH => 32
+        )
+        port map (
+            SYS_CLK => SYS_CLK,
+            SYS_RST => SYS_RST,
+            WSG_COUNT_INIT => WSG_DELAY_REG,
+            WSG_START => WSG_START_REG,
+            WSG_WAIT => WSG_WAIT
+        );
+
+   
+    SET_NEXT_STATE_AND_REG: process (SYS_CLK) begin
+		if rising_edge(SYS_CLK) then
+			if SYS_RST = '1' then
+				WSG_START_REG <= '0';
+				WSG_DELAY_REG <= std_logic_vector(RS232_START_DELAY);
+				TRM_DATA_REG <= (others => '0');
+				TRM_COUNT_REG <= 0;
+				TRM_STATE <= TRM_IDLE;
+			else
+				WSG_START_REG <= WSG_START;
+				WSG_DELAY_REG <= WSG_DELAY;
+				TRM_DATA_REG <= TRM_DATA;
+				TRM_COUNT_REG <= TRM_COUNT;
+				TRM_STATE <= TRM_NEXT_STATE;
+			end if;
+		end if;	
+    end process SET_NEXT_STATE_AND_REG;
+
+    SET_OUTPUT_AND_NEXT_STATE : process (TRM_STATE, START_TRANSMISSION, RS232_TRM_REG, WSG_WAIT, TRM_DATA_REG, TRM_COUNT_REG) begin
+        --  Defaultwerte:   
+		TRM_NEXT_STATE <= TRM_STATE;
+		WSG_START <= '0'; 
+		WSG_DELAY <= std_logic_vector(RS232_DELAY);
+		TRM_DATA  <= TRM_DATA_REG; 
+		TRM_COUNT <= TRM_COUNT_REG; 
+		RS232_TXD <= TXD_STOP_BIT; 
+		 
+
+        case TRM_STATE is
+            when TRM_IDLE =>
+                if START_TRANSMISSION = '1' then
+                    TRANSMITTER_BUSY <= '1';
+                    TRM_NEXT_STATE <= TRM_START;
+                    TRM_DATA <= RS232_TRM_REG(7 downto 0);
+                    WSG_START <= '1';
+                else
+                    TRANSMITTER_BUSY <= '0';
+                end if;
+		
+            when TRM_START =>
+                TRANSMITTER_BUSY <= '1';
+
+                if WSG_WAIT = '0' then
+                    TRM_NEXT_STATE <= TRM_SHIFT;
+                    TRM_COUNT <= 0;
+                    WSG_START <= '1';
+                end if;
+		
+                RS232_TXD <= TXD_START_BIT;
+
+            when TRM_SHIFT =>
+                TRANSMITTER_BUSY <= '1';
+
+                if WSG_WAIT = '0' then
+		    WSG_START <= '1';
+                    if TRM_COUNT_REG = 7 then	
+			TRM_NEXT_STATE <= TRM_STOP;
+                    else
+			TRM_COUNT <= TRM_COUNT_REG + 1;
+                        TRM_DATA <= '0' & TRM_DATA_REG(7 downto 1);		
+                    end if;
+                end if;
+
+                RS232_TXD <= TRM_DATA_REG(0);
+
+            when TRM_STOP =>
+                TRANSMITTER_BUSY <= '1';
+                if WSG_WAIT = '0' then
+                    TRM_NEXT_STATE <= TRM_IDLE;
+                end if;
+	    
+	    when others => 
+		TRM_NEXT_STATE <= TRM_IDLE;
+		WSG_START <= '0';
+		WSG_DELAY <= std_logic_vector(RS232_START_DELAY);
         end case;
-    end process FOLGEZUSTANDSBERECHNUNG;
-    
-    AUSGABEBERECHNUNG: process (START_TRANSMISSION, last_bit, ZUSTAND)
-    begin
-        if (ZUSTAND = Z0 and START_TRANSMISSION = '1') then
-            TRANSMITTER_BUSY = '1';
-        elsif (ZUSTAND = Z0 and START_TRANSMISSION = '0') then
-            TRANSMITTER_BUSY = '0';
-        elsif (ZUSTAND = Z1 and last_bit = '1') then
-            TRANSMITTER_BUSY = '0';
-        else
-            TRANSMITTER_BUSY = '1';
-        end if;
-    end process AUSGABEBERECHNUNG;
-    
-    PISO_SHIFT_REG: entity work.PISOShiftReg
-    generic map (WIDTH => 10)
-    port map (
-        CLK => SYS_CLK,
-        CLK_EN => clock_enable,
-        LOAD => load,
-        D_IN => data,
-        D_OUT => RS232_TXD,
-        LAST_BIT => last_bit
-    );
-    
-    clk_en_gen: process 
-    begin
-        clock_enable <= '1';
-        wait for ARM_SYS_CLK_PERIOD;
-        clock_enable <= '0';
-        wait for RS232_DELAY_TIME - ARM_SYS_CLK_PERIOD;
-    end process clk_en_gen;
-    
-    load_gen: process
-    begin 
-        wait until START_TRANSMISSION = '1';
-        load <= '1';
-        wait for RS232_DELAY_TIME;
-        load <= '0';
-    end process load_gen;
-    
-    
+	end process SET_OUTPUT_AND_NEXT_STATE;
 end block RS232_TRANSMITTER;
 
 end architecture behave;
+
