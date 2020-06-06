@@ -9,7 +9,7 @@ d/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-
 !i10e 25
 !i10f 100
 Parmconfiguration
-Z0 DPx4 work 8 armtypes 0 22 26EZz;nDL8GBhlz>YiM@G3
+Z0 DPx4 work 8 armtypes 0 22 ]^V=Zm_OHmJCVZ>6X8CZ?1
 DBx4 ieee 11 numeric_std 4 body 22 cf[UOE3Dlcl>8doRh?HSd2
 Z1 DPx3 std 6 textio 0 22 Y8d?=bLj9m4jiPLbo;>GT0
 DBx4 ieee 14 std_logic_1164 4 body 22 1]3]Sd[BH]a?RU=65;HdL3
@@ -19,16 +19,16 @@ Z2 d/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwareP
 F./src/ArmConfiguration.vhd
 l0
 L20
-VzRdJA<b6WE5IYPKiWHAmU0
+V8ZzlimU_zNC][g_e:9lh=0
 Z3 OL;C;10.2c_5;57
 33
-Z4 o-work ./work
+Z4 o-work ./work/
 Z5 tExplicit 1
 !s100 35POJ0<GDAWPhfL3FlY?63
-!s110 1591294672
+!s110 1591399683
 !i10b 1
-!s108 1591294672.333143
-!s90 -reportprogress|300|-work|./work|./src/ArmConfiguration.vhd|
+!s108 1591399683.441739
+!s90 -reportprogress|300|-work|./work/|./src/ArmConfiguration.vhd|
 !s107 ./src/ArmConfiguration.vhd|
 !i111 1
 Parmfilepaths
@@ -38,12 +38,12 @@ Z7 8./src/ArmFilePaths.vhd
 Z8 F./src/ArmFilePaths.vhd
 l0
 L1
-V`jcW3XV=z@358UPV^:faX2
+VB;CLm`]@k3]X`33`1O=VP3
 R3
 33
-Z9 !s110 1591294666
-Z10 !s108 1591294666.367283
-Z11 !s90 -reportprogress|300|-work|./work|./src/ArmFilePaths.vhd|
+Z9 !s110 1591399691
+Z10 !s108 1591399691.225055
+Z11 !s90 -reportprogress|300|-work|./work/|./src/ArmFilePaths.vhd|
 Z12 !s107 ./src/ArmFilePaths.vhd|
 R4
 R5
@@ -51,10 +51,10 @@ R5
 !i10b 1
 !i111 1
 Bbody
-Z13 DPx4 work 12 armfilepaths 0 22 `jcW3XV=z@358UPV^:faX2
+Z13 DPx4 work 12 armfilepaths 0 22 B;CLm`]@k3]X`33`1O=VP3
 l0
 L8
-VOlmhQe^VVY@9SROS0Mlno2
+V:KDda@KOQR3;9f3NFBRIA1
 R3
 33
 R9
@@ -67,184 +67,322 @@ nbody
 !s100 WJG<MiEm`bgnS@D:zISW:2
 !i10b 1
 !i111 1
+Earmrs232interface
+Z14 w1591455707
+Z15 DPx4 ieee 11 numeric_std 0 22 WES[o8HS0jHV[MIXQk2Ha1
+Z16 DPx4 work 16 armconfiguration 0 22 8ZzlimU_zNC][g_e:9lh=0
+Z17 DPx4 work 8 armtypes 0 22 ]^V=Zm_OHmJCVZ>6X8CZ?1
+R1
+Z18 DPx4 ieee 14 std_logic_1164 0 22 1bm?@Gd;P>[>_lN8Do9gP3
+R2
+Z19 8./src/ArmRS232Interface.vhd
+Z20 F./src/ArmRS232Interface.vhd
+l0
+L47
+VhFoCcZWS8OU;[^@AXE1S40
+!s100 3g3NQPeA78WV1JGW[]d390
+R3
+33
+Z21 !s110 1591455712
+!i10b 1
+Z22 !s108 1591455712.276718
+Z23 !s90 -reportprogress|300|-work|./work/|./src/ArmRS232Interface.vhd|
+Z24 !s107 ./src/ArmRS232Interface.vhd|
+!i111 1
+R4
+R5
+Abehave
+Z25 DEx4 work 20 armwaitstategenasync 0 22 B;h[^dXb83<0QM57CI_<Y1
+R15
+R16
+R17
+R1
+R18
+Z26 DEx4 work 17 armrs232interface 0 22 hFoCcZWS8OU;[^@AXE1S40
+l106
+L66
+V<=b8@8?V:Jz14>^kDSo6H0
+!s100 PgjSWlZ`N;dIOc3XEURh31
+R3
+33
+R21
+!i10b 1
+R22
+R23
+R24
+!i111 1
+R4
+R5
+Earmrs232interface_tb
+Z27 w1591293224
+R13
+R16
+R17
+Z28 DPx4 ieee 16 std_logic_textio 0 22 E=LR>a2bb_I?VV>QDdAdh3
+Z29 DPx4 work 8 tb_tools 0 22 kb8U95ZF54@A>gS0]W5]80
+R15
+R1
+R18
+R2
+Z30 8./src/ArmRS232Interface_tb.vhd
+Z31 F./src/ArmRS232Interface_tb.vhd
+l0
+L26
+V8T]IL36RN?ngjIj>8JXhD1
+R3
+33
+Z32 !s110 1591432460
+Z33 !s108 1591432460.579330
+Z34 !s90 -reportprogress|300|-work|./work/|./src/ArmRS232Interface_tb.vhd|
+Z35 !s107 ./src/ArmRS232Interface_tb.vhd|
+R4
+R5
+!s100 @n>z]S_YiJ0?G^`SY9IY22
+!i10b 1
+!i111 1
+Abehave
+R13
+R16
+R17
+R28
+R29
+R15
+R1
+R18
+DEx4 work 20 armrs232interface_tb 0 22 8T]IL36RN?ngjIj>8JXhD1
+l77
+L29
+Vl=1]l=AF@U4l`e1iLX?2T2
+R3
+33
+R32
+R33
+R34
+R35
+R4
+R5
+!s100 Q2nKeb]XRXccFNkc1oFLd0
+!i10b 1
+!i111 1
 Parmtypes
 R1
-Z14 DPx4 ieee 14 std_logic_1164 0 22 1bm?@Gd;P>[>_lN8Do9gP3
+R18
 R6
 R2
-Z15 8./src/ArmTypes.vhd
-Z16 F./src/ArmTypes.vhd
+Z36 8./src/ArmTypes.vhd
+Z37 F./src/ArmTypes.vhd
 l0
 L11
-V26EZz;nDL8GBhlz>YiM@G3
+V]^V=Zm_OHmJCVZ>6X8CZ?1
 R3
 33
 b1
-Z17 !s110 1591294658
-Z18 !s108 1591294658.543554
-Z19 !s90 -reportprogress|300|-work|./work|./src/ArmTypes.vhd|
-Z20 !s107 ./src/ArmTypes.vhd|
+Z38 !s110 1591399711
+Z39 !s108 1591399711.034805
+Z40 !s90 -reportprogress|300|-work|./work/|./src/ArmTypes.vhd|
+Z41 !s107 ./src/ArmTypes.vhd|
 R4
 R5
 !s100 3h7cSYlT9?Y0ZonFG2C=@1
 !i10b 1
 !i111 1
 Bbody
-Z21 DPx4 work 8 armtypes 0 22 26EZz;nDL8GBhlz>YiM@G3
+R17
 R1
-R14
+R18
 l0
 L413
-V@=N9FD6iGmI6]:=SG0lSY2
+V_1bC;H0CNk?O949EW6]Ef1
 R3
 33
-R17
-R18
-R19
-R20
+R38
+R39
+R40
+R41
 R4
 R5
 nbody
 !s100 5lWP:KmD=fJkIhzQOLmWz0
 !i10b 1
 !i111 1
-Episoshiftreg
-Z22 w1591307076
-Z23 DPx4 ieee 11 numeric_std 0 22 WES[o8HS0jHV[MIXQk2Ha1
+Earmwaitstategenasync
+Z42 w1381307189
+R15
 R1
-R14
+R18
 R2
-Z24 8./src/PISOShiftReg.vhd
-Z25 F./src/PISOShiftReg.vhd
+Z43 8./src/ArmWaitStateGenAsync.vhd
+Z44 F./src/ArmWaitStateGenAsync.vhd
+l0
+L13
+VB;h[^dXb83<0QM57CI_<Y1
+R3
+33
+Z45 !s110 1591398879
+Z46 !s108 1591398879.833374
+Z47 !s90 -reportprogress|300|-work|./work/|./src/ArmWaitStateGenAsync.vhd|
+Z48 !s107 ./src/ArmWaitStateGenAsync.vhd|
+R4
+R5
+!s100 OB[<a2AG>Na@3f9;Y;Y`I0
+!i10b 1
+!i111 1
+Abehave
+R15
+R1
+R18
+R25
+l28
+L22
+V?djkb@8zhNO<:Xmjf3l880
+R3
+33
+R45
+R46
+R47
+R48
+R4
+R5
+!s100 jR3h[AQ]ez6]_6l6^lMi:1
+!i10b 1
+!i111 1
+Episoshiftreg
+Z49 w1591398564
+R15
+R1
+R18
+R2
+Z50 8./src/PISOShiftReg.vhd
+Z51 F./src/PISOShiftReg.vhd
 l0
 L9
 V>1V^e@]LNYK2lbUzE8a2l1
 R3
 33
-Z26 !s110 1591307501
-Z27 !s108 1591307501.336267
-Z28 !s90 -reportprogress|300|-work|./work/|./src/PISOShiftReg.vhd|
-Z29 !s107 ./src/PISOShiftReg.vhd|
-Z30 o-work ./work/
+Z52 !s110 1591399728
+Z53 !s108 1591399728.354588
+Z54 !s90 -reportprogress|300|-work|./work/|./src/PISOShiftReg.vhd|
+Z55 !s107 ./src/PISOShiftReg.vhd|
+R4
 R5
 !s100 RUV[K3YB9Xhc9n0H@8Ol?0
 !i10b 1
 !i111 1
 Abehavioral
-R23
+R15
 R1
-R14
+R18
 DEx4 work 12 pisoshiftreg 0 22 >1V^e@]LNYK2lbUzE8a2l1
 l28
 L23
-V43edNhoTF;>bbIIA_gGl?2
+VSRD^[:j@b9kW^L;3SII@e2
 R3
 33
-R26
-R27
-R28
-R29
-R30
+R52
+R53
+R54
+R55
+R4
 R5
-!s100 c[IQ^>c1ZW5JBhm=>9iWj3
+!s100 _b477?[?]fDGW:CF6WWcR1
 !i10b 1
 !i111 1
 Episoshiftreg_tb
-Z31 w1591359001
+Z56 w1591359001
 R13
-Z32 DPx4 work 16 armconfiguration 0 22 zRdJA<b6WE5IYPKiWHAmU0
-R21
-Z33 DPx4 ieee 16 std_logic_textio 0 22 E=LR>a2bb_I?VV>QDdAdh3
-Z34 DPx4 work 8 tb_tools 0 22 KAaLaD;AKW:a`fhPHO78c2
-R23
+R16
+R17
+R28
+R29
+R15
 R1
-R14
+R18
 R2
-Z35 8./src/PISOShiftReg_tb.vhd
-Z36 F./src/PISOShiftReg_tb.vhd
+Z57 8./src/PISOShiftReg_tb.vhd
+Z58 F./src/PISOShiftReg_tb.vhd
 l0
 L9
 VId<if@>LlDQ2`n]jWaGfj3
-!s100 _iOMK3O?cD44dEk2F6@4<2
 R3
 33
-Z37 !s110 1591359034
-!i10b 1
-Z38 !s108 1591359034.423514
-Z39 !s90 -reportprogress|300|-work|./work/|./src/PISOShiftReg_tb.vhd|
-Z40 !s107 ./src/PISOShiftReg_tb.vhd|
-!i111 1
-R30
+Z59 !s110 1591399783
+Z60 !s108 1591399783.309604
+Z61 !s90 -reportprogress|300|-work|./work/|./src/PISOShiftReg_tb.vhd|
+Z62 !s107 ./src/PISOShiftReg_tb.vhd|
+R4
 R5
+!s100 _iOMK3O?cD44dEk2F6@4<2
+!i10b 1
+!i111 1
 Atestbench
 R13
-R32
-R21
-R33
-R34
-R23
+R16
+R17
+R28
+R29
+R15
 R1
-R14
-Z41 DEx4 work 15 pisoshiftreg_tb 0 22 Id<if@>LlDQ2`n]jWaGfj3
+R18
+DEx4 work 15 pisoshiftreg_tb 0 22 Id<if@>LlDQ2`n]jWaGfj3
 l36
 L12
 VZ1M;AzMhk<B4oiLGV21@J0
-!s100 WJ8?@a2a7lMWfhcTB`T2e3
 R3
 33
-R37
-!i10b 1
-R38
-R39
-R40
-!i111 1
-R30
+R59
+R60
+R61
+R62
+R4
 R5
+!s100 WJ8?@a2a7lMWfhcTB`T2e3
+!i10b 1
+!i111 1
 Ptb_tools
 R13
-R32
-R21
-R33
-R23
-R14
+R16
+R17
+R28
+R15
+R18
 R1
 R6
 R2
-Z42 8./src/TB_Tools.vhd
-Z43 F./src/TB_Tools.vhd
+Z63 8./src/TB_Tools.vhd
+Z64 F./src/TB_Tools.vhd
 l0
 L34
-VKAaLaD;AKW:a`fhPHO78c2
+Vkb8U95ZF54@A>gS0]W5]80
 R3
 33
 b1
-Z44 !s110 1591294678
-Z45 !s108 1591294678.375162
-Z46 !s90 -reportprogress|300|-work|./work|./src/TB_Tools.vhd|
-Z47 !s107 ./src/TB_Tools.vhd|
+Z65 !s110 1591399776
+Z66 !s108 1591399776.635841
+Z67 !s90 -reportprogress|300|-work|./work/|./src/TB_Tools.vhd|
+Z68 !s107 ./src/TB_Tools.vhd|
 R4
 R5
 !s100 KC<2mondh@>VaoP61n]dm0
 !i10b 1
 !i111 1
 Bbody
-R34
+R29
 R13
-R32
-R21
-R33
-R23
-R14
+R16
+R17
+R28
+R15
+R18
 R1
 l0
 L164
-Vem>SAAPhI`S?Gz2e[DPfo0
+V[f4kmkX`D;LPJS=K6SNbS1
 R3
 33
-R44
-R45
-R46
-R47
+R65
+R66
+R67
+R68
 R4
 R5
 nbody
