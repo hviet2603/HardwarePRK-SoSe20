@@ -1,0 +1,21 @@
+#
+# An unexpected error has occurred (11)
+#
+Stack:
+/lib/x86_64-linux-gnu/libc.so.6(+0x3ef20) [0x7fd928c95f20]
+/afs/tu-berlin.de/units/Fak_IV/aes/tools/xilinx/Vivado/2017.3/lib/lnx64.o/libverific.so(Verific::VhdlForScheme::VhdlForScheme(Verific::VhdlIdRef*, Verific::VhdlDiscreteRange*, unsigned int)+0xc7) [0x7fd92a77aad7]
+/afs/tu-berlin.de/units/Fak_IV/aes/tools/xilinx/Vivado/2017.3/lib/lnx64.o/libverific.so(vhdlparse()+0x7231) [0x7fd92a86cb31]
+/afs/tu-berlin.de/units/Fak_IV/aes/tools/xilinx/Vivado/2017.3/lib/lnx64.o/libverific.so(Verific::vhdl_file::Analyze(char const*, char const*, unsigned int)+0xb9) [0x7fd92a8433b9]
+srcscanner() [0x46a3b9]
+srcscanner() [0x46de3c]
+srcscanner() [0x470c56]
+srcscanner() [0x4459be]
+srcscanner() [0x44b958]
+/afs/tu-berlin.de/units/Fak_IV/aes/tools/xilinx/Vivado/2017.3/lib/lnx64.o/libtcl8.5.so(TclInvokeStringCommand+0x76) [0x7fd92adfdf66]
+/afs/tu-berlin.de/units/Fak_IV/aes/tools/xilinx/Vivado/2017.3/lib/lnx64.o/libtcl8.5.so(+0x334af) [0x7fd92ae024af]
+/afs/tu-berlin.de/units/Fak_IV/aes/tools/xilinx/Vivado/2017.3/lib/lnx64.o/libtcl8.5.so(+0x34b38) [0x7fd92ae03b38]
+/afs/tu-berlin.de/units/Fak_IV/aes/tools/xilinx/Vivado/2017.3/lib/lnx64.o/libtcl8.5.so(Tcl_EvalEx+0x13) [0x7fd92ae040a3]
+/afs/tu-berlin.de/units/Fak_IV/aes/tools/xilinx/Vivado/2017.3/lib/lnx64.o/libtcl8.5.so(Tcl_Eval+0x15) [0x7fd92ae040c5]
+srcscanner(main+0x293) [0x4316f3]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xe7) [0x7fd928c78b97]
+srcscanner() [0x433ff9]

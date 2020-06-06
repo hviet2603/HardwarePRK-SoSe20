@@ -1,0 +1,50 @@
+#-----------------------------------------------------------
+# Vivado v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:07 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Sun May 24 07:19:43 2020
+# Process ID: 11136
+# Current directory: /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20
+# Command line: vivado
+# Log file: /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/vivado.log
+# Journal file: /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt02/Vivado_WORK/Tutorial/Tutorial_Project/HWP2/HWP2.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/afs/tu-berlin.de/units/Fak_IV/aes/tools/xilinx/Vivado/2017.3/data/ip'.
+open_project: Time (s): cpu = 00:00:32 ; elapsed = 00:01:08 . Memory (MB): peak = 6243.871 ; gain = 138.980 ; free physical = 28965 ; free virtual = 33152
+update_compile_order -fileset sources_1
+add_files -norecurse /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt02/Vivado_WORK/Tutorial/src/ArmRegaddressTranslation.vhd
+WARNING: [filemgmt 56-12] File '/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt02/Vivado_WORK/Tutorial/src/ArmRegaddressTranslation.vhd' cannot be added to the project because it already exists in the project, skipping this file
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Sun May 24 07:24:47 2020] Launched synth_1...
+Run output will be captured here: /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt02/Vivado_WORK/Tutorial/Tutorial_Project/HWP2/HWP2.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 6294.547 ; gain = 5.363 ; free physical = 28963 ; free virtual = 33166
+set_property top ArmRegfile [current_fileset]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Sun May 24 07:27:42 2020] Launched synth_1...
+Run output will be captured here: /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt02/Vivado_WORK/Tutorial/Tutorial_Project/HWP2/HWP2.runs/synth_1/runme.log
+export_ip_user_files -of_objects  [get_files /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt02/Vivado_WORK/Tutorial/src/ArmRegfile.vhd] -no_script -reset -force -quiet
+remove_files  /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt02/Vivado_WORK/Tutorial/src/ArmRegfile.vhd
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt02/Vivado_WORK/Tutorial/src/ArmRAMB_4kx8.vhd] -no_script -reset -force -quiet
+remove_files  /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt02/Vivado_WORK/Tutorial/src/ArmRAMB_4kx8.vhd
+update_compile_order -fileset sources_1
+set_property top armregaddresstranslation [current_fileset]
+update_compile_order -fileset sources_1
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt02/Vivado_WORK/Tutorial/Tutorial_Project/HWP2/HWP2.runs/synth_1
+
+launch_runs synth_1 -jobs 2
+[Sun May 24 07:33:02 2020] Launched synth_1...
+Run output will be captured here: /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt02/Vivado_WORK/Tutorial/Tutorial_Project/HWP2/HWP2.runs/synth_1/runme.log
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun May 24 07:35:46 2020...

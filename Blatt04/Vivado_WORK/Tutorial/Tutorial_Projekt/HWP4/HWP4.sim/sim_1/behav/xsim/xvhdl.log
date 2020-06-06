@@ -1,0 +1,7 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt04/Vivado_WORK/Tutorial/src/PISOShiftReg.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity PISOShiftReg
+INFO: [VRFC 10-163] Analyzing VHDL file "/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt04/Vivado_WORK/Tutorial/src/PISOShiftReg_tb.vhd" into library xil_defaultlib
+ERROR: [VRFC 10-149] 'tb_tools' is not compiled in library xil_defaultlib [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt04/Vivado_WORK/Tutorial/src/PISOShiftReg_tb.vhd:7]
+INFO: [VRFC 10-307] analyzing entity PISOShiftReg_tb
+ERROR: [VRFC 10-1504] unit pisoshiftreg_tb ignored due to previous errors [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt04/Vivado_WORK/Tutorial/src/PISOShiftReg_tb.vhd:9]
+INFO: [VRFC 10-240] VHDL file /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt04/Vivado_WORK/Tutorial/src/PISOShiftReg_tb.vhd ignored due to errors

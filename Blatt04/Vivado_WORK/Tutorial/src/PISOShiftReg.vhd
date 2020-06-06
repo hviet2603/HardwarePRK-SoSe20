@@ -41,12 +41,16 @@ if (rising_edge(CLK)) then
 	end if;
 	-- Schiebvorgang
         if (LOAD = '0') then
-            for i in WIDTH-counter-2 downto 0 loop    
-                D_reg(i) <= D_reg(i+1);
+            for i in WIDTH-1 downto 0 loop    
+                if i > WIDTH-counter-2 then
+                    D_reg(i) <= '0';
+                else
+                    if i < WIDTH - 1 then       -- Dient zur Synthesefähigkeit
+                        D_reg(i) <= D_reg(i+1); -- Sonst i = 8 out of range
+                    end if;
+                end if;
             end loop;
-            for i in WIDTH-1 downto WIDTH-counter-1 loop    
-                D_reg(i) <= '0';
-            end loop;
+            
             if counter < WIDTH-1 then 
                 counter <= counter + 1; 
             end if;

@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../../src/PISOShiftReg.vhd" \
+"../../../../../../src/PISOShiftReg_tb.vhd" \
+
+# Do not sort compile order
+nosort
