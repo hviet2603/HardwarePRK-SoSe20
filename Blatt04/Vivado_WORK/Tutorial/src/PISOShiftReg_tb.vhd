@@ -12,7 +12,7 @@ end PISOShiftReg_tb;
 architecture testbench of PISOShiftReg_tb is
     constant test_width : integer :=  8; --STUDENT: SET TO ARBITRARY VALUE THAT FITS YOUR TESTDATA
 
-    signal tb_in       : std_logic_vector(test_width-1 downto 0) := "10001011";
+    signal tb_in       : std_logic_vector(test_width-1 downto 0) := "10010111";
     signal tb_out      : std_logic;
     signal tb_load     : std_logic;
     signal tb_last_bit : std_logic;

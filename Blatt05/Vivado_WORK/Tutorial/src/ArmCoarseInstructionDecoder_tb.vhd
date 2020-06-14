@@ -23,7 +23,7 @@ end ArmCoarseInstructionDecoder_tb;
 architecture testbench of ArmCoarseInstructionDecoder_tb is
 	signal INST		: std_logic_vector(31 downto 0) := (others => '0');
 	signal DECV		: COARSE_DECODE_TYPE := CD_UNDEFINED;
-	constant TESTDATA_PATH	: string := TESTDATA_FOLDER_PATH & "COARSE_INSTRUCTION_DECODER_TESTDATA";
+	constant TESTDATA_PATH	: string := "./" & "COARSE_INSTRUCTION_DECODER_TESTDATA";
 	constant WORKING_DELAY	: time := ARM_SYS_CLK_PERIOD/4.0;
 --------------------------------------------------------------------------------
 --	Punkte auf diese Aufgabe, pro fehlerhafter Gruppe wird ein Punkt

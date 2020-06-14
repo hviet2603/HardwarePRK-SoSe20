@@ -11,6 +11,27 @@
 project open /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt04/Vivado_WORK/Tutorial/project4
 # reading modelsim.ini
 # Loading project project4
+vcom -work ./work/ ./src/PISOShiftReg.vhd
+# QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity PISOShiftReg
+# -- Compiling architecture behavioral of PISOShiftReg
+vcom -work ./work/ ./src/PISOShiftReg_tb.vhd
+# QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package ArmTypes
+# -- Loading package ArmConfiguration
+# -- Loading package ArmFilePaths
+# -- Loading package TB_Tools
+# -- Compiling entity PISOShiftReg_tb
+# -- Compiling architecture testbench of PISOShiftReg_tb
 vsim -voptargs=+acc work.pisoshiftreg_tb
 # vsim -voptargs=+acc work.pisoshiftreg_tb 
 # Loading std.standard
@@ -34,6 +55,289 @@ run -all
 # ** Note: Das 4.Bit ist: 1
 #    Time: 42 ns  Iteration: 0  Instance: /pisoshiftreg_tb
 # ** Note: Das 5.Bit ist: 0
+#    Time: 52 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Das 6.Bit ist: 0
+#    Time: 62 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Das 7.Bit ist: 0
+#    Time: 72 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Das 8.Bit ist: 1
+#    Time: 82 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Das letzte Bit wird uebertragen
+#    Time: 90 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Das LAST_BIT Signal wurde gesetzt
+#    Time: 92 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Failure: -----END OF TEST-----
+#    Time: 92 ns  Iteration: 0  Process: /pisoshiftreg_tb/test File: ./src/PISOShiftReg_tb.vhd
+# Break in Process test at ./src/PISOShiftReg_tb.vhd line 100
+vcom -work ./work/ ./src/PISOShiftReg_tb.vhd
+# QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package ArmTypes
+# -- Loading package ArmConfiguration
+# -- Loading package ArmFilePaths
+# -- Loading package TB_Tools
+# -- Compiling entity PISOShiftReg_tb
+# -- Compiling architecture testbench of PISOShiftReg_tb
+vsim -voptargs=+acc work.pisoshiftreg_tb
+# vsim -voptargs=+acc work.pisoshiftreg_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.armtypes(body)
+# Loading work.armconfiguration
+# Loading work.armfilepaths(body)
+# Loading work.tb_tools(body)
+# Loading work.pisoshiftreg_tb(testbench)
+# Loading work.pisoshiftreg(behavioral)
+run -all
+# ** Note: Das 1.Bit ist: 1
+#    Time: 12 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Das 2.Bit ist: 0
+#    Time: 22 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Das 3.Bit ist: 0
+#    Time: 32 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Das 4.Bit ist: 0
+#    Time: 42 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Das 5.Bit ist: 0
+#    Time: 52 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Das 6.Bit ist: 0
+#    Time: 62 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Das 7.Bit ist: 0
+#    Time: 72 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Das 8.Bit ist: 1
+#    Time: 82 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Das letzte Bit wird uebertragen
+#    Time: 90 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Das LAST_BIT Signal wurde gesetzt
+#    Time: 92 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Failure: -----END OF TEST-----
+#    Time: 92 ns  Iteration: 0  Process: /pisoshiftreg_tb/test File: ./src/PISOShiftReg_tb.vhd
+# Break in Process test at ./src/PISOShiftReg_tb.vhd line 100
+vcom -work ./work/ ./src/PISOShiftReg_tb.vhd
+# QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package ArmTypes
+# -- Loading package ArmConfiguration
+# -- Loading package ArmFilePaths
+# -- Loading package TB_Tools
+# -- Compiling entity PISOShiftReg_tb
+# -- Compiling architecture testbench of PISOShiftReg_tb
+vsim -voptargs=+acc work.pisoshiftreg_tb
+# vsim -voptargs=+acc work.pisoshiftreg_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.armtypes(body)
+# Loading work.armconfiguration
+# Loading work.armfilepaths(body)
+# Loading work.tb_tools(body)
+# Loading work.pisoshiftreg_tb(testbench)
+# Loading work.pisoshiftreg(behavioral)
+vsim -voptargs=+acc work.pisoshiftreg_tb
+# vsim -voptargs=+acc work.pisoshiftreg_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.armtypes(body)
+# Loading work.armconfiguration
+# Loading work.armfilepaths(body)
+# Loading work.tb_tools(body)
+# Loading work.pisoshiftreg_tb(testbench)
+# Loading work.pisoshiftreg(behavioral)
+run -all
+# ** Note: Das 1.Bit ist: 1
+#    Time: 12 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Das 2.Bit ist: 1
+#    Time: 22 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Das 3.Bit ist: 1
+#    Time: 32 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Das 4.Bit ist: 0
+#    Time: 42 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Das 5.Bit ist: 1
+#    Time: 52 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Das 6.Bit ist: 0
+#    Time: 62 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Das 7.Bit ist: 0
+#    Time: 72 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Das 8.Bit ist: 1
+#    Time: 82 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Das letzte Bit wird uebertragen
+#    Time: 90 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Das LAST_BIT Signal wurde gesetzt
+#    Time: 92 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Failure: -----END OF TEST-----
+#    Time: 92 ns  Iteration: 0  Process: /pisoshiftreg_tb/test File: ./src/PISOShiftReg_tb.vhd
+# Break in Process test at ./src/PISOShiftReg_tb.vhd line 100
+add wave -position insertpoint  \
+sim:/pisoshiftreg_tb/clk
+add wave -position insertpoint  \
+sim:/pisoshiftreg_tb/ce
+add wave -position insertpoint  \
+sim:/pisoshiftreg_tb/tb_load
+add wave -position insertpoint  \
+sim:/pisoshiftreg_tb/tb_out
+vsim -voptargs=+acc work.pisoshiftreg_tb
+# vsim -voptargs=+acc work.pisoshiftreg_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.armtypes(body)
+# Loading work.armconfiguration
+# Loading work.armfilepaths(body)
+# Loading work.tb_tools(body)
+# Loading work.pisoshiftreg_tb(testbench)
+# Loading work.pisoshiftreg(behavioral)
+add wave -position insertpoint  \
+sim:/pisoshiftreg_tb/clk
+add wave -position insertpoint  \
+sim:/pisoshiftreg_tb/ce
+add wave -position insertpoint  \
+sim:/pisoshiftreg_tb/tb_load
+add wave -position insertpoint  \
+sim:/pisoshiftreg_tb/tb_out
+run -all
+# ** Note: Das 1.Bit ist: 1
+#    Time: 12 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Das 2.Bit ist: 1
+#    Time: 22 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Das 3.Bit ist: 1
+#    Time: 32 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Das 4.Bit ist: 0
+#    Time: 42 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Das 5.Bit ist: 1
+#    Time: 52 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Das 6.Bit ist: 0
+#    Time: 62 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Das 7.Bit ist: 0
+#    Time: 72 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Das 8.Bit ist: 1
+#    Time: 82 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Das letzte Bit wird uebertragen
+#    Time: 90 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Das LAST_BIT Signal wurde gesetzt
+#    Time: 92 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Failure: -----END OF TEST-----
+#    Time: 92 ns  Iteration: 0  Process: /pisoshiftreg_tb/test File: ./src/PISOShiftReg_tb.vhd
+# Break in Process test at ./src/PISOShiftReg_tb.vhd line 100
+vcom -work ./work/ ./src/PISOShiftReg_tb.vhd
+# QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package ArmTypes
+# -- Loading package ArmConfiguration
+# -- Loading package ArmFilePaths
+# -- Loading package TB_Tools
+# -- Compiling entity PISOShiftReg_tb
+# -- Compiling architecture testbench of PISOShiftReg_tb
+vsim -voptargs=+acc work.pisoshiftreg_tb
+# vsim -voptargs=+acc work.pisoshiftreg_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.armtypes(body)
+# Loading work.armconfiguration
+# Loading work.armfilepaths(body)
+# Loading work.tb_tools(body)
+# Loading work.pisoshiftreg_tb(testbench)
+# Loading work.pisoshiftreg(behavioral)
+add wave -position insertpoint  \
+sim:/pisoshiftreg_tb/tb_out
+run -all
+# ** Note: Das 1.Bit ist: 1
+#    Time: 12 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Das 2.Bit ist: 1
+#    Time: 22 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Das 3.Bit ist: 1
+#    Time: 32 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Das 4.Bit ist: 0
+#    Time: 42 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Das 5.Bit ist: 1
+#    Time: 52 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Das 6.Bit ist: 0
+#    Time: 62 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Das 7.Bit ist: 0
+#    Time: 72 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Das 8.Bit ist: 1
+#    Time: 82 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# Break key hit 
+# Simulation stop requested.
+restart -f
+run -all
+# ** Note: Das 1.Bit ist: 1
+#    Time: 12 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Das 2.Bit ist: 1
+#    Time: 22 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Das 3.Bit ist: 1
+#    Time: 32 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Das 4.Bit ist: 0
+#    Time: 42 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Das 5.Bit ist: 1
+#    Time: 52 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Das 6.Bit ist: 0
+#    Time: 62 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Das 7.Bit ist: 0
+#    Time: 72 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Das 8.Bit ist: 1
+#    Time: 82 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# Break key hit 
+# Simulation stop requested.
+vcom -work ./work/ ./src/PISOShiftReg_tb.vhd
+# QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package ArmTypes
+# -- Loading package ArmConfiguration
+# -- Loading package ArmFilePaths
+# -- Loading package TB_Tools
+# -- Compiling entity PISOShiftReg_tb
+# -- Compiling architecture testbench of PISOShiftReg_tb
+vsim -voptargs=+acc work.pisoshiftreg_tb
+# vsim -voptargs=+acc work.pisoshiftreg_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.armtypes(body)
+# Loading work.armconfiguration
+# Loading work.armfilepaths(body)
+# Loading work.tb_tools(body)
+# Loading work.pisoshiftreg_tb(testbench)
+# Loading work.pisoshiftreg(behavioral)
+run -all
+# ** Note: Das 1.Bit ist: 1
+#    Time: 12 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Das 2.Bit ist: 1
+#    Time: 22 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Das 3.Bit ist: 1
+#    Time: 32 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Das 4.Bit ist: 0
+#    Time: 42 ns  Iteration: 0  Instance: /pisoshiftreg_tb
+# ** Note: Das 5.Bit ist: 1
 #    Time: 52 ns  Iteration: 0  Instance: /pisoshiftreg_tb
 # ** Note: Das 6.Bit ist: 0
 #    Time: 62 ns  Iteration: 0  Instance: /pisoshiftreg_tb
