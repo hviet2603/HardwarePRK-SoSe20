@@ -6,8 +6,8 @@
 --	Version:	0.91
 --------------------------------------------------------------------------------
 library work;
-	use work.ArmRS232Interface;
-	use work.ArmMemInterface;
+    use work.ArmRS232Interface;
+    use work.ArmMemInterface;
     use work.ArmSwitchDebounce;
     use work.ArmChipSelectGenerator;
     use work.ArmSystemController;
@@ -16,8 +16,8 @@ library work;
 	use work.ArmTypes.SUPERVISOR;
 
 --library ARM_SIM_LIB;
---	use ARM_SIM_LIB.ArmRS232Interface;
---	use ARM_SIM_LIB.ArmMemInterface;
+--use ARM_SIM_LIB.ArmRS232Interface;
+--use ARM_SIM_LIB.ArmMemInterface;
 
 library ieee;
 use ieee.std_logic_1164.ALL;
