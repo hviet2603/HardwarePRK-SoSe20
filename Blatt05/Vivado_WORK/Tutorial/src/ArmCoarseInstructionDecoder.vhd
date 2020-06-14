@@ -52,14 +52,17 @@ architecture behave of ArmCoarseInstructionDecoder is
 begin
 	CID_DECODED_VECTOR	<= DECV;
 --	...
-	INST_7_4 <= CID_INSTRUCTION(7) & CID_INSTRUCTION(4);
-	INST_23_21_20 <= CID_INSTRUCTION(23) & CID_INSTRUCTION(21 downto 20);
-	INST_20_6 <= CID_INSTRUCTION(20) & CID_INSTRUCTION(6);
+
+--	INST_7_4 <= CID_INSTRUCTION(7) & CID_INSTRUCTION(4);
+--	INST_23_21_20 <= CID_INSTRUCTION(23) & CID_INSTRUCTION(21) & CID_INSTRUCTION(20);
+--	INST_20_6 <= CID_INSTRUCTION(20) & CID_INSTRUCTION(6);
 
 INST_DECODER: process (CID_INSTRUCTION) is
-	begin
-	
-	case CID_INSTRUCTION(27 downto 25) is
+begin
+--if Is_X(CID_INSTRUCTION) then
+--    DECV <= CD_UNDEFINED;
+--else
+    case CID_INSTRUCTION(27 downto 25) is
 	
 		when "111" =>
 			if (CID_INSTRUCTION(24) = '1') then	
@@ -93,20 +96,20 @@ INST_DECODER: process (CID_INSTRUCTION) is
 			end if;
 
 		when others =>
-			case INST_7_4 is
+			case CID_INSTRUCTION(7) & CID_INSTRUCTION(4) is
 				when "11" =>
 					case CID_INSTRUCTION(6 downto 5) is
 						when "00" =>
 							case CID_INSTRUCTION(24) is
 								when '0' => DECV <= CD_MULTIPLY;
 								when others => 	
-									case INST_23_21_20 is
+									case CID_INSTRUCTION(23) & CID_INSTRUCTION(21) & CID_INSTRUCTION(20) is
 										when "000" => DECV <= CD_SWAP;
 										when others => DECV <= CD_UNDEFINED;
 									end case;
 							end case;
 						when others =>
-							case INST_20_6 is
+							case CID_INSTRUCTION(20) & CID_INSTRUCTION(6) is
 								when "01" => DECV <= CD_UNDEFINED;
 								when others =>
 									case CID_INSTRUCTION(22) is
@@ -148,6 +151,7 @@ INST_DECODER: process (CID_INSTRUCTION) is
 					end case;
 			end case;
 	end case;	
+--end if;
 
 end process INST_DECODER;
 
