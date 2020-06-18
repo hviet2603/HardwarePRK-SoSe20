@@ -14,9 +14,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 9116 
+INFO: Helper process launched with PID 16668 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1253.918 ; gain = 77.000 ; free physical = 21978 ; free virtual = 32570
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1252.027 ; gain = 77.000 ; free physical = 27199 ; free virtual = 32431
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'ArmUncoreTop' [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt05/Vivado_WORK/Tutorial/src/ArmUncoreTop.vhd:44]
 INFO: [Synth 8-3491] module 'ArmSwitchDebounce' declared at '/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt05/Vivado_WORK/Tutorial/src/ArmSwitchDebounce.vhd:21' bound to instance 'Debouncing_EXT_LDP' of component 'ArmSwitchDebounce' [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt05/Vivado_WORK/Tutorial/src/ArmUncoreTop.vhd:186]
@@ -50,8 +50,8 @@ INFO: [Synth 8-226] default block is never used [/afs/tu-berlin.de/home/v/vincen
 INFO: [Synth 8-256] done synthesizing module 'ArmRS232Interface' (7#1) [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt05/Vivado_WORK/Tutorial/src/ArmRS232Interface.vhd:66]
 INFO: [Synth 8-3491] module 'ArmSystemController' declared at '/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt05/Vivado_WORK/Tutorial/src/ArmSystemController.vhd:47' bound to instance 'Inst_ArmSystemController' of component 'ArmSystemController' [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt05/Vivado_WORK/Tutorial/src/ArmUncoreTop.vhd:237]
 INFO: [Synth 8-638] synthesizing module 'ArmSystemController' [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt05/Vivado_WORK/Tutorial/src/ArmSystemController.vhd:69]
-INFO: [Synth 8-3491] module 'ArmClkGen' declared at '/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt05/Vivado_WORK/Tutorial/vivado_project/HWP5/HWP5.runs/synth_1/.Xil/Vivado-9088-cascada-ubu/realtime/ArmClkGen_stub.vhdl:5' bound to instance 'Inst_ArmClkGen' of component 'ArmClkGen' [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt05/Vivado_WORK/Tutorial/src/ArmSystemController.vhd:119]
-INFO: [Synth 8-638] synthesizing module 'ArmClkGen' [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt05/Vivado_WORK/Tutorial/vivado_project/HWP5/HWP5.runs/synth_1/.Xil/Vivado-9088-cascada-ubu/realtime/ArmClkGen_stub.vhdl:16]
+INFO: [Synth 8-3491] module 'ArmClkGen' declared at '/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt05/Vivado_WORK/Tutorial/vivado_project/HWP5/HWP5.runs/synth_1/.Xil/Vivado-16631-emmerich-ubu/realtime/ArmClkGen_stub.vhdl:5' bound to instance 'Inst_ArmClkGen' of component 'ArmClkGen' [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt05/Vivado_WORK/Tutorial/src/ArmSystemController.vhd:119]
+INFO: [Synth 8-638] synthesizing module 'ArmClkGen' [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt05/Vivado_WORK/Tutorial/vivado_project/HWP5/HWP5.runs/synth_1/.Xil/Vivado-16631-emmerich-ubu/realtime/ArmClkGen_stub.vhdl:16]
 INFO: [Synth 8-256] done synthesizing module 'ArmSystemController' (8#1) [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt05/Vivado_WORK/Tutorial/src/ArmSystemController.vhd:69]
 INFO: [Synth 8-256] done synthesizing module 'ArmUncoreTop' (9#1) [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt05/Vivado_WORK/Tutorial/src/ArmUncoreTop.vhd:44]
 WARNING: [Synth 8-3331] design ArmSystemController has unconnected port CTRL_DABORT
@@ -110,7 +110,7 @@ WARNING: [Synth 8-3331] design ArmChipSelectGenerator has unconnected port CSG_D
 WARNING: [Synth 8-3331] design ArmChipSelectGenerator has unconnected port CSG_DA[1]
 WARNING: [Synth 8-3331] design ArmChipSelectGenerator has unconnected port CSG_DA[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1296.449 ; gain = 119.531 ; free physical = 22007 ; free virtual = 32602
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1294.559 ; gain = 119.531 ; free physical = 27207 ; free virtual = 32440
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -120,39 +120,39 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1296.449 ; gain = 119.531 ; free physical = 22008 ; free virtual = 32602
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1294.559 ; gain = 119.531 ; free physical = 27208 ; free virtual = 32441
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt05/Vivado_WORK/Tutorial/vivado_project/HWP5/HWP5.runs/synth_1/.Xil/Vivado-9088-cascada-ubu/dcp3/ArmClkGen_in_context.xdc] for cell 'Inst_ArmSystemController/Inst_ArmClkGen'
-Finished Parsing XDC File [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt05/Vivado_WORK/Tutorial/vivado_project/HWP5/HWP5.runs/synth_1/.Xil/Vivado-9088-cascada-ubu/dcp3/ArmClkGen_in_context.xdc] for cell 'Inst_ArmSystemController/Inst_ArmClkGen'
+Parsing XDC File [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt05/Vivado_WORK/Tutorial/vivado_project/HWP5/HWP5.runs/synth_1/.Xil/Vivado-16631-emmerich-ubu/dcp3/ArmClkGen_in_context.xdc] for cell 'Inst_ArmSystemController/Inst_ArmClkGen'
+Finished Parsing XDC File [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt05/Vivado_WORK/Tutorial/vivado_project/HWP5/HWP5.runs/synth_1/.Xil/Vivado-16631-emmerich-ubu/dcp3/ArmClkGen_in_context.xdc] for cell 'Inst_ArmSystemController/Inst_ArmClkGen'
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.08 . Memory (MB): peak = 1655.062 ; gain = 0.000 ; free physical = 21740 ; free virtual = 32353
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1653.172 ; gain = 0.000 ; free physical = 26971 ; free virtual = 32204
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:29 ; elapsed = 00:00:48 . Memory (MB): peak = 1655.062 ; gain = 478.145 ; free physical = 21816 ; free virtual = 32431
+Finished Constraint Validation : Time (s): cpu = 00:00:28 ; elapsed = 00:00:40 . Memory (MB): peak = 1653.172 ; gain = 478.145 ; free physical = 27044 ; free virtual = 32278
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:29 ; elapsed = 00:00:48 . Memory (MB): peak = 1655.062 ; gain = 478.145 ; free physical = 21816 ; free virtual = 32431
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:28 ; elapsed = 00:00:40 . Memory (MB): peak = 1653.172 ; gain = 478.145 ; free physical = 27044 ; free virtual = 32278
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for EXT_CLK. (constraint file  /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt05/Vivado_WORK/Tutorial/vivado_project/HWP5/HWP5.runs/synth_1/.Xil/Vivado-9088-cascada-ubu/dcp3/ArmClkGen_in_context.xdc, line 4).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for EXT_CLK. (constraint file  /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt05/Vivado_WORK/Tutorial/vivado_project/HWP5/HWP5.runs/synth_1/.Xil/Vivado-9088-cascada-ubu/dcp3/ArmClkGen_in_context.xdc, line 5).
+Applied set_property IO_BUFFER_TYPE = NONE for EXT_CLK. (constraint file  /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt05/Vivado_WORK/Tutorial/vivado_project/HWP5/HWP5.runs/synth_1/.Xil/Vivado-16631-emmerich-ubu/dcp3/ArmClkGen_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for EXT_CLK. (constraint file  /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt05/Vivado_WORK/Tutorial/vivado_project/HWP5/HWP5.runs/synth_1/.Xil/Vivado-16631-emmerich-ubu/dcp3/ArmClkGen_in_context.xdc, line 5).
 Applied set_property DONT_TOUCH = true for Inst_ArmSystemController/Inst_ArmClkGen. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:48 . Memory (MB): peak = 1655.062 ; gain = 478.145 ; free physical = 21818 ; free virtual = 32433
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:40 . Memory (MB): peak = 1653.172 ; gain = 478.145 ; free physical = 27047 ; free virtual = 32280
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt05/Vivado_WORK/Tutorial/src/ArmWaitStateGenAsync.vhd:45]
 INFO: [Synth 8-5546] ROM "COUNT_REG" won't be mapped to RAM because it is too sparse
@@ -186,7 +186,7 @@ INFO: [Synth 8-5544] ROM "CTRL_STATE" won't be mapped to Block RAM because addre
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'CTRL_STATE_reg' using encoding 'sequential' in module 'ArmSystemController'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:29 ; elapsed = 00:00:48 . Memory (MB): peak = 1655.062 ; gain = 478.145 ; free physical = 21809 ; free virtual = 32423
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:28 ; elapsed = 00:00:41 . Memory (MB): peak = 1653.172 ; gain = 478.145 ; free physical = 27033 ; free virtual = 32266
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -435,7 +435,7 @@ WARNING: [Synth 8-3332] Sequential element (Inst_ArmRS232Interface/RS232_TRANSMI
 WARNING: [Synth 8-3332] Sequential element (Inst_ArmRS232Interface/INTERFACE_COMMUNICATION.REGISTER_SET_reg[2][7]) is unused and will be removed from module ArmUncoreTop.
 WARNING: [Synth 8-3332] Sequential element (Inst_ArmSystemController/DATA_ADDRESS_VECTOR_reg[28]) is unused and will be removed from module ArmUncoreTop.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:51 . Memory (MB): peak = 1655.062 ; gain = 478.145 ; free physical = 21786 ; free virtual = 32408
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:43 . Memory (MB): peak = 1653.172 ; gain = 478.145 ; free physical = 27044 ; free virtual = 32257
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -468,13 +468,13 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'Inst_ArmSystemController/
 INFO: [Synth 8-5578] Moved timing constraint from pin 'Inst_ArmSystemController/Inst_ArmClkGen/clk_out2' to pin 'Inst_ArmSystemController/Inst_ArmClkGen/bbstub_clk_out2/O'
 INFO: [Synth 8-5819] Moved 2 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:39 ; elapsed = 00:01:01 . Memory (MB): peak = 1655.062 ; gain = 478.145 ; free physical = 21647 ; free virtual = 32284
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:00:53 . Memory (MB): peak = 1653.172 ; gain = 478.145 ; free physical = 26909 ; free virtual = 32122
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:01:02 . Memory (MB): peak = 1655.062 ; gain = 478.145 ; free physical = 21638 ; free virtual = 32275
+Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:54 . Memory (MB): peak = 1653.172 ; gain = 478.145 ; free physical = 26905 ; free virtual = 32118
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -507,7 +507,7 @@ INFO: [Synth 8-4480] The timing for the instance Inst_ArmMemInterface/RAM_BLOCK/
 INFO: [Synth 8-4480] The timing for the instance Inst_ArmMemInterface/RAM_BLOCK/ArmRAMB_32[1].ArmRAMB_8/RAM_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-4480] The timing for the instance Inst_ArmMemInterface/RAM_BLOCK/ArmRAMB_32[0].ArmRAMB_8/RAM_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:40 ; elapsed = 00:01:03 . Memory (MB): peak = 1655.062 ; gain = 478.145 ; free physical = 21635 ; free virtual = 32272
+Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:00:54 . Memory (MB): peak = 1653.172 ; gain = 478.145 ; free physical = 26901 ; free virtual = 32115
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -531,7 +531,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:40 ; elapsed = 00:01:03 . Memory (MB): peak = 1655.062 ; gain = 478.145 ; free physical = 21630 ; free virtual = 32267
+Finished IO Insertion : Time (s): cpu = 00:00:39 ; elapsed = 00:00:54 . Memory (MB): peak = 1653.172 ; gain = 478.145 ; free physical = 26898 ; free virtual = 32111
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -544,7 +544,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:40 ; elapsed = 00:01:03 . Memory (MB): peak = 1655.062 ; gain = 478.145 ; free physical = 21630 ; free virtual = 32267
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:39 ; elapsed = 00:00:54 . Memory (MB): peak = 1653.172 ; gain = 478.145 ; free physical = 26898 ; free virtual = 32111
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -556,25 +556,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:40 ; elapsed = 00:01:03 . Memory (MB): peak = 1655.062 ; gain = 478.145 ; free physical = 21630 ; free virtual = 32267
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:39 ; elapsed = 00:00:55 . Memory (MB): peak = 1653.172 ; gain = 478.145 ; free physical = 26897 ; free virtual = 32111
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:40 ; elapsed = 00:01:03 . Memory (MB): peak = 1655.062 ; gain = 478.145 ; free physical = 21630 ; free virtual = 32267
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:39 ; elapsed = 00:00:55 . Memory (MB): peak = 1653.172 ; gain = 478.145 ; free physical = 26897 ; free virtual = 32111
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:40 ; elapsed = 00:01:03 . Memory (MB): peak = 1655.062 ; gain = 478.145 ; free physical = 21628 ; free virtual = 32264
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:00:55 . Memory (MB): peak = 1653.172 ; gain = 478.145 ; free physical = 26897 ; free virtual = 32111
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:40 ; elapsed = 00:01:03 . Memory (MB): peak = 1655.062 ; gain = 478.145 ; free physical = 21627 ; free virtual = 32264
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:39 ; elapsed = 00:00:55 . Memory (MB): peak = 1653.172 ; gain = 478.145 ; free physical = 26897 ; free virtual = 32111
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -626,11 +626,11 @@ Report Instance Areas:
 |13    |  Inst_ArmSystemController      |ArmSystemController                    |   352|
 +------+--------------------------------+---------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:40 ; elapsed = 00:01:03 . Memory (MB): peak = 1655.062 ; gain = 478.145 ; free physical = 21627 ; free virtual = 32263
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:39 ; elapsed = 00:00:55 . Memory (MB): peak = 1653.172 ; gain = 478.145 ; free physical = 26897 ; free virtual = 32111
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 11 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:00:35 . Memory (MB): peak = 1655.062 ; gain = 119.531 ; free physical = 21672 ; free virtual = 32309
-Synthesis Optimization Complete : Time (s): cpu = 00:00:40 ; elapsed = 00:01:03 . Memory (MB): peak = 1655.062 ; gain = 478.145 ; free physical = 21677 ; free virtual = 32314
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:00:34 . Memory (MB): peak = 1653.172 ; gain = 119.531 ; free physical = 26954 ; free virtual = 32168
+Synthesis Optimization Complete : Time (s): cpu = 00:00:39 ; elapsed = 00:00:55 . Memory (MB): peak = 1653.172 ; gain = 478.145 ; free physical = 26961 ; free virtual = 32175
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 47 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -642,8 +642,8 @@ No Unisim elements were transformed.
 INFO: [Common 17-83] Releasing license: Synthesis
 162 Infos, 66 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:42 ; elapsed = 00:01:06 . Memory (MB): peak = 1665.086 ; gain = 507.266 ; free physical = 21681 ; free virtual = 32326
+synth_design: Time (s): cpu = 00:00:41 ; elapsed = 00:00:56 . Memory (MB): peak = 1663.195 ; gain = 507.266 ; free physical = 26954 ; free virtual = 32168
 INFO: [Common 17-1381] The checkpoint '/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt05/Vivado_WORK/Tutorial/vivado_project/HWP5/HWP5.runs/synth_1/ArmUncoreTop.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file ArmUncoreTop_utilization_synth.rpt -pb ArmUncoreTop_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00.21 ; elapsed = 00:00:00.35 . Memory (MB): peak = 1689.098 ; gain = 0.000 ; free physical = 21675 ; free virtual = 32325
-INFO: [Common 17-206] Exiting Vivado at Sun Jun 14 19:26:53 2020...
+report_utilization: Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.23 . Memory (MB): peak = 1687.207 ; gain = 0.000 ; free physical = 26952 ; free virtual = 32167
+INFO: [Common 17-206] Exiting Vivado at Wed Jun 17 15:51:19 2020...

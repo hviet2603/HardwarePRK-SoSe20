@@ -18,9 +18,9 @@ entity ArmRegisterBitAdder is
 end entity ArmRegisterBitAdder;
 
 architecture structure of ArmRegisterBitAdder is
-type level_1_output: array (7 downto 0) of std_logic_vector(1 downto 0);
-type level_2_output: array (3 downto 0) of std_logic_vector(2 downto 0);
-type level_3_output: array (1 downto 0) of std_logic_vector(3 downto 0);
+type level_1_output is array (7 downto 0) of std_logic_vector(1 downto 0);
+type level_2_output is array (3 downto 0) of std_logic_vector(2 downto 0);
+type level_3_output is array (1 downto 0) of std_logic_vector(3 downto 0);
 
 signal lvl1_output: level_1_output;
 signal lvl2_output: level_2_output;
@@ -54,17 +54,17 @@ lvl1_output(0)(1) <= RBA_REGLIST(1) and RBA_REGLIST(0);
 lvl1_output(0)(0) <= RBA_REGLIST(1) xor RBA_REGLIST(0);
 
 -- LEVEL 2
-lvl2_output(3) <= std_logic_vector(to_unsigned(lvl1_output(7),3) + to_unsigned(lvl1_output(6),3));
-lvl2_output(2) <= std_logic_vector(to_unsigned(lvl1_output(5),3) + to_unsigned(lvl1_output(4),3));
-lvl2_output(1) <= std_logic_vector(to_unsigned(lvl1_output(3),3) + to_unsigned(lvl1_output(2),3));
-lvl2_output(0) <= std_logic_vector(to_unsigned(lvl1_output(1),3) + to_unsigned(lvl1_output(0),3));
+lvl2_output(3) <= std_logic_vector(unsigned('0' & lvl1_output(7)) + unsigned('0' & lvl1_output(6)));
+lvl2_output(2) <= std_logic_vector(unsigned('0' & lvl1_output(5)) + unsigned('0' & lvl1_output(4)));
+lvl2_output(1) <= std_logic_vector(unsigned('0' & lvl1_output(3)) + unsigned('0' & lvl1_output(2)));
+lvl2_output(0) <= std_logic_vector(unsigned('0' & lvl1_output(1)) + unsigned('0' & lvl1_output(0)));
 
 -- LEVEL 3
-lvl3_output(1) <= std_logic_vector(to_unsigned(lvl2_output(3),4) + to_unsigned(lvl2_output(2),4));
-lvl3_output(0) <= std_logic_vector(to_unsigned(lvl2_output(1),4) + to_unsigned(lvl2_output(0),4));
+lvl3_output(1) <= std_logic_vector(unsigned('0' & lvl2_output(3)) + unsigned('0' & lvl2_output(2)));
+lvl3_output(0) <= std_logic_vector(unsigned('0' & lvl2_output(1)) + unsigned('0' & lvl2_output(0)));
 
 -- LEVEL 4 (OUTPUT)
-RBA_NR_OF_REGS <= std_logic_vector(to_unsigned(lvl3_output(1),5) + to_unsigned(lvl3_output(0),5));
+RBA_NR_OF_REGS <= std_logic_vector(unsigned('0' & lvl3_output(1)) + unsigned('0' & lvl3_output(0)));
 
 
 end architecture structure;
