@@ -91,6 +91,7 @@ begin
 			REGLIST <= TEST_VECTOR(i);			
 			wait for 11 ns;
 			report "Test case: " & integer'image(i+1) & " : " & SLV_TO_STRING(TEST_VECTOR(i));
+			report "Anzahl der gesetzten Bits ist: " & integer'image(to_integer(unsigned(NR_OF_REGS)));
 			if (NR_OF_REGS /= NR_OF_SET_BITS(i)) then
 				report "Die Anzahl der gesetzten Bits stimmen nicht überein" severity error;
 				report "Erwartet: " & integer'image(to_integer(unsigned(NR_OF_SET_BITS(i))));
