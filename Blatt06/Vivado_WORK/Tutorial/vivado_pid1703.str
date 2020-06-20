@@ -174,3 +174,9 @@ dismissDialog("Starting Design Runs"); // bs (cl)
 // Elapsed time: 49 seconds
 selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
 dismissDialog("Synthesis Completed"); // ah (cl)
+// [GUI Memory]: 87 MB (+1206kb) [00:05:40]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking too long to process. Increasing delay to 5000 ms.
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED

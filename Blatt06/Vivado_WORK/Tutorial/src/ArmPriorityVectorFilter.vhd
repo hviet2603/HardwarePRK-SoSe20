@@ -20,7 +20,7 @@ begin
 	process (PVF_VECTOR_UNFILTERED) begin
 		PVF_VECTOR_FILTERED <= x"0000";
 
-		for i in 0 to PVF_VECTOR_UNFILTERED'length - 1 loop
+		for i in 0 to 15 loop
 			if PVF_VECTOR_UNFILTERED(i) = '1' then
 				PVF_VECTOR_FILTERED(i) <= '1';
 				exit;
