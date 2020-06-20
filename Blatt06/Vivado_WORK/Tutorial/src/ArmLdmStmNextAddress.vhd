@@ -37,9 +37,21 @@ architecture behave of ArmLdmStmNextAddress is
 begin
 	CURRENT_REGLIST_FILTER : ArmPriorityVectorFilter
 		port map(
-			PVF_VECTOR_UNFILTERED	=>
-			PVF_VECTOR_FILTERED	=>
+			PVF_VECTOR_UNFILTERED	=> LNA_REGLIST,
+			PVF_VECTOR_FILTERED	=> LNA_CURRENT_REGLIST_REG
 		);
+
+	UPDATE_REG: process
+	
+	begin
+		if (rising_edge(SYS_CLK)) then
+			if (SYS_CLK = '1') then
+				LNA_REGLIST <= x"0000";
+			else 
+				
+			end if;
+		end if;
+	end process UPDATE_REG;
 
 
 end architecture behave;

@@ -19,5 +19,24 @@ architecture structure of ArmPriorityVectorFilter is
 
 begin
 
+PRIO_FILTER: process
+variable index: integer := -1;
+variable i: integer; 
+
+begin
+
+PVF_VECTOR_FILTERED <= x"0000";
+for i in 15 downto 0 loop
+	if (PVF_VECTOR_UNFILTERED(i) = '1') then 
+		index = i; 
+	end if;
+end loop
+
+if (index >= 0) then
+	PVF_VECTOR_FILTERED(index) <= '1';
+end if;
+
+end process PRIO_FILTER;
+
 end architecture structure;
 
