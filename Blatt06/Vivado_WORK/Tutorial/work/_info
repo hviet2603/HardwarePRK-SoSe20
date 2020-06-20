@@ -10,244 +10,373 @@ d/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-
 !i10f 100
 Parmconfiguration
 Z0 DPx4 work 8 armtypes 0 22 ]^V=Zm_OHmJCVZ>6X8CZ?1
-DBx4 ieee 11 numeric_std 4 body 22 cf[UOE3Dlcl>8doRh?HSd2
-Z1 DPx3 std 6 textio 0 22 Y8d?=bLj9m4jiPLbo;>GT0
-DBx4 ieee 14 std_logic_1164 4 body 22 1]3]Sd[BH]a?RU=65;HdL3
-w1588841860
-Z2 d/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt06/Vivado_WORK/Tutorial
+Z1 DBx4 ieee 11 numeric_std 4 body 22 cf[UOE3Dlcl>8doRh?HSd2
+Z2 DPx3 std 6 textio 0 22 Y8d?=bLj9m4jiPLbo;>GT0
+Z3 DBx4 ieee 14 std_logic_1164 4 body 22 1]3]Sd[BH]a?RU=65;HdL3
+Z4 w1592682112
+Z5 d/afs/tu-berlin.de/home/h/hungbui7698/irb-ubuntu/HWP/HardwarePRK-SoSe20/Blatt06/Vivado_WORK/Tutorial
 8./src/ArmConfiguration.vhd
 F./src/ArmConfiguration.vhd
 l0
 L20
 V8ZzlimU_zNC][g_e:9lh=0
-Z3 OL;C;10.2c_5;57
-33
-Z4 o-work ./work/
-Z5 tExplicit 1
 !s100 35POJ0<GDAWPhfL3FlY?63
-!s110 1592510485
+Z6 OL;C;10.2c_5;57
+33
+Z7 !s110 1592689087
 !i10b 1
-!s108 1592510485.250567
-!s90 -reportprogress|300|-work|./work/|./src/ArmConfiguration.vhd|
-!s107 ./src/ArmConfiguration.vhd|
+Z8 !s108 1592689087.263277
+Z9 !s90 -reportprogress|300|-work|./work/|./src/ArmConfiguration.vhd|./src/ArmFilePaths.vhd|./src/ArmLdmStmNextAddress.vhd|./src/ArmLdmStmNextAddress_tb.vhd|./src/ArmPriorityVectorFilter.vhd|./src/ArmRegisterBitAdder.vhd|./src/ArmRegisterBitAdder_tb.vhd|./src/ArmTypes.vhd|./src/TB_Tools.vhd|
+Z10 !s107 ./src/TB_Tools.vhd|./src/ArmTypes.vhd|./src/ArmRegisterBitAdder_tb.vhd|./src/ArmRegisterBitAdder.vhd|./src/ArmPriorityVectorFilter.vhd|./src/ArmLdmStmNextAddress_tb.vhd|./src/ArmLdmStmNextAddress.vhd|./src/ArmFilePaths.vhd|./src/ArmConfiguration.vhd|
 !i111 1
+Z11 o-work ./work/
+Z12 tExplicit 1
 Parmfilepaths
-Z6 w1588841861
-R2
-Z7 8./src/ArmFilePaths.vhd
-Z8 F./src/ArmFilePaths.vhd
+R4
+R5
+Z13 8./src/ArmFilePaths.vhd
+Z14 F./src/ArmFilePaths.vhd
 l0
 L1
 VB;CLm`]@k3]X`33`1O=VP3
-R3
-33
-Z9 !s110 1592510463
-Z10 !s108 1592510463.100353
-Z11 !s90 -reportprogress|300|-work|./work/|./src/ArmFilePaths.vhd|
-Z12 !s107 ./src/ArmFilePaths.vhd|
-R4
-R5
 !s100 8oaLANeO_V=V]l_jz>l]o2
-!i10b 1
-!i111 1
-Bbody
-Z13 DPx4 work 12 armfilepaths 0 22 B;CLm`]@k3]X`33`1O=VP3
-l0
-L8
-V:KDda@KOQR3;9f3NFBRIA1
-R3
+R6
 33
+R7
+!i10b 1
+R8
 R9
 R10
+!i111 1
 R11
 R12
-R4
-R5
-nbody
-!s100 WJG<MiEm`bgnS@D:zISW:2
+Bbody
+Z15 DPx4 work 12 armfilepaths 0 22 B;CLm`]@k3]X`33`1O=VP3
+l0
+L8
+Z16 V:KDda@KOQR3;9f3NFBRIA1
+Z17 !s100 WJG<MiEm`bgnS@D:zISW:2
+R6
+33
+R7
 !i10b 1
+R8
+R9
+R10
 !i111 1
-Earmregisterbitadder
-Z14 w1592511365
-Z15 DPx4 ieee 11 numeric_std 0 22 WES[o8HS0jHV[MIXQk2Ha1
-R1
-Z16 DPx4 ieee 14 std_logic_1164 0 22 1bm?@Gd;P>[>_lN8Do9gP3
+R11
+R12
+nbody
+Earmldmstmnextaddress
+Z18 w1592689077
 R2
-Z17 8./src/ArmRegisterBitAdder.vhd
-Z18 F./src/ArmRegisterBitAdder.vhd
+Z19 DPx4 ieee 14 std_logic_1164 0 22 1bm?@Gd;P>[>_lN8Do9gP3
+R5
+Z20 8./src/ArmLdmStmNextAddress.vhd
+Z21 F./src/ArmLdmStmNextAddress.vhd
+l0
+L16
+VLAWF2lRgaLTUzoDhd5^`S2
+!s100 8`bKRkZlla_CJj^0Qk4JU2
+R6
+33
+R7
+!i10b 1
+R8
+R9
+R10
+!i111 1
+R11
+R12
+Abehave
+R2
+R19
+Z22 DEx4 work 20 armldmstmnextaddress 0 22 LAWF2lRgaLTUzoDhd5^`S2
+l38
+L28
+VWI@2F^hoDaQ:Emmf@Q;g@0
+!s100 4ZC0LT5Ii_DDSgC85TECC0
+R6
+33
+R7
+!i10b 1
+R8
+R9
+R10
+!i111 1
+R11
+R12
+Earmldmstmnextaddress_tb
+R4
+R15
+Z23 DPx4 ieee 16 std_logic_textio 0 22 E=LR>a2bb_I?VV>QDdAdh3
+Z24 DPx4 work 8 tb_tools 0 22 kb8U95ZF54@A>gS0]W5]80
+Z25 DPx4 work 8 armtypes 0 22 ]^V=Zm_OHmJCVZ>6X8CZ?1
+Z26 DPx4 work 16 armconfiguration 0 22 8ZzlimU_zNC][g_e:9lh=0
+Z27 DPx4 ieee 11 numeric_std 0 22 WES[o8HS0jHV[MIXQk2Ha1
+R2
+R19
+R5
+Z28 8./src/ArmLdmStmNextAddress_tb.vhd
+Z29 F./src/ArmLdmStmNextAddress_tb.vhd
+l0
+L30
+V:8Gc7TJcJ[h>bake19o9^0
+!s100 T2<o;8Tz?ZmSfI[C9akJh0
+R6
+33
+R7
+!i10b 1
+R8
+R9
+R10
+!i111 1
+R11
+R12
+Atestbench
+R15
+R23
+R24
+R25
+R26
+R27
+R2
+R19
+Z30 DEx4 work 23 armldmstmnextaddress_tb 0 22 :8Gc7TJcJ[h>bake19o9^0
+l58
+L33
+Z31 V75hIFV@o]ATd^<C4:COU=1
+Z32 !s100 m55z]B@CFlPY_JDz6=4Td1
+R6
+33
+R7
+!i10b 1
+R8
+R9
+R10
+!i111 1
+R11
+R12
+Earmpriorityvectorfilter
+Z33 w1592688020
+R2
+R19
+R5
+Z34 8./src/ArmPriorityVectorFilter.vhd
+Z35 F./src/ArmPriorityVectorFilter.vhd
+l0
+L11
+V<jkVShg0jO:KEDR[`85LD2
+!s100 UhLMQEPf=@`9Z__T9m3Da2
+R6
+33
+R7
+!i10b 1
+R8
+R9
+R10
+!i111 1
+R11
+R12
+Astructure
+R2
+R19
+Z36 DEx4 work 23 armpriorityvectorfilter 0 22 <jkVShg0jO:KEDR[`85LD2
+l19
+L18
+Z37 VlR:L;dBiPQUbR3QTC8Qf^2
+Z38 !s100 lV8fW0EBOcQnO`J2^644d3
+R6
+33
+R7
+!i10b 1
+R8
+R9
+R10
+!i111 1
+R11
+R12
+Earmregisterbitadder
+R4
+R27
+R2
+R19
+R5
+Z39 8./src/ArmRegisterBitAdder.vhd
+Z40 F./src/ArmRegisterBitAdder.vhd
 l0
 L13
 V]]coMGRL@0j?g`8D:6>I?3
-R3
-33
-Z19 !s110 1592511370
-Z20 !s108 1592511370.408711
-Z21 !s90 -reportprogress|300|-work|./work/|./src/ArmRegisterBitAdder.vhd|
-Z22 !s107 ./src/ArmRegisterBitAdder.vhd|
-R4
-R5
 !s100 Tjg1KJSFejL3jjZ4lQ3b31
+R6
+33
+R7
 !i10b 1
+R8
+R9
+R10
 !i111 1
+R11
+R12
 Astructure
-R15
-R1
-R16
-DEx4 work 19 armregisterbitadder 0 22 ]]coMGRL@0j?g`8D:6>I?3
+R27
+R2
+R19
+Z41 DEx4 work 19 armregisterbitadder 0 22 ]]coMGRL@0j?g`8D:6>I?3
 l29
 L20
-Vi]zBH_Q2CK3zkKNiH8:ok3
-R3
+Z42 Vi]zBH_Q2CK3zkKNiH8:ok3
+Z43 !s100 f52XUn943oX[iPQPD0WSF1
+R6
 33
-R19
-R20
-R21
-R22
-R4
-R5
-!s100 f52XUn943oX[iPQPD0WSF1
+R7
 !i10b 1
+R8
+R9
+R10
 !i111 1
+R11
+R12
 Earmregisterbitadder_tb
-Z23 w1592545512
-R13
-Z24 DPx4 work 16 armconfiguration 0 22 8ZzlimU_zNC][g_e:9lh=0
-Z25 DPx4 work 8 armtypes 0 22 ]^V=Zm_OHmJCVZ>6X8CZ?1
-Z26 DPx4 ieee 16 std_logic_textio 0 22 E=LR>a2bb_I?VV>QDdAdh3
-Z27 DPx4 work 8 tb_tools 0 22 kb8U95ZF54@A>gS0]W5]80
+R4
 R15
-R1
-R16
+R26
+R25
+R23
+R24
+R27
 R2
-Z28 8./src/ArmRegisterBitAdder_tb.vhd
-Z29 F./src/ArmRegisterBitAdder_tb.vhd
+R19
+R5
+Z44 8./src/ArmRegisterBitAdder_tb.vhd
+Z45 F./src/ArmRegisterBitAdder_tb.vhd
 l0
 L20
-VDK0lTli`S7ScG0N1M32F:0
+VKUcCXSU@IRdVl@ZLViS[o0
 !s100 kmD0_SDm0i]Cei3ZHkiOR0
-R3
+R6
 33
-Z30 !s110 1592545558
+R7
 !i10b 1
-Z31 !s108 1592545557.808147
-Z32 !s90 -reportprogress|300|-work|./work|./src/ArmRegisterBitAdder_tb.vhd|
-Z33 !s107 ./src/ArmRegisterBitAdder_tb.vhd|
+R8
+R9
+R10
 !i111 1
-Z34 o-work ./work
-R5
+R11
+R12
 Atestbench
-R13
-R24
-R25
-R26
-R27
 R15
-R1
-R16
-DEx4 work 22 armregisterbitadder_tb 0 22 DK0lTli`S7ScG0N1M32F:0
+R26
+R25
+R23
+R24
+R27
+R2
+R19
+Z46 DEx4 work 22 armregisterbitadder_tb 0 22 KUcCXSU@IRdVl@ZLViS[o0
 l74
 L23
-VPXNk:1S6YcS[nVIkVL9dS1
-!s100 BfGIUEX5^AV@Y9Ela?W`z3
-R3
-33
-R30
-!i10b 1
-R31
-R32
-R33
-!i111 1
-R34
-R5
-Parmtypes
-R1
-R16
+Z47 VFg5:UnKmT6LQn6HG`J>o60
+Z48 !s100 BfGIUEX5^AV@Y9Ela?W`z3
 R6
+33
+R7
+!i10b 1
+R8
+R9
+R10
+!i111 1
+R11
+R12
+Parmtypes
 R2
-Z35 8./src/ArmTypes.vhd
-Z36 F./src/ArmTypes.vhd
+R3
+R4
+R5
+Z49 8./src/ArmTypes.vhd
+Z50 F./src/ArmTypes.vhd
 l0
 L11
 V]^V=Zm_OHmJCVZ>6X8CZ?1
-R3
+!s100 3h7cSYlT9?Y0ZonFG2C=@1
+R6
 33
 b1
-Z37 !s110 1592510482
-Z38 !s108 1592510482.868867
-Z39 !s90 -reportprogress|300|-work|./work/|./src/ArmTypes.vhd|
-Z40 !s107 ./src/ArmTypes.vhd|
-R4
-R5
-!s100 3h7cSYlT9?Y0ZonFG2C=@1
+R7
 !i10b 1
+R8
+R9
+R10
 !i111 1
+R11
+R12
 Bbody
 R25
-R1
-R16
+R2
+R3
 l0
 L413
-V_1bC;H0CNk?O949EW6]Ef1
-R3
+Z51 V_1bC;H0CNk?O949EW6]Ef1
+Z52 !s100 5lWP:KmD=fJkIhzQOLmWz0
+R6
 33
-R37
-R38
-R39
-R40
+R7
+!i10b 1
+R8
+R9
+R10
+!i111 1
+R11
+R12
+nbody
+Ptb_tools
+R15
+R26
+R25
+R23
+R1
+R3
+R2
 R4
 R5
-nbody
-!s100 5lWP:KmD=fJkIhzQOLmWz0
-!i10b 1
-!i111 1
-Ptb_tools
-R13
-R24
-R25
-R26
-R15
-R16
-R1
-R6
-R2
-Z41 8./src/TB_Tools.vhd
-Z42 F./src/TB_Tools.vhd
+Z53 8./src/TB_Tools.vhd
+Z54 F./src/TB_Tools.vhd
 l0
 L34
 Vkb8U95ZF54@A>gS0]W5]80
-R3
+!s100 KC<2mondh@>VaoP61n]dm0
+R6
 33
 b1
-Z43 !s110 1592510506
-Z44 !s108 1592510506.369912
-Z45 !s90 -reportprogress|300|-work|./work/|./src/TB_Tools.vhd|
-Z46 !s107 ./src/TB_Tools.vhd|
-R4
-R5
-!s100 KC<2mondh@>VaoP61n]dm0
+R7
 !i10b 1
+R8
+R9
+R10
 !i111 1
+R11
+R12
 Bbody
-R27
-R13
 R24
-R25
-R26
 R15
-R16
+R26
+R25
+R23
 R1
+R3
+R2
 l0
 L164
-V[f4kmkX`D;LPJS=K6SNbS1
-R3
+Z55 V[f4kmkX`D;LPJS=K6SNbS1
+Z56 !s100 C[X60FXPhT4Eg_4k]T[Wh1
+R6
 33
-R43
-R44
-R45
-R46
-R4
-R5
-nbody
-!s100 C[X60FXPhT4Eg_4k]T[Wh1
+R7
 !i10b 1
+R8
+R9
+R10
 !i111 1
+R11
+R12
+nbody

@@ -16,27 +16,16 @@ entity ArmPriorityVectorFilter is
 end entity ArmPriorityVectorFilter;
 
 architecture structure of ArmPriorityVectorFilter is
-
 begin
+	process (PVF_VECTOR_UNFILTERED) begin
+		PVF_VECTOR_FILTERED <= x"0000";
 
-PRIO_FILTER: process
-variable index: integer := -1;
-variable i: integer; 
-
-begin
-
-PVF_VECTOR_FILTERED <= x"0000";
-for i in 15 downto 0 loop
-	if (PVF_VECTOR_UNFILTERED(i) = '1') then 
-		index = i; 
-	end if;
-end loop
-
-if (index >= 0) then
-	PVF_VECTOR_FILTERED(index) <= '1';
-end if;
-
-end process PRIO_FILTER;
-
+		for i in 0 to PVF_VECTOR_UNFILTERED'length - 1 loop
+			if PVF_VECTOR_UNFILTERED(i) = '1' then
+				PVF_VECTOR_FILTERED(i) <= '1';
+				exit;
+			end if;
+		end loop;
+	end process;
 end architecture structure;
 
