@@ -1,0 +1,84 @@
+#-----------------------------------------------------------
+# Vivado v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:07 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Sat Jun  6 23:29:52 2020
+# Process ID: 349
+# Current directory: /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20
+# Command line: vivado
+# Log file: /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/vivado.log
+# Journal file: /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/vivado.jou
+#-----------------------------------------------------------
+start_gui
+create_project HWP4 /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt04/Vivado_WORK/Tutorial/Tutorial_Projekt/HWP4 -part xc7a35tcpg236-1
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/afs/tu-berlin.de/units/Fak_IV/aes/tools/xilinx/Vivado/2017.3/data/ip'.
+create_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:07 . Memory (MB): peak = 6211.820 ; gain = 74.188 ; free physical = 28098 ; free virtual = 33083
+set_property target_language VHDL [current_project]
+add_files -norecurse {/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt04/Vivado_WORK/Tutorial/src/ArmRS232Interface.vhd /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt04/Vivado_WORK/Tutorial/src/PISOShiftReg.vhd}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 2
+[Sat Jun  6 23:34:20 2020] Launched synth_1...
+Run output will be captured here: /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt04/Vivado_WORK/Tutorial/Tutorial_Projekt/HWP4/HWP4.runs/synth_1/runme.log
+add_files -norecurse {/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt04/Vivado_WORK/Tutorial/src/ArmWaitStateGenAsync.vhd /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt04/Vivado_WORK/Tutorial/src/ArmTypes.vhd /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt04/Vivado_WORK/Tutorial/src/ArmConfiguration.vhd /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt04/Vivado_WORK/Tutorial/src/ArmFilePaths.vhd}
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Sat Jun  6 23:35:35 2020] Launched synth_1...
+Run output will be captured here: /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt04/Vivado_WORK/Tutorial/Tutorial_Projekt/HWP4/HWP4.runs/synth_1/runme.log
+set_property top PISOShiftReg [current_fileset]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Sat Jun  6 23:37:22 2020] Launched synth_1...
+Run output will be captured here: /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt04/Vivado_WORK/Tutorial/Tutorial_Projekt/HWP4/HWP4.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Sat Jun  6 23:41:56 2020] Launched synth_1...
+Run output will be captured here: /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt04/Vivado_WORK/Tutorial/Tutorial_Projekt/HWP4/HWP4.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Sat Jun  6 23:49:48 2020] Launched synth_1...
+Run output will be captured here: /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt04/Vivado_WORK/Tutorial/Tutorial_Projekt/HWP4/HWP4.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Sun Jun  7 00:10:19 2020] Launched synth_1...
+Run output will be captured here: /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt04/Vivado_WORK/Tutorial/Tutorial_Projekt/HWP4/HWP4.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Sun Jun  7 00:11:17 2020] Launched synth_1...
+Run output will be captured here: /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt04/Vivado_WORK/Tutorial/Tutorial_Projekt/HWP4/HWP4.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Sun Jun  7 00:13:33 2020] Launched synth_1...
+Run output will be captured here: /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt04/Vivado_WORK/Tutorial/Tutorial_Projekt/HWP4/HWP4.runs/synth_1/runme.log
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt04/Vivado_WORK/Tutorial/src/PISOShiftReg_tb.vhd
+update_compile_order -fileset sim_1
+set_property top PISOShiftReg_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt04/Vivado_WORK/Tutorial/Tutorial_Projekt/HWP4/HWP4.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'PISOShiftReg_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt04/Vivado_WORK/Tutorial/Tutorial_Projekt/HWP4/HWP4.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj PISOShiftReg_tb_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt04/Vivado_WORK/Tutorial/src/PISOShiftReg.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity PISOShiftReg
+INFO: [VRFC 10-163] Analyzing VHDL file "/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt04/Vivado_WORK/Tutorial/src/PISOShiftReg_tb.vhd" into library xil_defaultlib
+ERROR: [VRFC 10-149] 'tb_tools' is not compiled in library xil_defaultlib [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt04/Vivado_WORK/Tutorial/src/PISOShiftReg_tb.vhd:7]
+INFO: [VRFC 10-307] analyzing entity PISOShiftReg_tb
+ERROR: [VRFC 10-1504] unit pisoshiftreg_tb ignored due to previous errors [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt04/Vivado_WORK/Tutorial/src/PISOShiftReg_tb.vhd:9]
+INFO: [VRFC 10-240] VHDL file /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt04/Vivado_WORK/Tutorial/src/PISOShiftReg_tb.vhd ignored due to errors
+INFO: [USF-XSim-69] 'compile' step finished in '5' seconds
+INFO: [USF-XSim-99] Step results log file:'/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt04/Vivado_WORK/Tutorial/Tutorial_Projekt/HWP4/HWP4.sim/sim_1/behav/xsim/xvhdl.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or '/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt04/Vivado_WORK/Tutorial/Tutorial_Projekt/HWP4/HWP4.sim/sim_1/behav/xsim/xvhdl.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 6481.324 ; gain = 0.000 ; free physical = 27553 ; free virtual = 32857
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.

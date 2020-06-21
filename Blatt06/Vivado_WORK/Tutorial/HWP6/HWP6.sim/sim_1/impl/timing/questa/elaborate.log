@@ -1,0 +1,80 @@
+QuestaSim-64 vopt 10.2c_5 Compiler 2013.11 Nov 19 2013
+
+Top level modules:
+	ArmLdmStmNextAddress_TB
+	glbl
+
+Analyzing design...
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package ArmTypes
+-- Loading package ArmConfiguration
+-- Loading package std_logic_textio
+-- Loading package ArmFilePaths
+-- Loading package TB_Tools
+-- Loading entity ArmLdmStmNextAddress_TB
+-- Loading architecture testbench of ArmLdmStmNextAddress_tb
+-- Loading module ArmLdmStmNextAddress
+-- Loading package vl_types
+-- Loading entity ArmLdmStmNextAddress
+-- Loading package body ArmTypes
+-- Loading package body TB_Tools
+-- Loading package body ArmFilePaths
+-- Loading module ArmLdmStmNextAddress
+-- Loading module simprims_ver.OBUF
+-- Loading module simprims_ver.LUT6
+-- Loading module simprims_ver.LUT5
+-- Loading module simprims_ver.LUT2
+-- Loading UDP simprims_ver.x_lut2_mux4
+-- Loading module simprims_ver.LUT4
+-- Loading module simprims_ver.IBUF
+-- Loading module simprims_ver.FDRE
+-- Loading UDP simprims_ver.sffsrce_fdre
+-- Loading module simprims_ver.BUFG
+-- Loading module glbl
+
+Waiting for SDF compilation to complete...
+-- Loading typ SDF from ArmLdmStmNextAddress_TB_time_impl.sdf
+Optimizing 39 design-units (inlining 20 instances):
+-- Optimizing module ArmLdmStmNextAddress(fast)
+-- Optimizing module simprims_ver.LUT5(fast)
+-- Optimizing module simprims_ver.LUT5(fast__1)
+-- Optimizing module simprims_ver.LUT5(fast__2)
+-- Optimizing module simprims_ver.LUT5(fast__3)
+-- Optimizing module simprims_ver.LUT5(fast__4)
+-- Optimizing module simprims_ver.LUT6(fast)
+-- Optimizing module simprims_ver.LUT6(fast__1)
+-- Optimizing module simprims_ver.LUT6(fast__2)
+-- Optimizing module simprims_ver.LUT6(fast__3)
+-- Optimizing module simprims_ver.LUT6(fast__4)
+-- Optimizing module simprims_ver.LUT6(fast__5)
+-- Optimizing module simprims_ver.LUT6(fast__6)
+-- Optimizing module simprims_ver.LUT6(fast__7)
+-- Optimizing module simprims_ver.LUT6(fast__8)
+-- Optimizing module simprims_ver.LUT6(fast__9)
+-- Optimizing module simprims_ver.LUT6(fast__10)
+-- Optimizing module simprims_ver.LUT6(fast__11)
+-- Inlining UDP simprims_ver.sffsrce_fdre
+-- Optimizing module simprims_ver.FDRE(fast)
+-- Optimizing module simprims_ver.LUT4(fast)
+-- Optimizing module simprims_ver.LUT4(fast__1)
+-- Optimizing module simprims_ver.LUT4(fast__2)
+-- Optimizing module simprims_ver.LUT4(fast__3)
+-- Optimizing module glbl(fast)
+-- Inlining UDP simprims_ver.x_lut2_mux4
+-- Optimizing module simprims_ver.LUT2(fast)
+-- Optimizing module simprims_ver.LUT2(fast__1)
+-- Optimizing module simprims_ver.IBUF(fast)
+-- Optimizing module simprims_ver.OBUF(fast)
+-- Optimizing module simprims_ver.BUFG(fast)
+-- Optimizing architecture testbench of ArmLdmStmNextAddress_tb
+-- Optimizing package TB_Tools
+-- Optimizing package body TB_Tools
+-- Optimizing package ArmTypes
+-- Optimizing package body ArmTypes
+-- Optimizing package ArmConfiguration
+-- Optimizing package ArmFilePaths
+-- Optimizing package body ArmFilePaths
+Optimized design name is ArmLdmStmNextAddress_TB_opt

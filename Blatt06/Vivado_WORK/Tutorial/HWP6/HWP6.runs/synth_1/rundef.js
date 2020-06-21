@@ -27,7 +27,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log ArmRegisterBitAdder.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ArmRegisterBitAdder.tcl" );
+         "-log ArmLdmStmNextAddress.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ArmLdmStmNextAddress.tcl" );
 
 
 

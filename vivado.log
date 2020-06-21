@@ -2,83 +2,301 @@
 # Vivado v2017.3 (64-bit)
 # SW Build 2018833 on Wed Oct  4 19:58:07 MDT 2017
 # IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
-# Start of session at: Sat Jun  6 23:29:52 2020
-# Process ID: 349
+# Start of session at: Sun Jun 21 19:19:49 2020
+# Process ID: 4812
 # Current directory: /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20
 # Command line: vivado
 # Log file: /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/vivado.log
 # Journal file: /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/vivado.jou
 #-----------------------------------------------------------
 start_gui
-create_project HWP4 /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt04/Vivado_WORK/Tutorial/Tutorial_Projekt/HWP4 -part xc7a35tcpg236-1
+open_project /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt06/Vivado_WORK/Tutorial/HWP6/HWP6.xpr
+Scanning sources...
+Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/afs/tu-berlin.de/units/Fak_IV/aes/tools/xilinx/Vivado/2017.3/data/ip'.
-create_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:07 . Memory (MB): peak = 6211.820 ; gain = 74.188 ; free physical = 28098 ; free virtual = 33083
-set_property target_language VHDL [current_project]
-add_files -norecurse {/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt04/Vivado_WORK/Tutorial/src/ArmRS232Interface.vhd /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt04/Vivado_WORK/Tutorial/src/PISOShiftReg.vhd}
+open_project: Time (s): cpu = 00:00:19 ; elapsed = 00:00:12 . Memory (MB): peak = 6147.195 ; gain = 36.031 ; free physical = 27958 ; free virtual = 32870
+update_compile_order -fileset sources_1
+add_files -norecurse {/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt06/Vivado_WORK/Tutorial/src/ArmLdmStmNextAddress.vhd /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt06/Vivado_WORK/Tutorial/src/ArmPriorityVectorFilter.vhd}
 update_compile_order -fileset sources_1
 update_compile_order -fileset sources_1
-launch_runs synth_1 -jobs 2
-[Sat Jun  6 23:34:20 2020] Launched synth_1...
-Run output will be captured here: /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt04/Vivado_WORK/Tutorial/Tutorial_Projekt/HWP4/HWP4.runs/synth_1/runme.log
-add_files -norecurse {/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt04/Vivado_WORK/Tutorial/src/ArmWaitStateGenAsync.vhd /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt04/Vivado_WORK/Tutorial/src/ArmTypes.vhd /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt04/Vivado_WORK/Tutorial/src/ArmConfiguration.vhd /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt04/Vivado_WORK/Tutorial/src/ArmFilePaths.vhd}
-update_compile_order -fileset sources_1
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-[Sat Jun  6 23:35:35 2020] Launched synth_1...
-Run output will be captured here: /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt04/Vivado_WORK/Tutorial/Tutorial_Projekt/HWP4/HWP4.runs/synth_1/runme.log
-set_property top PISOShiftReg [current_fileset]
-update_compile_order -fileset sources_1
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-[Sat Jun  6 23:37:22 2020] Launched synth_1...
-Run output will be captured here: /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt04/Vivado_WORK/Tutorial/Tutorial_Projekt/HWP4/HWP4.runs/synth_1/runme.log
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-[Sat Jun  6 23:41:56 2020] Launched synth_1...
-Run output will be captured here: /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt04/Vivado_WORK/Tutorial/Tutorial_Projekt/HWP4/HWP4.runs/synth_1/runme.log
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-[Sat Jun  6 23:49:48 2020] Launched synth_1...
-Run output will be captured here: /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt04/Vivado_WORK/Tutorial/Tutorial_Projekt/HWP4/HWP4.runs/synth_1/runme.log
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-[Sun Jun  7 00:10:19 2020] Launched synth_1...
-Run output will be captured here: /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt04/Vivado_WORK/Tutorial/Tutorial_Projekt/HWP4/HWP4.runs/synth_1/runme.log
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-[Sun Jun  7 00:11:17 2020] Launched synth_1...
-Run output will be captured here: /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt04/Vivado_WORK/Tutorial/Tutorial_Projekt/HWP4/HWP4.runs/synth_1/runme.log
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-[Sun Jun  7 00:13:33 2020] Launched synth_1...
-Run output will be captured here: /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt04/Vivado_WORK/Tutorial/Tutorial_Projekt/HWP4/HWP4.runs/synth_1/runme.log
 set_property SOURCE_SET sources_1 [get_filesets sim_1]
-add_files -fileset sim_1 -norecurse /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt04/Vivado_WORK/Tutorial/src/PISOShiftReg_tb.vhd
+add_files -fileset sim_1 -norecurse /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt06/Vivado_WORK/Tutorial/src/ArmLdmStmNextAddress_tb.vhd
 update_compile_order -fileset sim_1
-set_property top PISOShiftReg_tb [get_filesets sim_1]
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Sun Jun 21 19:22:49 2020] Launched synth_1...
+Run output will be captured here: /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt06/Vivado_WORK/Tutorial/HWP6/HWP6.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 2
+[Sun Jun 21 19:25:46 2020] Launched impl_1...
+Run output will be captured here: /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt06/Vivado_WORK/Tutorial/HWP6/HWP6.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 20 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.3
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 6446.715 ; gain = 0.000 ; free physical = 27664 ; free virtual = 32602
+Restored from archive | CPU: 0.010000 secs | Memory: 0.102890 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 6446.715 ; gain = 0.000 ; free physical = 27664 ; free virtual = 32602
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:27 ; elapsed = 00:00:25 . Memory (MB): peak = 6660.855 ; gain = 381.453 ; free physical = 27581 ; free virtual = 32525
+WARNING: [Timing 38-313] There are no user specified timing constraints. Timing constraints are needed for proper timing analysis.
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+launch_simulation -mode post-implementation -type timing
+INFO: [Vivado 12-5682] Launching post-implementation timing simulation in '/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt06/Vivado_WORK/Tutorial/HWP6/HWP6.sim/sim_1/impl/timing/questa'
+INFO: [USF-Questa-47] Finding simulator installation...
+INFO: [USF-Questa-49] Using simulator executables from '/afs/tu-berlin.de/units/Fak_IV/aes/tools/mentor/questasim/linux_x86_64'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-20] The target language is set to VHDL, it is not supported for simulation type 'timing', using Verilog instead.
+INFO: [SIM-utils-31] Writing simulation netlist file for design 'impl_1'...
+INFO: [SIM-utils-32] write_verilog -mode timesim -nolib -sdf_anno true -force -file "/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt06/Vivado_WORK/Tutorial/HWP6/HWP6.sim/sim_1/impl/timing/questa/ArmRegisterBitAdder_TB_time_impl.v"
+INFO: [SIM-utils-34] Writing SDF file...
+INFO: [SIM-utils-35] write_sdf -mode timesim -process_corner slow -force -file "/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt06/Vivado_WORK/Tutorial/HWP6/HWP6.sim/sim_1/impl/timing/questa/ArmRegisterBitAdder_TB_time_impl.sdf"
+INFO: [SIM-utils-36] Netlist generated:/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt06/Vivado_WORK/Tutorial/HWP6/HWP6.sim/sim_1/impl/timing/questa/ArmRegisterBitAdder_TB_time_impl.v
+INFO: [SIM-utils-37] SDF generated:/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt06/Vivado_WORK/Tutorial/HWP6/HWP6.sim/sim_1/impl/timing/questa/ArmRegisterBitAdder_TB_time_impl.sdf
+INFO: [USF-Questa-7] Finding pre-compiled libraries...
+CRITICAL WARNING: [USF-Questa-8] Failed to find the pre-compiled simulation library!
+INFO: [USF-Questa-9]  Recommendation:- Please follow these instructions to resolve this issue:-
+ - set the 'COMPXLIB.QUESTA_COMPILED_LIBRARY_DIR' project property to the directory where Xilinx simulation libraries are compiled for Questa, or
+ - set the 'MODELSIM' environment variable to point to the modelsim.ini file, or
+ - set the 'WD_MGC' environment variable to point to the directory containing the modelsim.ini file
+INFO: [SIM-utils-54] Inspecting design source files for 'ArmRegisterBitAdder_TB' in fileset 'sim_1'...
+INFO: [USF-Questa-2] Questa::Compile design
+INFO: [USF-Questa-15] Creating automatic 'do' files...
+INFO: [USF-Questa-69] Executing 'COMPILE and ANALYZE' step in '/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt06/Vivado_WORK/Tutorial/HWP6/HWP6.sim/sim_1/impl/timing/questa'
+Copying /afs/tu-berlin.de/units/Fak_IV/aes/tools/mentor/questasim/linux_x86_64/../modelsim.ini to modelsim.ini
+Modifying modelsim.ini
+QuestaSim-64 vlog 10.2c_5 Compiler 2013.11 Nov 19 2013
+-- Compiling module ArmLdmStmNextAddress
+-- Compiling module glbl
+
+Top level modules:
+	ArmLdmStmNextAddress
+	glbl
+QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling package ArmTypes
+-- Compiling package body ArmTypes
+-- Loading package ArmTypes
+-- Loading package NUMERIC_STD
+-- Loading package ArmTypes
+-- Compiling package ArmConfiguration
+-- Compiling package ArmFilePaths
+-- Compiling package body ArmFilePaths
+-- Loading package ArmFilePaths
+-- Loading package std_logic_textio
+-- Loading package ArmConfiguration
+-- Loading package ArmFilePaths
+-- Compiling package TB_Tools
+-- Compiling package body TB_Tools
+-- Loading package TB_Tools
+-- Compiling entity ArmRegisterBitAdder
+-- Compiling architecture structure of ArmRegisterBitAdder
+-- Loading package TB_Tools
+-- Compiling entity ArmRegisterBitAdder_TB
+-- Compiling architecture testbench of ArmRegisterBitAdder_tb
+INFO: [USF-Questa-69] 'compile' step finished in '2' seconds
+INFO: [USF-Questa-3] Questa::Elaborate design
+INFO: [USF-Questa-69] Executing 'ELABORATE' step in '/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt06/Vivado_WORK/Tutorial/HWP6/HWP6.sim/sim_1/impl/timing/questa'
+QuestaSim-64 vopt 10.2c_5 Compiler 2013.11 Nov 19 2013
+
+Top level modules:
+	ArmRegisterBitAdder_TB
+	glbl
+
+Analyzing design...
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_textio
+-- Loading package ArmTypes
+-- Loading package ArmConfiguration
+-- Loading package ArmFilePaths
+-- Loading package TB_Tools
+-- Loading entity ArmRegisterBitAdder_TB
+-- Loading architecture testbench of ArmRegisterBitAdder_tb
+-- Loading entity ArmRegisterBitAdder
+-- Loading package body TB_Tools
+-- Loading package body ArmTypes
+-- Loading package body ArmFilePaths
+-- Loading architecture structure of ArmRegisterBitAdder
+-- Loading module glbl
+Optimizing 10 design-units (inlining 0 instances):
+-- Optimizing module glbl(fast)
+-- Optimizing package TB_Tools
+-- Optimizing package body TB_Tools
+-- Optimizing package ArmTypes
+-- Optimizing package body ArmTypes
+-- Optimizing architecture structure of ArmRegisterBitAdder
+-- Optimizing package ArmConfiguration
+-- Optimizing architecture testbench of ArmRegisterBitAdder_tb
+-- Optimizing package ArmFilePaths
+-- Optimizing package body ArmFilePaths
+Optimized design name is ArmRegisterBitAdder_TB_opt
+INFO: [USF-Questa-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-Questa-4] Questa::Simulate design
+INFO: [USF-Questa-69] Executing 'SIMULATE' step in '/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt06/Vivado_WORK/Tutorial/HWP6/HWP6.sim/sim_1/impl/timing/questa'
+Program launched (PID=7774)
+launch_simulation: Time (s): cpu = 00:00:13 ; elapsed = 00:00:06 . Memory (MB): peak = 7108.441 ; gain = 22.535 ; free physical = 27100 ; free virtual = 32088
+set_property top ArmLdmStmNextAddress_TB [get_filesets sim_1]
 set_property top_lib xil_defaultlib [get_filesets sim_1]
 update_compile_order -fileset sim_1
-launch_simulation
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt04/Vivado_WORK/Tutorial/Tutorial_Projekt/HWP4/HWP4.sim/sim_1/behav/xsim'
+reset_simulation -simset sim_1 -mode post-implementation -type timing
+INFO: [Vivado 12-2266] Removing simulation data...
+INFO: [Vivado 12-2267] Reset complete
+launch_simulation -mode post-implementation -type timing
+INFO: [Vivado 12-5682] Launching post-implementation timing simulation in '/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt06/Vivado_WORK/Tutorial/HWP6/HWP6.sim/sim_1/impl/timing/questa'
+INFO: [USF-Questa-47] Finding simulator installation...
+INFO: [USF-Questa-49] Using simulator executables from '/afs/tu-berlin.de/units/Fak_IV/aes/tools/mentor/questasim/linux_x86_64'
 INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'PISOShiftReg_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt04/Vivado_WORK/Tutorial/Tutorial_Projekt/HWP4/HWP4.sim/sim_1/behav/xsim'
-xvhdl --incr --relax -prj PISOShiftReg_tb_vhdl.prj
-INFO: [VRFC 10-163] Analyzing VHDL file "/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt04/Vivado_WORK/Tutorial/src/PISOShiftReg.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity PISOShiftReg
-INFO: [VRFC 10-163] Analyzing VHDL file "/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt04/Vivado_WORK/Tutorial/src/PISOShiftReg_tb.vhd" into library xil_defaultlib
-ERROR: [VRFC 10-149] 'tb_tools' is not compiled in library xil_defaultlib [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt04/Vivado_WORK/Tutorial/src/PISOShiftReg_tb.vhd:7]
-INFO: [VRFC 10-307] analyzing entity PISOShiftReg_tb
-ERROR: [VRFC 10-1504] unit pisoshiftreg_tb ignored due to previous errors [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt04/Vivado_WORK/Tutorial/src/PISOShiftReg_tb.vhd:9]
-INFO: [VRFC 10-240] VHDL file /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt04/Vivado_WORK/Tutorial/src/PISOShiftReg_tb.vhd ignored due to errors
-INFO: [USF-XSim-69] 'compile' step finished in '5' seconds
-INFO: [USF-XSim-99] Step results log file:'/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt04/Vivado_WORK/Tutorial/Tutorial_Projekt/HWP4/HWP4.sim/sim_1/behav/xsim/xvhdl.log'
-ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or '/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt04/Vivado_WORK/Tutorial/Tutorial_Projekt/HWP4/HWP4.sim/sim_1/behav/xsim/xvhdl.log' file for more information.
-ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
-launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 6481.324 ; gain = 0.000 ; free physical = 27553 ; free virtual = 32857
-ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+INFO: [SIM-utils-20] The target language is set to VHDL, it is not supported for simulation type 'timing', using Verilog instead.
+INFO: [SIM-utils-31] Writing simulation netlist file for design 'impl_1'...
+INFO: [SIM-utils-32] write_verilog -mode timesim -nolib -sdf_anno true -force -file "/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt06/Vivado_WORK/Tutorial/HWP6/HWP6.sim/sim_1/impl/timing/questa/ArmLdmStmNextAddress_TB_time_impl.v"
+INFO: [SIM-utils-34] Writing SDF file...
+INFO: [SIM-utils-35] write_sdf -mode timesim -process_corner slow -force -file "/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt06/Vivado_WORK/Tutorial/HWP6/HWP6.sim/sim_1/impl/timing/questa/ArmLdmStmNextAddress_TB_time_impl.sdf"
+INFO: [SIM-utils-36] Netlist generated:/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt06/Vivado_WORK/Tutorial/HWP6/HWP6.sim/sim_1/impl/timing/questa/ArmLdmStmNextAddress_TB_time_impl.v
+INFO: [SIM-utils-37] SDF generated:/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt06/Vivado_WORK/Tutorial/HWP6/HWP6.sim/sim_1/impl/timing/questa/ArmLdmStmNextAddress_TB_time_impl.sdf
+INFO: [USF-Questa-7] Finding pre-compiled libraries...
+CRITICAL WARNING: [USF-Questa-8] Failed to find the pre-compiled simulation library!
+INFO: [USF-Questa-9]  Recommendation:- Please follow these instructions to resolve this issue:-
+ - set the 'COMPXLIB.QUESTA_COMPILED_LIBRARY_DIR' project property to the directory where Xilinx simulation libraries are compiled for Questa, or
+ - set the 'MODELSIM' environment variable to point to the modelsim.ini file, or
+ - set the 'WD_MGC' environment variable to point to the directory containing the modelsim.ini file
+INFO: [SIM-utils-54] Inspecting design source files for 'ArmLdmStmNextAddress_TB' in fileset 'sim_1'...
+INFO: [USF-Questa-2] Questa::Compile design
+INFO: [USF-Questa-15] Creating automatic 'do' files...
+INFO: [USF-Questa-69] Executing 'COMPILE and ANALYZE' step in '/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt06/Vivado_WORK/Tutorial/HWP6/HWP6.sim/sim_1/impl/timing/questa'
+Copying /afs/tu-berlin.de/units/Fak_IV/aes/tools/mentor/questasim/linux_x86_64/../modelsim.ini to modelsim.ini
+Modifying modelsim.ini
+QuestaSim-64 vlog 10.2c_5 Compiler 2013.11 Nov 19 2013
+-- Compiling module ArmLdmStmNextAddress
+-- Compiling module glbl
+
+Top level modules:
+	ArmLdmStmNextAddress
+	glbl
+QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling package ArmTypes
+-- Compiling package body ArmTypes
+-- Loading package ArmTypes
+-- Loading package NUMERIC_STD
+-- Loading package ArmTypes
+-- Compiling package ArmConfiguration
+-- Compiling package ArmFilePaths
+-- Compiling package body ArmFilePaths
+-- Loading package ArmFilePaths
+-- Loading package std_logic_textio
+-- Loading package ArmConfiguration
+-- Loading package ArmFilePaths
+-- Compiling package TB_Tools
+-- Compiling package body TB_Tools
+-- Loading package TB_Tools
+-- Loading package TB_Tools
+-- Compiling entity ArmLdmStmNextAddress_TB
+-- Compiling architecture testbench of ArmLdmStmNextAddress_tb
+INFO: [USF-Questa-69] 'compile' step finished in '1' seconds
+INFO: [USF-Questa-3] Questa::Elaborate design
+INFO: [USF-Questa-69] Executing 'ELABORATE' step in '/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt06/Vivado_WORK/Tutorial/HWP6/HWP6.sim/sim_1/impl/timing/questa'
+QuestaSim-64 vopt 10.2c_5 Compiler 2013.11 Nov 19 2013
+
+Top level modules:
+	ArmLdmStmNextAddress_TB
+	glbl
+
+Analyzing design...
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package ArmTypes
+-- Loading package ArmConfiguration
+-- Loading package std_logic_textio
+-- Loading package ArmFilePaths
+-- Loading package TB_Tools
+-- Loading entity ArmLdmStmNextAddress_TB
+-- Loading architecture testbench of ArmLdmStmNextAddress_tb
+-- Loading module ArmLdmStmNextAddress
+-- Loading package vl_types
+-- Loading entity ArmLdmStmNextAddress
+-- Loading package body ArmTypes
+-- Loading package body TB_Tools
+-- Loading package body ArmFilePaths
+-- Loading module ArmLdmStmNextAddress
+-- Loading module simprims_ver.OBUF
+-- Loading module simprims_ver.LUT6
+-- Loading module simprims_ver.LUT5
+-- Loading module simprims_ver.LUT2
+-- Loading UDP simprims_ver.x_lut2_mux4
+-- Loading module simprims_ver.LUT4
+-- Loading module simprims_ver.IBUF
+-- Loading module simprims_ver.FDRE
+-- Loading UDP simprims_ver.sffsrce_fdre
+-- Loading module simprims_ver.BUFG
+-- Loading module glbl
+
+Waiting for SDF compilation to complete...
+-- Loading typ SDF from ArmLdmStmNextAddress_TB_time_impl.sdf
+Optimizing 39 design-units (inlining 20 instances):
+-- Optimizing module ArmLdmStmNextAddress(fast)
+-- Optimizing module simprims_ver.LUT5(fast)
+-- Optimizing module simprims_ver.LUT5(fast__1)
+-- Optimizing module simprims_ver.LUT5(fast__2)
+-- Optimizing module simprims_ver.LUT5(fast__3)
+-- Optimizing module simprims_ver.LUT5(fast__4)
+-- Optimizing module simprims_ver.LUT6(fast)
+-- Optimizing module simprims_ver.LUT6(fast__1)
+-- Optimizing module simprims_ver.LUT6(fast__2)
+-- Optimizing module simprims_ver.LUT6(fast__3)
+-- Optimizing module simprims_ver.LUT6(fast__4)
+-- Optimizing module simprims_ver.LUT6(fast__5)
+-- Optimizing module simprims_ver.LUT6(fast__6)
+-- Optimizing module simprims_ver.LUT6(fast__7)
+-- Optimizing module simprims_ver.LUT6(fast__8)
+-- Optimizing module simprims_ver.LUT6(fast__9)
+-- Optimizing module simprims_ver.LUT6(fast__10)
+-- Optimizing module simprims_ver.LUT6(fast__11)
+-- Inlining UDP simprims_ver.sffsrce_fdre
+-- Optimizing module simprims_ver.FDRE(fast)
+-- Optimizing module simprims_ver.LUT4(fast)
+-- Optimizing module simprims_ver.LUT4(fast__1)
+-- Optimizing module simprims_ver.LUT4(fast__2)
+-- Optimizing module simprims_ver.LUT4(fast__3)
+-- Optimizing module glbl(fast)
+-- Inlining UDP simprims_ver.x_lut2_mux4
+-- Optimizing module simprims_ver.LUT2(fast)
+-- Optimizing module simprims_ver.LUT2(fast__1)
+-- Optimizing module simprims_ver.IBUF(fast)
+-- Optimizing module simprims_ver.OBUF(fast)
+-- Optimizing module simprims_ver.BUFG(fast)
+-- Optimizing architecture testbench of ArmLdmStmNextAddress_tb
+-- Optimizing package TB_Tools
+-- Optimizing package body TB_Tools
+-- Optimizing package ArmTypes
+-- Optimizing package body ArmTypes
+-- Optimizing package ArmConfiguration
+-- Optimizing package ArmFilePaths
+-- Optimizing package body ArmFilePaths
+Optimized design name is ArmLdmStmNextAddress_TB_opt
+INFO: [USF-Questa-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-Questa-4] Questa::Simulate design
+INFO: [USF-Questa-69] Executing 'SIMULATE' step in '/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt06/Vivado_WORK/Tutorial/HWP6/HWP6.sim/sim_1/impl/timing/questa'
+Program launched (PID=7980)
+close_design
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Jun 21 19:36:36 2020...

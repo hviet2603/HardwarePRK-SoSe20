@@ -38,6 +38,6 @@ EAStep()
 
 # pre-commands:
 /bin/touch .init_design.begin.rst
-EAStep vivado -log ArmRegisterBitAdder.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source ArmRegisterBitAdder.tcl -notrace
+EAStep vivado -log ArmLdmStmNextAddress.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source ArmLdmStmNextAddress.tcl -notrace
 
 
