@@ -180,6 +180,6 @@ begin
 		report SEPARATOR_LINE;	
 		report " EOT (END OF TEST) - Diese Fehlermeldung stoppt den Simulator unabhaengig von tatsaechlich aufgetretenen Fehlern!" severity failure; 
 		wait;
-	end process tb
+	end process tb;
 		
 end architecture testbench; 
