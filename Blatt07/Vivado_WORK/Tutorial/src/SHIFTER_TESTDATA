@@ -1,0 +1,590 @@
+#	Reihenfolge und Art der Signale in der Komponente
+#	OPERAND_WIDTH : 32
+#	AMOUNT_WIDTH : 8
+#	Shifttypen: 00 = LSL, 01 = LSR, 10 = ASR, 11 = ROR
+#--------------------------------------------------------------------------------
+#	Bedeutung des Testvektors:
+#--------------------------------------------------------------------------------
+#	Stimuli:
+#		SHIFT_TEST_OPERAND : std_logic_vector(OPERAND_WIDTH-1 downto 0);
+#		SHIFT_TEST_AMOUNT : std_logic_vector(AMOUNT_WIDTH-1 downto 0);
+#		SHIFT_TEST_TYPE_IN : std_logic_vector(1 downto 0);
+#		SHIFT_TEST_C_IN : std_logic_vector(0 downto 0);
+#		SHIFT_TEST_RRX : std_logic_vector(0 downto 0);
+#	Die erwarteten Ergebnisse:
+#		SHIFT_TEST_RESULT : std_logic_vector(OPERAND_WIDTH-1 downto 0);
+#		SHIFT_TEST_C_OUT : std_logic_vector(0 downto 0);
+#--------------------------------------------------------------------------------
+
+# Test logischer Linksshifts
+
+#	Testvektor 1
+	h"00000000"
+	d"0"
+	b"00"
+	b"1"
+	b"0"
+	h"00000000"
+	b"1"
+	
+#	Testvektor 2
+	h"00000001" 
+	d"1"
+	b"00"
+	b"0"
+	b"0"
+	h"00000002"
+	b"0"
+	
+#	Testvektor 3
+	h"00000001"
+	d"2"
+	b"00"
+	b"0"
+	b"0"
+	h"00000004"
+	b"0"
+	
+#	Testvektor 4
+	h"00000001" 
+	d"3"
+	b"00"
+	b"0"
+	b"0"
+	h"00000008"
+	b"0"
+	
+#	Testvektor 5
+	h"00000001" 
+	d"4"
+	b"00"
+	b"0"
+	b"0"
+	h"00000010"
+	b"0"
+
+#	Testvektor 6
+	h"00ABCDEF" 
+	d"4"
+	b"00"
+	b"0"
+	b"0"
+	h"0ABCDEF0"
+	b"0"
+	
+#	Testvektor 7
+	h"00000001" 
+	d"31"
+	b"00"
+	b"1"
+	b"0"
+	h"80000000"
+	b"0"
+	
+#	Testvektor 8
+	h"00000003" 
+	d"31"
+	b"00"
+	b"1"
+	b"0"
+	h"80000000"
+	b"1"
+	
+#	Testvektor 9
+	h"FFFFFFFF" 
+	d"31"
+	b"00"
+	b"0"
+	b"0"
+	h"80000000"
+	b"1"
+	
+#	Testvektor 10
+	h"FFFFFFFF" 
+	d"32"
+	b"00"
+	b"0"
+	b"0"
+	h"00000000"
+	b"1"
+	
+#	Testvektor 11
+	h"FFFFFFFF" 
+	d"33"
+	b"00"
+	b"0"
+	b"0"
+	h"00000000"
+	b"0"	
+	
+#	Testvektor 12
+	h"FFFFFFFF" 
+	d"255"
+	b"00"
+	b"0"
+	b"0"
+	h"00000000"
+	b"0"
+	
+# Test logischer Rechtsshifts	
+
+#	Testvektor 13
+	h"00000000"
+	d"0"
+	b"01"
+	b"0"
+	b"0"
+	h"00000000"
+	b"0"
+	
+#	Testvektor 14
+	h"00000001" 
+	d"1"
+	b"01"
+	b"0"
+	b"0"
+	h"00000000"
+	b"1"
+	
+#	Testvektor 15
+	h"00000010"
+	d"2"
+	b"01"
+	b"0"
+	b"0"
+	h"00000004"
+	b"0"
+	
+#	Testvektor 16
+	h"00000001" 
+	d"3"
+	b"01"
+	b"0"
+	b"0"
+	h"00000000"
+	b"0"
+	
+#	Testvektor 17
+	h"80000000" 
+	d"4"
+	b"01"
+	b"0"
+	b"0"
+	h"08000000"
+	b"0"
+
+#	Testvektor 18
+	h"ABCDEF00" 
+	d"4"
+	b"01"
+	b"1"
+	b"0"
+	h"0ABCDEF0"
+	b"0"
+	
+#	Testvektor 19
+	h"80000000" 
+	d"31"
+	b"01"
+	b"1"
+	b"0"
+	h"00000001"
+	b"0"
+	
+#	Testvektor 20
+	h"C0000000" 
+	d"31"
+	b"01"
+	b"1"
+	b"0"
+	h"00000001"
+	b"1"
+	
+#	Testvektor 21
+	h"FFFFFFFF" 
+	d"31"
+	b"01"
+	b"0"
+	b"0"
+	h"00000001"
+	b"1"
+	
+#	Testvektor 22
+	h"FFFFFFFF" 
+	d"32"
+	b"01"
+	b"0"
+	b"0"
+	h"00000000"
+	b"1"
+	
+#	Testvektor 23
+	h"FFFFFFFF" 
+	d"33"
+	b"01"
+	b"0"
+	b"0"
+	h"00000000"
+	b"0"	
+	
+#	Testvektor 24
+	h"FFFFFFFF" 
+	d"255"
+	b"01"
+	b"0"
+	b"0"
+	h"00000000"
+	b"0"
+	
+#	Testvektor 25
+	h"FF00FFFF" 
+	d"1"
+	b"01"
+	b"1"
+	b"0"
+	h"7F807FFF"
+	b"1"
+
+# Test arithmetischer Rechtsshifts	
+
+#	Testvektor 26
+	h"00000000"
+	d"0"
+	b"11"
+	b"0"
+	b"0"
+	h"00000000"
+	b"0"
+	
+#	Testvektor 27
+	h"00000001" 
+	d"1"
+	b"10"
+	b"0"
+	b"0"
+	h"00000000"
+	b"1"
+	
+#	Testvektor 28
+	h"00000010"
+	d"2"
+	b"10"
+	b"1"
+	b"0"
+	h"00000004"
+	b"0"
+	
+#	Testvektor 29
+	h"00000001" 
+	d"3"
+	b"10"
+	b"1"
+	b"0"
+	h"00000000"
+	b"0"
+	
+#	Testvektor 30
+	h"80000000" 
+	d"4"
+	b"10"
+	b"1"
+	b"0"
+	h"F8000000"
+	b"0"
+
+#	Testvektor 31
+	h"ABCDEF00" 
+	d"4"
+	b"10"
+	b"1"
+	b"0"
+	h"FABCDEF0"
+	b"0"
+	
+#	Testvektor 32
+	h"80000000" 
+	d"31"
+	b"10"
+	b"1"
+	b"0"
+	h"FFFFFFFF"
+	b"0"
+	
+#	Testvektor 33
+	h"C0000000" 
+	d"31"
+	b"10"
+	b"1"
+	b"0"
+	h"FFFFFFFF"
+	b"1"
+	
+#	Testvektor 34
+	h"FFFFFFFF" 
+	d"31"
+	b"10"
+	b"0"
+	b"0"
+	h"FFFFFFFF"
+	b"1"
+	
+#	Testvektor 35
+	h"7FFFFFFF" 
+	d"32"
+	b"10"
+	b"0"
+	b"0"
+	h"00000000"
+	b"0"
+	
+#	Testvektor 36
+	h"FFFFFFFF" 
+	d"33"
+	b"10"
+	b"1"
+	b"0"
+	h"FFFFFFFF"
+	b"1"	
+	
+#	Testvektor 37
+	h"FFFFFFFF" 
+	d"255"
+	b"10"
+	b"1"
+	b"0"
+	h"FFFFFFFF"
+	b"1"
+	
+#	Testvektor 38
+	h"FF00FFFF" 
+	d"1"
+	b"10"
+	b"1"
+	b"0"
+	h"FF807FFF"
+	b"1"
+	
+# Test der Rechtsrotation
+
+#	Testvektor 39
+	h"00000000"
+	d"0"
+	b"11"
+	b"0"
+	b"0"
+	h"00000000"
+	b"0"
+	
+#	Testvektor 40
+	h"00000001" 
+	d"1"
+	b"11"
+	b"0"
+	b"0"
+	h"80000000"
+	b"1"
+	
+#	Testvektor 41
+	h"00000010"
+	d"2"
+	b"11"
+	b"1"
+	b"0"
+	h"00000004"
+	b"0"
+	
+#	Testvektor 42
+	h"00000001" 
+	d"3"
+	b"11"
+	b"1"
+	b"0"
+	h"20000000"
+	b"0"
+	
+#	Testvektor 43
+	h"80000000" 
+	d"4"
+	b"11"
+	b"1"
+	b"0"
+	h"08000000"
+	b"0"
+
+#	Testvektor 44
+	h"ABCDEF00" 
+	d"4"
+	b"11"
+	b"1"
+	b"0"
+	h"0ABCDEF0"
+	b"0"
+	
+#	Testvektor 45
+	h"80000000" 
+	d"31"
+	b"11"
+	b"1"
+	b"0"
+	h"00000001"
+	b"0"
+	
+#	Testvektor 46
+	h"C0000000" 
+	d"31"
+	b"11"
+	b"1"
+	b"0"
+	h"80000001"
+	b"1"
+	
+#	Testvektor 47
+	h"FFFFFFFF" 
+	d"31"
+	b"11"
+	b"0"
+	b"0"
+	h"FFFFFFFF"
+	b"1"
+	
+#	Testvektor 48
+	h"7FFFFFFF" 
+	d"32"
+	b"11"
+	b"0"
+	b"0"
+	h"7FFFFFFF"
+	b"0"
+	
+#	Testvektor 49
+	h"F0FFFFF0" 
+	d"33"
+	b"11"
+	b"1"
+	b"0"
+	h"787FFFF8"
+	b"0"	
+	
+#	Testvektor 50
+	h"FFFFFFFF" 
+	d"255"
+	b"11"
+	b"1"
+	b"0"
+	h"FFFFFFFF"
+	b"1"
+	
+#	Testvektor 51
+	h"FF00FFFF" 
+	d"1"
+	b"11"
+	b"0"
+	b"0"
+	h"FF807FFF"
+	b"1"
+	
+# Test von RRX
+
+#	Testvektor 52
+	h"00000000"
+	d"23"
+	b"00"
+	b"1"
+	b"1"
+	h"80000000"
+	b"0"
+
+#	Testvektor 53
+	h"FF00FFFF" 
+	d"1"
+	b"00"
+	b"1"
+	b"1"
+	h"FF807FFF"
+	b"1"
+	
+#	Testvektor 54
+	h"ABCDEF00" 
+	d"4"
+	b"11"
+	b"0"
+	b"1"
+	b"01010101111001101111011110000000"
+	b"0"
+	
+# weitere Tests	
+
+#	Testvektor 55
+	h"ABCDEF00" 
+	d"00"
+	b"11"
+	b"0"
+	b"0"
+	h"ABCDEF00"
+	b"0"	
+	
+#	Testvektor 56
+	h"ABCDEF00" 
+	d"00"
+	b"10"
+	b"1"
+	b"0"
+	h"ABCDEF00"
+	b"1"
+
+#	Testvektoren die Fehler bei unvollstaendigen Sensitivitaetslisten provozieren sollen
+#	Daher Aendert sich zwischen den Vektoren immer genau ein Eingangssignal
+#
+#	Testvektor 57	
+	h"00000000"
+	d"0"
+	b"00"
+	b"0"
+	b"0"
+	h"00000000"
+	b"0"
+
+#	Testvektor 58	
+	h"00000000"
+	d"0"
+	b"00"
+	b"1"
+	b"0"
+	h"00000000"
+	b"1"
+
+#	Testvektor 59	
+	h"F0000000"
+	d"0"
+	b"00"
+	b"1"
+	b"0"
+	h"F0000000"
+	b"1"
+
+#	Testvektor 60	
+	h"F0000000"
+	d"1"
+	b"00"
+	b"1"
+	b"0"
+	h"E0000000"
+	b"1"
+
+#	Testvektor 61	
+	h"F0000000"
+	d"1"
+	b"01"
+	b"1"
+	b"0"
+	h"78000000"
+	b"0"
+
+#	Testvektor 62	
+	h"F0000000"
+	d"1"
+	b"01"
+	b"1"
+	b"1"
+	h"F8000000"
+	b"0"

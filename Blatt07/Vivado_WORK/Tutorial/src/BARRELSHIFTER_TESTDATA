@@ -1,0 +1,10 @@
+# Für den reinen Barrelshifter Operanden, die über alle Richtungen und
+# und Weiten geschoben werden
+
+	h"80000000"
+	h"10000000"
+	h"00000001"
+	h"10000001"
+	h"F000000F"
+	h"F0F0F0F0"
+	h"FFFFEEEE"
