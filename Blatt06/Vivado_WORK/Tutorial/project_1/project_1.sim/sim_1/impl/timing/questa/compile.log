@@ -1,0 +1,78 @@
+Copying /afs/tu-berlin.de/units/Fak_IV/aes/tools/mentor/questasim/linux_x86_64/../modelsim.ini to modelsim.ini
+Modifying modelsim.ini
+QuestaSim-64 vlog 10.2c_5 Compiler 2013.11 Nov 19 2013
+-- Compiling module ArmRegisterBitAdder
+-- Compiling module glbl
+
+Top level modules:
+	ArmRegisterBitAdder
+	glbl
+QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+** Error: (vcom-11) Could not find work.tb_tools.
+** Error: ../../../../../../src/ArmRegisterBitAdder_tb.vhd(18): (vcom-1195) Cannot find expanded name "work.TB_TOOLS".
+** Error: ../../../../../../src/ArmRegisterBitAdder_tb.vhd(18): Unknown expanded name.
+** Error: ../../../../../../src/ArmRegisterBitAdder_tb.vhd(20): VHDL Compiler exiting
+** Warning: (vlib-34) Library already exists at "questa_lib/work".
+** Warning: (vlib-34) Library already exists at "questa_lib/msim".
+** Warning: (vlib-34) Library already exists at "questa_lib/msim/xil_defaultlib".
+Modifying modelsim.ini
+QuestaSim-64 vlog 10.2c_5 Compiler 2013.11 Nov 19 2013
+-- Skipping module ArmRegisterBitAdder
+-- Skipping module glbl
+
+Top level modules:
+	ArmRegisterBitAdder
+	glbl
+QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+** Error: (vcom-11) Could not find work.tb_tools.
+** Error: ../../../../../../src/ArmRegisterBitAdder_tb.vhd(18): (vcom-1195) Cannot find expanded name "work.TB_TOOLS".
+** Error: ../../../../../../src/ArmRegisterBitAdder_tb.vhd(18): Unknown expanded name.
+** Error: ../../../../../../src/ArmRegisterBitAdder_tb.vhd(20): VHDL Compiler exiting
+** Warning: (vlib-34) Library already exists at "questa_lib/work".
+** Warning: (vlib-34) Library already exists at "questa_lib/msim".
+** Warning: (vlib-34) Library already exists at "questa_lib/msim/xil_defaultlib".
+Modifying modelsim.ini
+QuestaSim-64 vlog 10.2c_5 Compiler 2013.11 Nov 19 2013
+-- Skipping module ArmRegisterBitAdder
+-- Skipping module glbl
+
+Top level modules:
+	ArmRegisterBitAdder
+	glbl
+QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+** Error: (vcom-11) Could not find work.tb_tools.
+** Error: ../../../../../../src/ArmRegisterBitAdder_tb.vhd(18): (vcom-1195) Cannot find expanded name "work.TB_TOOLS".
+** Error: ../../../../../../src/ArmRegisterBitAdder_tb.vhd(18): Unknown expanded name.
+** Error: ../../../../../../src/ArmRegisterBitAdder_tb.vhd(20): VHDL Compiler exiting
+** Warning: (vlib-34) Library already exists at "questa_lib/work".
+** Warning: (vlib-34) Library already exists at "questa_lib/msim".
+** Warning: (vlib-34) Library already exists at "questa_lib/msim/xil_defaultlib".
+Modifying modelsim.ini
+QuestaSim-64 vlog 10.2c_5 Compiler 2013.11 Nov 19 2013
+-- Skipping module ArmRegisterBitAdder
+-- Skipping module glbl
+
+Top level modules:
+	ArmRegisterBitAdder
+	glbl
+QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+** Error: (vcom-11) Could not find work.tb_tools.
+** Error: ../../../../../../src/ArmRegisterBitAdder_tb.vhd(18): (vcom-1195) Cannot find expanded name "work.TB_TOOLS".
+** Error: ../../../../../../src/ArmRegisterBitAdder_tb.vhd(18): Unknown expanded name.
+** Error: ../../../../../../src/ArmRegisterBitAdder_tb.vhd(20): VHDL Compiler exiting

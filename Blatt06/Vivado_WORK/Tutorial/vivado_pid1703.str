@@ -180,3 +180,4 @@ dismissDialog("Synthesis Completed"); // ah (cl)
 // WARNING: HTimer (FileMgr Design Graph Update Timer) is taking too long to process. Increasing delay to 5000 ms.
 // TclEventType: DG_ANALYSIS_MSG_RESET
 // TclEventType: DG_GRAPH_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 1,193 MB. GUI used memory: 40 MB. Current time: 6/20/20 11:42:49 PM CEST

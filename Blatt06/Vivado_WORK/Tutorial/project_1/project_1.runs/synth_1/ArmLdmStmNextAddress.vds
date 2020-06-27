@@ -2,8 +2,8 @@
 # Vivado v2017.3 (64-bit)
 # SW Build 2018833 on Wed Oct  4 19:58:07 MDT 2017
 # IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
-# Start of session at: Sat Jun 20 23:40:08 2020
-# Process ID: 2499
+# Start of session at: Wed Jun 24 15:20:56 2020
+# Process ID: 32208
 # Current directory: /afs/tu-berlin.de/home/h/hungbui7698/irb-ubuntu/HWP/HardwarePRK-SoSe20/Blatt06/Vivado_WORK/Tutorial/project_1/project_1.runs/synth_1
 # Command line: vivado -log ArmLdmStmNextAddress.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ArmLdmStmNextAddress.tcl
 # Log file: /afs/tu-berlin.de/home/h/hungbui7698/irb-ubuntu/HWP/HardwarePRK-SoSe20/Blatt06/Vivado_WORK/Tutorial/project_1/project_1.runs/synth_1/ArmLdmStmNextAddress.vds
@@ -15,9 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 2527 
+INFO: Helper process launched with PID 32236 
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1243.195 ; gain = 72.000 ; free physical = 26448 ; free virtual = 32539
+Starting Synthesize : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1242.273 ; gain = 72.000 ; free physical = 27808 ; free virtual = 32654
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'ArmLdmStmNextAddress' [/afs/tu-berlin.de/home/h/hungbui7698/irb-ubuntu/HWP/HardwarePRK-SoSe20/Blatt06/Vivado_WORK/Tutorial/src/ArmLdmStmNextAddress.vhd:28]
 INFO: [Synth 8-3491] module 'ArmPriorityVectorFilter' declared at '/afs/tu-berlin.de/home/h/hungbui7698/irb-ubuntu/HWP/HardwarePRK-SoSe20/Blatt06/Vivado_WORK/Tutorial/src/ArmPriorityVectorFilter.vhd:11' bound to instance 'CURRENT_REGLIST_FILTER' of component 'ArmPriorityVectorFilter' [/afs/tu-berlin.de/home/h/hungbui7698/irb-ubuntu/HWP/HardwarePRK-SoSe20/Blatt06/Vivado_WORK/Tutorial/src/ArmLdmStmNextAddress.vhd:40]
@@ -25,10 +25,10 @@ INFO: [Synth 8-638] synthesizing module 'ArmPriorityVectorFilter' [/afs/tu-berli
 INFO: [Synth 8-256] done synthesizing module 'ArmPriorityVectorFilter' (1#1) [/afs/tu-berlin.de/home/h/hungbui7698/irb-ubuntu/HWP/HardwarePRK-SoSe20/Blatt06/Vivado_WORK/Tutorial/src/ArmPriorityVectorFilter.vhd:18]
 INFO: [Synth 8-256] done synthesizing module 'ArmLdmStmNextAddress' (2#1) [/afs/tu-berlin.de/home/h/hungbui7698/irb-ubuntu/HWP/HardwarePRK-SoSe20/Blatt06/Vivado_WORK/Tutorial/src/ArmLdmStmNextAddress.vhd:28]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1285.727 ; gain = 114.531 ; free physical = 26434 ; free virtual = 32529
+Finished Synthesize : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1284.805 ; gain = 114.531 ; free physical = 27822 ; free virtual = 32668
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1285.727 ; gain = 114.531 ; free physical = 26425 ; free virtual = 32520
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1284.805 ; gain = 114.531 ; free physical = 27822 ; free virtual = 32668
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -36,10 +36,10 @@ Start Loading Part and Timing Information
 Loading part: xc7a35tcpg236-1
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1293.730 ; gain = 122.535 ; free physical = 26420 ; free virtual = 32515
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1292.809 ; gain = 122.535 ; free physical = 27821 ; free virtual = 32668
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1301.738 ; gain = 130.543 ; free physical = 26426 ; free virtual = 32521
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1300.816 ; gain = 130.543 ; free physical = 27814 ; free virtual = 32661
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -96,7 +96,7 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:29 . Memory (MB): peak = 1423.855 ; gain = 252.660 ; free physical = 26251 ; free virtual = 32346
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:29 . Memory (MB): peak = 1422.934 ; gain = 252.660 ; free physical = 27661 ; free virtual = 32507
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -109,7 +109,7 @@ No constraint files found.
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:29 . Memory (MB): peak = 1423.855 ; gain = 252.660 ; free physical = 26237 ; free virtual = 32331
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:29 . Memory (MB): peak = 1422.934 ; gain = 252.660 ; free physical = 27661 ; free virtual = 32507
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -121,7 +121,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:29 . Memory (MB): peak = 1423.855 ; gain = 252.660 ; free physical = 26231 ; free virtual = 32325
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:29 . Memory (MB): peak = 1422.934 ; gain = 252.660 ; free physical = 27660 ; free virtual = 32507
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -145,7 +145,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:30 . Memory (MB): peak = 1423.855 ; gain = 252.660 ; free physical = 26214 ; free virtual = 32309
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:30 . Memory (MB): peak = 1422.934 ; gain = 252.660 ; free physical = 27660 ; free virtual = 32507
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -158,7 +158,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:30 . Memory (MB): peak = 1423.855 ; gain = 252.660 ; free physical = 26214 ; free virtual = 32309
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:30 . Memory (MB): peak = 1422.934 ; gain = 252.660 ; free physical = 27660 ; free virtual = 32507
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -170,25 +170,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:30 . Memory (MB): peak = 1423.855 ; gain = 252.660 ; free physical = 26225 ; free virtual = 32320
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:30 . Memory (MB): peak = 1422.934 ; gain = 252.660 ; free physical = 27660 ; free virtual = 32507
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:30 . Memory (MB): peak = 1423.855 ; gain = 252.660 ; free physical = 26225 ; free virtual = 32320
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:30 . Memory (MB): peak = 1422.934 ; gain = 252.660 ; free physical = 27660 ; free virtual = 32507
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:30 . Memory (MB): peak = 1423.855 ; gain = 252.660 ; free physical = 26234 ; free virtual = 32329
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:30 . Memory (MB): peak = 1422.934 ; gain = 252.660 ; free physical = 27660 ; free virtual = 32507
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:30 . Memory (MB): peak = 1423.855 ; gain = 252.660 ; free physical = 26234 ; free virtual = 32329
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:30 . Memory (MB): peak = 1422.934 ; gain = 252.660 ; free physical = 27660 ; free virtual = 32507
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -221,11 +221,11 @@ Report Instance Areas:
 |1     |top      |       |    92|
 +------+---------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:30 . Memory (MB): peak = 1423.855 ; gain = 252.660 ; free physical = 26234 ; free virtual = 32329
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:30 . Memory (MB): peak = 1422.934 ; gain = 252.660 ; free physical = 27660 ; free virtual = 32507
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:30 . Memory (MB): peak = 1423.855 ; gain = 252.660 ; free physical = 26235 ; free virtual = 32330
-Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:30 . Memory (MB): peak = 1423.863 ; gain = 252.660 ; free physical = 26242 ; free virtual = 32336
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:30 . Memory (MB): peak = 1422.934 ; gain = 252.660 ; free physical = 27662 ; free virtual = 32508
+Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:30 . Memory (MB): peak = 1422.941 ; gain = 252.660 ; free physical = 27669 ; free virtual = 32516
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 20 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -237,8 +237,8 @@ No Unisim elements were transformed.
 INFO: [Common 17-83] Releasing license: Synthesis
 15 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:32 . Memory (MB): peak = 1551.090 ; gain = 393.266 ; free physical = 26230 ; free virtual = 32325
+synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:32 . Memory (MB): peak = 1550.168 ; gain = 393.266 ; free physical = 27640 ; free virtual = 32487
 INFO: [Common 17-1381] The checkpoint '/afs/tu-berlin.de/home/h/hungbui7698/irb-ubuntu/HWP/HardwarePRK-SoSe20/Blatt06/Vivado_WORK/Tutorial/project_1/project_1.runs/synth_1/ArmLdmStmNextAddress.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file ArmLdmStmNextAddress_utilization_synth.rpt -pb ArmLdmStmNextAddress_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00.16 ; elapsed = 00:00:00.66 . Memory (MB): peak = 1575.102 ; gain = 0.000 ; free physical = 26251 ; free virtual = 32329
-INFO: [Common 17-206] Exiting Vivado at Sat Jun 20 23:40:50 2020...
+report_utilization: Time (s): cpu = 00:00:00.16 ; elapsed = 00:00:00.23 . Memory (MB): peak = 1574.180 ; gain = 0.000 ; free physical = 27640 ; free virtual = 32486
+INFO: [Common 17-206] Exiting Vivado at Wed Jun 24 15:21:37 2020...

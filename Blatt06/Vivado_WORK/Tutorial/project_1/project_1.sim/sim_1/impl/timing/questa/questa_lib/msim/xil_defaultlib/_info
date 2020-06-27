@@ -1,0 +1,53 @@
+m255
+K4
+z2
+13
+cModel Technology
+Z0 d/afs/tu-berlin.de/home/h/hungbui7698/irb-ubuntu/HWP/HardwarePRK-SoSe20/Blatt06/Vivado_WORK/Tutorial/project_1/project_1.sim/sim_1/impl/timing/questa
+!s112 0.1
+!i10d 8192
+!i10e 25
+!i10f 100
+vArmRegisterBitAdder
+Z1 !s10a 1593004622
+Z2 !s110 1593003342
+Z3 IjFnCd^RUU_4a<KO:<J[;U3
+Z4 V`JN@9S9cnhjKRR_L]QIcM3
+Z5 d/afs/tu-berlin.de/home/h/hungbui7698/irb-ubuntu/HWP/HardwarePRK-SoSe20/Blatt06/Vivado_WORK/Tutorial/project_1/project_1.sim/sim_1/impl/timing/questa
+Z6 w1593003340
+Z7 8ArmRegisterBitAdder_TB_time_impl.v
+Z8 FArmRegisterBitAdder_TB_time_impl.v
+L0 18
+Z9 OL;L;10.2c_5;57
+r1
+31
+Z10 !s108 1593003342.332566
+Z11 !s107 ArmRegisterBitAdder_TB_time_impl.v|
+Z12 !s90 -incr|-work|xil_defaultlib|ArmRegisterBitAdder_TB_time_impl.v|
+Z13 o-work xil_defaultlib -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+Z14 n@arm@register@bit@adder
+Z15 !s100 4<jZF]`ClQIcnf23RbL0`1
+!i10b 1
+!s85 0
+!i111 1
+vglbl
+R1
+R2
+Z16 IAnbd76Q0k]7d=VoUUDb0e1
+R4
+R5
+R6
+R7
+R8
+Z17 L0 363
+R9
+r1
+31
+R10
+R11
+R12
+R13
+Z18 !s100 U:;3[XL@>QAC6B^9zjz5m2
+!i10b 1
+!s85 0
+!i111 1
