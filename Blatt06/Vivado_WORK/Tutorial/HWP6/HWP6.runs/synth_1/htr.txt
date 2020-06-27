@@ -6,4 +6,4 @@
 # Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 #
 
-vivado -log ArmLdmStmNextAddress.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ArmLdmStmNextAddress.tcl
+vivado -log ArmRegisterBitAdder.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ArmRegisterBitAdder.tcl

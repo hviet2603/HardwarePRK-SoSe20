@@ -18,7 +18,7 @@ entity ArmBarrelShifter is
 --	koennen. Es muss gelten: ???
 --------------------------------------------------------------------------------
 	generic (OPERAND_WIDTH : integer := 32;	
-		 SHIFTER_DEPTH : integer := 5 -- log_2(4)
+		 SHIFTER_DEPTH : integer := 5  -- log_2(OPERAND_WIDTH)
 	 );
 	port (  OPERAND 	: in std_logic_vector(OPERAND_WIDTH-1 downto 0);	
     		MUX_CTRL 	: in std_logic_vector(1 downto 0);
@@ -33,9 +33,11 @@ end entity ArmBarrelShifter;
 
 architecture structure of ArmBarrelShifter is
 
-type data_array is array(SHIFTER_DEPTH downto 0) of std_logic_vector(OPERAND_WIDTH-1 downto 0);
-signal data: data_array;
+type data_array is array(0 to OPERAND_WIDTH) of std_logic_vector(OPERAND_WIDTH-1 downto 0);
+signal data: data_array := (others => (others => '0'));
 signal case_of_rightshift: std_logic;
+signal i: integer;
+signal j: integer;
 
 begin
 	data(0) <= OPERAND;

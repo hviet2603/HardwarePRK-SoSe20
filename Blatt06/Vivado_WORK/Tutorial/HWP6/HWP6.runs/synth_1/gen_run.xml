@@ -1,29 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1592760168">
-  <File Type="VDS-TIMING-PB" Name="ArmLdmStmNextAddress_timing_summary_synth.pb"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="ArmLdmStmNextAddress_timing_summary_synth.rpt"/>
-  <File Type="RDS-DCP" Name="ArmLdmStmNextAddress.dcp"/>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1593003407">
+  <File Type="VDS-TIMING-PB" Name="ArmRegisterBitAdder_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="ArmRegisterBitAdder_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="ArmRegisterBitAdder.dcp"/>
   <File Type="RDS-UTIL-PB" Name="ArmRegisterBitAdder_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="ArmLdmStmNextAddress_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="ArmLdmStmNextAddress_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="ArmLdmStmNextAddress.vds"/>
-  <File Type="REPORTS-TCL" Name="ArmLdmStmNextAddress_reports.tcl"/>
-  <File Type="PA-TCL" Name="ArmLdmStmNextAddress.tcl"/>
+  <File Type="RDS-UTIL" Name="ArmRegisterBitAdder_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="ArmRegisterBitAdder_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="ArmRegisterBitAdder.vds"/>
+  <File Type="REPORTS-TCL" Name="ArmRegisterBitAdder_reports.tcl"/>
+  <File Type="PA-TCL" Name="ArmRegisterBitAdder.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../src/ArmRegisterBitAdder.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PPRDIR/../src/ArmPriorityVectorFilter.vhd">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PPRDIR/../src/ArmLdmStmNextAddress.vhd">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../src/ArmRegisterBitAdder.vhd">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -53,8 +54,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="ArmLdmStmNextAddress"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
+      <Option Name="TopModule" Val="ArmRegisterBitAdder"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

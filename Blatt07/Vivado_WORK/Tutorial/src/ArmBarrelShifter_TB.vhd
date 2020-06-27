@@ -124,7 +124,7 @@ begin
 
 
 	tb : process
-		constant TESTDATA_PATH			: string  := TESTDATA_FOLDER_PATH & "BARRELSHIFTER_TESTDATA";
+		constant TESTDATA_PATH			: string  := "./src/" & "BARRELSHIFTER_TESTDATA";
 		file TESTDATA_FILE			: text open read_mode is TESTDATA_PATH;
 		variable DATA_LINE			: line; 
 		variable IS_COMMENT			: boolean := false;

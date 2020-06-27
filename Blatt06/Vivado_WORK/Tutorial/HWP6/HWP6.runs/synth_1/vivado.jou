@@ -2,11 +2,11 @@
 # Vivado v2017.3 (64-bit)
 # SW Build 2018833 on Wed Oct  4 19:58:07 MDT 2017
 # IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
-# Start of session at: Sun Jun 21 19:22:50 2020
-# Process ID: 5455
+# Start of session at: Wed Jun 24 14:56:49 2020
+# Process ID: 1907
 # Current directory: /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt06/Vivado_WORK/Tutorial/HWP6/HWP6.runs/synth_1
-# Command line: vivado -log ArmLdmStmNextAddress.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ArmLdmStmNextAddress.tcl
-# Log file: /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt06/Vivado_WORK/Tutorial/HWP6/HWP6.runs/synth_1/ArmLdmStmNextAddress.vds
+# Command line: vivado -log ArmRegisterBitAdder.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ArmRegisterBitAdder.tcl
+# Log file: /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt06/Vivado_WORK/Tutorial/HWP6/HWP6.runs/synth_1/ArmRegisterBitAdder.vds
 # Journal file: /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt06/Vivado_WORK/Tutorial/HWP6/HWP6.runs/synth_1/vivado.jou
 #-----------------------------------------------------------
-source ArmLdmStmNextAddress.tcl -notrace
+source ArmRegisterBitAdder.tcl -notrace

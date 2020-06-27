@@ -11,7 +11,7 @@ architecture testbench of ArmBarrelShifter4Bit_TB is
 	component ArmBarrelShifter
 	generic (
 		OPERAND_WIDTH : integer := 4;	
-		SHIFTER_DEPTH : integer := 2;
+		SHIFTER_DEPTH : integer := 2
 	);
 	port(	
 		OPERAND	: in std_logic_vector(3 downto 0);
@@ -35,6 +35,8 @@ architecture testbench of ArmBarrelShifter4Bit_TB is
 	signal i: integer;
 	signal j: integer;
 	-- Testcases
+	signal NR_OF_ERRORS: integer;
+	signal ERRORS_IN_TEST_CASE: integer;
 	type DATA is array (0 to 24) of std_logic_vector(3 downto 0);
 	type CARRY is array (0 to 24) of std_logic; 
 	signal DATA_REF: DATA := (
@@ -51,7 +53,7 @@ architecture testbench of ArmBarrelShifter4Bit_TB is
 		'0', '1', '0', '0',
 		'0', '1', '0', '0',
 		'1', '1', '0', '0',
-		'1', '1', '1', '0', '0',
+		'1', '1', '1', '0', '0'
 	);
 begin
 --	Unit under Test
@@ -73,7 +75,7 @@ begin
 		wait for 210 ns;
 		OPERAND <= "0111";
 		wait for 20 ns;
-		OPERAND <= "0000"
+		OPERAND <= "0000";
 		wait;
 	end process GEN_OPERAND;
 
@@ -120,7 +122,7 @@ begin
 		C_IN <= '1';
 		wait for 10 ns;
 		C_IN <= '0';
-		wait for 10 ns:
+		wait for 10 ns;
 		C_IN <= '1';
 		wait for 10 ns;
 		C_IN <= '0';
@@ -151,15 +153,14 @@ begin
 	
 --	TESTBENCH
 	tb: process
-	signal NR_OF_ERRORS: integer := 0;
-	signal ERRORS_IN_TEST_CASE: integer;
+
 	begin
 		for j in 0 to 24 loop
 			ERRORS_IN_TEST_CASE <= 0;
 			wait for 5 ns;
 			report "Test " & integer'image(j+1) & ": OPERAND = " & SLV_TO_STRING(OPERAND) & " | MUX_CTRL = " & SLV_TO_STRING(MUX_CTRL) 
-				& " | AMOUNT = " & integer'image(to_integer(unsigned(AMOUNT))) & " | ARITH_SHIFT = " SL_TO_STRING(ARITH_SHIFT) 
-				& " | C_IN = " SL_TO_STRING(C_IN);
+				& " | AMOUNT = " & integer'image(to_integer(unsigned(AMOUNT))) & " | ARITH_SHIFT = " & SL_TO_STRING(ARITH_SHIFT) 
+				& " | C_IN = " & SL_TO_STRING(C_IN);
 			if (DATA_OUT /= DATA_REF(j)) then
 				report "DATA_OUT ist falsch";
 				report "Erwartetes DATA_OUT: " & SLV_TO_STRING(DATA_REF(j));

@@ -29,3 +29,168 @@ QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
 -- Loading package TB_Tools
 -- Compiling entity ArmLdmStmNextAddress_TB
 -- Compiling architecture testbench of ArmLdmStmNextAddress_tb
+** Warning: (vlib-34) Library already exists at "questa_lib/work".
+** Warning: (vlib-34) Library already exists at "questa_lib/msim".
+** Warning: (vlib-34) Library already exists at "questa_lib/msim/xil_defaultlib".
+Modifying modelsim.ini
+QuestaSim-64 vlog 10.2c_5 Compiler 2013.11 Nov 19 2013
+-- Skipping module ArmLdmStmNextAddress
+-- Skipping module glbl
+
+Top level modules:
+	ArmLdmStmNextAddress
+	glbl
+QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling package ArmTypes
+-- Compiling package body ArmTypes
+-- Loading package ArmTypes
+-- Loading package NUMERIC_STD
+-- Loading package ArmTypes
+-- Compiling package ArmConfiguration
+-- Compiling package ArmFilePaths
+-- Compiling package body ArmFilePaths
+-- Loading package ArmFilePaths
+-- Loading package std_logic_textio
+-- Loading package ArmConfiguration
+-- Loading package ArmFilePaths
+-- Compiling package TB_Tools
+-- Compiling package body TB_Tools
+-- Loading package TB_Tools
+-- Loading package TB_Tools
+-- Compiling entity ArmLdmStmNextAddress_TB
+-- Compiling architecture testbench of ArmLdmStmNextAddress_tb
+** Warning: (vlib-34) Library already exists at "questa_lib/work".
+** Warning: (vlib-34) Library already exists at "questa_lib/msim".
+** Warning: (vlib-34) Library already exists at "questa_lib/msim/xil_defaultlib".
+Modifying modelsim.ini
+QuestaSim-64 vlog 10.2c_5 Compiler 2013.11 Nov 19 2013
+-- Compiling module ArmLdmStmNextAddress
+-- Compiling module glbl
+
+Top level modules:
+	ArmLdmStmNextAddress
+	glbl
+QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling package ArmTypes
+-- Compiling package body ArmTypes
+-- Loading package ArmTypes
+-- Loading package NUMERIC_STD
+-- Loading package ArmTypes
+-- Compiling package ArmConfiguration
+-- Compiling package ArmFilePaths
+-- Compiling package body ArmFilePaths
+-- Loading package ArmFilePaths
+-- Loading package std_logic_textio
+-- Loading package ArmConfiguration
+-- Loading package ArmFilePaths
+-- Compiling package TB_Tools
+-- Compiling package body TB_Tools
+-- Loading package TB_Tools
+-- Loading package TB_Tools
+-- Compiling entity ArmRegisterBitAdder_TB
+-- Compiling architecture testbench of ArmRegisterBitAdder_tb
+** Warning: (vlib-34) Library already exists at "questa_lib/work".
+** Warning: (vlib-34) Library already exists at "questa_lib/msim".
+** Warning: (vlib-34) Library already exists at "questa_lib/msim/xil_defaultlib".
+Modifying modelsim.ini
+QuestaSim-64 vlog 10.2c_5 Compiler 2013.11 Nov 19 2013
+-- Compiling module ArmRegisterBitAdder
+-- Compiling module glbl
+
+Top level modules:
+	ArmRegisterBitAdder
+	glbl
+QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling package ArmTypes
+-- Compiling package body ArmTypes
+-- Loading package ArmTypes
+-- Loading package NUMERIC_STD
+-- Loading package ArmTypes
+-- Compiling package ArmConfiguration
+-- Compiling package ArmFilePaths
+-- Compiling package body ArmFilePaths
+-- Loading package ArmFilePaths
+-- Loading package std_logic_textio
+-- Loading package ArmConfiguration
+-- Loading package ArmFilePaths
+-- Compiling package TB_Tools
+-- Compiling package body TB_Tools
+-- Loading package TB_Tools
+-- Loading package TB_Tools
+-- Compiling entity ArmRegisterBitAdder_TB
+-- Compiling architecture testbench of ArmRegisterBitAdder_tb
+** Warning: (vlib-34) Library already exists at "questa_lib/work".
+** Warning: (vlib-34) Library already exists at "questa_lib/msim".
+** Warning: (vlib-34) Library already exists at "questa_lib/msim/xil_defaultlib".
+Modifying modelsim.ini
+QuestaSim-64 vlog 10.2c_5 Compiler 2013.11 Nov 19 2013
+-- Skipping module ArmRegisterBitAdder
+-- Skipping module glbl
+
+Top level modules:
+	ArmRegisterBitAdder
+	glbl
+QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling package ArmTypes
+-- Compiling package body ArmTypes
+-- Loading package ArmTypes
+-- Loading package NUMERIC_STD
+-- Loading package ArmTypes
+-- Compiling package ArmConfiguration
+-- Compiling package ArmFilePaths
+-- Compiling package body ArmFilePaths
+-- Loading package ArmFilePaths
+-- Loading package std_logic_textio
+-- Loading package ArmConfiguration
+-- Loading package ArmFilePaths
+-- Compiling package TB_Tools
+-- Compiling package body TB_Tools
+-- Loading package TB_Tools
+-- Loading package TB_Tools
+-- Compiling entity ArmRegisterBitAdder_TB
+-- Compiling architecture testbench of ArmRegisterBitAdder_tb
+** Warning: (vlib-34) Library already exists at "questa_lib/work".
+** Warning: (vlib-34) Library already exists at "questa_lib/msim".
+** Warning: (vlib-34) Library already exists at "questa_lib/msim/xil_defaultlib".
+Modifying modelsim.ini
+QuestaSim-64 vlog 10.2c_5 Compiler 2013.11 Nov 19 2013
+-- Skipping module ArmRegisterBitAdder
+-- Skipping module glbl
+
+Top level modules:
+	ArmRegisterBitAdder
+	glbl
+QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling package ArmTypes
+-- Compiling package body ArmTypes
+-- Loading package ArmTypes
+-- Loading package NUMERIC_STD
+-- Loading package ArmTypes
+-- Compiling package ArmConfiguration
+-- Compiling package ArmFilePaths
+-- Compiling package body ArmFilePaths
+-- Loading package ArmFilePaths
+-- Loading package std_logic_textio
+-- Loading package ArmConfiguration
+-- Loading package ArmFilePaths
+-- Compiling package TB_Tools
+-- Compiling package body TB_Tools
+-- Loading package TB_Tools
+-- Loading package TB_Tools
+-- Compiling entity ArmRegisterBitAdder_TB
+-- Compiling architecture testbench of ArmRegisterBitAdder_tb

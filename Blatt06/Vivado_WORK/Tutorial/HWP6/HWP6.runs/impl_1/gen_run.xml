@@ -1,83 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1592760346">
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1593003407">
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
-  <File Type="BG-DRC" Name="ArmLdmStmNextAddress.drc"/>
-  <File Type="BG-BGN" Name="ArmLdmStmNextAddress.bgn"/>
-  <File Type="BITSTR-SYSDEF" Name="ArmLdmStmNextAddress.sysdef"/>
+  <File Type="BG-DRC" Name="ArmRegisterBitAdder.drc"/>
+  <File Type="BG-BGN" Name="ArmRegisterBitAdder.bgn"/>
+  <File Type="BITSTR-SYSDEF" Name="ArmRegisterBitAdder.sysdef"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="ArmLdmStmNextAddress.ltx"/>
-  <File Type="BITSTR-MMI" Name="ArmLdmStmNextAddress.mmi"/>
-  <File Type="BITSTR-BMM" Name="ArmLdmStmNextAddress_bd.bmm"/>
-  <File Type="BITSTR-NKY" Name="ArmLdmStmNextAddress.nky"/>
-  <File Type="BITSTR-RBT" Name="ArmLdmStmNextAddress.rbt"/>
-  <File Type="BITSTR-MSK" Name="ArmLdmStmNextAddress.msk"/>
-  <File Type="BG-BIN" Name="ArmLdmStmNextAddress.bin"/>
-  <File Type="BG-BIT" Name="ArmLdmStmNextAddress.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="ArmLdmStmNextAddress_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="ArmLdmStmNextAddress_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="ArmLdmStmNextAddress_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="ArmLdmStmNextAddress_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="ArmLdmStmNextAddress_postroute_physopt.dcp"/>
-  <File Type="ROUTE-CLK" Name="ArmLdmStmNextAddress_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-SIMILARITY" Name="ArmLdmStmNextAddress_incremental_reuse_routed.rpt"/>
+  <File Type="BITSTR-LTX" Name="ArmRegisterBitAdder.ltx"/>
+  <File Type="BITSTR-MMI" Name="ArmRegisterBitAdder.mmi"/>
+  <File Type="BITSTR-BMM" Name="ArmRegisterBitAdder_bd.bmm"/>
+  <File Type="BITSTR-NKY" Name="ArmRegisterBitAdder.nky"/>
+  <File Type="BITSTR-RBT" Name="ArmRegisterBitAdder.rbt"/>
+  <File Type="BITSTR-MSK" Name="ArmRegisterBitAdder.msk"/>
+  <File Type="BG-BIN" Name="ArmRegisterBitAdder.bin"/>
+  <File Type="BG-BIT" Name="ArmRegisterBitAdder.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="ArmRegisterBitAdder_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="ArmRegisterBitAdder_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="ArmRegisterBitAdder_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="ArmRegisterBitAdder_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="ArmRegisterBitAdder_postroute_physopt.dcp"/>
+  <File Type="ROUTE-CLK" Name="ArmRegisterBitAdder_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-SIMILARITY" Name="ArmRegisterBitAdder_incremental_reuse_routed.rpt"/>
   <File Type="ROUTE-TIMING-RPX" Name="ArmRegisterBitAdder_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-TIMING-PB" Name="ArmLdmStmNextAddress_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="ArmLdmStmNextAddress_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="ArmRegisterBitAdder_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="ArmRegisterBitAdder_timing_summary_routed.rpt"/>
   <File Type="ROUTE-STATUS-PB" Name="ArmRegisterBitAdder_route_status.pb"/>
-  <File Type="ROUTE-STATUS" Name="ArmLdmStmNextAddress_route_status.rpt"/>
+  <File Type="ROUTE-STATUS" Name="ArmRegisterBitAdder_route_status.rpt"/>
   <File Type="ROUTE-PWR-RPX" Name="ArmRegisterBitAdder_power_routed.rpx"/>
   <File Type="ROUTE-PWR-SUM" Name="ArmRegisterBitAdder_power_summary_routed.pb"/>
-  <File Type="ROUTE-PWR" Name="ArmLdmStmNextAddress_power_routed.rpt"/>
+  <File Type="ROUTE-PWR" Name="ArmRegisterBitAdder_power_routed.rpt"/>
   <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="ArmRegisterBitAdder_methodology_drc_routed.pb"/>
   <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="ArmRegisterBitAdder_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="ArmLdmStmNextAddress_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="ArmRegisterBitAdder_methodology_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-RPX" Name="ArmRegisterBitAdder_drc_routed.rpx"/>
   <File Type="ROUTE-DRC-PB" Name="ArmRegisterBitAdder_drc_routed.pb"/>
-  <File Type="ROUTE-DRC" Name="ArmLdmStmNextAddress_drc_routed.rpt"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="ArmLdmStmNextAddress_routed_bb.dcp"/>
-  <File Type="ROUTE-DCP" Name="ArmLdmStmNextAddress_routed.dcp"/>
-  <File Type="ROUTE-ERROR-DCP" Name="ArmLdmStmNextAddress_routed_error.dcp"/>
-  <File Type="PHYSOPT-TIMING" Name="ArmLdmStmNextAddress_timing_summary_physopted.rpt"/>
-  <File Type="PHYSOPT-DRC" Name="ArmLdmStmNextAddress_drc_physopted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="ArmLdmStmNextAddress_physopt.dcp"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="ArmLdmStmNextAddress_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="ArmLdmStmNextAddress_postplace_pwropt.dcp"/>
-  <File Type="PLACE-TIMING" Name="ArmLdmStmNextAddress_timing_summary_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="ArmLdmStmNextAddress_incremental_reuse_pre_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="ArmLdmStmNextAddress_incremental_reuse_placed.rpt"/>
-  <File Type="PLACE-CTRL" Name="ArmLdmStmNextAddress_control_sets_placed.rpt"/>
+  <File Type="ROUTE-DRC" Name="ArmRegisterBitAdder_drc_routed.rpt"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="ArmRegisterBitAdder_routed_bb.dcp"/>
+  <File Type="ROUTE-DCP" Name="ArmRegisterBitAdder_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="ArmRegisterBitAdder_routed_error.dcp"/>
+  <File Type="PHYSOPT-TIMING" Name="ArmRegisterBitAdder_timing_summary_physopted.rpt"/>
+  <File Type="PHYSOPT-DRC" Name="ArmRegisterBitAdder_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="ArmRegisterBitAdder_physopt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="ArmRegisterBitAdder_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="ArmRegisterBitAdder_postplace_pwropt.dcp"/>
+  <File Type="PLACE-TIMING" Name="ArmRegisterBitAdder_timing_summary_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="ArmRegisterBitAdder_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="ArmRegisterBitAdder_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-CTRL" Name="ArmRegisterBitAdder_control_sets_placed.rpt"/>
   <File Type="PLACE-UTIL-PB" Name="ArmRegisterBitAdder_utilization_placed.pb"/>
-  <File Type="PLACE-UTIL" Name="ArmLdmStmNextAddress_utilization_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="ArmLdmStmNextAddress_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-IO" Name="ArmLdmStmNextAddress_io_placed.rpt"/>
-  <File Type="RDI-RDI" Name="ArmLdmStmNextAddress.vdi"/>
-  <File Type="PWROPT-TIMING" Name="ArmLdmStmNextAddress_timing_summary_pwropted.rpt"/>
-  <File Type="PWROPT-DRC" Name="ArmLdmStmNextAddress_drc_pwropted.rpt"/>
-  <File Type="OPT-TIMING" Name="ArmLdmStmNextAddress_timing_summary_opted.rpt"/>
-  <File Type="OPT-HWDEF" Name="ArmLdmStmNextAddress.hwdef"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="ArmLdmStmNextAddress_methodology_drc_opted.rpt"/>
-  <File Type="OPT-DRC" Name="ArmLdmStmNextAddress_drc_opted.rpt"/>
-  <File Type="OPT-DCP" Name="ArmLdmStmNextAddress_opt.dcp"/>
-  <File Type="INIT-TIMING" Name="ArmLdmStmNextAddress_timing_summary_init.rpt"/>
-  <File Type="PWROPT-DCP" Name="ArmLdmStmNextAddress_pwropt.dcp"/>
-  <File Type="REPORTS-TCL" Name="ArmLdmStmNextAddress_reports.tcl"/>
-  <File Type="PLACE-DCP" Name="ArmLdmStmNextAddress_placed.dcp"/>
-  <File Type="PA-TCL" Name="ArmLdmStmNextAddress.tcl"/>
+  <File Type="PLACE-UTIL" Name="ArmRegisterBitAdder_utilization_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="ArmRegisterBitAdder_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-IO" Name="ArmRegisterBitAdder_io_placed.rpt"/>
+  <File Type="RDI-RDI" Name="ArmRegisterBitAdder.vdi"/>
+  <File Type="PWROPT-TIMING" Name="ArmRegisterBitAdder_timing_summary_pwropted.rpt"/>
+  <File Type="PWROPT-DRC" Name="ArmRegisterBitAdder_drc_pwropted.rpt"/>
+  <File Type="OPT-TIMING" Name="ArmRegisterBitAdder_timing_summary_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="ArmRegisterBitAdder.hwdef"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="ArmRegisterBitAdder_methodology_drc_opted.rpt"/>
+  <File Type="OPT-DRC" Name="ArmRegisterBitAdder_drc_opted.rpt"/>
+  <File Type="OPT-DCP" Name="ArmRegisterBitAdder_opt.dcp"/>
+  <File Type="INIT-TIMING" Name="ArmRegisterBitAdder_timing_summary_init.rpt"/>
+  <File Type="PWROPT-DCP" Name="ArmRegisterBitAdder_pwropt.dcp"/>
+  <File Type="REPORTS-TCL" Name="ArmRegisterBitAdder_reports.tcl"/>
+  <File Type="PLACE-DCP" Name="ArmRegisterBitAdder_placed.dcp"/>
+  <File Type="PA-TCL" Name="ArmRegisterBitAdder.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../src/ArmRegisterBitAdder.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PPRDIR/../src/ArmPriorityVectorFilter.vhd">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PPRDIR/../src/ArmLdmStmNextAddress.vhd">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../src/ArmRegisterBitAdder.vhd">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -107,8 +108,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="ArmLdmStmNextAddress"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
+      <Option Name="TopModule" Val="ArmRegisterBitAdder"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

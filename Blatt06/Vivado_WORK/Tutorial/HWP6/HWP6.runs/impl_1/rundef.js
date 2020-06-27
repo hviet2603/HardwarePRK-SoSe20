@@ -29,7 +29,7 @@ eval( EAInclude(ISEJScriptLib) );
 // pre-commands:
 ISETouchFile( "init_design", "begin" );
 ISEStep( "vivado",
-         "-log ArmLdmStmNextAddress.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source ArmLdmStmNextAddress.tcl -notrace" );
+         "-log ArmRegisterBitAdder.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source ArmRegisterBitAdder.tcl -notrace" );
 
 
 

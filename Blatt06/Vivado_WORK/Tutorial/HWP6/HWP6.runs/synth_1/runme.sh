@@ -36,4 +36,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log ArmLdmStmNextAddress.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ArmLdmStmNextAddress.tcl
+EAStep vivado -log ArmRegisterBitAdder.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ArmRegisterBitAdder.tcl

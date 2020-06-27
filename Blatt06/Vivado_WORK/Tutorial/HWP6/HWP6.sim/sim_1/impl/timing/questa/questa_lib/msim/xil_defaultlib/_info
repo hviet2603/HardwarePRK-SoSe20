@@ -22,10 +22,10 @@ L20
 VSK<cHD]k^ej2JJIKboCNW3
 Z6 OL;C;10.2c_5;57
 31
-Z7 !s110 1592760875
-Z8 !s108 1592760875.068585
-Z9 !s90 -93|-work|xil_defaultlib|../../../../../../src/ArmTypes.vhd|../../../../../../src/ArmConfiguration.vhd|../../../../../../src/ArmFilePaths.vhd|../../../../../../src/TB_Tools.vhd|../../../../../../src/ArmLdmStmNextAddress_tb.vhd|
-Z10 !s107 ../../../../../../src/ArmLdmStmNextAddress_tb.vhd|../../../../../../src/TB_Tools.vhd|../../../../../../src/ArmFilePaths.vhd|../../../../../../src/ArmConfiguration.vhd|../../../../../../src/ArmTypes.vhd|
+Z7 !s110 1593005843
+Z8 !s108 1593005843.097070
+Z9 !s90 -93|-work|xil_defaultlib|../../../../../../src/ArmTypes.vhd|../../../../../../src/ArmConfiguration.vhd|../../../../../../src/ArmFilePaths.vhd|../../../../../../src/TB_Tools.vhd|../../../../../../src/ArmRegisterBitAdder_tb.vhd|
+Z10 !s107 ../../../../../../src/ArmRegisterBitAdder_tb.vhd|../../../../../../src/TB_Tools.vhd|../../../../../../src/ArmFilePaths.vhd|../../../../../../src/ArmConfiguration.vhd|../../../../../../src/ArmTypes.vhd|
 Z11 o-93 -work xil_defaultlib
 Z12 tExplicit 1
 !s100 35POJ0<GDAWPhfL3FlY?63
@@ -68,48 +68,48 @@ nbody
 !i10b 1
 !i111 1
 vArmLdmStmNextAddress
-R7
-I9ZS1Xf9TNCJ?QP]n;i5H12
+IDZzQCX4AlN:0R1UMIl[d^2
 Z17 V`JN@9S9cnhjKRR_L]QIcM3
 R5
-Z18 w1592760874
-Z19 8ArmLdmStmNextAddress_TB_time_impl.v
-Z20 FArmLdmStmNextAddress_TB_time_impl.v
+w1593003246
+Z18 8ArmRegisterBitAdder_TB_time_impl.v
+Z19 FArmRegisterBitAdder_TB_time_impl.v
 L0 18
-Z21 OL;L;10.2c_5;57
+Z20 OL;L;10.2c_5;57
 r1
 31
-Z22 !s108 1592760874.979662
-Z23 !s107 ArmLdmStmNextAddress_TB_time_impl.v|
-Z24 !s90 -incr|-work|xil_defaultlib|ArmLdmStmNextAddress_TB_time_impl.v|
-Z25 o-work xil_defaultlib -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+Z21 !s107 ArmRegisterBitAdder_TB_time_impl.v|
+Z22 !s90 -incr|-work|xil_defaultlib|ArmRegisterBitAdder_TB_time_impl.v|
+Z23 o-work xil_defaultlib -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
 n@arm@ldm@stm@next@address
+!s110 1593003246
+!s108 1593003246.736424
+!s100 g5ETYgIfmd3C]R99_AL7k1
 !i10b 1
-!s100 d8^:ZOO<hWAN6WGOgMGcW1
 !s85 0
 !i111 1
 Earmldmstmnextaddress_tb
-Z26 w1592510268
+Z24 w1592510268
 R16
-Z27 DPx4 ieee 16 std_logic_textio 0 22 E=LR>a2bb_I?VV>QDdAdh3
-Z28 DPx4 work 8 tb_tools 0 22 ljE8QNhQz>PPnodHFLQ;c1
+Z25 DPx4 ieee 16 std_logic_textio 0 22 E=LR>a2bb_I?VV>QDdAdh3
+Z26 DPx4 work 8 tb_tools 0 22 ljE8QNhQz>PPnodHFLQ;c1
 R1
-Z29 DPx4 work 16 armconfiguration 0 22 SK<cHD]k^ej2JJIKboCNW3
+Z27 DPx4 work 16 armconfiguration 0 22 SK<cHD]k^ej2JJIKboCNW3
 R2
 R3
 R4
 R5
-Z30 8../../../../../../src/ArmLdmStmNextAddress_tb.vhd
-Z31 F../../../../../../src/ArmLdmStmNextAddress_tb.vhd
+Z28 8../../../../../../src/ArmLdmStmNextAddress_tb.vhd
+Z29 F../../../../../../src/ArmLdmStmNextAddress_tb.vhd
 l0
 L30
 VgRh6i?HV[Ln7L9MD2jhoR0
 R6
 31
-R7
-R8
-R9
-R10
+Z30 !s110 1593001750
+Z31 !s108 1593001750.121434
+Z32 !s90 -93|-work|xil_defaultlib|../../../../../../src/ArmTypes.vhd|../../../../../../src/ArmConfiguration.vhd|../../../../../../src/ArmFilePaths.vhd|../../../../../../src/TB_Tools.vhd|../../../../../../src/ArmLdmStmNextAddress_tb.vhd|
+Z33 !s107 ../../../../../../src/ArmLdmStmNextAddress_tb.vhd|../../../../../../src/TB_Tools.vhd|../../../../../../src/ArmFilePaths.vhd|../../../../../../src/ArmConfiguration.vhd|../../../../../../src/ArmTypes.vhd|
 R11
 R12
 !s100 T2<o;8Tz?ZmSfI[C9akJh0
@@ -117,10 +117,10 @@ R12
 !i111 1
 Atestbench
 R16
-R27
-R28
+R25
+R26
 R1
-R29
+R27
 R2
 R3
 R4
@@ -130,30 +130,112 @@ L33
 VaFcQDUhO2DaKc_SD:RoHo2
 R6
 31
-R7
-R8
-R9
-R10
+R30
+R31
+R32
+R33
 R11
 R12
 !s100 m55z]B@CFlPY_JDz6=4Td1
 !i10b 1
 !i111 1
 TArmLdmStmNextAddress_TB_opt
-!s110 1592760876
-VIRFQE<gBIcTHm=ig7PYM?1
+R30
+VKQW6VlE7I0TI54g>ZGj9G0
 04 23 9 work armldmstmnextaddress_tb testbench 1
-04 4 4 work glbl fast 0
-o+acc=npr -L xil_defaultlib -L simprims_ver -L secureip -work xil_defaultlib
+Z34 04 4 4 work glbl fast 0
+Z35 o+acc=npr -L xil_defaultlib -L simprims_ver -L secureip -work xil_defaultlib
 n@arm@ldm@stm@next@address_@t@b_opt
-OL;O;10.2c_5;57
+Z36 OL;O;10.2c_5;57
+R5
+vArmRegisterBitAdder
+Z37 !s10a 1593005842
+Z38 !s110 1593003687
+IjFnCd^RUU_4a<KO:<J[;U3
+R17
+R5
+Z39 w1593003686
+R18
+R19
+L0 18
+R20
+r1
+31
+Z40 !s108 1593003687.006342
+R21
+R22
+R23
+n@arm@register@bit@adder
+!s100 4<jZF]`ClQIcnf23RbL0`1
+!i10b 1
+!s85 0
+!i111 1
+Earmregisterbitadder_tb
+Z41 w1592545512
+R16
+R27
+R1
+R25
+R26
+R2
+R3
+R4
+R5
+Z42 8../../../../../../src/ArmRegisterBitAdder_tb.vhd
+Z43 F../../../../../../src/ArmRegisterBitAdder_tb.vhd
+l0
+L20
+VZ1bYMQgh^Pf^V_>6hZ=FJ2
+R6
+31
+R7
+R8
+R9
+R10
+R11
+R12
+!s100 kmD0_SDm0i]Cei3ZHkiOR0
+!i10b 1
+!i111 1
+Atestbench
+R16
+R27
+R1
+R25
+R26
+R2
+R3
+R4
+DEx4 work 22 armregisterbitadder_tb 0 22 Z1bYMQgh^Pf^V_>6hZ=FJ2
+l74
+L23
+VS5_boN];<jd:eI3a06ff<1
+R6
+31
+R7
+R8
+R9
+R10
+R11
+R12
+!s100 BfGIUEX5^AV@Y9Ela?W`z3
+!i10b 1
+!i111 1
+TArmRegisterBitAdder_TB_opt
+R7
+VVJzK=8IP7QWN9OcAV3D[=2
+04 22 9 work armregisterbitadder_tb testbench 1
+R34
+R35
+n@arm@register@bit@adder_@t@b_opt
+R36
 Parmtypes
 R3
 R4
 R13
 R5
-Z32 8../../../../../../src/ArmTypes.vhd
-Z33 F../../../../../../src/ArmTypes.vhd
+Z44 8../../../../../../src/ArmTypes.vhd
+Z45 F../../../../../../src/ArmTypes.vhd
 l0
 L11
 VYeR=]MS9;FOKfLA<cWgaB0
@@ -189,37 +271,38 @@ nbody
 !i10b 1
 !i111 1
 vglbl
-R7
-IbSzV5HMn>4aL3<K5OC=Mj0
+R37
+R38
+IAnbd76Q0k]7d=VoUUDb0e1
 R17
 R5
+R39
 R18
 R19
+L0 363
 R20
-L0 663
-R21
 r1
 31
+R40
+R21
 R22
 R23
-R24
-R25
+!s100 U:;3[XL@>QAC6B^9zjz5m2
 !i10b 1
-!s100 [LoM0RD`D1zVP5k`SngHP1
 !s85 0
 !i111 1
 Ptb_tools
 R16
-R29
-R1
 R27
+R1
+R25
 R2
 R4
 R3
 R13
 R5
-Z34 8../../../../../../src/TB_Tools.vhd
-Z35 F../../../../../../src/TB_Tools.vhd
+Z46 8../../../../../../src/TB_Tools.vhd
+Z47 F../../../../../../src/TB_Tools.vhd
 l0
 L34
 VljE8QNhQz>PPnodHFLQ;c1
@@ -236,11 +319,11 @@ R12
 !i10b 1
 !i111 1
 Bbody
-R28
+R26
 R16
-R29
-R1
 R27
+R1
+R25
 R2
 R4
 R3
