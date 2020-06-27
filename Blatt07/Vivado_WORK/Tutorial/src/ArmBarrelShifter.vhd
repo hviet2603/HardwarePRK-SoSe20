@@ -35,6 +35,8 @@ architecture structure of ArmBarrelShifter is
 
 type data_array is array(SHIFTER_DEPTH downto 0) of std_logic_vector(OPERAND_WIDTH-1 downto 0);
 signal data: data_array;
+type ctrl_array is array(SHIFTER_DEPTH-1 downto 0) of std_logic_vector(1 downto 0);
+signal ctrl : ctrl_array;
 signal case_of_rightshift: std_logic;
 
 begin
@@ -42,56 +44,42 @@ begin
 	case_of_rightshift <= '1' when ARITH_SHIFT ='1' and data(0)(OPERAND_WIDTH -1 ) = '1' else 
 		              '0';
 	SHIFT_LAYER:for i in 0 to SHIFTER_DEPTH-1 generate
-			CASE_SHIFT1: if AMOUNT(i) = '1' generate
-			begin
-				MUX:for j in 0 to OPERAND_WIDTH - 1 generate
-					LSBs:if j < 2**i  generate --LSBs
-						MUX1:entity work.Mux port map (
-							A => data(i)(j), --kein Shift
-							B => '0',	 --Linksshift 
-							C => data(i)(j+2**i),--Rechtsshift 
-							D => data(i)(j+2**i),--Rechtsrotation 
-							S => MUX_CTRL,
-							MUX_OUT => data(i+1)(j)
-						);
-					end generate LSBs;
-					
-					MIDDLE_BITs:if j >= 2**i and j <= OPERAND_WIDTH - 1 - (2**i) generate --MIDDLE_BITs
-						MUX2:entity work.Mux port map (
-							A => data(i)(j), --kein Shift
-							B => data(i)(j-2**i),	 --Linksshift 
-							C => data(i)(j+2**i),--Rechtsshift 
-							D => data(i)(j+2**i),--Rechtsrotation 
-							S => MUX_CTRL,
-							MUX_OUT => data(i+1)(j)
-						);
-					end generate MIDDLE_BITs;
+			ctrl(i) <= MUX_CTRL when AMOUNT(i) = '1' else
+					    "00";
+			MUX:for j in 0 to OPERAND_WIDTH - 1 generate
+				LSBs:if j < 2**i  generate --LSBs
+					MUX1:entity work.Mux port map (
+						A => data(i)(j), --kein Shift
+						B => '0',	 --Linksshift 
+						C => data(i)(j+2**i),--Rechtsshift 
+						D => data(i)(j+2**i),--Rechtsrotation 
+						S => ctrl(i),
+						MUX_OUT => data(i+1)(j)
+					);
+				end generate LSBs;
+				
+				MIDDLE_BITs:if j >= 2**i and j <= OPERAND_WIDTH - 1 - (2**i) generate --MIDDLE_BITs
+					MUX2:entity work.Mux port map (
+						A => data(i)(j), --kein Shift
+						B => data(i)(j-2**i),	 --Linksshift 
+						C => data(i)(j+2**i),--Rechtsshift 
+						D => data(i)(j+2**i),--Rechtsrotation 
+						S => ctrl(i),
+						MUX_OUT => data(i+1)(j)
+					);
+				end generate MIDDLE_BITs;
 
-					MSBs: if j > OPERAND_WIDTH - 1 - (2**i) generate --MSBs
-						MUX3:entity work.Mux port map (
-							A => data(i)(j), --kein Shift
-							B => data(i)(j-2**i),	 --Linksshift 
-							C => case_of_rightshift,--Rechtsshift 
-							D => data(i)((j+(2**i)) mod OPERAND_WIDTH),--Rechtsrotation 
-							S => MUX_CTRL,
-							MUX_OUT => data(i+1)(j)
-						);
-					end generate MSBs;
-				end generate MUX;
-			end;
-		end generate CASE_SHIFT1;
-		CASE_SHIFT2: if AMOUNT(i) = '0' generate
-			MUX_ALL:for j in 0 to OPERAND_WIDTH - 1 generate
-				MUX4:entity work.Mux port map (
-					A => data(i)(j), --kein Shift
-					B => data(i)(j), --Linksshift 
-					C => data(i)(j), --Rechtsshift 
-					D => data(i)(j), --Rechtsrotation 
-					S => MUX_CTRL,
-					MUX_OUT => data(i+1)(j)
-				);
-			end generate MUX_ALL;
-		end generate CASE_SHIFT2;
+				MSBs: if j > OPERAND_WIDTH - 1 - (2**i) generate --MSBs
+					MUX3:entity work.Mux port map (
+						A => data(i)(j), --kein Shift
+						B => data(i)(j-2**i),	 --Linksshift 
+						C => case_of_rightshift,--Rechtsshift 
+						D => data(i)((j+(2**i)) mod OPERAND_WIDTH),--Rechtsrotation 
+						S => ctrl(i),
+						MUX_OUT => data(i+1)(j)
+					);
+				end generate MSBs;
+			end generate MUX;
 	end generate SHIFT_LAYER;
 	DATA_OUT <=  data(SHIFTER_DEPTH);
 	C_OUT <= C_IN when (to_integer(unsigned(AMOUNT)) = 0) else 
@@ -100,7 +88,6 @@ begin
 		 OPERAND(to_integer(unsigned(AMOUNT))-1) when MUX_CTRL = "11" else
 	         OPERAND((OPERAND_WIDTH) - to_integer(unsigned(AMOUNT))) when MUX_CTRL = "01" else
 		 '0';
-		 
-
+		
 end architecture structure;
 
