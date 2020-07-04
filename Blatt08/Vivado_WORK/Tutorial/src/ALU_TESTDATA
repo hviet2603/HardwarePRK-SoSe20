@@ -1,0 +1,560 @@
+#--------------------------------------
+# ALU-Testvektoren
+#
+# Aufbau eines Vektors:
+#	Operand 1
+#	Operand 2
+#	erwartetes Resultat
+#	Opcode
+#	Conditioncode am ALU-Eingang (wobei und N und Z ignoriert werden)
+#	erwarteter Conditioncode am ALU-Ausgang
+#
+#	Werte können hexadezimal, oktal, binär und als Dezimalzahl angegeben werden
+#	Die Basis wird durch die Buchstaben b,h,o,d angegeben, die Zahl unmittelbar 
+#	dahinter in Anführungszeichen
+#
+#	Einschränkung für Dezimalzahlen: Integerbereich in VHDL!
+#
+#	Zur Erinnerung: Integer in VHDL =[-(2^31)-1 bis +(2^31)-1] = [-2147483647 bis 2147483647]
+#
+#	Bedeutung des Conditioncode: [N,Z,C,V]
+#
+#	Achtung: alle Subtraktionsbefehle (inkl. CMP) setzen C genau dann, wenn kein Übertrag auftritt!
+#--------------------------------------
+
+
+#vector 1
+#AND
+h"8000FFFF"
+h"C00FF000"
+h"8000F000"
+b"0000"
+b"1111"
+b"1011"
+
+#vector 2
+#AND
+h"30000FFF"
+h"C00FF000"
+h"00000000"
+b"0000"
+b"1101"
+b"0101"
+
+#vector 3
+#AND
+h"00000000"
+h"00000000"
+h"00000000"
+b"0000"
+b"0010"
+b"0110"
+
+#vector 4
+#AND
+h"F1111111"
+h"F1111111"
+h"F1111111"
+b"0000"
+b"0010"
+b"1010"
+
+#vector 5
+#EOR
+h"FFFFFFFF"
+h"FFFF0000"
+h"0000FFFF"
+b"0001"
+b"1100"
+b"0000"
+
+#vector 6
+#EOR
+h"FFFFFFFF"
+h"00000000"
+h"FFFFFFFF"
+b"0001"
+b"0111"
+b"1011"
+
+
+#vector 7
+#EOR
+h"FFFFFFFF"
+h"FFFFFFFF"
+h"00000000"
+b"0001"
+b"0111"
+b"0111"
+
+#vector 8
+#SUB
+d"10"
+d"5"
+d"5"
+b"0010"
+b"0000"
+b"0010"
+
+#vector 9
+#SUB
+d"-2000"
+d"-5"
+d"-1995"
+b"0010"
+b"0000"
+b"1000"
+
+#vector 10
+#SUB
+d"-2147483647"
+d"2"
+d"2147483647"
+b"0010"
+b"0000"
+b"0011"
+
+#vector 11
+#SUB
+d"-2147483646"
+d"1"
+d"-2147483647"
+b"0010"
+b"0100"
+b"1010"
+
+#vector 12
+#SUB
+d"1"
+d"2"
+d"-1"
+b"0010"
+b"0000"
+b"1000"
+
+#vector 13
+#SUB
+d"3"
+d"-2"
+d"5"
+b"0010"
+b"0000"
+b"0000"
+
+#vector 14
+##SUB
+h"00000001"
+h"80000000"
+h"80000001"
+b"0010"
+b"0000"
+b"1001"
+
+#vector 15
+##SUB
+h"80000001"
+h"80000000"
+h"00000001"
+b"0010"
+b"0000"
+b"0010"
+
+
+#vector 16
+#RSB
+d"-2147483646"
+d"1"
+d"2147483647"
+b"0011"
+b"0100"
+b"0000" #Carry tritt auf, wird deshalb _nicht_ gesetzt
+
+#vector 17
+#RSB
+d"-2147483646"
+d"2"
+h"80000000"
+b"0011"
+b"0100"
+b"1001"
+
+#vector 18
+#RSB
+d"2147483646"
+d"-2"
+h"80000000"
+b"0011"
+b"0100"
+b"1010"
+
+#vector 19
+#RSB
+d"-2000"
+d"-5"
+d"1995"
+b"0011"
+b"0111"
+b"0010"
+
+#vector 20
+#RSB
+d"2"
+d"1"
+d"-1"
+b"0011"
+b"0000"
+b"1000"
+
+#vector 21
+#RSB
+d"-2"
+d"3"
+d"5"
+b"0011"
+b"0000"
+b"0000"
+
+#vector 22
+#RSB
+h"80000000"
+h"00000001"
+h"80000001"
+b"0011"
+b"0000"
+b"1001"
+
+#vector 23
+#RSB
+h"80000000"
+h"80000001"
+h"00000001"
+b"0011"
+b"0000"
+b"0010"
+
+#vector 24
+#ADD
+d"23"
+d"42"
+d"65"
+b"0100"
+b"1111"
+b"0000"
+
+#vector 25
+#ADD
+d"-2000"
+d"5000"
+d"3000"
+b"0100"
+b"0011"
+b"0010"
+
+#vector 26
+#ADD
+d"2147483646"
+d"1"
+d"2147483647"
+b"0100"
+b"1111"
+b"0000"
+
+#vector 27
+#ADD
+d"2147483646"
+d"3"
+d"-2147483647"
+b"0100"
+b"1111"
+b"1001"
+
+#vector 28
+#ADD
+d"2147483647"
+d"2"
+d"-2147483647"
+b"0100"
+b"1111"
+b"1001"
+
+#vector 29
+#ADC
+d"2723420"
+d"1800000"
+d"4523421"
+b"0101"
+b"1111"
+b"0000"
+
+#vector 30
+#ADC
+d"2147483646"
+d"0"
+d"2147483647"
+b"0101"
+b"1111"
+b"0000"
+
+#vector 31
+#ADC
+d"2147483646"
+d"1"
+h"80000000"
+b"0101"
+b"1111"
+b"1001"
+
+#vector 32
+#ADC
+h"FFFFFFFE"
+d"1"
+h"00000000"
+b"0101"
+b"1111"
+b"0110"
+
+#vector 33
+#SBC (- NOT C-Bit!)
+d"1000000000"
+d"2000000000"
+d"-1000000001"
+b"0110"
+b"1000"
+b"1000"
+
+#vector 34 
+#SBC (- NOT C-Bit!)
+#int32
+h"00000000"
+h"00000000"
+h"FFFFFFFF"
+b"0110"
+b"1001"
+b"1000"
+
+#vector 35
+#RSC (- NOT C-Bit!)
+d"1000000000"
+d"2000000000"
+d"0999999999"
+b"0111"
+b"1000"
+b"0010"
+
+#vector 36
+#RSC (- NOT C-Bit!)
+h"00000001"
+h"10000000"
+h"0FFFFFFE"
+b"0111"
+b"1000"
+b"0010"
+
+#vector 37
+#TST
+h"F0F0F0F0"
+h"10F025FF"
+h"10F020F0"
+b"1000"
+b"1111"
+b"0011"
+
+#vector 38
+#TST
+h"8000FFFF"
+h"C00FF000"
+h"8000F000"
+b"1000"
+b"1111"
+b"1011"
+
+#vector 39
+#TST
+h"30000FFF"
+h"C00FF000"
+h"00000000"
+b"1000"
+b"1101"
+b"0101"
+
+#vector 40
+#TEQ
+h"F0F0F0F0"
+h"10F025FF"
+h"E000D50F"
+b"1001"
+b"0000"
+b"1000"
+
+#vector 41
+#TEQ
+h"FFFFFFFF"
+h"FFFF0000"
+h"0000FFFF"
+b"1001"
+b"1100"
+b"0000"
+
+#vector 42
+#TEQ
+h"FFFFFFFF"
+h"00000000"
+h"FFFFFFFF"
+b"1001"
+b"0111"
+b"1011"
+
+
+#vector 43
+#TEQ
+h"FFFFFFFF"
+h"FFFFFFFF"
+h"00000000"
+b"1001"
+b"0111"
+b"0111"
+
+#vector 44
+#CMP
+d"10"
+d"5"
+d"5"
+b"1010"
+b"0000"
+b"0010"
+
+#vector 45
+#CMP
+d"-2000"
+d"-5"
+d"-1995"
+b"1010"
+b"0000"
+b"1000"
+
+#vector 46
+#CMP
+d"-2147483647"
+d"2"
+d"2147483647"
+b"1010"
+b"0000"
+b"0011"
+
+#vector 47
+#CMP
+d"-2147483646"
+d"1"
+d"-2147483647"
+b"1010"
+b"0100"
+b"1010"
+
+#vector 48
+#CMN
+d"23"
+d"42"
+d"65"
+b"1011"
+b"1111"
+b"0000"
+
+#vector 49
+#CMN
+d"-2000"
+d"5000"
+d"3000"
+b"1011"
+b"0011"
+b"0010"
+
+#vector 50
+#CMN
+d"2147483646"
+d"1"
+d"2147483647"
+b"1011"
+b"1111"
+b"0000"
+
+#vector 51
+#ORR
+h"FFFE1110"
+h"000EEEEB"
+h"FFFEFFFB"
+b"1100"
+b"0000"
+b"1000"
+
+#vector 52
+#ORR
+h"FFFE1110"
+h"00000000"
+h"FFFE1110"
+b"1100"
+b"0111"
+b"1011"
+
+#vector 53
+#MOV
+h"12345678"
+h"23232323"
+h"23232323"
+b"1101"
+b"1111"
+b"0011"
+
+#vector 54
+#MOV
+h"FFFFFFFF"
+h"00000000"
+h"00000000"
+b"1101"
+b"1100"
+b"0100"
+
+#vector 55
+#BIC = Op1 AND NOT Op2
+h"12345678"
+h"23232323"
+h"10145458"
+b"1110"
+b"1111"
+b"0011"
+
+#vector 56
+#BIC = Op1 AND NOT Op2
+h"FFFFFFFF"
+h"00000000"
+h"FFFFFFFF"
+b"1110"
+b"1110"
+b"1010"
+
+#vector 57
+#Move Not
+b"01110000000000001100000001100000"
+b"01111111111111111000000000000001"
+b"10000000000000000111111111111110"
+b"1111"
+b"1111"
+b"1011"
+
+#vector 58
+#MVN
+h"12345678"
+h"FFFFFFFF"
+h"00000000"
+b"1111"
+b"1100"
+b"0100"
+
+
+#vector 59
+#SUB
+d"-5"
+d"-2000"
+d"1995"
+b"0010"
+b"0111"
+b"0010"
