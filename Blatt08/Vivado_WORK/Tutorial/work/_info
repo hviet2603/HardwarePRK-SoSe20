@@ -9,12 +9,12 @@ d/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-
 !i10e 25
 !i10f 100
 Earmalu
-Z0 w1593939811
+Z0 w1593941508
 Z1 DPx4 work 8 armtypes 0 22 ]^V=Zm_OHmJCVZ>6X8CZ?1
 Z2 DPx4 ieee 11 numeric_std 0 22 WES[o8HS0jHV[MIXQk2Ha1
 Z3 DPx3 std 6 textio 0 22 Y8d?=bLj9m4jiPLbo;>GT0
 Z4 DPx4 ieee 14 std_logic_1164 0 22 1bm?@Gd;P>[>_lN8Do9gP3
-Z5 d/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt08/Vivado_WORK/Tutorial
+Z5 d/afs/tu-berlin.de/home/h/hungbui7698/irb-ubuntu/HWP/HardwarePRK-SoSe20/Blatt08/Vivado_WORK/Tutorial
 Z6 8./src/ArmALU.vhd
 Z7 F./src/ArmALU.vhd
 l0
@@ -23,9 +23,9 @@ V4l@D:2_=BIH@>>]SQj7EP0
 !s100 YeTlEf3km9]mOU[mN>Y_H0
 Z8 OL;C;10.2c_5;57
 33
-Z9 !s110 1593939893
+Z9 !s110 1593941523
 !i10b 1
-Z10 !s108 1593939893.667338
+Z10 !s108 1593941523.324238
 Z11 !s90 -reportprogress|300|-work|./work/|./src/ArmALU.vhd|./src/ArmALU_tb.vhd|./src/ArmConfiguration.vhd|./src/ArmFilePaths.vhd|./src/ArmMultiplier.vhd|./src/ArmTypes.vhd|./src/TB_Tools.vhd|
 Z12 !s107 ./src/TB_Tools.vhd|./src/ArmTypes.vhd|./src/ArmMultiplier.vhd|./src/ArmFilePaths.vhd|./src/ArmConfiguration.vhd|./src/ArmALU_tb.vhd|./src/ArmALU.vhd|
 !i111 1
@@ -37,10 +37,10 @@ R2
 R3
 R4
 Z15 DEx4 work 6 armalu 0 22 4l@D:2_=BIH@>>]SQj7EP0
-l28
+l29
 L24
-Z16 VDZ<fIFPYbV8kB>]doF>GX2
-Z17 !s100 NXdUk^dNQfdLJ[`m[IS4`3
+Z16 VFCQ5>>EIGBgI0L3@2BBkE0
+Z17 !s100 =ECmN_fJ1F@l1ZKUP>ohB0
 R8
 33
 R9
@@ -52,7 +52,7 @@ R12
 R13
 R14
 Earmalu_tb
-Z18 w1593934562
+Z18 w1593940670
 Z19 DPx4 work 12 armfilepaths 0 22 ^M3cdLUMT=kAO2d=TcdPT3
 Z20 DPx4 work 16 armconfiguration 0 22 8ZzlimU_zNC][g_e:9lh=0
 R1
@@ -126,10 +126,10 @@ R12
 R13
 R14
 Parmfilepaths
-Z30 w1593936300
+R18
 R5
-Z31 8./src/ArmFilePaths.vhd
-Z32 F./src/ArmFilePaths.vhd
+Z30 8./src/ArmFilePaths.vhd
+Z31 F./src/ArmFilePaths.vhd
 l0
 L1
 V^M3cdLUMT=kAO2d=TcdPT3
@@ -148,8 +148,8 @@ Bbody
 R19
 l0
 L8
-Z33 V:KDda@KOQR3;9f3NFBRIA1
-Z34 !s100 WJG<MiEm`bgnS@D:zISW:2
+Z32 V:KDda@KOQR3;9f3NFBRIA1
+Z33 !s100 WJG<MiEm`bgnS@D:zISW:2
 R8
 33
 R9
@@ -162,14 +162,14 @@ R13
 R14
 nbody
 Earmmultiplier
-Z35 w1593935335
+R18
 R1
 R2
 R3
 R4
 R5
-Z36 8./src/ArmMultiplier.vhd
-Z37 F./src/ArmMultiplier.vhd
+Z34 8./src/ArmMultiplier.vhd
+Z35 F./src/ArmMultiplier.vhd
 l0
 L16
 VMY8PI;jg8_@;i3n8A8>@32
@@ -189,11 +189,11 @@ R1
 R2
 R3
 R4
-Z38 DEx4 work 13 armmultiplier 0 22 MY8PI;jg8_@;i3n8A8>@32
+Z36 DEx4 work 13 armmultiplier 0 22 MY8PI;jg8_@;i3n8A8>@32
 l26
 L24
-Z39 Vo8=7d^X8_<3kS<OIc:Mc83
-Z40 !s100 65hEHz5GV[nARc?d>JLB00
+Z37 Vo8=7d^X8_<3kS<OIc:Mc83
+Z38 !s100 65hEHz5GV[nARc?d>JLB00
 R8
 33
 R9
@@ -209,8 +209,8 @@ R3
 R29
 R18
 R5
-Z41 8./src/ArmTypes.vhd
-Z42 F./src/ArmTypes.vhd
+Z39 8./src/ArmTypes.vhd
+Z40 F./src/ArmTypes.vhd
 l0
 L11
 V]^V=Zm_OHmJCVZ>6X8CZ?1
@@ -232,8 +232,8 @@ R3
 R29
 l0
 L413
-Z43 V_1bC;H0CNk?O949EW6]Ef1
-Z44 !s100 5lWP:KmD=fJkIhzQOLmWz0
+Z41 V_1bC;H0CNk?O949EW6]Ef1
+Z42 !s100 5lWP:KmD=fJkIhzQOLmWz0
 R8
 33
 R9
@@ -255,8 +255,8 @@ R29
 R3
 R18
 R5
-Z45 8./src/TB_Tools.vhd
-Z46 F./src/TB_Tools.vhd
+Z43 8./src/TB_Tools.vhd
+Z44 F./src/TB_Tools.vhd
 l0
 L34
 Vkb8U95ZF54@A>gS0]W5]80
@@ -283,8 +283,8 @@ R29
 R3
 l0
 L164
-Z47 V[f4kmkX`D;LPJS=K6SNbS1
-Z48 !s100 C[X60FXPhT4Eg_4k]T[Wh1
+Z45 V[f4kmkX`D;LPJS=K6SNbS1
+Z46 !s100 C[X60FXPhT4Eg_4k]T[Wh1
 R8
 33
 R9

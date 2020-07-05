@@ -1,0 +1,2410 @@
+# //  Questa Sim-64
+# //  Version 10.2c_5 linux_x86_64 Nov 19 2013
+# //
+# //  Copyright 1991-2013 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+vcom -work ./work/ ./src/*.vhd
+# QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package ArmTypes
+# -- Compiling entity ArmALU
+# -- Compiling architecture behave of ArmALU
+# ** Error: ./src/ArmALU.vhd(37): near "ALU_RES_REF": expecting <= or :=
+# ** Error: ./src/ArmALU.vhd(76): VHDL Compiler exiting
+# /afs/tu-berlin.de/units/Fak_IV/aes/tools/mentor/questasim/linux_x86_64/vcom failed.
+vcom -work ./work/ ./src/*.vhd
+# QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package ArmTypes
+# -- Compiling entity ArmALU
+# -- Compiling architecture behave of ArmALU
+# -- Loading package std_logic_textio
+# -- Loading package ArmConfiguration
+# -- Loading package ArmFilePaths
+# -- Loading package TB_Tools
+# -- Compiling entity ArmALU_TB
+# -- Compiling architecture behave of ArmALU_TB
+# ** Warning: [9] ./src/ArmALU_tb.vhd(96): (vcom-1013) Initial value of "ALU_TEST_FILE_PATH" depends on value of signal "TESTDATA_FOLDER_PATH".
+# -- Compiling package ArmConfiguration
+# -- Compiling package ArmFilePaths
+# -- Compiling package body ArmFilePaths
+# -- Loading package ArmFilePaths
+# -- Compiling entity ArmMultiplier
+# -- Compiling architecture behavioral of ArmMultiplier
+# -- Compiling package ArmTypes
+# -- Compiling package body ArmTypes
+# -- Loading package ArmTypes
+# -- Loading package ArmTypes
+# -- Loading package ArmConfiguration
+# -- Loading package ArmFilePaths
+# -- Compiling package TB_Tools
+# ** Warning: ./src/TB_Tools.vhd(152): (vcom-1236) Shared variables must be of a protected type.
+# ** Warning: ./src/TB_Tools.vhd(153): (vcom-1236) Shared variables must be of a protected type.
+# -- Compiling package body TB_Tools
+# -- Loading package TB_Tools
+vsim work.armalu_tb
+# vsim work.armalu_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.armtypes(body)
+# Loading work.armconfiguration
+# Loading work.armfilepaths(body)
+# Loading work.tb_tools(body)
+# Loading work.armalu_tb(behave)
+# Loading work.armalu(behave)
+run -all
+# ** Note: Testvektordatei: ./src/ALU_TESTDATA
+#    Time: 10 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 10 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Simulation startet...
+#    Time: 10 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 10 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 10 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 1 ; Typ: AND
+#    Time: 10 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 20 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 20 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 2 ; Typ: AND
+#    Time: 20 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 30 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 30 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 3 ; Typ: AND
+#    Time: 30 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 40 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 40 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 4 ; Typ: AND
+#    Time: 40 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 50 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 50 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 5 ; Typ: EOR
+#    Time: 50 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 60 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 60 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 6 ; Typ: EOR
+#    Time: 60 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 70 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 70 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 7 ; Typ: EOR
+#    Time: 70 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 80 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 80 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 8 ; Typ: SUB
+#    Time: 80 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 90 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 90 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 9 ; Typ: SUB
+#    Time: 90 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 100 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 100 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 10 ; Typ: SUB
+#    Time: 100 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 110 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 110 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 11 ; Typ: SUB
+#    Time: 110 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 120 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 120 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 12 ; Typ: SUB
+#    Time: 120 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 130 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 130 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 13 ; Typ: SUB
+#    Time: 130 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 140 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 140 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 14 ; Typ: SUB
+#    Time: 140 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 150 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 150 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 15 ; Typ: SUB
+#    Time: 150 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 160 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 160 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 16 ; Typ: RSB
+#    Time: 160 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 170 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 170 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 17 ; Typ: RSB
+#    Time: 170 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 180 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 180 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 18 ; Typ: RSB
+#    Time: 180 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 190 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 190 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 19 ; Typ: RSB
+#    Time: 190 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 200 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 200 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 20 ; Typ: RSB
+#    Time: 200 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 210 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 210 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 21 ; Typ: RSB
+#    Time: 210 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 220 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 220 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 22 ; Typ: RSB
+#    Time: 220 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 230 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 230 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 23 ; Typ: RSB
+#    Time: 230 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 240 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 240 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 24 ; Typ: ADD
+#    Time: 240 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 250 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 250 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 25 ; Typ: ADD
+#    Time: 250 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 260 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 260 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 26 ; Typ: ADD
+#    Time: 260 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 270 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 270 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 27 ; Typ: ADD
+#    Time: 270 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 280 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 280 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 28 ; Typ: ADD
+#    Time: 280 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 290 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 290 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 29 ; Typ: ADC
+#    Time: 290 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 300 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 300 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 30 ; Typ: ADC
+#    Time: 300 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 310 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 310 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 31 ; Typ: ADC
+#    Time: 310 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 320 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 320 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 32 ; Typ: ADC
+#    Time: 320 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 330 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 330 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 33 ; Typ: SBC
+#    Time: 330 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 340 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 340 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 34 ; Typ: SBC
+#    Time: 340 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 350 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 350 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 35 ; Typ: RSC
+#    Time: 350 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 360 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 360 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 36 ; Typ: RSC
+#    Time: 360 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 370 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 370 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 37 ; Typ: TST
+#    Time: 370 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 380 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 380 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 38 ; Typ: TST
+#    Time: 380 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 390 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 390 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 39 ; Typ: TST
+#    Time: 390 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 400 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 400 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 40 ; Typ: TEQ
+#    Time: 400 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 410 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 410 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 41 ; Typ: TEQ
+#    Time: 410 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 420 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 420 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 42 ; Typ: TEQ
+#    Time: 420 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 430 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 430 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 43 ; Typ: TEQ
+#    Time: 430 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 440 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 440 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 44 ; Typ: CMP
+#    Time: 440 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 450 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 450 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 45 ; Typ: CMP
+#    Time: 450 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 460 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 460 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 46 ; Typ: CMP
+#    Time: 460 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 470 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 470 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 47 ; Typ: CMP
+#    Time: 470 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 480 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 480 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 48 ; Typ: CMN
+#    Time: 480 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 490 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 490 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 49 ; Typ: CMN
+#    Time: 490 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 500 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 500 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 50 ; Typ: CMN
+#    Time: 500 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 510 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 510 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 51 ; Typ: ORR
+#    Time: 510 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 520 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 520 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 52 ; Typ: ORR
+#    Time: 520 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 530 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 530 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 53 ; Typ: MOV
+#    Time: 530 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 540 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 540 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 54 ; Typ: MOV
+#    Time: 540 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 550 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 550 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 55 ; Typ: BIC
+#    Time: 550 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 560 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 560 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 56 ; Typ: BIC
+#    Time: 560 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 570 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 570 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 57 ; Typ: MVN
+#    Time: 570 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 580 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 580 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 58 ; Typ: MVN
+#    Time: 580 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 590 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 590 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 59 ; Typ: SUB
+#    Time: 590 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Simulation beendet..
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note:  
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note:  
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Opcode: Testabdeckung | Ergebnisfehler | CC-Fehler:
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	AND: 	4	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	EOR: 	3	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	SUB: 	9	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	RSB: 	8	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	ADD: 	5	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	ADC: 	4	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	SBC: 	2	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	RSC: 	2	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	TST: 	3	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	TEQ: 	4	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	CMP: 	4	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	CMN: 	3	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	ORR: 	2	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	MOV: 	2	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	BIC: 	2	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	MVN: 	2	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note:  
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note:  
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Simulation bestanden
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Punkte: 4 + 2 = 6
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note:  
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note:  
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Failure:  EOT (END OF TEST) - Diese Fehlermeldung stoppt den Simulator unabhaengig von tatsaechlich aufgetretenen Fehlern!
+#    Time: 600 ns  Iteration: 0  Process: /armalu_tb/tb File: ./src/ArmALU_tb.vhd
+# Break in Process tb at ./src/ArmALU_tb.vhd line 309
+quit -sim
+vcom -work ./work/ ./src/*.vhd
+# QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package ArmTypes
+# -- Compiling entity ArmALU
+# -- Compiling architecture behave of ArmALU
+# -- Loading package std_logic_textio
+# -- Loading package ArmConfiguration
+# -- Loading package ArmFilePaths
+# -- Loading package TB_Tools
+# -- Compiling entity ArmALU_TB
+# -- Compiling architecture behave of ArmALU_TB
+# ** Warning: [9] ./src/ArmALU_tb.vhd(96): (vcom-1013) Initial value of "ALU_TEST_FILE_PATH" depends on value of signal "TESTDATA_FOLDER_PATH".
+# -- Compiling package ArmConfiguration
+# -- Compiling package ArmFilePaths
+# -- Compiling package body ArmFilePaths
+# -- Loading package ArmFilePaths
+# -- Compiling entity ArmMultiplier
+# -- Compiling architecture behavioral of ArmMultiplier
+# -- Compiling package ArmTypes
+# -- Compiling package body ArmTypes
+# -- Loading package ArmTypes
+# -- Loading package ArmTypes
+# -- Loading package ArmConfiguration
+# -- Loading package ArmFilePaths
+# -- Compiling package TB_Tools
+# ** Warning: ./src/TB_Tools.vhd(152): (vcom-1236) Shared variables must be of a protected type.
+# ** Warning: ./src/TB_Tools.vhd(153): (vcom-1236) Shared variables must be of a protected type.
+# -- Compiling package body TB_Tools
+# -- Loading package TB_Tools
+vsim work.armalu_tb
+# vsim work.armalu_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.armtypes(body)
+# Loading work.armconfiguration
+# Loading work.armfilepaths(body)
+# Loading work.tb_tools(body)
+# Loading work.armalu_tb(behave)
+# Loading work.armalu(behave)
+vsim work.armalu_tb
+# vsim work.armalu_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.armtypes(body)
+# Loading work.armconfiguration
+# Loading work.armfilepaths(body)
+# Loading work.tb_tools(body)
+# Loading work.armalu_tb(behave)
+# Loading work.armalu(behave)
+run -all
+# ** Note: Testvektordatei: ./src/ALU_TESTDATA
+#    Time: 10 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 10 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Simulation startet...
+#    Time: 10 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 10 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 10 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 1 ; Typ: AND
+#    Time: 10 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 20 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 20 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 2 ; Typ: AND
+#    Time: 20 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 30 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 30 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 3 ; Typ: AND
+#    Time: 30 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 40 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 40 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 4 ; Typ: AND
+#    Time: 40 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 50 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 50 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 5 ; Typ: EOR
+#    Time: 50 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 60 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 60 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 6 ; Typ: EOR
+#    Time: 60 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 70 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 70 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 7 ; Typ: EOR
+#    Time: 70 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 80 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 80 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 8 ; Typ: SUB
+#    Time: 80 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 90 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 90 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 9 ; Typ: SUB
+#    Time: 90 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 100 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 100 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 10 ; Typ: SUB
+#    Time: 100 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 110 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 110 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 11 ; Typ: SUB
+#    Time: 110 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 120 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 120 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 12 ; Typ: SUB
+#    Time: 120 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 130 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 130 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 13 ; Typ: SUB
+#    Time: 130 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 140 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 140 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 14 ; Typ: SUB
+#    Time: 140 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 150 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 150 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 15 ; Typ: SUB
+#    Time: 150 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 160 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 160 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 16 ; Typ: RSB
+#    Time: 160 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 170 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 170 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 17 ; Typ: RSB
+#    Time: 170 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 180 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 180 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 18 ; Typ: RSB
+#    Time: 180 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 190 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 190 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 19 ; Typ: RSB
+#    Time: 190 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 200 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 200 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 20 ; Typ: RSB
+#    Time: 200 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 210 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 210 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 21 ; Typ: RSB
+#    Time: 210 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 220 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 220 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 22 ; Typ: RSB
+#    Time: 220 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 230 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 230 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 23 ; Typ: RSB
+#    Time: 230 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 240 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 240 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 24 ; Typ: ADD
+#    Time: 240 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 250 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 250 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 25 ; Typ: ADD
+#    Time: 250 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 260 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 260 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 26 ; Typ: ADD
+#    Time: 260 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 270 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 270 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 27 ; Typ: ADD
+#    Time: 270 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 280 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 280 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 28 ; Typ: ADD
+#    Time: 280 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 290 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 290 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 29 ; Typ: ADC
+#    Time: 290 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 300 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 300 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 30 ; Typ: ADC
+#    Time: 300 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 310 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 310 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 31 ; Typ: ADC
+#    Time: 310 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 320 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 320 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 32 ; Typ: ADC
+#    Time: 320 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 330 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 330 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 33 ; Typ: SBC
+#    Time: 330 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 340 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 340 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 34 ; Typ: SBC
+#    Time: 340 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 350 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 350 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 35 ; Typ: RSC
+#    Time: 350 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 360 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 360 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 36 ; Typ: RSC
+#    Time: 360 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 370 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 370 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 37 ; Typ: TST
+#    Time: 370 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 380 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 380 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 38 ; Typ: TST
+#    Time: 380 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 390 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 390 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 39 ; Typ: TST
+#    Time: 390 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 400 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 400 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 40 ; Typ: TEQ
+#    Time: 400 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 410 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 410 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 41 ; Typ: TEQ
+#    Time: 410 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 420 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 420 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 42 ; Typ: TEQ
+#    Time: 420 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 430 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 430 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 43 ; Typ: TEQ
+#    Time: 430 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 440 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 440 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 44 ; Typ: CMP
+#    Time: 440 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 450 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 450 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 45 ; Typ: CMP
+#    Time: 450 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 460 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 460 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 46 ; Typ: CMP
+#    Time: 460 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 470 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 470 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 47 ; Typ: CMP
+#    Time: 470 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 480 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 480 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 48 ; Typ: CMN
+#    Time: 480 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 490 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 490 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 49 ; Typ: CMN
+#    Time: 490 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 500 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 500 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 50 ; Typ: CMN
+#    Time: 500 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 510 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 510 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 51 ; Typ: ORR
+#    Time: 510 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 520 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 520 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 52 ; Typ: ORR
+#    Time: 520 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 530 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 530 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 53 ; Typ: MOV
+#    Time: 530 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 540 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 540 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 54 ; Typ: MOV
+#    Time: 540 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 550 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 550 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 55 ; Typ: BIC
+#    Time: 550 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 560 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 560 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 56 ; Typ: BIC
+#    Time: 560 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 570 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 570 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 57 ; Typ: MVN
+#    Time: 570 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 580 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 580 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 58 ; Typ: MVN
+#    Time: 580 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 590 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 590 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 59 ; Typ: SUB
+#    Time: 590 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Simulation beendet..
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note:  
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note:  
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Opcode: Testabdeckung | Ergebnisfehler | CC-Fehler:
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	AND: 	4	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	EOR: 	3	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	SUB: 	9	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	RSB: 	8	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	ADD: 	5	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	ADC: 	4	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	SBC: 	2	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	RSC: 	2	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	TST: 	3	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	TEQ: 	4	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	CMP: 	4	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	CMN: 	3	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	ORR: 	2	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	MOV: 	2	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	BIC: 	2	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	MVN: 	2	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note:  
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note:  
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Simulation bestanden
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Punkte: 4 + 2 = 6
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note:  
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note:  
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Failure:  EOT (END OF TEST) - Diese Fehlermeldung stoppt den Simulator unabhaengig von tatsaechlich aufgetretenen Fehlern!
+#    Time: 600 ns  Iteration: 0  Process: /armalu_tb/tb File: ./src/ArmALU_tb.vhd
+# Break in Process tb at ./src/ArmALU_tb.vhd line 309
+quit -sim
+vcom -work ./work/ ./src/*.vhd
+# QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package ArmTypes
+# -- Compiling entity ArmALU
+# -- Compiling architecture behave of ArmALU
+# -- Loading package std_logic_textio
+# -- Loading package ArmConfiguration
+# -- Loading package ArmFilePaths
+# -- Loading package TB_Tools
+# -- Compiling entity ArmALU_TB
+# -- Compiling architecture behave of ArmALU_TB
+# ** Warning: [9] ./src/ArmALU_tb.vhd(96): (vcom-1013) Initial value of "ALU_TEST_FILE_PATH" depends on value of signal "TESTDATA_FOLDER_PATH".
+# -- Compiling package ArmConfiguration
+# -- Compiling package ArmFilePaths
+# -- Compiling package body ArmFilePaths
+# -- Loading package ArmFilePaths
+# -- Compiling entity ArmMultiplier
+# -- Compiling architecture behavioral of ArmMultiplier
+# -- Compiling package ArmTypes
+# -- Compiling package body ArmTypes
+# -- Loading package ArmTypes
+# -- Loading package ArmTypes
+# -- Loading package ArmConfiguration
+# -- Loading package ArmFilePaths
+# -- Compiling package TB_Tools
+# ** Warning: ./src/TB_Tools.vhd(152): (vcom-1236) Shared variables must be of a protected type.
+# ** Warning: ./src/TB_Tools.vhd(153): (vcom-1236) Shared variables must be of a protected type.
+# -- Compiling package body TB_Tools
+# -- Loading package TB_Tools
+vsim work.armalu_tb
+# vsim work.armalu_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.armtypes(body)
+# Loading work.armconfiguration
+# Loading work.armfilepaths(body)
+# Loading work.tb_tools(body)
+# Loading work.armalu_tb(behave)
+# Loading work.armalu(behave)
+run -all
+# ** Note: Testvektordatei: ./src/ALU_TESTDATA
+#    Time: 10 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 10 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Simulation startet...
+#    Time: 10 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 10 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 10 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 1 ; Typ: AND
+#    Time: 10 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 20 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 20 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 2 ; Typ: AND
+#    Time: 20 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 30 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 30 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 3 ; Typ: AND
+#    Time: 30 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 40 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 40 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 4 ; Typ: AND
+#    Time: 40 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 50 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 50 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 5 ; Typ: EOR
+#    Time: 50 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 60 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 60 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 6 ; Typ: EOR
+#    Time: 60 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 70 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 70 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 7 ; Typ: EOR
+#    Time: 70 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 80 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 80 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 8 ; Typ: SUB
+#    Time: 80 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 90 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 90 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 9 ; Typ: SUB
+#    Time: 90 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 100 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 100 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 10 ; Typ: SUB
+#    Time: 100 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 110 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 110 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 11 ; Typ: SUB
+#    Time: 110 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 120 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 120 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 12 ; Typ: SUB
+#    Time: 120 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 130 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 130 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 13 ; Typ: SUB
+#    Time: 130 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 140 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 140 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 14 ; Typ: SUB
+#    Time: 140 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 150 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 150 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 15 ; Typ: SUB
+#    Time: 150 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 160 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 160 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 16 ; Typ: RSB
+#    Time: 160 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 170 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 170 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 17 ; Typ: RSB
+#    Time: 170 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 180 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 180 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 18 ; Typ: RSB
+#    Time: 180 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 190 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 190 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 19 ; Typ: RSB
+#    Time: 190 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 200 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 200 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 20 ; Typ: RSB
+#    Time: 200 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 210 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 210 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 21 ; Typ: RSB
+#    Time: 210 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 220 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 220 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 22 ; Typ: RSB
+#    Time: 220 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 230 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 230 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 23 ; Typ: RSB
+#    Time: 230 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 240 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 240 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 24 ; Typ: ADD
+#    Time: 240 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 250 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 250 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 25 ; Typ: ADD
+#    Time: 250 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 260 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 260 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 26 ; Typ: ADD
+#    Time: 260 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 270 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 270 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 27 ; Typ: ADD
+#    Time: 270 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 280 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 280 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 28 ; Typ: ADD
+#    Time: 280 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 290 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 290 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 29 ; Typ: ADC
+#    Time: 290 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 300 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 300 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 30 ; Typ: ADC
+#    Time: 300 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 310 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 310 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 31 ; Typ: ADC
+#    Time: 310 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 320 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 320 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 32 ; Typ: ADC
+#    Time: 320 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 330 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 330 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 33 ; Typ: SBC
+#    Time: 330 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 340 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 340 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 34 ; Typ: SBC
+#    Time: 340 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 350 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 350 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 35 ; Typ: RSC
+#    Time: 350 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 360 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 360 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 36 ; Typ: RSC
+#    Time: 360 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 370 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 370 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 37 ; Typ: TST
+#    Time: 370 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 380 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 380 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 38 ; Typ: TST
+#    Time: 380 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 390 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 390 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 39 ; Typ: TST
+#    Time: 390 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 400 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 400 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 40 ; Typ: TEQ
+#    Time: 400 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 410 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 410 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 41 ; Typ: TEQ
+#    Time: 410 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 420 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 420 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 42 ; Typ: TEQ
+#    Time: 420 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 430 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 430 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 43 ; Typ: TEQ
+#    Time: 430 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 440 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 440 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 44 ; Typ: CMP
+#    Time: 440 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 450 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 450 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 45 ; Typ: CMP
+#    Time: 450 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 460 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 460 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 46 ; Typ: CMP
+#    Time: 460 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 470 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 470 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 47 ; Typ: CMP
+#    Time: 470 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 480 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 480 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 48 ; Typ: CMN
+#    Time: 480 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 490 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 490 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 49 ; Typ: CMN
+#    Time: 490 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 500 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 500 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 50 ; Typ: CMN
+#    Time: 500 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 510 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 510 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 51 ; Typ: ORR
+#    Time: 510 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 520 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 520 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 52 ; Typ: ORR
+#    Time: 520 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 530 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 530 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 53 ; Typ: MOV
+#    Time: 530 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 540 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 540 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 54 ; Typ: MOV
+#    Time: 540 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 550 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 550 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 55 ; Typ: BIC
+#    Time: 550 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 560 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 560 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 56 ; Typ: BIC
+#    Time: 560 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 570 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 570 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 57 ; Typ: MVN
+#    Time: 570 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 580 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 580 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 58 ; Typ: MVN
+#    Time: 580 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 590 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 590 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 59 ; Typ: SUB
+#    Time: 590 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Simulation beendet..
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note:  
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note:  
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Opcode: Testabdeckung | Ergebnisfehler | CC-Fehler:
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	AND: 	4	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	EOR: 	3	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	SUB: 	9	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	RSB: 	8	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	ADD: 	5	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	ADC: 	4	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	SBC: 	2	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	RSC: 	2	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	TST: 	3	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	TEQ: 	4	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	CMP: 	4	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	CMN: 	3	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	ORR: 	2	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	MOV: 	2	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	BIC: 	2	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	MVN: 	2	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note:  
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note:  
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Simulation bestanden
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Punkte: 4 + 2 = 6
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note:  
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note:  
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Failure:  EOT (END OF TEST) - Diese Fehlermeldung stoppt den Simulator unabhaengig von tatsaechlich aufgetretenen Fehlern!
+#    Time: 600 ns  Iteration: 0  Process: /armalu_tb/tb File: ./src/ArmALU_tb.vhd
+# Break in Process tb at ./src/ArmALU_tb.vhd line 309
+quit -sim
+vcom -work ./work/ ./src/*.vhd
+# QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package ArmTypes
+# -- Compiling entity ArmALU
+# -- Compiling architecture behave of ArmALU
+# -- Loading package std_logic_textio
+# -- Loading package ArmConfiguration
+# -- Loading package ArmFilePaths
+# -- Loading package TB_Tools
+# -- Compiling entity ArmALU_TB
+# -- Compiling architecture behave of ArmALU_TB
+# ** Warning: [9] ./src/ArmALU_tb.vhd(96): (vcom-1013) Initial value of "ALU_TEST_FILE_PATH" depends on value of signal "TESTDATA_FOLDER_PATH".
+# -- Compiling package ArmConfiguration
+# -- Compiling package ArmFilePaths
+# -- Compiling package body ArmFilePaths
+# -- Loading package ArmFilePaths
+# -- Compiling entity ArmMultiplier
+# -- Compiling architecture behavioral of ArmMultiplier
+# -- Compiling package ArmTypes
+# -- Compiling package body ArmTypes
+# -- Loading package ArmTypes
+# -- Loading package ArmTypes
+# -- Loading package ArmConfiguration
+# -- Loading package ArmFilePaths
+# -- Compiling package TB_Tools
+# ** Warning: ./src/TB_Tools.vhd(152): (vcom-1236) Shared variables must be of a protected type.
+# ** Warning: ./src/TB_Tools.vhd(153): (vcom-1236) Shared variables must be of a protected type.
+# -- Compiling package body TB_Tools
+# -- Loading package TB_Tools
+vsim work.armalu_tb
+# vsim work.armalu_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.armtypes(body)
+# Loading work.armconfiguration
+# Loading work.armfilepaths(body)
+# Loading work.tb_tools(body)
+# Loading work.armalu_tb(behave)
+# Loading work.armalu(behave)
+run -all
+# ** Note: Testvektordatei: ./src/ALU_TESTDATA
+#    Time: 10 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 10 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Simulation startet...
+#    Time: 10 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 10 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 10 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 1 ; Typ: AND
+#    Time: 10 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 20 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 20 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 2 ; Typ: AND
+#    Time: 20 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 30 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 30 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 3 ; Typ: AND
+#    Time: 30 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 40 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 40 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 4 ; Typ: AND
+#    Time: 40 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 50 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 50 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 5 ; Typ: EOR
+#    Time: 50 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 60 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 60 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 6 ; Typ: EOR
+#    Time: 60 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 70 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 70 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 7 ; Typ: EOR
+#    Time: 70 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 80 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 80 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 8 ; Typ: SUB
+#    Time: 80 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 90 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 90 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 9 ; Typ: SUB
+#    Time: 90 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 100 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 100 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 10 ; Typ: SUB
+#    Time: 100 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 110 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 110 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 11 ; Typ: SUB
+#    Time: 110 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 120 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 120 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 12 ; Typ: SUB
+#    Time: 120 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 130 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 130 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 13 ; Typ: SUB
+#    Time: 130 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 140 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 140 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 14 ; Typ: SUB
+#    Time: 140 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 150 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 150 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 15 ; Typ: SUB
+#    Time: 150 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 160 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 160 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 16 ; Typ: RSB
+#    Time: 160 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 170 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 170 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 17 ; Typ: RSB
+#    Time: 170 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 180 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 180 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 18 ; Typ: RSB
+#    Time: 180 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 190 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 190 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 19 ; Typ: RSB
+#    Time: 190 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 200 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 200 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 20 ; Typ: RSB
+#    Time: 200 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 210 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 210 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 21 ; Typ: RSB
+#    Time: 210 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 220 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 220 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 22 ; Typ: RSB
+#    Time: 220 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 230 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 230 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 23 ; Typ: RSB
+#    Time: 230 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 240 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 240 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 24 ; Typ: ADD
+#    Time: 240 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 250 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 250 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 25 ; Typ: ADD
+#    Time: 250 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 260 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 260 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 26 ; Typ: ADD
+#    Time: 260 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 270 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 270 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 27 ; Typ: ADD
+#    Time: 270 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 280 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 280 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 28 ; Typ: ADD
+#    Time: 280 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 290 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 290 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 29 ; Typ: ADC
+#    Time: 290 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 300 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 300 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 30 ; Typ: ADC
+#    Time: 300 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 310 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 310 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 31 ; Typ: ADC
+#    Time: 310 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 320 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 320 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 32 ; Typ: ADC
+#    Time: 320 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 330 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 330 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 33 ; Typ: SBC
+#    Time: 330 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 340 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 340 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 34 ; Typ: SBC
+#    Time: 340 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 350 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 350 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 35 ; Typ: RSC
+#    Time: 350 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 360 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 360 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 36 ; Typ: RSC
+#    Time: 360 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 370 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 370 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 37 ; Typ: TST
+#    Time: 370 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 380 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 380 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 38 ; Typ: TST
+#    Time: 380 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 390 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 390 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 39 ; Typ: TST
+#    Time: 390 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 400 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 400 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 40 ; Typ: TEQ
+#    Time: 400 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 410 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 410 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 41 ; Typ: TEQ
+#    Time: 410 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 420 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 420 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 42 ; Typ: TEQ
+#    Time: 420 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 430 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 430 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 43 ; Typ: TEQ
+#    Time: 430 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 440 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 440 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 44 ; Typ: CMP
+#    Time: 440 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 450 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 450 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 45 ; Typ: CMP
+#    Time: 450 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 460 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 460 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 46 ; Typ: CMP
+#    Time: 460 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 470 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 470 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 47 ; Typ: CMP
+#    Time: 470 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 480 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 480 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 48 ; Typ: CMN
+#    Time: 480 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 490 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 490 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 49 ; Typ: CMN
+#    Time: 490 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 500 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 500 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 50 ; Typ: CMN
+#    Time: 500 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 510 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 510 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 51 ; Typ: ORR
+#    Time: 510 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 520 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 520 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 52 ; Typ: ORR
+#    Time: 520 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 530 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 530 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 53 ; Typ: MOV
+#    Time: 530 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 540 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 540 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 54 ; Typ: MOV
+#    Time: 540 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 550 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 550 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 55 ; Typ: BIC
+#    Time: 550 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 560 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 560 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 56 ; Typ: BIC
+#    Time: 560 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 570 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 570 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 57 ; Typ: MVN
+#    Time: 570 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 580 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 580 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 58 ; Typ: MVN
+#    Time: 580 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 590 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 590 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 59 ; Typ: SUB
+#    Time: 590 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Simulation beendet..
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note:  
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note:  
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Opcode: Testabdeckung | Ergebnisfehler | CC-Fehler:
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	AND: 	4	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	EOR: 	3	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	SUB: 	9	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	RSB: 	8	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	ADD: 	5	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	ADC: 	4	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	SBC: 	2	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	RSC: 	2	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	TST: 	3	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	TEQ: 	4	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	CMP: 	4	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	CMN: 	3	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	ORR: 	2	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	MOV: 	2	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	BIC: 	2	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	MVN: 	2	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note:  
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note:  
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Simulation bestanden
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Punkte: 4 + 2 = 6
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note:  
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note:  
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Failure:  EOT (END OF TEST) - Diese Fehlermeldung stoppt den Simulator unabhaengig von tatsaechlich aufgetretenen Fehlern!
+#    Time: 600 ns  Iteration: 0  Process: /armalu_tb/tb File: ./src/ArmALU_tb.vhd
+# Break in Process tb at ./src/ArmALU_tb.vhd line 309
+quit -sim
+vcom -work ./work/ ./src/*.vhd
+# QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package ArmTypes
+# -- Compiling entity ArmALU
+# -- Compiling architecture behave of ArmALU
+# -- Loading package std_logic_textio
+# -- Loading package ArmConfiguration
+# -- Loading package ArmFilePaths
+# -- Loading package TB_Tools
+# -- Compiling entity ArmALU_TB
+# -- Compiling architecture behave of ArmALU_TB
+# ** Warning: [9] ./src/ArmALU_tb.vhd(96): (vcom-1013) Initial value of "ALU_TEST_FILE_PATH" depends on value of signal "TESTDATA_FOLDER_PATH".
+# -- Compiling package ArmConfiguration
+# -- Compiling package ArmFilePaths
+# -- Compiling package body ArmFilePaths
+# -- Loading package ArmFilePaths
+# -- Compiling entity ArmMultiplier
+# -- Compiling architecture behavioral of ArmMultiplier
+# -- Compiling package ArmTypes
+# -- Compiling package body ArmTypes
+# -- Loading package ArmTypes
+# -- Loading package ArmTypes
+# -- Loading package ArmConfiguration
+# -- Loading package ArmFilePaths
+# -- Compiling package TB_Tools
+# ** Warning: ./src/TB_Tools.vhd(152): (vcom-1236) Shared variables must be of a protected type.
+# ** Warning: ./src/TB_Tools.vhd(153): (vcom-1236) Shared variables must be of a protected type.
+# -- Compiling package body TB_Tools
+# -- Loading package TB_Tools
+vsim work.armalu_tb
+# vsim work.armalu_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.armtypes(body)
+# Loading work.armconfiguration
+# Loading work.armfilepaths(body)
+# Loading work.tb_tools(body)
+# Loading work.armalu_tb(behave)
+# Loading work.armalu(behave)
+run -all
+# ** Note: Testvektordatei: ./src/ALU_TESTDATA
+#    Time: 10 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 10 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Simulation startet...
+#    Time: 10 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 10 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 10 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 1 ; Typ: AND
+#    Time: 10 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 20 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 20 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 2 ; Typ: AND
+#    Time: 20 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 30 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 30 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 3 ; Typ: AND
+#    Time: 30 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 40 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 40 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 4 ; Typ: AND
+#    Time: 40 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 50 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 50 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 5 ; Typ: EOR
+#    Time: 50 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 60 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 60 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 6 ; Typ: EOR
+#    Time: 60 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 70 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 70 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 7 ; Typ: EOR
+#    Time: 70 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 80 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 80 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 8 ; Typ: SUB
+#    Time: 80 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 90 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 90 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 9 ; Typ: SUB
+#    Time: 90 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 100 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 100 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 10 ; Typ: SUB
+#    Time: 100 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 110 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 110 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 11 ; Typ: SUB
+#    Time: 110 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 120 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 120 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 12 ; Typ: SUB
+#    Time: 120 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 130 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 130 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 13 ; Typ: SUB
+#    Time: 130 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 140 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 140 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 14 ; Typ: SUB
+#    Time: 140 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 150 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 150 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 15 ; Typ: SUB
+#    Time: 150 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 160 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 160 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 16 ; Typ: RSB
+#    Time: 160 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 170 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 170 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 17 ; Typ: RSB
+#    Time: 170 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 180 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 180 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 18 ; Typ: RSB
+#    Time: 180 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 190 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 190 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 19 ; Typ: RSB
+#    Time: 190 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 200 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 200 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 20 ; Typ: RSB
+#    Time: 200 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 210 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 210 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 21 ; Typ: RSB
+#    Time: 210 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 220 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 220 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 22 ; Typ: RSB
+#    Time: 220 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 230 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 230 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 23 ; Typ: RSB
+#    Time: 230 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 240 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 240 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 24 ; Typ: ADD
+#    Time: 240 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 250 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 250 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 25 ; Typ: ADD
+#    Time: 250 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 260 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 260 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 26 ; Typ: ADD
+#    Time: 260 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 270 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 270 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 27 ; Typ: ADD
+#    Time: 270 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 280 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 280 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 28 ; Typ: ADD
+#    Time: 280 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 290 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 290 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 29 ; Typ: ADC
+#    Time: 290 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 300 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 300 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 30 ; Typ: ADC
+#    Time: 300 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 310 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 310 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 31 ; Typ: ADC
+#    Time: 310 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 320 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 320 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 32 ; Typ: ADC
+#    Time: 320 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 330 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 330 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 33 ; Typ: SBC
+#    Time: 330 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 340 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 340 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 34 ; Typ: SBC
+#    Time: 340 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 350 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 350 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 35 ; Typ: RSC
+#    Time: 350 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 360 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 360 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 36 ; Typ: RSC
+#    Time: 360 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 370 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 370 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 37 ; Typ: TST
+#    Time: 370 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 380 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 380 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 38 ; Typ: TST
+#    Time: 380 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 390 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 390 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 39 ; Typ: TST
+#    Time: 390 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 400 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 400 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 40 ; Typ: TEQ
+#    Time: 400 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 410 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 410 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 41 ; Typ: TEQ
+#    Time: 410 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 420 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 420 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 42 ; Typ: TEQ
+#    Time: 420 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 430 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 430 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 43 ; Typ: TEQ
+#    Time: 430 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 440 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 440 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 44 ; Typ: CMP
+#    Time: 440 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 450 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 450 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 45 ; Typ: CMP
+#    Time: 450 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 460 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 460 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 46 ; Typ: CMP
+#    Time: 460 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 470 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 470 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 47 ; Typ: CMP
+#    Time: 470 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 480 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 480 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 48 ; Typ: CMN
+#    Time: 480 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 490 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 490 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 49 ; Typ: CMN
+#    Time: 490 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 500 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 500 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 50 ; Typ: CMN
+#    Time: 500 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 510 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 510 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 51 ; Typ: ORR
+#    Time: 510 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 520 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 520 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 52 ; Typ: ORR
+#    Time: 520 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 530 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 530 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 53 ; Typ: MOV
+#    Time: 530 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 540 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 540 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 54 ; Typ: MOV
+#    Time: 540 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 550 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 550 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 55 ; Typ: BIC
+#    Time: 550 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 560 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 560 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 56 ; Typ: BIC
+#    Time: 560 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 570 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 570 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 57 ; Typ: MVN
+#    Time: 570 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 580 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 580 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 58 ; Typ: MVN
+#    Time: 580 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 590 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 590 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Teste Testvektor Nr. 59 ; Typ: SUB
+#    Time: 590 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: ...korrekt
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Simulation beendet..
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note:  
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note:  
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Opcode: Testabdeckung | Ergebnisfehler | CC-Fehler:
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	AND: 	4	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	EOR: 	3	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	SUB: 	9	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	RSB: 	8	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	ADD: 	5	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	ADC: 	4	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	SBC: 	2	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	RSC: 	2	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	TST: 	3	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	TEQ: 	4	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	CMP: 	4	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	CMN: 	3	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	ORR: 	2	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	MOV: 	2	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	BIC: 	2	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: 	MVN: 	2	|	0	|	0
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note:  
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note:  
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Simulation bestanden
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: Punkte: 4 + 2 = 6
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note:  
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note: --------------------------------------------------------------------------------
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Note:  
+#    Time: 600 ns  Iteration: 0  Instance: /armalu_tb
+# ** Failure:  EOT (END OF TEST) - Diese Fehlermeldung stoppt den Simulator unabhaengig von tatsaechlich aufgetretenen Fehlern!
+#    Time: 600 ns  Iteration: 0  Process: /armalu_tb/tb File: ./src/ArmALU_tb.vhd
+# Break in Process tb at ./src/ArmALU_tb.vhd line 309
+quit -sim
