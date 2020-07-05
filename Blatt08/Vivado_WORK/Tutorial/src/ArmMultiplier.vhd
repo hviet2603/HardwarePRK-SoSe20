@@ -26,6 +26,6 @@ signal MUL_64_BITS: std_logic_vector(63 downto 0);
 begin
 
 MUL_64_BITS <= std_logic_vector(unsigned(MUL_OP1)*unsigned(MUL_OP2));
-MUL_RES <= std_logic_vector(31 downto 0);
+MUL_RES <= MUL_64_BITS(31 downto 0);
 
 end architecture behavioral;	
