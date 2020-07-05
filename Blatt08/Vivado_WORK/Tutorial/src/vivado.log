@@ -1,0 +1,36 @@
+#-----------------------------------------------------------
+# Vivado v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:07 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Sun Jul  5 15:42:58 2020
+# Process ID: 9512
+# Current directory: /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt08/Vivado_WORK/Tutorial/src
+# Command line: vivado
+# Log file: /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt08/Vivado_WORK/Tutorial/src/vivado.log
+# Journal file: /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt08/Vivado_WORK/Tutorial/src/vivado.jou
+#-----------------------------------------------------------
+start_gui
+create_project HWP8 /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt08/Vivado_WORK/Tutorial/HWP8 -part xc7a35tcpg236-1
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/afs/tu-berlin.de/units/Fak_IV/aes/tools/xilinx/Vivado/2017.3/data/ip'.
+create_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 6224.977 ; gain = 12.477 ; free physical = 27271 ; free virtual = 32328
+set_property target_language VHDL [current_project]
+add_files -norecurse {/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt08/Vivado_WORK/Tutorial/src/ArmALU.vhd /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt08/Vivado_WORK/Tutorial/src/ArmMultiplier.vhd}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 2
+[Sun Jul  5 15:48:34 2020] Launched synth_1...
+Run output will be captured here: /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt08/Vivado_WORK/Tutorial/HWP8/HWP8.runs/synth_1/runme.log
+add_files -norecurse {/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt08/Vivado_WORK/Tutorial/src/ArmConfiguration.vhd /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt08/Vivado_WORK/Tutorial/src/ArmTypes.vhd /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt08/Vivado_WORK/Tutorial/src/ArmFilePaths.vhd}
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Sun Jul  5 15:49:43 2020] Launched synth_1...
+Run output will be captured here: /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt08/Vivado_WORK/Tutorial/HWP8/HWP8.runs/synth_1/runme.log
+set_property top ArmMultiplier [current_fileset]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Sun Jul  5 15:51:13 2020] Launched synth_1...
+Run output will be captured here: /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt08/Vivado_WORK/Tutorial/HWP8/HWP8.runs/synth_1/runme.log

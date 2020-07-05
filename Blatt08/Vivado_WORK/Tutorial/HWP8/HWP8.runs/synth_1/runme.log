@@ -1,0 +1,254 @@
+
+*** Running vivado
+    with args -log ArmMultiplier.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ArmMultiplier.tcl
+
+
+****** Vivado v2017.3 (64-bit)
+  **** SW Build 2018833 on Wed Oct  4 19:58:07 MDT 2017
+  **** IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source ArmMultiplier.tcl -notrace
+Command: synth_design -top ArmMultiplier -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 11282 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1241.297 ; gain = 72.000 ; free physical = 26952 ; free virtual = 32071
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'ArmMultiplier' [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt08/Vivado_WORK/Tutorial/src/ArmMultiplier.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'ArmMultiplier' (1#1) [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt08/Vivado_WORK/Tutorial/src/ArmMultiplier.vhd:24]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1283.828 ; gain = 114.531 ; free physical = 26967 ; free virtual = 32086
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1283.828 ; gain = 114.531 ; free physical = 26968 ; free virtual = 32087
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1291.832 ; gain = 122.535 ; free physical = 26968 ; free virtual = 32087
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1299.840 ; gain = 130.543 ; free physical = 26967 ; free virtual = 32086
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Multipliers : 
+	                32x32  Multipliers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module ArmMultiplier 
+Detailed RTL Component Info : 
++---Multipliers : 
+	                32x32  Multipliers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt08/Vivado_WORK/Tutorial/src/ArmMultiplier.vhd:28]
+DSP Report: Generating DSP MUL_64_BITS, operation Mode is: A*B.
+DSP Report: operator MUL_64_BITS is absorbed into DSP MUL_64_BITS.
+DSP Report: operator MUL_64_BITS is absorbed into DSP MUL_64_BITS.
+DSP Report: Generating DSP MUL_64_BITS, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator MUL_64_BITS is absorbed into DSP MUL_64_BITS.
+DSP Report: operator MUL_64_BITS is absorbed into DSP MUL_64_BITS.
+DSP Report: Generating DSP MUL_64_BITS, operation Mode is: A*B.
+DSP Report: operator MUL_64_BITS is absorbed into DSP MUL_64_BITS.
+DSP Report: operator MUL_64_BITS is absorbed into DSP MUL_64_BITS.
+DSP Report: Generating DSP MUL_64_BITS, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator MUL_64_BITS is absorbed into DSP MUL_64_BITS.
+DSP Report: operator MUL_64_BITS is absorbed into DSP MUL_64_BITS.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:28 . Memory (MB): peak = 1407.941 ; gain = 238.645 ; free physical = 26812 ; free virtual = 31931
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping  Report (see note below)
++--------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name   | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++--------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|ArmMultiplier | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ArmMultiplier | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ArmMultiplier | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ArmMultiplier | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++--------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:29 . Memory (MB): peak = 1407.941 ; gain = 238.645 ; free physical = 26811 ; free virtual = 31930
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:29 . Memory (MB): peak = 1407.941 ; gain = 238.645 ; free physical = 26810 ; free virtual = 31929
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:29 . Memory (MB): peak = 1407.941 ; gain = 238.645 ; free physical = 26810 ; free virtual = 31929
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:29 . Memory (MB): peak = 1407.941 ; gain = 238.645 ; free physical = 26810 ; free virtual = 31929
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:29 . Memory (MB): peak = 1407.941 ; gain = 238.645 ; free physical = 26810 ; free virtual = 31929
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:29 . Memory (MB): peak = 1407.941 ; gain = 238.645 ; free physical = 26810 ; free virtual = 31929
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:29 . Memory (MB): peak = 1407.941 ; gain = 238.645 ; free physical = 26810 ; free virtual = 31929
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:29 . Memory (MB): peak = 1407.941 ; gain = 238.645 ; free physical = 26810 ; free virtual = 31929
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |CARRY4  |     4|
+|2     |DSP48E1 |     3|
+|3     |LUT2    |    15|
+|4     |IBUF    |    64|
+|5     |OBUF    |    32|
++------+--------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |   118|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:29 . Memory (MB): peak = 1407.941 ; gain = 238.645 ; free physical = 26810 ; free virtual = 31929
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:29 . Memory (MB): peak = 1407.941 ; gain = 238.645 ; free physical = 26811 ; free virtual = 31930
+Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:29 . Memory (MB): peak = 1407.949 ; gain = 238.645 ; free physical = 26819 ; free virtual = 31938
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 71 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+12 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:31 . Memory (MB): peak = 1492.172 ; gain = 336.246 ; free physical = 26779 ; free virtual = 31898
+INFO: [Common 17-1381] The checkpoint '/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt08/Vivado_WORK/Tutorial/HWP8/HWP8.runs/synth_1/ArmMultiplier.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file ArmMultiplier_utilization_synth.rpt -pb ArmMultiplier_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.15 ; elapsed = 00:00:00.23 . Memory (MB): peak = 1516.184 ; gain = 0.000 ; free physical = 26777 ; free virtual = 31896
+INFO: [Common 17-206] Exiting Vivado at Sun Jul  5 15:51:55 2020...

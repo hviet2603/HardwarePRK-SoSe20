@@ -1,0 +1,271 @@
+/*
+
+Xilinx Vivado v2017.3 (64-bit) [Major: 2017, Minor: 3]
+SW Build: 2018833 on Wed Oct  4 19:58:07 MDT 2017
+IP Build: 2016188 on Wed Oct  4 21:52:56 MDT 2017
+
+Process ID: 9512
+License: Customer
+
+Current time: 	Sun Jul 05 15:44:24 CEST 2020
+Time zone: 	Central European Time (Europe/Berlin)
+
+OS: NAME="Ubuntu"
+OS Version: 4.15.0-109-generic
+OS Architecture: amd64
+Available processors (cores): 32
+
+Display: :10.0
+Screen size: 1560x797
+Screen resolution (DPI): 95
+Available screens: 1
+Available disk space: 6 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	/afs/tu-berlin.de/units/Fak_IV/aes/tools/xilinx/Vivado/2017.3/tps/lnx64/jre
+JVM executable location: 	/afs/tu-berlin.de/units/Fak_IV/aes/tools/xilinx/Vivado/2017.3/tps/lnx64/jre/bin/java
+
+User name: 	vincenthp2603
+User home directory: /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu
+User working directory: /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt08/Vivado_WORK/Tutorial/src
+User country: 	DE
+User language: 	de
+User locale: 	de_DE
+
+RDI_BASEROOT: /afs/tu-berlin.de/units/Fak_IV/aes/tools/xilinx/Vivado
+HDI_APPROOT: /afs/tu-berlin.de/units/Fak_IV/aes/tools/xilinx/Vivado/2017.3
+RDI_DATADIR: /afs/tu-berlin.de/units/Fak_IV/aes/tools/xilinx/Vivado/2017.3/data
+RDI_BINDIR: /afs/tu-berlin.de/units/Fak_IV/aes/tools/xilinx/Vivado/2017.3/bin
+
+User preferences location: /home/users/v/vincenthp2603/irb-ubuntu/.Xilinx/Vivado
+Vivado preferences directory: /home/users/v/vincenthp2603/irb-ubuntu/.Xilinx/Vivado/2017.3/vivado.xml
+Vivado layouts directory: /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/.Xilinx/Vivado/2017.3/layouts
+PlanAhead jar file location: 	/afs/tu-berlin.de/units/Fak_IV/aes/tools/xilinx/Vivado/2017.3/lib/classes/planAhead.jar
+Vivado log file location: 	/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt08/Vivado_WORK/Tutorial/src/vivado.log
+Vivado journal file location: 	/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt08/Vivado_WORK/Tutorial/src/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-9512-kurrat-ubu
+
+GUI allocated memory:	121 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 902 MB
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// [GUI Memory]: 38 MB (+37425kb) [00:00:26]
+// [Engine Memory]: 871 MB (+762313kb) [00:00:26]
+// Tcl Message: start_gui 
+// [GUI Memory]: 42 MB (+2473kb) [00:00:30]
+// [Engine Memory]: 919 MB (+3936kb) [00:00:30]
+// HMemoryUtils.trashcanNow. Engine heap size: 919 MB. GUI used memory: 28 MB. Current time: 7/5/20 3:44:26 PM CEST
+selectButton(PAResourceEtoH.GettingStartedView_CREATE_NEW_PROJECT, "Create Project"); // x (w, cl)
+// Run Command: PAResourceCommand.PACommandNames_NEW_PROJECT
+// [GUI Memory]: 46 MB (+1888kb) [00:00:33]
+// [GUI Memory]: 55 MB (+6470kb) [00:00:33]
+// g (cl): New Project: addNotify
+// [Engine Memory]: 1,004 MB (+41131kb) [00:00:36]
+selectButton("NEXT", "Next >"); // JButton (h, g)
+setText(PAResourceOtoP.ProjectNameChooser_PROJECT_NAME, "HWP8"); // X (N, g)
+selectButton(PAResourceOtoP.ProjectNameChooser_CHOOSE_PROJECT_LOCATION, (String) null); // q (af, g)
+// [GUI Memory]: 58 MB (+398kb) [00:03:08]
+// Elapsed time: 149 seconds
+setFolderChooser("/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt08/Vivado_WORK/Tutorial");
+selectButton("NEXT", "Next >"); // JButton (h, g)
+selectButton("NEXT", "Next >"); // JButton (h, g)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_OR_CREATE_SOURCE_FILE, "Add"); // B (f, g)
+selectMenuItem(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files..."); // ac (ai, g)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,036 MB. GUI used memory: 34 MB. Current time: 7/5/20 3:47:26 PM CEST
+// Elapsed time: 11 seconds
+String[] filenames31467 = {"/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt08/Vivado_WORK/Tutorial/src/ArmALU.vhd", "/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt08/Vivado_WORK/Tutorial/src/ArmMultiplier.vhd"};
+setFileChooser(filenames31467);
+selectButton("NEXT", "Next >"); // JButton (h, g)
+selectButton("NEXT", "Next >"); // JButton (h, g)
+selectComboBox(PAResourceOtoP.PartChooser_FAMILY_CHOOSER, "Artix-7", 1); // aC (N, g)
+selectComboBox(PAResourceOtoP.PartChooser_PART_PACKAGE_CHOOSER, "cpg236", 1); // au (N, g)
+// [GUI Memory]: 67 MB (+6020kb) [00:03:51]
+selectComboBox(PAResourceOtoP.PartChooser_PART_SPEED_CHOOSER, "-1", 1); // av (N, g)
+selectTable(PAResourceOtoP.PartChooser_PARTS, "xc7a15tcpg236-1 ; 236 ; 106 ; 10400 ; 20800 ; 25 ; 0 ; 45 ; 2 ; 2 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 1 ; 5 ;  ;  ;  ;  ; 0.95 ; 0.95 ; 1.05", 0, "10400", 3); // ah (O, g)
+selectTable(PAResourceOtoP.PartChooser_PARTS, "xc7a35tcpg236-1 ; 236 ; 106 ; 20800 ; 41600 ; 50 ; 0 ; 90 ; 2 ; 2 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 1 ; 5 ;  ;  ;  ;  ; 0.95 ; 0.95 ; 1.05", 1, "0", 6); // ah (O, g)
+selectButton("NEXT", "Next >"); // JButton (h, g)
+// bs (g):  Create Project : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// Tcl Message: create_project HWP8 /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt08/Vivado_WORK/Tutorial/HWP8 -part xc7a35tcpg236-1 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: PROJECT_NEW
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/afs/tu-berlin.de/units/Fak_IV/aes/tools/xilinx/Vivado/2017.3/data/ip'. 
+// [Engine Memory]: 1,055 MB (+378kb) [00:04:08]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// [GUI Memory]: 75 MB (+5083kb) [00:04:09]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: create_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 6224.977 ; gain = 12.477 ; free physical = 27271 ; free virtual = 32328 
+// TclEventType: PROJECT_CHANGE
+// Tcl Message: set_property target_language VHDL [current_project] 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse {/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt08/Vivado_WORK/Tutorial/src/ArmALU.vhd /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt08/Vivado_WORK/Tutorial/src/ArmMultiplier.vhd} 
+// Elapsed time: 11 seconds
+selectButton("FINISH", "Finish"); // JButton (h, g)
+// 'g' command handler elapsed time: 217 seconds
+dismissDialog("Create Project"); // bs (g)
+dismissDialog("New Project"); // g (cl)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,064 MB. GUI used memory: 40 MB. Current time: 7/5/20 3:48:06 PM CEST
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 0); // B (D, cl)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0); // B (D, cl)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [GUI Memory]: 83 MB (+4980kb) [00:04:20]
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// [Engine Memory]: 1,115 MB (+7597kb) [00:04:22]
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// PAPropertyPanels.initPanels (ArmALU.vhd) elapsed time: 0.2s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ArmALU(behave) (ArmALU.vhd)]", 1, false); // B (D, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ArmALU(behave) (ArmALU.vhd)]", 1, false, false, false, false, false, true); // B (D, cl) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 1,127 MB. GUI used memory: 44 MB. Current time: 7/5/20 3:48:21 PM CEST
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // u (O, cl)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator]", 1); // u (O, cl)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// f (cl): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bs (cl):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cl)
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs synth_1 -jobs 2 
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Sun Jul  5 15:48:34 2020] Launched synth_1... Run output will be captured here: /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt08/Vivado_WORK/Tutorial/HWP8/HWP8.runs/synth_1/runme.log 
+// 'k' command handler elapsed time: 3 seconds
+dismissDialog("Starting Design Runs"); // bs (cl)
+// TclEventType: RUN_FAILED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 2000 ms.
+// ah (cl): Synthesis Failed: addNotify
+// Elapsed time: 27 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // ah (cl)
+// Elapsed time: 11 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0, true); // B (D, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0, true, false, false, false, true, false); // B (D, cl) - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // Z (ai, cl)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // Z (ai, cl)
+selectMenuItem(PAResourceCommand.PACommandNames_ADD_SOURCES, "Add Sources..."); // ac (ai, cl)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cl): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (h, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a (C, c)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,139 MB. GUI used memory: 42 MB. Current time: 7/5/20 3:49:21 PM CEST
+// Elapsed time: 10 seconds
+String[] filenames16706 = {"/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt08/Vivado_WORK/Tutorial/src/ArmConfiguration.vhd", "/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt08/Vivado_WORK/Tutorial/src/ArmFilePaths.vhd", "/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt08/Vivado_WORK/Tutorial/src/ArmTypes.vhd"};
+setFileChooser(filenames16706);
+selectButton("FINISH", "Finish"); // JButton (h, c)
+// 'h' command handler elapsed time: 15 seconds
+dismissDialog("Add Sources"); // c (cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse {/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt08/Vivado_WORK/Tutorial/src/ArmConfiguration.vhd /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt08/Vivado_WORK/Tutorial/src/ArmTypes.vhd /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt08/Vivado_WORK/Tutorial/src/ArmFilePaths.vhd} 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// [Engine Memory]: 1,172 MB (+1646kb) [00:05:42]
+// TclEventType: DG_GRAPH_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 1,172 MB. GUI used memory: 42 MB. Current time: 7/5/20 3:49:41 PM CEST
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // u (O, cl)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bs (cl):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cl): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bs (cl):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cl)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 -jobs 2 
+// Tcl Message: [Sun Jul  5 15:49:43 2020] Launched synth_1... Run output will be captured here: /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt08/Vivado_WORK/Tutorial/HWP8/HWP8.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bs (cl)
+selectTab((HResource) null, (HResource) null, "Tcl Console", 0); // aF (Q, cl)
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aF (Q, cl)
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ExpRunMgr Pending Runs Timer) is taking too long to process. Increasing delay to 3000 ms.
+// [GUI Memory]: 88 MB (+124kb) [00:06:38]
+// ah (cl): Synthesis Completed: addNotify
+// Elapsed time: 45 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_REPORTS_WINDOW, "View Reports"); // a (N, ah)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_REPORTS_WINDOW
+dismissDialog("Synthesis Completed"); // ah (cl)
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aF (Q, cl)
+selectTab((HResource) null, (HResource) null, "Log", 2); // aF (Q, cl)
+// [GUI Memory]: 93 MB (+555kb) [00:06:52]
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aF (Q, cl)
+selectCheckBox(PAResourceItoN.MsgView_INFORMATION_MESSAGES, (String) null, true); // g (aQ, cl): TRUE
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ArmMultiplier(behavioral) (ArmMultiplier.vhd)]", 2, false); // B (D, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ArmMultiplier(behavioral) (ArmMultiplier.vhd)]", 2, false, false, false, false, true, false); // B (D, cl) - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // Z (ai, cl)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // Z (ai, cl)
+selectMenuItem(PAResourceCommand.PACommandNames_SET_AS_TOP, "Set as Top"); // ac (ai, cl)
+// Run Command: PAResourceCommand.PACommandNames_SET_AS_TOP
+// [GUI Memory]: 98 MB (+355kb) [00:07:04]
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: set_property top ArmMultiplier [current_fileset] 
+// TclEventType: DG_GRAPH_STALE
+// bs (cl):  Set as Top : addNotify
+dismissDialog("Set as Top"); // bs (cl)
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking too long to process. Increasing delay to 3000 ms.
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // u (O, cl)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bs (cl):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,206 MB. GUI used memory: 43 MB. Current time: 7/5/20 3:51:11 PM CEST
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (cl): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bs (cl):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cl)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 -jobs 2 
+// Tcl Message: [Sun Jul  5 15:51:13 2020] Launched synth_1... Run output will be captured here: /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt08/Vivado_WORK/Tutorial/HWP8/HWP8.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bs (cl)
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ExpRunMgr Pending Runs Timer) is taking too long to process. Increasing delay to 4000 ms.
+// ah (cl): Synthesis Completed: addNotify
+// Elapsed time: 81 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Synthesis Completed"); // ah (cl)
