@@ -1,0 +1,462 @@
+
+*** Running vivado
+    with args -log ArmDataPath.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ArmDataPath.tcl
+
+
+****** Vivado v2017.3 (64-bit)
+  **** SW Build 2018833 on Wed Oct  4 19:58:07 MDT 2017
+  **** IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source ArmDataPath.tcl -notrace
+Command: synth_design -top ArmDataPath -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 28671 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1241.461 ; gain = 72.000 ; free physical = 26479 ; free virtual = 32414
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'ArmDataPath' [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt09/Vivado_WORK/Tutorial/src/ArmDataPath.vhd:149]
+INFO: [Synth 8-3491] module 'ArmInstructionAddressRegister' declared at '/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt09/Vivado_WORK/Tutorial/src/ArmInstructionAddressRegister.vhd:16' bound to instance 'ArmInstructionAddressRegister_Instance' of component 'ArmInstructionAddressRegister' [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt09/Vivado_WORK/Tutorial/src/ArmDataPath.vhd:373]
+INFO: [Synth 8-638] synthesizing module 'ArmInstructionAddressRegister' [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt09/Vivado_WORK/Tutorial/src/ArmInstructionAddressRegister.vhd:38]
+	Parameter ARB_ADDR_WIDTH bound to: 3 - type: integer 
+	Parameter ARB_DATA_WIDTH bound to: 30 - type: integer 
+INFO: [Synth 8-3491] module 'ArmRamBuffer' declared at '/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt09/Vivado_WORK/Tutorial/src/ArmRamBuffer.vhd:13' bound to instance 'IAR_HISTORY_BUFFER' of component 'ArmRamBuffer' [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt09/Vivado_WORK/Tutorial/src/ArmInstructionAddressRegister.vhd:61]
+INFO: [Synth 8-638] synthesizing module 'ArmRamBuffer' [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt09/Vivado_WORK/Tutorial/src/ArmRamBuffer.vhd:27]
+	Parameter ARB_ADDR_WIDTH bound to: 3 - type: integer 
+	Parameter ARB_DATA_WIDTH bound to: 30 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'ArmRamBuffer' (1#1) [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt09/Vivado_WORK/Tutorial/src/ArmRamBuffer.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'ArmInstructionAddressRegister' (2#1) [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt09/Vivado_WORK/Tutorial/src/ArmInstructionAddressRegister.vhd:38]
+INFO: [Synth 8-3491] module 'ArmRegfile' declared at '/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt09/Vivado_WORK/Tutorial/src/ArmRegfile.vhd:18' bound to instance 'Regfile_Instance' of component 'ArmRegfile' [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt09/Vivado_WORK/Tutorial/src/ArmDataPath.vhd:403]
+INFO: [Synth 8-638] synthesizing module 'ArmRegfile' [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt09/Vivado_WORK/Tutorial/src/ArmRegfile.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'ArmRegfile' (3#1) [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt09/Vivado_WORK/Tutorial/src/ArmRegfile.vhd:43]
+INFO: [Synth 8-637] synthesizing blackbox instance 'ArmProgramStatusRegister_Instance' of component 'ArmProgramStatusRegister' [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt09/Vivado_WORK/Tutorial/src/ArmDataPath.vhd:426]
+INFO: [Synth 8-3491] module 'ArmALU' declared at '/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt09/Vivado_WORK/Tutorial/src/ArmALU.vhd:14' bound to instance 'ArmALU_Instance' of component 'ArmALU' [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt09/Vivado_WORK/Tutorial/src/ArmDataPath.vhd:505]
+INFO: [Synth 8-638] synthesizing module 'ArmALU' [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt09/Vivado_WORK/Tutorial/src/ArmALU.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'ArmALU' (4#1) [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt09/Vivado_WORK/Tutorial/src/ArmALU.vhd:24]
+INFO: [Synth 8-3491] module 'ArmMultiplier' declared at '/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt09/Vivado_WORK/Tutorial/src/ArmMultiplier.vhd:16' bound to instance 'ArmMultiplier_Instance' of component 'ArmMultiplier' [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt09/Vivado_WORK/Tutorial/src/ArmDataPath.vhd:515]
+INFO: [Synth 8-638] synthesizing module 'ArmMultiplier' [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt09/Vivado_WORK/Tutorial/src/ArmMultiplier.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'ArmMultiplier' (5#1) [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt09/Vivado_WORK/Tutorial/src/ArmMultiplier.vhd:24]
+INFO: [Synth 8-3491] module 'ArmShifter' declared at '/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt09/Vivado_WORK/Tutorial/src/ArmShifter.vhd:13' bound to instance 'ArmShifter_Instance' of component 'ArmShifter' [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt09/Vivado_WORK/Tutorial/src/ArmDataPath.vhd:522]
+INFO: [Synth 8-638] synthesizing module 'ArmShifter' [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt09/Vivado_WORK/Tutorial/src/ArmShifter.vhd:25]
+INFO: [Synth 8-638] synthesizing module 'ArmBarrelShifter' [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt09/Vivado_WORK/Tutorial/src/ArmBarrelShifter.vhd:34]
+	Parameter OPERAND_WIDTH bound to: 32 - type: integer 
+	Parameter SHIFTER_DEPTH bound to: 5 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'MUX' [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt09/Vivado_WORK/Tutorial/src/MUX.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'MUX' (6#1) [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt09/Vivado_WORK/Tutorial/src/MUX.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'ArmBarrelShifter' (7#1) [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt09/Vivado_WORK/Tutorial/src/ArmBarrelShifter.vhd:34]
+INFO: [Synth 8-226] default block is never used [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt09/Vivado_WORK/Tutorial/src/ArmShifter.vhd:48]
+INFO: [Synth 8-256] done synthesizing module 'ArmShifter' (8#1) [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt09/Vivado_WORK/Tutorial/src/ArmShifter.vhd:25]
+INFO: [Synth 8-3491] module 'ArmDataReplication' declared at '/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt09/Vivado_WORK/Tutorial/src/ArmDataReplication.vhd:21' bound to instance 'ArmDataReplication_Instance' of component 'ArmDataReplication' [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt09/Vivado_WORK/Tutorial/src/ArmDataPath.vhd:618]
+INFO: [Synth 8-638] synthesizing module 'ArmDataReplication' [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt09/Vivado_WORK/Tutorial/src/ArmDataReplication.vhd:28]
+INFO: [Synth 8-256] done synthesizing module 'ArmDataReplication' (9#1) [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt09/Vivado_WORK/Tutorial/src/ArmDataReplication.vhd:28]
+INFO: [Synth 8-637] synthesizing blackbox instance 'ArmWordManipulation_Instance' of component 'ArmWordManipulation' [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt09/Vivado_WORK/Tutorial/src/ArmDataPath.vhd:685]
+INFO: [Synth 8-256] done synthesizing module 'ArmDataPath' (10#1) [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt09/Vivado_WORK/Tutorial/src/ArmDataPath.vhd:149]
+WARNING: [Synth 8-3331] design ArmDataPath has unconnected port DPA_WB_FBRANCH_MUX_CTRL
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1285.992 ; gain = 116.531 ; free physical = 26484 ; free virtual = 32420
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1285.992 ; gain = 116.531 ; free physical = 26485 ; free virtual = 32422
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1293.996 ; gain = 124.535 ; free physical = 26485 ; free virtual = 32421
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element ADDR_reg was removed.  [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt09/Vivado_WORK/Tutorial/src/ArmInstructionAddressRegister.vhd:89]
+INFO: [Synth 8-5546] ROM "reg_reg[0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "reg_reg[1]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "reg_reg[2]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "reg_reg[3]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "reg_reg[4]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "reg_reg[5]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "reg_reg[6]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "reg_reg[7]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "reg_reg[8]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "reg_reg[9]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "reg_reg[10]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "reg_reg[11]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "reg_reg[12]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "reg_reg[13]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "reg_reg[14]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "reg_reg[16]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "reg_reg[17]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "reg_reg[18]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "reg_reg[19]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "reg_reg[20]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "reg_reg[21]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "reg_reg[22]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "reg_reg[23]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "reg_reg[24]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "reg_reg[25]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "reg_reg[26]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "reg_reg[27]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "reg_reg[28]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "reg_reg[29]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "reg_reg[30]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ALU_CC_OUT" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "ABS_MUX_CTRL" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ABS_ARITH_SHIFT" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1310.012 ; gain = 140.551 ; free physical = 26445 ; free virtual = 32381
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     33 Bit       Adders := 2     
+	   2 Input     33 Bit       Adders := 2     
+	   4 Input     33 Bit       Adders := 2     
+	   2 Input     32 Bit       Adders := 2     
+	   2 Input     30 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
++---XORs : 
+	   2 Input     33 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 40    
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
++---Multipliers : 
+	                32x32  Multipliers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 46    
+	   4 Input     32 Bit        Muxes := 3     
+	   2 Input     30 Bit        Muxes := 2     
+	   5 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 4     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 104   
+	   4 Input      1 Bit        Muxes := 162   
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module ArmDataPath 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 9     
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 7     
+	   4 Input     32 Bit        Muxes := 3     
+	   2 Input     30 Bit        Muxes := 1     
+	   5 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 2     
+Module ArmInstructionAddressRegister 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     30 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     30 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module ArmRegfile 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 31    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 37    
+	   2 Input      1 Bit        Muxes := 94    
+Module ArmDataReplication 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+Module ArmALU 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     33 Bit       Adders := 2     
+	   2 Input     33 Bit       Adders := 2     
+	   4 Input     33 Bit       Adders := 2     
++---XORs : 
+	   2 Input     33 Bit         XORs := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module ArmMultiplier 
+Detailed RTL Component Info : 
++---Multipliers : 
+	                32x32  Multipliers := 1     
+Module MUX 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      1 Bit        Muxes := 1     
+Module ArmBarrelShifter 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+Module ArmShifter 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+	   4 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element ADDR_reg was removed.  [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt09/Vivado_WORK/Tutorial/src/ArmInstructionAddressRegister.vhd:89]
+INFO: [Synth 8-5545] ROM "ALU_CC_OUT" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt09/Vivado_WORK/Tutorial/src/ArmMultiplier.vhd:28]
+WARNING: [Synth 8-6014] Unused sequential element MEM_ADDR_REG_reg was removed.  [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt09/Vivado_WORK/Tutorial/src/ArmDataPath.vhd:633]
+DSP Report: Generating DSP computation.ArmMultiplier_Instance/MUL_64_BITS, operation Mode is: A*B.
+DSP Report: operator computation.ArmMultiplier_Instance/MUL_64_BITS is absorbed into DSP computation.ArmMultiplier_Instance/MUL_64_BITS.
+DSP Report: operator computation.ArmMultiplier_Instance/MUL_64_BITS is absorbed into DSP computation.ArmMultiplier_Instance/MUL_64_BITS.
+DSP Report: Generating DSP computation.ArmMultiplier_Instance/MUL_64_BITS, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator computation.ArmMultiplier_Instance/MUL_64_BITS is absorbed into DSP computation.ArmMultiplier_Instance/MUL_64_BITS.
+DSP Report: operator computation.ArmMultiplier_Instance/MUL_64_BITS is absorbed into DSP computation.ArmMultiplier_Instance/MUL_64_BITS.
+DSP Report: Generating DSP computation.ArmMultiplier_Instance/MUL_64_BITS, operation Mode is: A*B.
+DSP Report: operator computation.ArmMultiplier_Instance/MUL_64_BITS is absorbed into DSP computation.ArmMultiplier_Instance/MUL_64_BITS.
+DSP Report: operator computation.ArmMultiplier_Instance/MUL_64_BITS is absorbed into DSP computation.ArmMultiplier_Instance/MUL_64_BITS.
+DSP Report: Generating DSP computation.ArmMultiplier_Instance/MUL_64_BITS, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator computation.ArmMultiplier_Instance/MUL_64_BITS is absorbed into DSP computation.ArmMultiplier_Instance/MUL_64_BITS.
+DSP Report: operator computation.ArmMultiplier_Instance/MUL_64_BITS is absorbed into DSP computation.ArmMultiplier_Instance/MUL_64_BITS.
+WARNING: [Synth 8-3331] design ArmDataPath has unconnected port DPA_WB_FBRANCH_MUX_CTRL
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:43 . Memory (MB): peak = 1498.098 ; gain = 328.637 ; free physical = 26271 ; free virtual = 32207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping  Report (see note below)
++---------------------------------------+--------------------------------+-----------+----------------------+-----------------+
+|Module Name                            | RTL Object                     | Inference | Size (Depth x Width) | Primitives      | 
++---------------------------------------+--------------------------------+-----------+----------------------+-----------------+
+|ArmInstructionAddressRegister_Instance | IAR_HISTORY_BUFFER/ARB_RAM_reg | Implied   | 8 x 30               | RAM16X1S x 30   | 
++---------------------------------------+--------------------------------+-----------+----------------------+-----------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|ArmDataPath | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ArmDataPath | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ArmDataPath | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ArmDataPath | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:44 . Memory (MB): peak = 1498.098 ; gain = 328.637 ; free physical = 26271 ; free virtual = 32207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping  Report
++---------------------------------------+--------------------------------+-----------+----------------------+-----------------+
+|Module Name                            | RTL Object                     | Inference | Size (Depth x Width) | Primitives      | 
++---------------------------------------+--------------------------------+-----------+----------------------+-----------------+
+|ArmInstructionAddressRegister_Instance | IAR_HISTORY_BUFFER/ARB_RAM_reg | Implied   | 8 x 30               | RAM16X1S x 30   | 
++---------------------------------------+--------------------------------+-----------+----------------------+-----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:34 ; elapsed = 00:00:46 . Memory (MB): peak = 1498.098 ; gain = 328.637 ; free physical = 26269 ; free virtual = 32205
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:35 ; elapsed = 00:00:46 . Memory (MB): peak = 1498.098 ; gain = 328.637 ; free physical = 26270 ; free virtual = 32206
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:35 ; elapsed = 00:00:47 . Memory (MB): peak = 1498.098 ; gain = 328.637 ; free physical = 26270 ; free virtual = 32206
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:00:47 . Memory (MB): peak = 1498.098 ; gain = 328.637 ; free physical = 26270 ; free virtual = 32206
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:00:47 . Memory (MB): peak = 1498.098 ; gain = 328.637 ; free physical = 26270 ; free virtual = 32206
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:36 ; elapsed = 00:00:48 . Memory (MB): peak = 1498.098 ; gain = 328.637 ; free physical = 26270 ; free virtual = 32206
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:36 ; elapsed = 00:00:48 . Memory (MB): peak = 1498.098 ; gain = 328.637 ; free physical = 26270 ; free virtual = 32206
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+-------------------------+----------+
+|      |BlackBox name            |Instances |
++------+-------------------------+----------+
+|1     |ArmProgramStatusRegister |         1|
+|2     |ArmWordManipulation      |         1|
++------+-------------------------+----------+
+
+Report Cell Usage: 
++------+--------------------------------+------+
+|      |Cell                            |Count |
++------+--------------------------------+------+
+|1     |ArmProgramStatusRegister_bbox_0 |     1|
+|2     |ArmWordManipulation_bbox_1      |     1|
+|3     |BUFG                            |     2|
+|4     |CARRY4                          |    82|
+|5     |DSP48E1                         |     3|
+|6     |LUT1                            |     3|
+|7     |LUT2                            |   212|
+|8     |LUT3                            |   212|
+|9     |LUT4                            |    59|
+|10    |LUT5                            |   402|
+|11    |LUT6                            |  2416|
+|12    |MUXF7                           |   252|
+|13    |MUXF8                           |    64|
+|14    |RAM16X1S                        |    30|
+|15    |FDRE                            |  1326|
+|16    |IBUF                            |   168|
+|17    |OBUF                            |   126|
++------+--------------------------------+------+
+
+Report Instance Areas: 
++------+-----------------------------------------+------------------------------+------+
+|      |Instance                                 |Module                        |Cells |
++------+-----------------------------------------+------------------------------+------+
+|1     |top                                      |                              |  5453|
+|2     |  ArmInstructionAddressRegister_Instance |ArmInstructionAddressRegister |   169|
+|3     |    IAR_HISTORY_BUFFER                   |ArmRamBuffer                  |    91|
+|4     |  Regfile_Instance                       |ArmRegfile                    |  3237|
+|5     |  \computation.ArmMultiplier_Instance    |ArmMultiplier                 |   603|
++------+-----------------------------------------+------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:36 ; elapsed = 00:00:48 . Memory (MB): peak = 1498.098 ; gain = 328.637 ; free physical = 26270 ; free virtual = 32206
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 5 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:36 ; elapsed = 00:00:48 . Memory (MB): peak = 1498.098 ; gain = 328.637 ; free physical = 26272 ; free virtual = 32208
+Synthesis Optimization Complete : Time (s): cpu = 00:00:36 ; elapsed = 00:00:48 . Memory (MB): peak = 1498.105 ; gain = 328.637 ; free physical = 26278 ; free virtual = 32214
+INFO: [Project 1-571] Translating synthesized netlist
+Parsing EDIF File [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt09/Vivado_WORK/Tutorial/src/ArmProgramStatusRegister.edf]
+Finished Parsing EDIF File [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt09/Vivado_WORK/Tutorial/src/ArmProgramStatusRegister.edf]
+Parsing EDIF File [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt09/Vivado_WORK/Tutorial/src/ArmWordManipulation.edf]
+Finished Parsing EDIF File [/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt09/Vivado_WORK/Tutorial/src/ArmWordManipulation.edf]
+INFO: [Netlist 29-17] Analyzing 599 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.3.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 30 instances were transformed.
+  RAM16X1S => RAM32X1S (RAMS32): 30 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+75 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:51 . Memory (MB): peak = 1615.332 ; gain = 459.242 ; free physical = 26270 ; free virtual = 32206
+INFO: [Common 17-1381] The checkpoint '/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt09/Vivado_WORK/Tutorial/HWP9/HWP9.runs/synth_1/ArmDataPath.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file ArmDataPath_utilization_synth.rpt -pb ArmDataPath_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.26 . Memory (MB): peak = 1639.344 ; gain = 0.000 ; free physical = 26268 ; free virtual = 32206
+INFO: [Common 17-206] Exiting Vivado at Sat Jul 11 02:11:50 2020...
