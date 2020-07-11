@@ -113,6 +113,7 @@ architecture behave of ArmBypassCtrl is
 	signal C0_equal_A2 : boolean;
 	signal C0_equal_B2 : boolean;
 
+	signal REN_A0, REN_B0, REN_C0:std_logic;
 begin
 
 	A0_equal_A1 <= true when ADDR_A0 = ADDR_A1 else false;
@@ -129,9 +130,41 @@ begin
 	C0_equal_B1 <= true when ADDR_C0 = ADDR_B1 else false;
 	C0_equal_A2 <= true when ADDR_C0 = ADDR_A2 else false;
 	C0_equal_B2 <= true when ADDR_C0 = ADDR_B2 else false;	
+	
+	REN_A0 <= ABC_INST0_REGS_USED(0);
+	REN_B0 <= ABC_INST0_REGS_USED(1);
+	REN_C0 <= ABC_INST0_REGS_USED(2);
 
+	ABC_INST0_OPA_BYPASS_MUX_CTRL <= "01" when A0_equal_A1 and REN_A0 = '1' and WEN_A1 = '1' else --MEM_RES
+					 "10" when A0_equal_A2 and REN_A0 = '1' and WEN_A2 = '1' else --WB_RES
+					 "11" when A0_equal_B2 and REN_A0 = '1' and WEN_B2 = '1' else --WB_LOAD
+					 "00";
 
+	ABC_INST0_OPB_BYPASS_MUX_CTRL <= "01" when B0_equal_A1 and REN_B0 = '1' and WEN_A1 = '1' else --MEM_RES
+					 "10" when B0_equal_A2 and REN_B0 = '1' and WEN_A2 = '1' else --WB_RES
+					 "11" when B0_equal_B2 and REN_B0 = '1' and WEN_B2 = '1' else --WB_LOAD
+					 "00";
 
+	ABC_INST0_OPC_BYPASS_MUX_CTRL <= "01" when C0_equal_A1 and REN_C0 = '1' and WEN_A1 = '1' else --MEM_RES
+					 "10" when C0_equal_A2 and REN_C0 = '1' and WEN_A2 = '1' else --WB_RES
+					 "11" when C0_equal_B2 and REN_C0 = '1' and WEN_B2 = '1' else --WB_LOAD
+					 "00";
 
+	ABC_LOAD_USE_CONFLICT <= '1' when A0_equal_B1 and not A0_equal_A1 and not A0_equal_A2 and not A0_equal_B2 and WEN_B1 = '1' and REN_A0 = '1' else
+				 '1' when B0_equal_B1 and not B0_equal_A1 and not B0_equal_A2 and not B0_equal_B2 and WEN_B1 = '1' and REN_B0 = '1' else
+				 '1' when C0_equal_B1 and not C0_equal_A1 and not C0_equal_A2 and not C0_equal_B2 and WEN_B1 = '1' and REN_C0 = '1' else
+				 '0';
+
+	--shift: fast mit ABC_INST0_OPC_BYPASS_MUX_CTRL identisch.....ABC_INST0_SHIFT_REG_USED: ob die Schiebeweite wirklich aus Registerport C stammt oder ein Direktoperand ist. 
+	ABC_INST0_SHIFT_BYPASS_MUX_CTRL <= "01" when C0_equal_A1 and REN_C0 = '1' and WEN_A1 = '1' and ABC_INST0_SHIFT_REG_USED = '1' else
+					   "10" when C0_equal_A2 and REN_C0 = '1' and WEN_A2 = '1' and ABC_INST0_SHIFT_REG_USED = '1' else
+					   "11" when C0_equal_B2 and REN_C0 = '1' and WEN_B2 = '1' and ABC_INST0_SHIFT_REG_USED = '1' else
+					   "00";
+
+	ABC_INST0_CC_BYPASS_MUX_CTRL <= "01" when PSR_SET_CC_1 = '1' and PSR_EN_1 = '1' else
+					"10" when PSR_SET_CC_2 = '1' and PSR_EN_2 = '1' else
+					"00";
+
+	
 
 end architecture behave;
