@@ -151,6 +151,11 @@ begin
 					 "11" when C0_equal_B2 and REN_C0 = '1' and WEN_B2 = '1' else --WB_LOAD
 					 "00";
 
+	--ABC_LOAD_USE_CONFLICT <= '1' when A0_equal_B1 and not A0_equal_A1 and not A0_equal_A2 and not A0_equal_B2 and WEN_B1 = '1' and REN_A0 = '1' else
+	--			 '1' when B0_equal_B1 and not B0_equal_A1 and not B0_equal_A2 and not B0_equal_B2 and WEN_B1 = '1' and REN_B0 = '1' else
+	--			 '1' when C0_equal_B1 and not C0_equal_A1 and not C0_equal_A2 and not C0_equal_B2 and WEN_B1 = '1' and REN_C0 = '1' else
+	--			 '0';
+
 	ABC_LOAD_USE_CONFLICT <= '1' when A0_equal_B1 and not A0_equal_A1 and WEN_B1 = '1' and REN_A0 = '1' else
 				 '1' when B0_equal_B1 and WEN_B1 = '1' and not B0_equal_A1 and REN_B0 = '1' else
 				 '1' when C0_equal_B1 and WEN_B1 = '1' and not C0_equal_A1 and REN_C0 = '1' else
