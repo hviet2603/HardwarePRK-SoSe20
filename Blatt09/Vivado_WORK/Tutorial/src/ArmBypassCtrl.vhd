@@ -130,8 +130,13 @@ begin
 	C0_equal_A2 <= true when ADDR_C0 = ADDR_A2 else false;
 	C0_equal_B2 <= true when ADDR_C0 = ADDR_B2 else false;	
 
-
-
+	ABC_INST0_OPA_BYPASS_MUX_CTRL <= "10" when A0_equal_A2 = true and A0_equal_A1 = false else -- WB_RES
+					  "11" when A0_equal_B2 = true else -- WB_LOAD
+					  "01" when A0_equal_A1 = true else -- MEM_RES
+					  "00";
+					  
+	ABC_LOAD_USE_CONFLICT <= '1' when A0_equal_B1 else
+				  '0';
 
 
 end architecture behave;
