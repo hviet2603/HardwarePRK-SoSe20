@@ -27,7 +27,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log ArmDataPath.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ArmDataPath.tcl" );
+         "-log ArmBypassCtrl.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ArmBypassCtrl.tcl" );
 
 
 

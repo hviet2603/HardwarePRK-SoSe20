@@ -1,0 +1,37 @@
+#-----------------------------------------------------------
+# Vivado v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:07 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Sun Jun 28 00:09:11 2020
+# Process ID: 8836
+# Current directory: /afs/tu-berlin.de/home/h/hungbui7698/irb-ubuntu/HWP/HardwarePRK-SoSe20
+# Command line: vivado
+# Log file: /afs/tu-berlin.de/home/h/hungbui7698/irb-ubuntu/HWP/HardwarePRK-SoSe20/vivado.log
+# Journal file: /afs/tu-berlin.de/home/h/hungbui7698/irb-ubuntu/HWP/HardwarePRK-SoSe20/vivado.jou
+#-----------------------------------------------------------
+start_gui
+create_project project_1 /afs/tu-berlin.de/home/h/hungbui7698/irb-ubuntu/HWP/HardwarePRK-SoSe20/project_1 -part xc7a35tcpg236-1
+set_property target_language VHDL [current_project]
+add_files -norecurse {/afs/tu-berlin.de/home/h/hungbui7698/irb-ubuntu/HWP/HardwarePRK-SoSe20/Blatt07/Vivado_WORK/Tutorial/src/ArmConfiguration.vhd /afs/tu-berlin.de/home/h/hungbui7698/irb-ubuntu/HWP/HardwarePRK-SoSe20/Blatt07/Vivado_WORK/Tutorial/src/ArmTypes.vhd /afs/tu-berlin.de/home/h/hungbui7698/irb-ubuntu/HWP/HardwarePRK-SoSe20/Blatt07/Vivado_WORK/Tutorial/src/ArmBarrelShifter.vhd /afs/tu-berlin.de/home/h/hungbui7698/irb-ubuntu/HWP/HardwarePRK-SoSe20/Blatt07/Vivado_WORK/Tutorial/src/MUX.vhd /afs/tu-berlin.de/home/h/hungbui7698/irb-ubuntu/HWP/HardwarePRK-SoSe20/Blatt07/Vivado_WORK/Tutorial/src/ArmBarrelShifter_HILEVEL.vhd /afs/tu-berlin.de/home/h/hungbui7698/irb-ubuntu/HWP/HardwarePRK-SoSe20/Blatt07/Vivado_WORK/Tutorial/src/ArmFilePaths.vhd /afs/tu-berlin.de/home/h/hungbui7698/irb-ubuntu/HWP/HardwarePRK-SoSe20/Blatt07/Vivado_WORK/Tutorial/src/ArmShifter.vhd}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top ArmBarrelShifter [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 16
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+wait_on_run synth_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top ArmShifter [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+wait_on_run synth_1

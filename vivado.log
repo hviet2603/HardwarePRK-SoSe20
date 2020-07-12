@@ -2,37 +2,29 @@
 # Vivado v2017.3 (64-bit)
 # SW Build 2018833 on Wed Oct  4 19:58:07 MDT 2017
 # IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
-# Start of session at: Sun Jun 28 00:09:11 2020
-# Process ID: 8836
-# Current directory: /afs/tu-berlin.de/home/h/hungbui7698/irb-ubuntu/HWP/HardwarePRK-SoSe20
+# Start of session at: Sun Jul 12 18:42:26 2020
+# Process ID: 6820
+# Current directory: /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20
 # Command line: vivado
-# Log file: /afs/tu-berlin.de/home/h/hungbui7698/irb-ubuntu/HWP/HardwarePRK-SoSe20/vivado.log
-# Journal file: /afs/tu-berlin.de/home/h/hungbui7698/irb-ubuntu/HWP/HardwarePRK-SoSe20/vivado.jou
+# Log file: /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/vivado.log
+# Journal file: /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/vivado.jou
 #-----------------------------------------------------------
 start_gui
-create_project project_1 /afs/tu-berlin.de/home/h/hungbui7698/irb-ubuntu/HWP/HardwarePRK-SoSe20/project_1 -part xc7a35tcpg236-1
+open_project /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt09/Vivado_WORK/Tutorial/HWP9/HWP9.xpr
+Scanning sources...
+Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/afs/tu-berlin.de/units/Fak_IV/aes/tools/xilinx/Vivado/2017.3/data/ip'.
-create_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:07 . Memory (MB): peak = 6166.867 ; gain = 27.488 ; free physical = 27345 ; free virtual = 32719
-set_property target_language VHDL [current_project]
-add_files -norecurse {/afs/tu-berlin.de/home/h/hungbui7698/irb-ubuntu/HWP/HardwarePRK-SoSe20/Blatt07/Vivado_WORK/Tutorial/src/ArmConfiguration.vhd /afs/tu-berlin.de/home/h/hungbui7698/irb-ubuntu/HWP/HardwarePRK-SoSe20/Blatt07/Vivado_WORK/Tutorial/src/ArmTypes.vhd /afs/tu-berlin.de/home/h/hungbui7698/irb-ubuntu/HWP/HardwarePRK-SoSe20/Blatt07/Vivado_WORK/Tutorial/src/ArmBarrelShifter.vhd /afs/tu-berlin.de/home/h/hungbui7698/irb-ubuntu/HWP/HardwarePRK-SoSe20/Blatt07/Vivado_WORK/Tutorial/src/MUX.vhd /afs/tu-berlin.de/home/h/hungbui7698/irb-ubuntu/HWP/HardwarePRK-SoSe20/Blatt07/Vivado_WORK/Tutorial/src/ArmBarrelShifter_HILEVEL.vhd /afs/tu-berlin.de/home/h/hungbui7698/irb-ubuntu/HWP/HardwarePRK-SoSe20/Blatt07/Vivado_WORK/Tutorial/src/ArmFilePaths.vhd /afs/tu-berlin.de/home/h/hungbui7698/irb-ubuntu/HWP/HardwarePRK-SoSe20/Blatt07/Vivado_WORK/Tutorial/src/ArmShifter.vhd}
+open_project: Time (s): cpu = 00:00:21 ; elapsed = 00:00:06 . Memory (MB): peak = 6203.219 ; gain = 107.219 ; free physical = 26835 ; free virtual = 31922
 update_compile_order -fileset sources_1
+add_files -norecurse /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt09/Vivado_WORK/Tutorial/src/ArmBypassCtrl.vhd
 update_compile_order -fileset sources_1
-set_property top ArmBarrelShifter [current_fileset]
-update_compile_order -fileset sources_1
-launch_runs synth_1 -jobs 16
-[Sun Jun 28 00:11:09 2020] Launched synth_1...
-Run output will be captured here: /afs/tu-berlin.de/home/h/hungbui7698/irb-ubuntu/HWP/HardwarePRK-SoSe20/project_1/project_1.runs/synth_1/runme.log
-reset_run synth_1
-launch_runs synth_1 -jobs 16
-[Sun Jun 28 00:13:54 2020] Launched synth_1...
-Run output will be captured here: /afs/tu-berlin.de/home/h/hungbui7698/irb-ubuntu/HWP/HardwarePRK-SoSe20/project_1/project_1.runs/synth_1/runme.log
-set_property top ArmShifter [current_fileset]
+set_property top ArmBypassCtrl [current_fileset]
 update_compile_order -fileset sources_1
 reset_run synth_1
-launch_runs synth_1 -jobs 16
-[Sun Jun 28 00:15:12 2020] Launched synth_1...
-Run output will be captured here: /afs/tu-berlin.de/home/h/hungbui7698/irb-ubuntu/HWP/HardwarePRK-SoSe20/project_1/project_1.runs/synth_1/runme.log
+launch_runs synth_1 -jobs 2
+[Sun Jul 12 18:44:34 2020] Launched synth_1...
+Run output will be captured here: /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt09/Vivado_WORK/Tutorial/HWP9/HWP9.runs/synth_1/runme.log
 exit
-INFO: [Common 17-206] Exiting Vivado at Sun Jun 28 00:16:11 2020...
+INFO: [Common 17-206] Exiting Vivado at Sun Jul 12 18:46:46 2020...
