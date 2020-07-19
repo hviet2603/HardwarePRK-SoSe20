@@ -1,7 +1,7 @@
 package ArmFilePaths is 
 
 	--	Pfad zum Testvektorverzeichnis, betriebssystem- und und Projektabhängig;
-	constant TESTVECTOR_FOLDER_PATH : STRING := "/bitte/eigenen/Pfad/zu/den/Testvektoren/eintragen";
+	constant TESTVECTOR_FOLDER_PATH : STRING := "./";
 
 end package ArmFilePaths;
 

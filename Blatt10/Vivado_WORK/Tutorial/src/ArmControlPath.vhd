@@ -18,7 +18,7 @@ use work.ArmRegAddressTranslation.all;
 --------------------------------------------------------------------------------
 --	Simulationsmodelle fuer fehlerhaft implementierte Module
 --------------------------------------------------------------------------------
---library ARM_SIM_LIB;
+library ARM_SIM_LIB;
 --	use ARM_SIM_LIB.ArmRegisterBitAdder;
 --	use ARM_SIM_LIB.ArmLdmStmNextAddress;
 --	use ARM_SIM_LIB.ArmCoarseInstructionDecoder;
