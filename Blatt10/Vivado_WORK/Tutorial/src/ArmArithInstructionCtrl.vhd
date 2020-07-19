@@ -88,14 +88,6 @@ AIC_ID_R_PORT_C_ADDR <= Rs_reg;
 -- Write Back - WritePort A: write to Rd
 AIC_WB_W_PORT_A_ADDR <= Rd_reg;
 
--- MUX Ctrl in WB 
-AIC_WB_IAR_MUX_CTRL <= '1' when AIC_DECODED_VECTOR = CD_LOAD_STORE_MULTIPLE or            -- Memory Access
-                                AIC_DECODED_VECTOR = CD_LOAD_STORE_UNSIGNED_IMMEDIATE or
-                                AIC_DECODED_VECTOR = CD_LOAD_STORE_UNSIGNED_REGISTER or
-                                AIC_DECODED_VECTOR = CD_LOAD_STORE_SIGNED_IMMEDIATE or
-                                AIC_DECODED_VECTOR = CD_LOAD_STORE_SIGNED_REGISTER else
-                        '0'                                                      ;        -- No Memory Access
-
 -- ALU_CTRL = opcode
 AIC_EX_ALU_CTRL <= opcode;
 
@@ -111,7 +103,16 @@ AIC_MEM_RES_REG_EN <= '1' when not test_or_compare_instr else  -- MEM_RES Regist
 AIC_WB_RES_REG_EN <= '1' when not test_or_compare_instr else   -- WB_RES Register
                      '0'                                    ;
 AIC_WB_W_PORT_A_EN <= '1' when not test_or_compare_instr else  -- Write on Port A
-                      '0'                                    ;              
+                      '0'                                    ;
+
+-- MUX Ctrl in WB 
+AIC_WB_IAR_MUX_CTRL <= '1' when AIC_DECODED_VECTOR = CD_LOAD_STORE_MULTIPLE or            -- Memory Access: WB_LOAD
+                                AIC_DECODED_VECTOR = CD_LOAD_STORE_UNSIGNED_IMMEDIATE or
+                                AIC_DECODED_VECTOR = CD_LOAD_STORE_UNSIGNED_REGISTER or
+                                AIC_DECODED_VECTOR = CD_LOAD_STORE_SIGNED_IMMEDIATE or
+                                AIC_DECODED_VECTOR = CD_LOAD_STORE_SIGNED_REGISTER else
+                        '0'                                                      ;        -- No Memory Access: WB_RES
+              
 
 -- Branching
 AIC_IF_IAR_INC <= '1' when not branch else  -- When not Branching: new PC = PC + 1
