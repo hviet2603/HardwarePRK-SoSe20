@@ -8,938 +8,3800 @@
 # //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
 # //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
 # //
-project open /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt09/Vivado_WORK/Tutorial/project9
-# Loading project project9
-vsim -voptargs=+acc work.armdatapath_tb_vhd
-# vsim -voptargs=+acc work.armdatapath_tb_vhd 
+# Loading project project10
+vlib work
+# ** Warning: (vlib-34) Library already exists at "work".
+vmap work work
+# Modifying /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt10/Vivado_WORK/Tutorial/project10.mpf
+vcom -work ./work/ ./src/ArmTypes.vhd
+# QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package ArmTypes
+# -- Compiling package body ArmTypes
+# -- Loading package ArmTypes
+vcom -work ./work/ ./src/ArmConfiguration.vhd
+# QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package ArmTypes
+# -- Compiling package ArmConfiguration
+vcom -work ./work/ ./src/ArmFilePaths.vhd
+# QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
+# -- Loading package STANDARD
+# -- Compiling package ArmFilePaths
+# -- Compiling package body ArmFilePaths
+# -- Loading package ArmFilePaths
+vcom -work ./work/ ./src/TB_Tools.vhd
+# QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package ArmTypes
+# -- Loading package ArmConfiguration
+# -- Loading package ArmFilePaths
+# -- Compiling package TB_Tools
+# ** Warning: ./src/TB_Tools.vhd(152): (vcom-1236) Shared variables must be of a protected type.
+# ** Warning: ./src/TB_Tools.vhd(153): (vcom-1236) Shared variables must be of a protected type.
+# -- Compiling package body TB_Tools
+# -- Loading package TB_Tools
+vcom -work ./work/ ./src/ArmArithInstructionCtrl.vhd
+# QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package ArmTypes
+# -- Compiling entity ArmArithInstructionCtrl
+# -- Compiling architecture behave of ArmArithInstructionCtrl
+vcom -work ./work/ ./src/ArmArithInstructionCtrl_tb.vhd
+# QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package ArmTypes
+# -- Loading entity ArmArithInstructionCtrl
+# -- Loading package ArmTypes
+# -- Loading entity ArmArithInstructionCtrl
+# -- Loading entity ArmCoarseInstructionDecoder
+# -- Compiling entity ArmArithInstructionCtrl_tb
+# -- Compiling architecture bench of ArmArithInstructionCtrl_tb
+vsim -voptargs=+acc work.armarithinstructionctrl_tb
+# vsim -voptargs=+acc work.armarithinstructionctrl_tb 
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
 # Loading ieee.numeric_std(body)
-# Loading modelsim_lib.util(body)
-# Loading work.armtypes(body)
-# Loading work.armconfiguration
-# Loading work.armglobalprobes(body)
 # Loading ieee.std_logic_textio(body)
-# Loading work.armfilepaths(body)
-# Loading work.tb_tools(body)
-# Loading work.armdatapath_tb_vhd(behavior)
-# Loading work.armregaddresstranslation(body)
-# Loading ieee.math_real(body)
+# Loading work.armtypes(body)
 # Loading arm_sim_lib.armtypes(body)
-# Loading arm_sim_lib.armconfiguration
-# Loading work.armdatapath(structure)
-# Loading work.arminstructionaddressregister(behave)
-# Loading work.armrambuffer(behavioral)
-# Loading work.armregfile(behave)
-# Loading arm_sim_lib.armprogramstatusregister(behave)
-# Loading work.armalu(behave)
-# Loading work.armmultiplier(behavioral)
-# Loading work.armshifter(behave)
-# Loading work.armbarrelshifter(structure)
-# Loading work.mux(structure)
-# Loading work.armdatareplication(behave)
-# Loading arm_sim_lib.armwordmanipulation(behave)
-vsim -voptargs=+acc work.armdatapath_tb_vhd
-# vsim -voptargs=+acc work.armdatapath_tb_vhd 
+# Loading work.armarithinstructionctrl_tb(bench)
+# Loading work.armarithinstructionctrl(behave)
+# Loading arm_sim_lib.armcoarseinstructiondecoder(behave)
+# Loading arm_sim_lib.armarithinstructionctrl(behave)
+# ** Warning: (vsim-8683) Uninitialized out port /armarithinstructionctrl_tb/uut/AIC_WB_IAR_MUX_CTRL has no driver.
+# This port will contribute value (U) to the signal network.
+run -all
+# ------------------- Testcase 1 / 28: -------------------
+#   Instruktion: add    r0, r1, r2, lsl #2
+#   binaer:      11100000100000010000000100000010
+#   Zeit:        0 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 2 / 28: -------------------
+#   Instruktion: add    r3, r4, r5, lsl r6
+#   binaer:      11100000100001000011011000010101
+#   Zeit:        10000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_ID_OPB_MUX_CTRL fehlerhaft! 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 3 / 28: -------------------
+#   Instruktion: add    r7, r8, #16       
+#   binaer:      11100010100010000111000000010000
+#   Zeit:        20000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 4 / 28: -------------------
+#   Instruktion: add    r15, r9, r10      
+#   binaer:      11100000100010011111000000001010
+#   Zeit:        30000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 5 / 28: -------------------
+#   Instruktion: sub    r0, r1, r2, lsl #2
+#   binaer:      11100000010000010000000100000010
+#   Zeit:        40000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 6 / 28: -------------------
+#   Instruktion: sub    r3, r4, r5, lsl r6
+#   binaer:      11100000010001000011011000010101
+#   Zeit:        50000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_ID_OPB_MUX_CTRL fehlerhaft! 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 7 / 28: -------------------
+#   Instruktion: sub    r7, r8, #16       
+#   binaer:      11100010010010000111000000010000
+#   Zeit:        60000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 8 / 28: -------------------
+#   Instruktion: sub    r15, r9, r10      
+#   binaer:      11100000010010011111000000001010
+#   Zeit:        70000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 9 / 28: -------------------
+#   Instruktion: mov    r0, r1, lsl #2    
+#   binaer:      11100001101000000000000100000001
+#   Zeit:        80000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 10 / 28: -------------------
+#   Instruktion: mvn    r3, r4, lsl r6    
+#   binaer:      11100001111000000011011000010100
+#   Zeit:        90000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_ID_OPB_MUX_CTRL fehlerhaft! 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 11 / 28: -------------------
+#   Instruktion: orr    r7, r8, #16       
+#   binaer:      11100011100010000111000000010000
+#   Zeit:        100000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 12 / 28: -------------------
+#   Instruktion: and    r15, r9, r10      
+#   binaer:      11100000000010011111000000001010
+#   Zeit:        110000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 13 / 28: -------------------
+#   Instruktion: adds   r0, r1, r2, lsl #2
+#   binaer:      11100000100100010000000100000010
+#   Zeit:        120000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_MEM_CC_REG_EN   fehlerhaft! 
+#   AIC_WB_CC_REG_EN    fehlerhaft! 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_WB_PSR_SET_CC   fehlerhaft! 
+#   AIC_WB_PSR_ER       fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 14 / 28: -------------------
+#   Instruktion: adds   r3, r4, r5, lsl r6
+#   binaer:      11100000100101000011011000010101
+#   Zeit:        130000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_ID_OPB_MUX_CTRL fehlerhaft! 
+#   AIC_MEM_CC_REG_EN   fehlerhaft! 
+#   AIC_WB_CC_REG_EN    fehlerhaft! 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_WB_PSR_SET_CC   fehlerhaft! 
+#   AIC_WB_PSR_ER       fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 15 / 28: -------------------
+#   Instruktion: adds   r7, r8, #16       
+#   binaer:      11100010100110000111000000010000
+#   Zeit:        140000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_MEM_CC_REG_EN   fehlerhaft! 
+#   AIC_WB_CC_REG_EN    fehlerhaft! 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_WB_PSR_SET_CC   fehlerhaft! 
+#   AIC_WB_PSR_ER       fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 16 / 28: -------------------
+#   Instruktion: adds   r15, r9, r10      
+#   binaer:      11100000100110011111000000001010
+#   Zeit:        150000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 17 / 28: -------------------
+#   Instruktion: subs   r0, r1, r2, lsl #2
+#   binaer:      11100000010100010000000100000010
+#   Zeit:        160000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_MEM_CC_REG_EN   fehlerhaft! 
+#   AIC_WB_CC_REG_EN    fehlerhaft! 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_WB_PSR_SET_CC   fehlerhaft! 
+#   AIC_WB_PSR_ER       fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 18 / 28: -------------------
+#   Instruktion: subs   r3, r4, r5, lsl r6
+#   binaer:      11100000010101000011011000010101
+#   Zeit:        170000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_ID_OPB_MUX_CTRL fehlerhaft! 
+#   AIC_MEM_CC_REG_EN   fehlerhaft! 
+#   AIC_WB_CC_REG_EN    fehlerhaft! 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_WB_PSR_SET_CC   fehlerhaft! 
+#   AIC_WB_PSR_ER       fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 19 / 28: -------------------
+#   Instruktion: subs   r7, r8, #16       
+#   binaer:      11100010010110000111000000010000
+#   Zeit:        180000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_MEM_CC_REG_EN   fehlerhaft! 
+#   AIC_WB_CC_REG_EN    fehlerhaft! 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_WB_PSR_SET_CC   fehlerhaft! 
+#   AIC_WB_PSR_ER       fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 20 / 28: -------------------
+#   Instruktion: subs   pc, lr            
+#   binaer:      11100000010111111111000000001110
+#   Zeit:        190000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 21 / 28: -------------------
+#   Instruktion: cmp    r0, r1, lsl #2    
+#   binaer:      11100001010100000000000100000001
+#   Zeit:        200000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 22 / 28: -------------------
+#   Instruktion: cmn    r3, r4, lsl r6    
+#   binaer:      11100001011100110000011000010100
+#   Zeit:        210000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_ID_OPB_MUX_CTRL fehlerhaft! 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 23 / 28: -------------------
+#   Instruktion: tst    r7, #16           
+#   binaer:      11100011000101110000000000010000
+#   Zeit:        220000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 24 / 28: -------------------
+#   Instruktion: teq    r15, r10          
+#   binaer:      11100001001111110000000000001010
+#   Zeit:        230000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 25 / 28: -------------------
+#   Instruktion: cmp    r7, #16           
+#   binaer:      11100011010101110000000000010000
+#   Zeit:        240000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 26 / 28: -------------------
+#   Instruktion: cmn    r15, r11          
+#   binaer:      11100001011111110000000000001011
+#   Zeit:        250000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 27 / 28: -------------------
+#   Instruktion: tst    r0, r1, lsl #2    
+#   binaer:      11100001000100000000000100000001
+#   Zeit:        260000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 28 / 28: -------------------
+#   Instruktion: teq    r3, r4, lsl r6    
+#   binaer:      11100001001100110000011000010100
+#   Zeit:        270000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_ID_OPB_MUX_CTRL fehlerhaft! 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------------ Ergebnis: ----------------------
+# Erfolgreiche Testcases: 0 / 28
+# Fehlerhafte Signale:    142
+# 
+# ** Failure:  EOT (END OF TEST) - Diese Fehlermeldung stoppt den Simulator unabhaengig von tatsaechlich aufgetretenen Fehlern!
+#    Time: 280 ns  Iteration: 0  Process: /armarithinstructionctrl_tb/tb File: ./src/ArmArithInstructionCtrl_tb.vhd
+# Break in Process tb at ./src/ArmArithInstructionCtrl_tb.vhd line 210
+vcom -work ./work/ ./src/ArmGlobalProbes.vhd
+# QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package ArmTypes
+# -- Compiling package ArmGlobalProbes
+# -- Compiling package body ArmGlobalProbes
+# -- Loading package ArmGlobalProbes
+vcom -work ./work/ ./src/ArmTop.*
+# QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package ArmTypes
+# -- Loading package ArmGlobalProbes
+# -- Loading package NUMERIC_STD
+# -- Loading package ArmConfiguration
+# -- Compiling entity ArmTop
+# -- Compiling architecture behave of ArmTop
+# ** Error: ./src/ArmTop.xdc(1): near "#": syntax error
+# /afs/tu-berlin.de/units/Fak_IV/aes/tools/mentor/questasim/linux_x86_64/vcom failed.
+vcom -work ./work/ ./src/ArmTop_tb.udo
+# QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
+# -- Loading package STANDARD
+# ** Error: ./src/ArmTop_tb.udo(6): near "add": syntax error
+# /afs/tu-berlin.de/units/Fak_IV/aes/tools/mentor/questasim/linux_x86_64/vcom failed.
+vcom -work ./work/ ./src/ArmTop.vhd
+# QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package ArmTypes
+# -- Loading package ArmGlobalProbes
+# -- Loading package NUMERIC_STD
+# -- Loading package ArmConfiguration
+# -- Compiling entity ArmTop
+# -- Compiling architecture behave of ArmTop
+vcom -work ./work/ ./src/ArmTop_tb.vhd
+# QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package ArmTypes
+# -- Loading package ArmConfiguration
+# -- Loading package ArmFilePaths
+# -- Loading package TB_Tools
+# -- Loading package ArmGlobalProbes
+# -- Compiling entity ArmTop_tb
+# -- Compiling architecture testbench of ArmTop_tb
+# ** Warning: ./src/ArmTop_tb.vhd(31): (vcom-1236) Shared variables must be of a protected type.
+# ** Warning: ./src/ArmTop_tb.vhd(143): (vcom-1236) Shared variables must be of a protected type.
+# ** Warning: [9] ./src/ArmTop_tb.vhd(33): (vcom-1013) Initial value of "TEST_FILE_PATH" depends on value of signal "TESTDATA_FOLDER_PATH".
+vsim -voptargs=+acc work.armarithinstructionctrl_tb
+# vsim -voptargs=+acc work.armarithinstructionctrl_tb 
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
 # Loading ieee.numeric_std(body)
-# Loading modelsim_lib.util(body)
-# Loading work.armtypes(body)
-# Loading work.armconfiguration
-# Loading work.armglobalprobes(body)
 # Loading ieee.std_logic_textio(body)
-# Loading work.armfilepaths(body)
-# Loading work.tb_tools(body)
-# Loading work.armdatapath_tb_vhd(behavior)
-# Loading work.armregaddresstranslation(body)
-# Loading ieee.math_real(body)
+# Loading work.armtypes(body)
 # Loading arm_sim_lib.armtypes(body)
-# Loading arm_sim_lib.armconfiguration
-# Loading work.armdatapath(structure)
-# Loading work.arminstructionaddressregister(behave)
-# Loading work.armrambuffer(behavioral)
-# Loading work.armregfile(behave)
-# Loading arm_sim_lib.armprogramstatusregister(behave)
-# Loading work.armalu(behave)
-# Loading work.armmultiplier(behavioral)
-# Loading work.armshifter(behave)
-# Loading work.armbarrelshifter(structure)
-# Loading work.mux(structure)
-# Loading work.armdatareplication(behave)
-# Loading arm_sim_lib.armwordmanipulation(behave)
+# Loading work.armarithinstructionctrl_tb(bench)
+# Loading work.armarithinstructionctrl(behave)
+# Loading arm_sim_lib.armcoarseinstructiondecoder(behave)
+# Loading arm_sim_lib.armarithinstructionctrl(behave)
+# ** Warning: (vsim-8683) Uninitialized out port /armarithinstructionctrl_tb/uut/AIC_WB_IAR_MUX_CTRL has no driver.
+# This port will contribute value (U) to the signal network.
 run -all
-# ** Note: init_signal_spy [./src/ArmDataPath_tb.vhd] : Mirroring the value of '/armdatapath_tb_vhd/uut/EX_OPA_MUX' onto '/armdatapath_tb_vhd/OPA_BYPASS_MUX_OUT'.
-# ** Note: init_signal_spy [./src/ArmDataPath_tb.vhd] : Mirroring the value of '/armdatapath_tb_vhd/uut/EX_OPB_MUX' onto '/armdatapath_tb_vhd/OPB_BYPASS_MUX_OUT'.
-# ** Note: init_signal_spy [./src/ArmDataPath_tb.vhd] : Mirroring the value of '/armdatapath_tb_vhd/uut/EX_OPC_MUX' onto '/armdatapath_tb_vhd/OPC_BYPASS_MUX_OUT'.
-# ** Note: init_signal_spy [./src/ArmDataPath_tb.vhd] : Mirroring the value of '/armdatapath_tb_vhd/uut/EX_SHIFT_MUX' onto '/armdatapath_tb_vhd/SHIFT_BYPASS_MUX_OUT'.
-# ** Note: init_signal_spy [./src/ArmDataPath_tb.vhd] : Mirroring the value of '/armdatapath_tb_vhd/uut/EX_CC_MUX' onto '/armdatapath_tb_vhd/CC_BYPASS_MUX_OUT'.
-# ** Note: init_signal_spy [./src/ArmDataPath_tb.vhd] : Mirroring the value of '/armdatapath_tb_vhd/uut/IF_IAR_NEXT_ADDR_OUT' onto '/armdatapath_tb_vhd/NEXT_ADDR_OUT'.
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /armdatapath_tb_vhd/uut/computation/ArmShifter_Instance
-# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /armdatapath_tb_vhd/uut/computation/ArmShifter_Instance
-# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /armdatapath_tb_vhd/uut/computation/ArmShifter_Instance
-# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /armdatapath_tb_vhd/uut/computation/ArmShifter_Instance
-# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /armdatapath_tb_vhd/uut/computation/ArmShifter_Instance
-# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /armdatapath_tb_vhd/uut/computation/ArmShifter_Instance
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /armdatapath_tb_vhd/uut/computation/ArmShifter_Instance
-# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /armdatapath_tb_vhd/uut/computation/ArmShifter_Instance
-# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /armdatapath_tb_vhd/uut/computation/ArmShifter_Instance
-# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /armdatapath_tb_vhd/uut/computation/ArmShifter_Instance
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /armdatapath_tb_vhd/uut/computation/ArmShifter_Instance/ARM_BARREL_SHIFTER
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 2  Instance: /armdatapath_tb_vhd
-# ** Note: signal_force [./src/ArmDataPath_tb.vhd] : Forcing the value '16#aaaaaaaa' onto '/armdatapath_tb_vhd/uut/EX_OPA_REG' at time 1025000 ps.
-# ** Note: signal_force [./src/ArmDataPath_tb.vhd] : Forcing the value '16#cccccccc' onto '/armdatapath_tb_vhd/uut/EX_OPC_REG' at time 1025000 ps.
-# ** Note: signal_force [./src/ArmDataPath_tb.vhd] : Forcing the value '16#dd' onto '/armdatapath_tb_vhd/uut/EX_SHIFT_REG' at time 1025000 ps.
-# ** Note: signal_force [./src/ArmDataPath_tb.vhd] : Forcing the value '16#11111111' onto '/armdatapath_tb_vhd/uut/MEM_RES_REG' at time 1025000 ps.
-# ** Note: signal_force [./src/ArmDataPath_tb.vhd] : Forcing the value '16#22222222' onto '/armdatapath_tb_vhd/uut/WB_RES_REG' at time 1025000 ps.
-# ** Note: signal_force [./src/ArmDataPath_tb.vhd] : Forcing the value '16#4' onto '/armdatapath_tb_vhd/uut/MEM_CC_REG' at time 1025000 ps.
-# ** Note: signal_force [./src/ArmDataPath_tb.vhd] : Forcing the value '16#5' onto '/armdatapath_tb_vhd/uut/WB_CC_REG' at time 1025000 ps.
-# ** Note: signal_force [./src/ArmDataPath_tb.vhd] : Forcing the value '16#60000000' onto '/armdatapath_tb_vhd/uut/EX_CPSR' at time 1025000 ps.
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 1175 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: Testcase : 1: Test des OPA-Bypassmultiplexers
-#    Time: 1175 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: Testcase 1 korrekt.
-#    Time: 1975 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 1975 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 1975 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 1975 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: Testcase : 2: Test des OPB-Bypassmultiplexers
-#    Time: 1975 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: Testcase 2 korrekt.
-#    Time: 2775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 2775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 2775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 2775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: Testcase : 3: Test des OPC-Bypassmultiplexers
-#    Time: 2775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: Testcase 3 korrekt.
-#    Time: 3575 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 3575 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 3575 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 3575 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: Testcase : 4: Test des SHIFT-Bypassmultiplexers
-#    Time: 3575 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: Testcase 4 korrekt.
-#    Time: 4375 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 4375 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 4375 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 4375 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: Testcase : 5: Test des CC-Bypassmultiplexers
-#    Time: 4375 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: Testcase 5 korrekt.
-#    Time: 5175 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 5175 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 5175 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 5175 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: Testcase : 6: Test des Instruktionsadressregisters, 0 nach Reset und halten des Initialwertes
-#    Time: 5175 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: Testcase 6 korrekt.
-#    Time: 5375 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 5375 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 5375 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 5375 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: Testcase : 7: Test des Instruktionsadressregisters, inkrementieren
-#    Time: 5375 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: signal_force [./src/ArmDataPath_tb.vhd] : Forcing the value '16#7fff7000' onto '/armdatapath_tb_vhd/uut/WB_RES_REG' at time 5375000 ps.
-# ** Note: Testcase 7 korrekt.
-#    Time: 5675 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 5675 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 5675 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 5675 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: Testcase : 8: Test des Instruktionsadressregisters, laden
-#    Time: 5675 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: Testcase 8 korrekt.
-#    Time: 5875 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 5875 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 5875 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 5875 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: Testcase : 9: Test des Instruktionsadressregisters, gleichzeitiges Inkrementieren und Laden, Laden ist priorisiert.
-#    Time: 5875 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: signal_force [./src/ArmDataPath_tb.vhd] : Forcing the value '16#0000aaac' onto '/armdatapath_tb_vhd/uut/WB_RES_REG' at time 5875000 ps.
-# ** Note: Testcase 9 korrekt.
-#    Time: 6075 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 6075 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 6075 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 6075 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: Testcase : 10: Test des Instruktionsadressregisters, Puffern und Rekonstruieren von Adressen. Schreibzugriffe erfolgen synchron, lesen mit IAR_REVOKE = 1 und verschiedenen Werten fuer HISTORY_ID erfolgt asynchron
-#    Time: 6075 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: signal_force [./src/ArmDataPath_tb.vhd] : Forcing the value '16#0000bbbc' onto '/armdatapath_tb_vhd/uut/WB_RES_REG' at time 6075000 ps.
-# ** Note: signal_force [./src/ArmDataPath_tb.vhd] : Forcing the value '16#0000cccc' onto '/armdatapath_tb_vhd/uut/WB_RES_REG' at time 6175000 ps.
-# ** Note: signal_force [./src/ArmDataPath_tb.vhd] : Forcing the value '16#0000dddc' onto '/armdatapath_tb_vhd/uut/WB_RES_REG' at time 6275000 ps.
-# ** Note: signal_force [./src/ArmDataPath_tb.vhd] : Forcing the value '16#0000eeec' onto '/armdatapath_tb_vhd/uut/WB_RES_REG' at time 6375000 ps.
-# ** Note: signal_force [./src/ArmDataPath_tb.vhd] : Forcing the value '16#0000fffc' onto '/armdatapath_tb_vhd/uut/WB_RES_REG' at time 6475000 ps.
-# ** Note: Testcase 10 korrekt.
-#    Time: 6775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 6775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 6775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 6775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 6775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 6775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: ...Simulation beendet
-#    Time: 6775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 6775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 6775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: Testcase 1: 0 Fehler
-#    Time: 6775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: Testcase 2: 0 Fehler
-#    Time: 6775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: Testcase 3: 0 Fehler
-#    Time: 6775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: Testcase 4: 0 Fehler
-#    Time: 6775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: Testcase 5: 0 Fehler
-#    Time: 6775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: Testcase 6: 0 Fehler
-#    Time: 6775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: Testcase 7: 0 Fehler
-#    Time: 6775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: Testcase 8: 0 Fehler
-#    Time: 6775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: Testcase 9: 0 Fehler
-#    Time: 6775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: Testcase 10: 0 Fehler
-#    Time: 6775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 6775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: Errechnung der Punkte:
-#    Time: 6775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: 	In Testcases 1-5: 1 Punkt Abzug pro fehlerhafter Verbindung, minimal 0 Punkte, maximal 6 Punkte
-#    Time: 6775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: 	In Testcases 6-10: 1 Punkt Abzug pro fehlerhaftem Testcase, minimal 0 Punkte, maximal 3 Punkte
-#    Time: 6775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: erzielte Punkte:
-#    Time: 6775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: 	IAR: 3/3 Punkte
-#    Time: 6775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: 	BYPASS: 6/6 Punkte
-#    Time: 6775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: 	Gesamt: 9/9 Punkte
-#    Time: 6775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: Funktionstest bestanden
-#    Time: 6775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 6775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 6775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
+# ------------------- Testcase 1 / 28: -------------------
+#   Instruktion: add    r0, r1, r2, lsl #2
+#   binaer:      11100000100000010000000100000010
+#   Zeit:        0 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 2 / 28: -------------------
+#   Instruktion: add    r3, r4, r5, lsl r6
+#   binaer:      11100000100001000011011000010101
+#   Zeit:        10000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_ID_OPB_MUX_CTRL fehlerhaft! 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 3 / 28: -------------------
+#   Instruktion: add    r7, r8, #16       
+#   binaer:      11100010100010000111000000010000
+#   Zeit:        20000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 4 / 28: -------------------
+#   Instruktion: add    r15, r9, r10      
+#   binaer:      11100000100010011111000000001010
+#   Zeit:        30000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 5 / 28: -------------------
+#   Instruktion: sub    r0, r1, r2, lsl #2
+#   binaer:      11100000010000010000000100000010
+#   Zeit:        40000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 6 / 28: -------------------
+#   Instruktion: sub    r3, r4, r5, lsl r6
+#   binaer:      11100000010001000011011000010101
+#   Zeit:        50000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_ID_OPB_MUX_CTRL fehlerhaft! 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 7 / 28: -------------------
+#   Instruktion: sub    r7, r8, #16       
+#   binaer:      11100010010010000111000000010000
+#   Zeit:        60000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 8 / 28: -------------------
+#   Instruktion: sub    r15, r9, r10      
+#   binaer:      11100000010010011111000000001010
+#   Zeit:        70000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 9 / 28: -------------------
+#   Instruktion: mov    r0, r1, lsl #2    
+#   binaer:      11100001101000000000000100000001
+#   Zeit:        80000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 10 / 28: -------------------
+#   Instruktion: mvn    r3, r4, lsl r6    
+#   binaer:      11100001111000000011011000010100
+#   Zeit:        90000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_ID_OPB_MUX_CTRL fehlerhaft! 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 11 / 28: -------------------
+#   Instruktion: orr    r7, r8, #16       
+#   binaer:      11100011100010000111000000010000
+#   Zeit:        100000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 12 / 28: -------------------
+#   Instruktion: and    r15, r9, r10      
+#   binaer:      11100000000010011111000000001010
+#   Zeit:        110000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 13 / 28: -------------------
+#   Instruktion: adds   r0, r1, r2, lsl #2
+#   binaer:      11100000100100010000000100000010
+#   Zeit:        120000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_MEM_CC_REG_EN   fehlerhaft! 
+#   AIC_WB_CC_REG_EN    fehlerhaft! 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_WB_PSR_SET_CC   fehlerhaft! 
+#   AIC_WB_PSR_ER       fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 14 / 28: -------------------
+#   Instruktion: adds   r3, r4, r5, lsl r6
+#   binaer:      11100000100101000011011000010101
+#   Zeit:        130000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_ID_OPB_MUX_CTRL fehlerhaft! 
+#   AIC_MEM_CC_REG_EN   fehlerhaft! 
+#   AIC_WB_CC_REG_EN    fehlerhaft! 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_WB_PSR_SET_CC   fehlerhaft! 
+#   AIC_WB_PSR_ER       fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 15 / 28: -------------------
+#   Instruktion: adds   r7, r8, #16       
+#   binaer:      11100010100110000111000000010000
+#   Zeit:        140000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_MEM_CC_REG_EN   fehlerhaft! 
+#   AIC_WB_CC_REG_EN    fehlerhaft! 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_WB_PSR_SET_CC   fehlerhaft! 
+#   AIC_WB_PSR_ER       fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 16 / 28: -------------------
+#   Instruktion: adds   r15, r9, r10      
+#   binaer:      11100000100110011111000000001010
+#   Zeit:        150000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 17 / 28: -------------------
+#   Instruktion: subs   r0, r1, r2, lsl #2
+#   binaer:      11100000010100010000000100000010
+#   Zeit:        160000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_MEM_CC_REG_EN   fehlerhaft! 
+#   AIC_WB_CC_REG_EN    fehlerhaft! 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_WB_PSR_SET_CC   fehlerhaft! 
+#   AIC_WB_PSR_ER       fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 18 / 28: -------------------
+#   Instruktion: subs   r3, r4, r5, lsl r6
+#   binaer:      11100000010101000011011000010101
+#   Zeit:        170000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_ID_OPB_MUX_CTRL fehlerhaft! 
+#   AIC_MEM_CC_REG_EN   fehlerhaft! 
+#   AIC_WB_CC_REG_EN    fehlerhaft! 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_WB_PSR_SET_CC   fehlerhaft! 
+#   AIC_WB_PSR_ER       fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 19 / 28: -------------------
+#   Instruktion: subs   r7, r8, #16       
+#   binaer:      11100010010110000111000000010000
+#   Zeit:        180000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_MEM_CC_REG_EN   fehlerhaft! 
+#   AIC_WB_CC_REG_EN    fehlerhaft! 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_WB_PSR_SET_CC   fehlerhaft! 
+#   AIC_WB_PSR_ER       fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 20 / 28: -------------------
+#   Instruktion: subs   pc, lr            
+#   binaer:      11100000010111111111000000001110
+#   Zeit:        190000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 21 / 28: -------------------
+#   Instruktion: cmp    r0, r1, lsl #2    
+#   binaer:      11100001010100000000000100000001
+#   Zeit:        200000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 22 / 28: -------------------
+#   Instruktion: cmn    r3, r4, lsl r6    
+#   binaer:      11100001011100110000011000010100
+#   Zeit:        210000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_ID_OPB_MUX_CTRL fehlerhaft! 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 23 / 28: -------------------
+#   Instruktion: tst    r7, #16           
+#   binaer:      11100011000101110000000000010000
+#   Zeit:        220000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 24 / 28: -------------------
+#   Instruktion: teq    r15, r10          
+#   binaer:      11100001001111110000000000001010
+#   Zeit:        230000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 25 / 28: -------------------
+#   Instruktion: cmp    r7, #16           
+#   binaer:      11100011010101110000000000010000
+#   Zeit:        240000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 26 / 28: -------------------
+#   Instruktion: cmn    r15, r11          
+#   binaer:      11100001011111110000000000001011
+#   Zeit:        250000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 27 / 28: -------------------
+#   Instruktion: tst    r0, r1, lsl #2    
+#   binaer:      11100001000100000000000100000001
+#   Zeit:        260000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 28 / 28: -------------------
+#   Instruktion: teq    r3, r4, lsl r6    
+#   binaer:      11100001001100110000011000010100
+#   Zeit:        270000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_ID_OPB_MUX_CTRL fehlerhaft! 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------------ Ergebnis: ----------------------
+# Erfolgreiche Testcases: 0 / 28
+# Fehlerhafte Signale:    142
+# 
 # ** Failure:  EOT (END OF TEST) - Diese Fehlermeldung stoppt den Simulator unabhaengig von tatsaechlich aufgetretenen Fehlern!
-#    Time: 6775 ns  Iteration: 0  Process: /armdatapath_tb_vhd/tb File: ./src/ArmDataPath_tb.vhd
-# Break in Process tb at ./src/ArmDataPath_tb.vhd line 718
-vsim -voptargs=+acc work.armdatapath_tb_vhd
-# vsim -voptargs=+acc work.armdatapath_tb_vhd 
+#    Time: 280 ns  Iteration: 0  Process: /armarithinstructionctrl_tb/tb File: ./src/ArmArithInstructionCtrl_tb.vhd
+# Break in Process tb at ./src/ArmArithInstructionCtrl_tb.vhd line 210
+vsim -voptargs=+acc work.armarithinstructionctrl_tb
+# vsim -voptargs=+acc work.armarithinstructionctrl_tb 
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
 # Loading ieee.numeric_std(body)
-# Loading modelsim_lib.util(body)
-# Loading work.armtypes(body)
-# Loading work.armconfiguration
-# Loading work.armglobalprobes(body)
 # Loading ieee.std_logic_textio(body)
-# Loading work.armfilepaths(body)
-# Loading work.tb_tools(body)
-# Loading work.armdatapath_tb_vhd(behavior)
-# Loading work.armregaddresstranslation(body)
-# Loading ieee.math_real(body)
+# Loading work.armtypes(body)
 # Loading arm_sim_lib.armtypes(body)
-# Loading arm_sim_lib.armconfiguration
-# Loading work.armdatapath(structure)
-# Loading work.arminstructionaddressregister(behave)
-# Loading work.armrambuffer(behavioral)
-# Loading work.armregfile(behave)
-# Loading arm_sim_lib.armprogramstatusregister(behave)
-# Loading work.armalu(behave)
-# Loading work.armmultiplier(behavioral)
-# Loading work.armshifter(behave)
-# Loading work.armbarrelshifter(structure)
-# Loading work.mux(structure)
-# Loading work.armdatareplication(behave)
-# Loading arm_sim_lib.armwordmanipulation(behave)
-run -all
-# ** Note: init_signal_spy [./src/ArmDataPath_tb.vhd] : Mirroring the value of '/armdatapath_tb_vhd/uut/EX_OPA_MUX' onto '/armdatapath_tb_vhd/OPA_BYPASS_MUX_OUT'.
-# ** Note: init_signal_spy [./src/ArmDataPath_tb.vhd] : Mirroring the value of '/armdatapath_tb_vhd/uut/EX_OPB_MUX' onto '/armdatapath_tb_vhd/OPB_BYPASS_MUX_OUT'.
-# ** Note: init_signal_spy [./src/ArmDataPath_tb.vhd] : Mirroring the value of '/armdatapath_tb_vhd/uut/EX_OPC_MUX' onto '/armdatapath_tb_vhd/OPC_BYPASS_MUX_OUT'.
-# ** Note: init_signal_spy [./src/ArmDataPath_tb.vhd] : Mirroring the value of '/armdatapath_tb_vhd/uut/EX_SHIFT_MUX' onto '/armdatapath_tb_vhd/SHIFT_BYPASS_MUX_OUT'.
-# ** Note: init_signal_spy [./src/ArmDataPath_tb.vhd] : Mirroring the value of '/armdatapath_tb_vhd/uut/EX_CC_MUX' onto '/armdatapath_tb_vhd/CC_BYPASS_MUX_OUT'.
-# ** Note: init_signal_spy [./src/ArmDataPath_tb.vhd] : Mirroring the value of '/armdatapath_tb_vhd/uut/IF_IAR_NEXT_ADDR_OUT' onto '/armdatapath_tb_vhd/NEXT_ADDR_OUT'.
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /armdatapath_tb_vhd/uut/computation/ArmShifter_Instance
-# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /armdatapath_tb_vhd/uut/computation/ArmShifter_Instance
-# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /armdatapath_tb_vhd/uut/computation/ArmShifter_Instance
-# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /armdatapath_tb_vhd/uut/computation/ArmShifter_Instance
-# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /armdatapath_tb_vhd/uut/computation/ArmShifter_Instance
-# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /armdatapath_tb_vhd/uut/computation/ArmShifter_Instance
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /armdatapath_tb_vhd/uut/computation/ArmShifter_Instance
-# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /armdatapath_tb_vhd/uut/computation/ArmShifter_Instance
-# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /armdatapath_tb_vhd/uut/computation/ArmShifter_Instance
-# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-#    Time: 0 ps  Iteration: 0  Instance: /armdatapath_tb_vhd/uut/computation/ArmShifter_Instance
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /armdatapath_tb_vhd/uut/computation/ArmShifter_Instance/ARM_BARREL_SHIFTER
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 2  Instance: /armdatapath_tb_vhd
-# ** Note: signal_force [./src/ArmDataPath_tb.vhd] : Forcing the value '16#aaaaaaaa' onto '/armdatapath_tb_vhd/uut/EX_OPA_REG' at time 1025000 ps.
-# ** Note: signal_force [./src/ArmDataPath_tb.vhd] : Forcing the value '16#cccccccc' onto '/armdatapath_tb_vhd/uut/EX_OPC_REG' at time 1025000 ps.
-# ** Note: signal_force [./src/ArmDataPath_tb.vhd] : Forcing the value '16#dd' onto '/armdatapath_tb_vhd/uut/EX_SHIFT_REG' at time 1025000 ps.
-# ** Note: signal_force [./src/ArmDataPath_tb.vhd] : Forcing the value '16#11111111' onto '/armdatapath_tb_vhd/uut/MEM_RES_REG' at time 1025000 ps.
-# ** Note: signal_force [./src/ArmDataPath_tb.vhd] : Forcing the value '16#22222222' onto '/armdatapath_tb_vhd/uut/WB_RES_REG' at time 1025000 ps.
-# ** Note: signal_force [./src/ArmDataPath_tb.vhd] : Forcing the value '16#4' onto '/armdatapath_tb_vhd/uut/MEM_CC_REG' at time 1025000 ps.
-# ** Note: signal_force [./src/ArmDataPath_tb.vhd] : Forcing the value '16#5' onto '/armdatapath_tb_vhd/uut/WB_CC_REG' at time 1025000 ps.
-# ** Note: signal_force [./src/ArmDataPath_tb.vhd] : Forcing the value '16#60000000' onto '/armdatapath_tb_vhd/uut/EX_CPSR' at time 1025000 ps.
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 1175 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: Testcase : 1: Test des OPA-Bypassmultiplexers
-#    Time: 1175 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: Testcase 1 korrekt.
-#    Time: 1975 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 1975 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 1975 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 1975 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: Testcase : 2: Test des OPB-Bypassmultiplexers
-#    Time: 1975 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: Testcase 2 korrekt.
-#    Time: 2775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 2775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 2775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 2775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: Testcase : 3: Test des OPC-Bypassmultiplexers
-#    Time: 2775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: Testcase 3 korrekt.
-#    Time: 3575 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 3575 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 3575 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 3575 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: Testcase : 4: Test des SHIFT-Bypassmultiplexers
-#    Time: 3575 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: Testcase 4 korrekt.
-#    Time: 4375 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 4375 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 4375 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 4375 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: Testcase : 5: Test des CC-Bypassmultiplexers
-#    Time: 4375 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: Testcase 5 korrekt.
-#    Time: 5175 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 5175 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 5175 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 5175 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: Testcase : 6: Test des Instruktionsadressregisters, 0 nach Reset und halten des Initialwertes
-#    Time: 5175 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: Testcase 6 korrekt.
-#    Time: 5375 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 5375 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 5375 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 5375 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: Testcase : 7: Test des Instruktionsadressregisters, inkrementieren
-#    Time: 5375 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: signal_force [./src/ArmDataPath_tb.vhd] : Forcing the value '16#7fff7000' onto '/armdatapath_tb_vhd/uut/WB_RES_REG' at time 5375000 ps.
-# ** Note: Testcase 7 korrekt.
-#    Time: 5675 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 5675 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 5675 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 5675 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: Testcase : 8: Test des Instruktionsadressregisters, laden
-#    Time: 5675 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: Testcase 8 korrekt.
-#    Time: 5875 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 5875 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 5875 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 5875 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: Testcase : 9: Test des Instruktionsadressregisters, gleichzeitiges Inkrementieren und Laden, Laden ist priorisiert.
-#    Time: 5875 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: signal_force [./src/ArmDataPath_tb.vhd] : Forcing the value '16#0000aaac' onto '/armdatapath_tb_vhd/uut/WB_RES_REG' at time 5875000 ps.
-# ** Note: Testcase 9 korrekt.
-#    Time: 6075 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 6075 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 6075 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 6075 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: Testcase : 10: Test des Instruktionsadressregisters, Puffern und Rekonstruieren von Adressen. Schreibzugriffe erfolgen synchron, lesen mit IAR_REVOKE = 1 und verschiedenen Werten fuer HISTORY_ID erfolgt asynchron
-#    Time: 6075 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: signal_force [./src/ArmDataPath_tb.vhd] : Forcing the value '16#0000bbbc' onto '/armdatapath_tb_vhd/uut/WB_RES_REG' at time 6075000 ps.
-# ** Note: signal_force [./src/ArmDataPath_tb.vhd] : Forcing the value '16#0000cccc' onto '/armdatapath_tb_vhd/uut/WB_RES_REG' at time 6175000 ps.
-# ** Note: signal_force [./src/ArmDataPath_tb.vhd] : Forcing the value '16#0000dddc' onto '/armdatapath_tb_vhd/uut/WB_RES_REG' at time 6275000 ps.
-# ** Note: signal_force [./src/ArmDataPath_tb.vhd] : Forcing the value '16#0000eeec' onto '/armdatapath_tb_vhd/uut/WB_RES_REG' at time 6375000 ps.
-# ** Note: signal_force [./src/ArmDataPath_tb.vhd] : Forcing the value '16#0000fffc' onto '/armdatapath_tb_vhd/uut/WB_RES_REG' at time 6475000 ps.
-# ** Note: Testcase 10 korrekt.
-#    Time: 6775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 6775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 6775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 6775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 6775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 6775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: ...Simulation beendet
-#    Time: 6775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 6775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 6775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: Testcase 1: 0 Fehler
-#    Time: 6775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: Testcase 2: 0 Fehler
-#    Time: 6775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: Testcase 3: 0 Fehler
-#    Time: 6775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: Testcase 4: 0 Fehler
-#    Time: 6775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: Testcase 5: 0 Fehler
-#    Time: 6775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: Testcase 6: 0 Fehler
-#    Time: 6775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: Testcase 7: 0 Fehler
-#    Time: 6775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: Testcase 8: 0 Fehler
-#    Time: 6775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: Testcase 9: 0 Fehler
-#    Time: 6775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: Testcase 10: 0 Fehler
-#    Time: 6775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 6775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: Errechnung der Punkte:
-#    Time: 6775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: 	In Testcases 1-5: 1 Punkt Abzug pro fehlerhafter Verbindung, minimal 0 Punkte, maximal 6 Punkte
-#    Time: 6775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: 	In Testcases 6-10: 1 Punkt Abzug pro fehlerhaftem Testcase, minimal 0 Punkte, maximal 3 Punkte
-#    Time: 6775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: erzielte Punkte:
-#    Time: 6775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: 	IAR: 3/3 Punkte
-#    Time: 6775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: 	BYPASS: 6/6 Punkte
-#    Time: 6775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: 	Gesamt: 9/9 Punkte
-#    Time: 6775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: Funktionstest bestanden
-#    Time: 6775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 6775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 6775 ns  Iteration: 0  Instance: /armdatapath_tb_vhd
-# ** Failure:  EOT (END OF TEST) - Diese Fehlermeldung stoppt den Simulator unabhaengig von tatsaechlich aufgetretenen Fehlern!
-#    Time: 6775 ns  Iteration: 0  Process: /armdatapath_tb_vhd/tb File: ./src/ArmDataPath_tb.vhd
-# Break in Process tb at ./src/ArmDataPath_tb.vhd line 718
-vsim -voptargs=+acc work.armbypassctrl_tb
-# vsim -voptargs=+acc work.armbypassctrl_tb 
+# Loading work.armarithinstructionctrl_tb(bench)
+# Loading work.armarithinstructionctrl(behave)
+# Loading arm_sim_lib.armcoarseinstructiondecoder(behave)
+# Loading arm_sim_lib.armarithinstructionctrl(behave)
+# ** Warning: (vsim-8683) Uninitialized out port /armarithinstructionctrl_tb/uut/AIC_WB_IAR_MUX_CTRL has no driver.
+# This port will contribute value (U) to the signal network.
+vcom -work ./work/ ./src/ArmArithInstructionCtrl.vhd
+# QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package ArmTypes
+# -- Compiling entity ArmArithInstructionCtrl
+# -- Compiling architecture behave of ArmArithInstructionCtrl
+vsim -voptargs=+acc work.armarithinstructionctrl_tb
+# vsim -voptargs=+acc work.armarithinstructionctrl_tb 
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
 # Loading ieee.numeric_std(body)
 # Loading ieee.std_logic_textio(body)
 # Loading work.armtypes(body)
-# Loading work.armconfiguration
-# Loading work.armfilepaths(body)
-# Loading work.tb_tools(body)
-# Loading work.armbypassctrl_tb(behavior)
-# Loading work.armbypassctrl(behave)
+# Loading arm_sim_lib.armtypes(body)
+# Loading work.armarithinstructionctrl_tb(bench)
+# Loading work.armarithinstructionctrl(behave)
+# Loading arm_sim_lib.armcoarseinstructiondecoder(behave)
+# Loading arm_sim_lib.armarithinstructionctrl(behave)
+# ** Warning: (vsim-8683) Uninitialized out port /armarithinstructionctrl_tb/uut/AIC_WB_IAR_MUX_CTRL has no driver.
+# This port will contribute value (U) to the signal network.
+vcom -work ./work/ ./src/ArmArithInstructionCtrl.vhd
+# QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package ArmTypes
+# -- Compiling entity ArmArithInstructionCtrl
+# -- Compiling architecture behave of ArmArithInstructionCtrl
+vsim -voptargs=+acc work.armarithinstructionctrl_tb
+# vsim -voptargs=+acc work.armarithinstructionctrl_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.armtypes(body)
+# Loading arm_sim_lib.armtypes(body)
+# Loading work.armarithinstructionctrl_tb(bench)
+# Loading work.armarithinstructionctrl(behave)
+# Loading arm_sim_lib.armcoarseinstructiondecoder(behave)
+# Loading arm_sim_lib.armarithinstructionctrl(behave)
 run -all
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 100 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Gemischte Testfaelle ohne aktivierte Bypaesse:
-#    Time: 100 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 100 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 1: 
-#    Time: 100 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 1 korrekt
-#    Time: 200 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 200 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 200 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 2: 
-#    Time: 200 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 2 korrekt
-#    Time: 300 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 300 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 300 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 3: 
-#    Time: 300 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 3 korrekt
-#    Time: 400 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 400 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 400 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 4: 
-#    Time: 400 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 4 korrekt
-#    Time: 500 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 500 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 500 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 5: 
-#    Time: 500 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 5 korrekt
-#    Time: 600 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 600 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 600 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 6: 
-#    Time: 600 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 6 korrekt
-#    Time: 700 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 700 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 700 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 700 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Test der Bypaesse von Operand A:
-#    Time: 700 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 700 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 7: 
-#    Time: 700 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 7 korrekt
-#    Time: 800 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 800 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 800 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 8: 
-#    Time: 800 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 8 korrekt
-#    Time: 900 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 900 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 900 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 9: 
-#    Time: 900 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 9 korrekt
-#    Time: 1 us  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 1 us  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 1 us  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 10: 
-#    Time: 1 us  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 10 korrekt
-#    Time: 1100 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 1100 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 1100 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 11: 
-#    Time: 1100 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 11 korrekt
-#    Time: 1200 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 1200 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 1200 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 12: 
-#    Time: 1200 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 12 korrekt
-#    Time: 1300 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 1300 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 1300 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 13: 
-#    Time: 1300 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 13 korrekt
-#    Time: 1400 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 1400 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 1400 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 1400 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Test der Bypaesse von Operand B:
-#    Time: 1400 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 1400 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 14: 
-#    Time: 1400 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 14 korrekt
-#    Time: 1500 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 1500 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 1500 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 15: 
-#    Time: 1500 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 15 korrekt
-#    Time: 1600 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 1600 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 1600 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 16: 
-#    Time: 1600 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 16 korrekt
-#    Time: 1700 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 1700 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 1700 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 17: 
-#    Time: 1700 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 17 korrekt
-#    Time: 1800 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 1800 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 1800 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 18: 
-#    Time: 1800 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 18 korrekt
-#    Time: 1900 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 1900 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 1900 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 19: 
-#    Time: 1900 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 19 korrekt
-#    Time: 2 us  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 2 us  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 2 us  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 20: 
-#    Time: 2 us  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 20 korrekt
-#    Time: 2100 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 2100 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 2100 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 2100 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Test der Bypaesse von Operand C:
-#    Time: 2100 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 2100 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 21: 
-#    Time: 2100 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 21 korrekt
-#    Time: 2200 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 2200 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 2200 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 22: 
-#    Time: 2200 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 22 korrekt
-#    Time: 2300 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 2300 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 2300 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 23: 
-#    Time: 2300 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 23 korrekt
-#    Time: 2400 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 2400 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 2400 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 24: 
-#    Time: 2400 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 24 korrekt
-#    Time: 2500 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 2500 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 2500 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 25: 
-#    Time: 2500 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 25 korrekt
-#    Time: 2600 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 2600 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 2600 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 26: 
-#    Time: 2600 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 26 korrekt
-#    Time: 2700 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 2700 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 2700 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 27: 
-#    Time: 2700 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 27 korrekt
-#    Time: 2800 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 2800 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 2800 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 2800 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Test der Bypaesse von Operand SHIFT im Verbund mit Operand C:
-#    Time: 2800 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 2800 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 28: 
-#    Time: 2800 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 28 korrekt
-#    Time: 2900 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 2900 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 2900 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 29: 
-#    Time: 2900 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 29 korrekt
-#    Time: 3 us  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 3 us  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 3 us  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 30: 
-#    Time: 3 us  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 30 korrekt
-#    Time: 3100 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 3100 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 3100 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 31: 
-#    Time: 3100 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 31 korrekt
-#    Time: 3200 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 3200 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 3200 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 32: 
-#    Time: 3200 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 32 korrekt
-#    Time: 3300 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 3300 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 3300 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 33: 
-#    Time: 3300 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 33 korrekt
-#    Time: 3400 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 3400 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 3400 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 34: 
-#    Time: 3400 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 34 korrekt
-#    Time: 3500 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 3500 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 3500 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 3500 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Test der Bypaesse des Condition-Code, gleichzeit Erzeugung gemischter weiterer Bypaesse
-#    Time: 3500 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 3500 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 35: 
-#    Time: 3500 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 35 korrekt
-#    Time: 3600 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 3600 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 3600 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 36: 
-#    Time: 3600 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 36 korrekt
-#    Time: 3700 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 3700 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 3700 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 37: 
-#    Time: 3700 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 37 korrekt
-#    Time: 3800 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 3800 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 3800 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 3800 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Test auf Erkennung von Load-Use-Konflikten
-#    Time: 3800 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 3800 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 38: 
-#    Time: 3800 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 38 korrekt
-#    Time: 3900 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 3900 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 3900 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 39: 
-#    Time: 3900 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 39 korrekt
-#    Time: 4 us  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 4 us  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 4 us  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 40: 
-#    Time: 4 us  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 40 korrekt
-#    Time: 4100 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 4100 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 4100 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 41: 
-#    Time: 4100 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 41 korrekt
-#    Time: 4200 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 4200 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 4200 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 42: 
-#    Time: 4200 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Testcase 42 korrekt
-#    Time: 4300 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 4300 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 4300 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Fehler in Abschnitt 1 (keine Bypaesse): 0
-#    Time: 4300 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Fehler in Abschnitt 2 (Operand A - Bypaesse): 0
-#    Time: 4300 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Fehler in Abschnitt 3 (Operand B - Bypaesse): 0
-#    Time: 4300 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Fehler in Abschnitt 4 (Operand C - Bypaesse): 0
-#    Time: 4300 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Fehler in Abschnitt 5 (SHIFT - Bypaesse): 0
-#    Time: 4300 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Fehler in Abschnitt 6 (CC - Bypaesse): 0
-#    Time: 4300 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Fehler in Abschnitt 7 (Load-Use-Konflikte): 0
-#    Time: 4300 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 4300 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Funktionstest bestanden.
-#    Time: 4300 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Punkte: 6/6
-#    Time: 4300 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 4300 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: Simulation beendet.
-#    Time: 4300 ns  Iteration: 0  Instance: /armbypassctrl_tb
-# ** Note: --------------------------------------------------------------------------------
-#    Time: 4300 ns  Iteration: 0  Instance: /armbypassctrl_tb
+# ------------------- Testcase 1 / 28: -------------------
+#   Instruktion: add    r0, r1, r2, lsl #2
+#   binaer:      11100000100000010000000100000010
+#   Zeit:        0 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+# 
+# ------------------- Testcase 2 / 28: -------------------
+#   Instruktion: add    r3, r4, r5, lsl r6
+#   binaer:      11100000100001000011011000010101
+#   Zeit:        10000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_ID_OPB_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 3 / 28: -------------------
+#   Instruktion: add    r7, r8, #16       
+#   binaer:      11100010100010000111000000010000
+#   Zeit:        20000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+# 
+# ------------------- Testcase 4 / 28: -------------------
+#   Instruktion: add    r15, r9, r10      
+#   binaer:      11100000100010011111000000001010
+#   Zeit:        30000 ps
+# 
+# 
+# ------------------- Testcase 5 / 28: -------------------
+#   Instruktion: sub    r0, r1, r2, lsl #2
+#   binaer:      11100000010000010000000100000010
+#   Zeit:        40000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 6 / 28: -------------------
+#   Instruktion: sub    r3, r4, r5, lsl r6
+#   binaer:      11100000010001000011011000010101
+#   Zeit:        50000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_ID_OPB_MUX_CTRL fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 7 / 28: -------------------
+#   Instruktion: sub    r7, r8, #16       
+#   binaer:      11100010010010000111000000010000
+#   Zeit:        60000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 8 / 28: -------------------
+#   Instruktion: sub    r15, r9, r10      
+#   binaer:      11100000010010011111000000001010
+#   Zeit:        70000 ps
+# 
+# 
+# ------------------- Testcase 9 / 28: -------------------
+#   Instruktion: mov    r0, r1, lsl #2    
+#   binaer:      11100001101000000000000100000001
+#   Zeit:        80000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 10 / 28: -------------------
+#   Instruktion: mvn    r3, r4, lsl r6    
+#   binaer:      11100001111000000011011000010100
+#   Zeit:        90000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_ID_OPB_MUX_CTRL fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 11 / 28: -------------------
+#   Instruktion: orr    r7, r8, #16       
+#   binaer:      11100011100010000111000000010000
+#   Zeit:        100000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 12 / 28: -------------------
+#   Instruktion: and    r15, r9, r10      
+#   binaer:      11100000000010011111000000001010
+#   Zeit:        110000 ps
+# 
+# 
+# ------------------- Testcase 13 / 28: -------------------
+#   Instruktion: adds   r0, r1, r2, lsl #2
+#   binaer:      11100000100100010000000100000010
+#   Zeit:        120000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_MEM_CC_REG_EN   fehlerhaft! 
+#   AIC_WB_CC_REG_EN    fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_WB_PSR_SET_CC   fehlerhaft! 
+#   AIC_WB_PSR_ER       fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 14 / 28: -------------------
+#   Instruktion: adds   r3, r4, r5, lsl r6
+#   binaer:      11100000100101000011011000010101
+#   Zeit:        130000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_ID_OPB_MUX_CTRL fehlerhaft! 
+#   AIC_MEM_CC_REG_EN   fehlerhaft! 
+#   AIC_WB_CC_REG_EN    fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_WB_PSR_SET_CC   fehlerhaft! 
+#   AIC_WB_PSR_ER       fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 15 / 28: -------------------
+#   Instruktion: adds   r7, r8, #16       
+#   binaer:      11100010100110000111000000010000
+#   Zeit:        140000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_MEM_CC_REG_EN   fehlerhaft! 
+#   AIC_WB_CC_REG_EN    fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_WB_PSR_SET_CC   fehlerhaft! 
+#   AIC_WB_PSR_ER       fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 16 / 28: -------------------
+#   Instruktion: adds   r15, r9, r10      
+#   binaer:      11100000100110011111000000001010
+#   Zeit:        150000 ps
+# 
+# 
+# ------------------- Testcase 17 / 28: -------------------
+#   Instruktion: subs   r0, r1, r2, lsl #2
+#   binaer:      11100000010100010000000100000010
+#   Zeit:        160000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_MEM_CC_REG_EN   fehlerhaft! 
+#   AIC_WB_CC_REG_EN    fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_WB_PSR_SET_CC   fehlerhaft! 
+#   AIC_WB_PSR_ER       fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 18 / 28: -------------------
+#   Instruktion: subs   r3, r4, r5, lsl r6
+#   binaer:      11100000010101000011011000010101
+#   Zeit:        170000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_ID_OPB_MUX_CTRL fehlerhaft! 
+#   AIC_MEM_CC_REG_EN   fehlerhaft! 
+#   AIC_WB_CC_REG_EN    fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_WB_PSR_SET_CC   fehlerhaft! 
+#   AIC_WB_PSR_ER       fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 19 / 28: -------------------
+#   Instruktion: subs   r7, r8, #16       
+#   binaer:      11100010010110000111000000010000
+#   Zeit:        180000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_MEM_CC_REG_EN   fehlerhaft! 
+#   AIC_WB_CC_REG_EN    fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_WB_PSR_SET_CC   fehlerhaft! 
+#   AIC_WB_PSR_ER       fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 20 / 28: -------------------
+#   Instruktion: subs   pc, lr            
+#   binaer:      11100000010111111111000000001110
+#   Zeit:        190000 ps
+# 
+# 
+# ------------------- Testcase 21 / 28: -------------------
+#   Instruktion: cmp    r0, r1, lsl #2    
+#   binaer:      11100001010100000000000100000001
+#   Zeit:        200000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 22 / 28: -------------------
+#   Instruktion: cmn    r3, r4, lsl r6    
+#   binaer:      11100001011100110000011000010100
+#   Zeit:        210000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_ID_OPB_MUX_CTRL fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 23 / 28: -------------------
+#   Instruktion: tst    r7, #16           
+#   binaer:      11100011000101110000000000010000
+#   Zeit:        220000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 24 / 28: -------------------
+#   Instruktion: teq    r15, r10          
+#   binaer:      11100001001111110000000000001010
+#   Zeit:        230000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 25 / 28: -------------------
+#   Instruktion: cmp    r7, #16           
+#   binaer:      11100011010101110000000000010000
+#   Zeit:        240000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 26 / 28: -------------------
+#   Instruktion: cmn    r15, r11          
+#   binaer:      11100001011111110000000000001011
+#   Zeit:        250000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 27 / 28: -------------------
+#   Instruktion: tst    r0, r1, lsl #2    
+#   binaer:      11100001000100000000000100000001
+#   Zeit:        260000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 28 / 28: -------------------
+#   Instruktion: teq    r3, r4, lsl r6    
+#   binaer:      11100001001100110000011000010100
+#   Zeit:        270000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_ID_OPB_MUX_CTRL fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------------ Ergebnis: ----------------------
+# Erfolgreiche Testcases: 5 / 28
+# Fehlerhafte Signale:    114
+# 
 # ** Failure:  EOT (END OF TEST) - Diese Fehlermeldung stoppt den Simulator unabhaengig von tatsaechlich aufgetretenen Fehlern!
-#    Time: 4300 ns  Iteration: 0  Process: /armbypassctrl_tb/tb File: ./src/ArmBypassCtrl_tb.vhd
-# Break in Process tb at ./src/ArmBypassCtrl_tb.vhd line 645
+#    Time: 280 ns  Iteration: 0  Process: /armarithinstructionctrl_tb/tb File: ./src/ArmArithInstructionCtrl_tb.vhd
+# Break in Process tb at ./src/ArmArithInstructionCtrl_tb.vhd line 210
+vsim -voptargs=+acc work.armarithinstructionctrl_tb
+# vsim -voptargs=+acc work.armarithinstructionctrl_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.armtypes(body)
+# Loading arm_sim_lib.armtypes(body)
+# Loading work.armarithinstructionctrl_tb(bench)
+# Loading work.armarithinstructionctrl(behave)
+# Loading arm_sim_lib.armcoarseinstructiondecoder(behave)
+# Loading arm_sim_lib.armarithinstructionctrl(behave)
+vsim -voptargs=+acc work.armarithinstructionctrl_tb
+# vsim -voptargs=+acc work.armarithinstructionctrl_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.armtypes(body)
+# Loading arm_sim_lib.armtypes(body)
+# Loading work.armarithinstructionctrl_tb(bench)
+# Loading work.armarithinstructionctrl(behave)
+# Loading arm_sim_lib.armcoarseinstructiondecoder(behave)
+# Loading arm_sim_lib.armarithinstructionctrl(behave)
+run -all
+# ------------------- Testcase 1 / 28: -------------------
+#   Instruktion: add    r0, r1, r2, lsl #2
+#   binaer:      11100000100000010000000100000010
+#   Zeit:        0 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+# 
+# ------------------- Testcase 2 / 28: -------------------
+#   Instruktion: add    r3, r4, r5, lsl r6
+#   binaer:      11100000100001000011011000010101
+#   Zeit:        10000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_ID_OPB_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 3 / 28: -------------------
+#   Instruktion: add    r7, r8, #16       
+#   binaer:      11100010100010000111000000010000
+#   Zeit:        20000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+# 
+# ------------------- Testcase 4 / 28: -------------------
+#   Instruktion: add    r15, r9, r10      
+#   binaer:      11100000100010011111000000001010
+#   Zeit:        30000 ps
+# 
+# 
+# ------------------- Testcase 5 / 28: -------------------
+#   Instruktion: sub    r0, r1, r2, lsl #2
+#   binaer:      11100000010000010000000100000010
+#   Zeit:        40000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 6 / 28: -------------------
+#   Instruktion: sub    r3, r4, r5, lsl r6
+#   binaer:      11100000010001000011011000010101
+#   Zeit:        50000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_ID_OPB_MUX_CTRL fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 7 / 28: -------------------
+#   Instruktion: sub    r7, r8, #16       
+#   binaer:      11100010010010000111000000010000
+#   Zeit:        60000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 8 / 28: -------------------
+#   Instruktion: sub    r15, r9, r10      
+#   binaer:      11100000010010011111000000001010
+#   Zeit:        70000 ps
+# 
+# 
+# ------------------- Testcase 9 / 28: -------------------
+#   Instruktion: mov    r0, r1, lsl #2    
+#   binaer:      11100001101000000000000100000001
+#   Zeit:        80000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 10 / 28: -------------------
+#   Instruktion: mvn    r3, r4, lsl r6    
+#   binaer:      11100001111000000011011000010100
+#   Zeit:        90000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_ID_OPB_MUX_CTRL fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 11 / 28: -------------------
+#   Instruktion: orr    r7, r8, #16       
+#   binaer:      11100011100010000111000000010000
+#   Zeit:        100000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 12 / 28: -------------------
+#   Instruktion: and    r15, r9, r10      
+#   binaer:      11100000000010011111000000001010
+#   Zeit:        110000 ps
+# 
+# 
+# ------------------- Testcase 13 / 28: -------------------
+#   Instruktion: adds   r0, r1, r2, lsl #2
+#   binaer:      11100000100100010000000100000010
+#   Zeit:        120000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_MEM_CC_REG_EN   fehlerhaft! 
+#   AIC_WB_CC_REG_EN    fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_WB_PSR_SET_CC   fehlerhaft! 
+#   AIC_WB_PSR_ER       fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 14 / 28: -------------------
+#   Instruktion: adds   r3, r4, r5, lsl r6
+#   binaer:      11100000100101000011011000010101
+#   Zeit:        130000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_ID_OPB_MUX_CTRL fehlerhaft! 
+#   AIC_MEM_CC_REG_EN   fehlerhaft! 
+#   AIC_WB_CC_REG_EN    fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_WB_PSR_SET_CC   fehlerhaft! 
+#   AIC_WB_PSR_ER       fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 15 / 28: -------------------
+#   Instruktion: adds   r7, r8, #16       
+#   binaer:      11100010100110000111000000010000
+#   Zeit:        140000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_MEM_CC_REG_EN   fehlerhaft! 
+#   AIC_WB_CC_REG_EN    fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_WB_PSR_SET_CC   fehlerhaft! 
+#   AIC_WB_PSR_ER       fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 16 / 28: -------------------
+#   Instruktion: adds   r15, r9, r10      
+#   binaer:      11100000100110011111000000001010
+#   Zeit:        150000 ps
+# 
+# 
+# ------------------- Testcase 17 / 28: -------------------
+#   Instruktion: subs   r0, r1, r2, lsl #2
+#   binaer:      11100000010100010000000100000010
+#   Zeit:        160000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_MEM_CC_REG_EN   fehlerhaft! 
+#   AIC_WB_CC_REG_EN    fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_WB_PSR_SET_CC   fehlerhaft! 
+#   AIC_WB_PSR_ER       fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 18 / 28: -------------------
+#   Instruktion: subs   r3, r4, r5, lsl r6
+#   binaer:      11100000010101000011011000010101
+#   Zeit:        170000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_ID_OPB_MUX_CTRL fehlerhaft! 
+#   AIC_MEM_CC_REG_EN   fehlerhaft! 
+#   AIC_WB_CC_REG_EN    fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_WB_PSR_SET_CC   fehlerhaft! 
+#   AIC_WB_PSR_ER       fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 19 / 28: -------------------
+#   Instruktion: subs   r7, r8, #16       
+#   binaer:      11100010010110000111000000010000
+#   Zeit:        180000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_MEM_CC_REG_EN   fehlerhaft! 
+#   AIC_WB_CC_REG_EN    fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_WB_PSR_SET_CC   fehlerhaft! 
+#   AIC_WB_PSR_ER       fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 20 / 28: -------------------
+#   Instruktion: subs   pc, lr            
+#   binaer:      11100000010111111111000000001110
+#   Zeit:        190000 ps
+# 
+# 
+# ------------------- Testcase 21 / 28: -------------------
+#   Instruktion: cmp    r0, r1, lsl #2    
+#   binaer:      11100001010100000000000100000001
+#   Zeit:        200000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 22 / 28: -------------------
+#   Instruktion: cmn    r3, r4, lsl r6    
+#   binaer:      11100001011100110000011000010100
+#   Zeit:        210000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_ID_OPB_MUX_CTRL fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 23 / 28: -------------------
+#   Instruktion: tst    r7, #16           
+#   binaer:      11100011000101110000000000010000
+#   Zeit:        220000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 24 / 28: -------------------
+#   Instruktion: teq    r15, r10          
+#   binaer:      11100001001111110000000000001010
+#   Zeit:        230000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 25 / 28: -------------------
+#   Instruktion: cmp    r7, #16           
+#   binaer:      11100011010101110000000000010000
+#   Zeit:        240000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 26 / 28: -------------------
+#   Instruktion: cmn    r15, r11          
+#   binaer:      11100001011111110000000000001011
+#   Zeit:        250000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 27 / 28: -------------------
+#   Instruktion: tst    r0, r1, lsl #2    
+#   binaer:      11100001000100000000000100000001
+#   Zeit:        260000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 28 / 28: -------------------
+#   Instruktion: teq    r3, r4, lsl r6    
+#   binaer:      11100001001100110000011000010100
+#   Zeit:        270000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_ID_OPB_MUX_CTRL fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------------ Ergebnis: ----------------------
+# Erfolgreiche Testcases: 5 / 28
+# Fehlerhafte Signale:    114
+# 
+# ** Failure:  EOT (END OF TEST) - Diese Fehlermeldung stoppt den Simulator unabhaengig von tatsaechlich aufgetretenen Fehlern!
+#    Time: 280 ns  Iteration: 0  Process: /armarithinstructionctrl_tb/tb File: ./src/ArmArithInstructionCtrl_tb.vhd
+# Break in Process tb at ./src/ArmArithInstructionCtrl_tb.vhd line 210
+vcom -work ./work/ ./src/ArmArithInstructionCtrl.vhd
+# QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package ArmTypes
+# -- Compiling entity ArmArithInstructionCtrl
+# -- Compiling architecture behave of ArmArithInstructionCtrl
+vsim -voptargs=+acc work.armarithinstructionctrl_tb
+# vsim -voptargs=+acc work.armarithinstructionctrl_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.armtypes(body)
+# Loading arm_sim_lib.armtypes(body)
+# Loading work.armarithinstructionctrl_tb(bench)
+# Loading work.armarithinstructionctrl(behave)
+# Loading arm_sim_lib.armcoarseinstructiondecoder(behave)
+# Loading arm_sim_lib.armarithinstructionctrl(behave)
+run -all
+# ------------------- Testcase 1 / 28: -------------------
+#   Instruktion: add    r0, r1, r2, lsl #2
+#   binaer:      11100000100000010000000100000010
+#   Zeit:        0 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+# 
+# ------------------- Testcase 2 / 28: -------------------
+#   Instruktion: add    r3, r4, r5, lsl r6
+#   binaer:      11100000100001000011011000010101
+#   Zeit:        10000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_ID_OPB_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 3 / 28: -------------------
+#   Instruktion: add    r7, r8, #16       
+#   binaer:      11100010100010000111000000010000
+#   Zeit:        20000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+# 
+# ------------------- Testcase 4 / 28: -------------------
+#   Instruktion: add    r15, r9, r10      
+#   binaer:      11100000100010011111000000001010
+#   Zeit:        30000 ps
+# 
+# 
+# ------------------- Testcase 5 / 28: -------------------
+#   Instruktion: sub    r0, r1, r2, lsl #2
+#   binaer:      11100000010000010000000100000010
+#   Zeit:        40000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 6 / 28: -------------------
+#   Instruktion: sub    r3, r4, r5, lsl r6
+#   binaer:      11100000010001000011011000010101
+#   Zeit:        50000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_ID_OPB_MUX_CTRL fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 7 / 28: -------------------
+#   Instruktion: sub    r7, r8, #16       
+#   binaer:      11100010010010000111000000010000
+#   Zeit:        60000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 8 / 28: -------------------
+#   Instruktion: sub    r15, r9, r10      
+#   binaer:      11100000010010011111000000001010
+#   Zeit:        70000 ps
+# 
+# 
+# ------------------- Testcase 9 / 28: -------------------
+#   Instruktion: mov    r0, r1, lsl #2    
+#   binaer:      11100001101000000000000100000001
+#   Zeit:        80000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 10 / 28: -------------------
+#   Instruktion: mvn    r3, r4, lsl r6    
+#   binaer:      11100001111000000011011000010100
+#   Zeit:        90000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_ID_OPB_MUX_CTRL fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 11 / 28: -------------------
+#   Instruktion: orr    r7, r8, #16       
+#   binaer:      11100011100010000111000000010000
+#   Zeit:        100000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 12 / 28: -------------------
+#   Instruktion: and    r15, r9, r10      
+#   binaer:      11100000000010011111000000001010
+#   Zeit:        110000 ps
+# 
+# 
+# ------------------- Testcase 13 / 28: -------------------
+#   Instruktion: adds   r0, r1, r2, lsl #2
+#   binaer:      11100000100100010000000100000010
+#   Zeit:        120000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_MEM_CC_REG_EN   fehlerhaft! 
+#   AIC_WB_CC_REG_EN    fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_WB_PSR_SET_CC   fehlerhaft! 
+#   AIC_WB_PSR_ER       fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 14 / 28: -------------------
+#   Instruktion: adds   r3, r4, r5, lsl r6
+#   binaer:      11100000100101000011011000010101
+#   Zeit:        130000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_ID_OPB_MUX_CTRL fehlerhaft! 
+#   AIC_MEM_CC_REG_EN   fehlerhaft! 
+#   AIC_WB_CC_REG_EN    fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_WB_PSR_SET_CC   fehlerhaft! 
+#   AIC_WB_PSR_ER       fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 15 / 28: -------------------
+#   Instruktion: adds   r7, r8, #16       
+#   binaer:      11100010100110000111000000010000
+#   Zeit:        140000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_MEM_CC_REG_EN   fehlerhaft! 
+#   AIC_WB_CC_REG_EN    fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_WB_PSR_SET_CC   fehlerhaft! 
+#   AIC_WB_PSR_ER       fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 16 / 28: -------------------
+#   Instruktion: adds   r15, r9, r10      
+#   binaer:      11100000100110011111000000001010
+#   Zeit:        150000 ps
+# 
+# 
+# ------------------- Testcase 17 / 28: -------------------
+#   Instruktion: subs   r0, r1, r2, lsl #2
+#   binaer:      11100000010100010000000100000010
+#   Zeit:        160000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_MEM_CC_REG_EN   fehlerhaft! 
+#   AIC_WB_CC_REG_EN    fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_WB_PSR_SET_CC   fehlerhaft! 
+#   AIC_WB_PSR_ER       fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 18 / 28: -------------------
+#   Instruktion: subs   r3, r4, r5, lsl r6
+#   binaer:      11100000010101000011011000010101
+#   Zeit:        170000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_ID_OPB_MUX_CTRL fehlerhaft! 
+#   AIC_MEM_CC_REG_EN   fehlerhaft! 
+#   AIC_WB_CC_REG_EN    fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_WB_PSR_SET_CC   fehlerhaft! 
+#   AIC_WB_PSR_ER       fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 19 / 28: -------------------
+#   Instruktion: subs   r7, r8, #16       
+#   binaer:      11100010010110000111000000010000
+#   Zeit:        180000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_MEM_CC_REG_EN   fehlerhaft! 
+#   AIC_WB_CC_REG_EN    fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_WB_PSR_SET_CC   fehlerhaft! 
+#   AIC_WB_PSR_ER       fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 20 / 28: -------------------
+#   Instruktion: subs   pc, lr            
+#   binaer:      11100000010111111111000000001110
+#   Zeit:        190000 ps
+# 
+# 
+# ------------------- Testcase 21 / 28: -------------------
+#   Instruktion: cmp    r0, r1, lsl #2    
+#   binaer:      11100001010100000000000100000001
+#   Zeit:        200000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 22 / 28: -------------------
+#   Instruktion: cmn    r3, r4, lsl r6    
+#   binaer:      11100001011100110000011000010100
+#   Zeit:        210000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_ID_OPB_MUX_CTRL fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 23 / 28: -------------------
+#   Instruktion: tst    r7, #16           
+#   binaer:      11100011000101110000000000010000
+#   Zeit:        220000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 24 / 28: -------------------
+#   Instruktion: teq    r15, r10          
+#   binaer:      11100001001111110000000000001010
+#   Zeit:        230000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 25 / 28: -------------------
+#   Instruktion: cmp    r7, #16           
+#   binaer:      11100011010101110000000000010000
+#   Zeit:        240000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 26 / 28: -------------------
+#   Instruktion: cmn    r15, r11          
+#   binaer:      11100001011111110000000000001011
+#   Zeit:        250000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 27 / 28: -------------------
+#   Instruktion: tst    r0, r1, lsl #2    
+#   binaer:      11100001000100000000000100000001
+#   Zeit:        260000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 28 / 28: -------------------
+#   Instruktion: teq    r3, r4, lsl r6    
+#   binaer:      11100001001100110000011000010100
+#   Zeit:        270000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_ID_OPB_MUX_CTRL fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------------ Ergebnis: ----------------------
+# Erfolgreiche Testcases: 5 / 28
+# Fehlerhafte Signale:    114
+# 
+# ** Failure:  EOT (END OF TEST) - Diese Fehlermeldung stoppt den Simulator unabhaengig von tatsaechlich aufgetretenen Fehlern!
+#    Time: 280 ns  Iteration: 0  Process: /armarithinstructionctrl_tb/tb File: ./src/ArmArithInstructionCtrl_tb.vhd
+# Break in Process tb at ./src/ArmArithInstructionCtrl_tb.vhd line 210
+vcom -work ./work/ ./src/ArmArithInstructionCtrl.vhd
+# QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package ArmTypes
+# -- Compiling entity ArmArithInstructionCtrl
+# -- Compiling architecture behave of ArmArithInstructionCtrl
+vsim -voptargs=+acc work.armarithinstructionctrl_tb
+# vsim -voptargs=+acc work.armarithinstructionctrl_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.armtypes(body)
+# Loading arm_sim_lib.armtypes(body)
+# Loading work.armarithinstructionctrl_tb(bench)
+# Loading work.armarithinstructionctrl(behave)
+# Loading arm_sim_lib.armcoarseinstructiondecoder(behave)
+# Loading arm_sim_lib.armarithinstructionctrl(behave)
+run -all
+# ------------------- Testcase 1 / 28: -------------------
+#   Instruktion: add    r0, r1, r2, lsl #2
+#   binaer:      11100000100000010000000100000010
+#   Zeit:        0 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+# 
+# ------------------- Testcase 2 / 28: -------------------
+#   Instruktion: add    r3, r4, r5, lsl r6
+#   binaer:      11100000100001000011011000010101
+#   Zeit:        10000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+# 
+# ------------------- Testcase 3 / 28: -------------------
+#   Instruktion: add    r7, r8, #16       
+#   binaer:      11100010100010000111000000010000
+#   Zeit:        20000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+# 
+# ------------------- Testcase 4 / 28: -------------------
+#   Instruktion: add    r15, r9, r10      
+#   binaer:      11100000100010011111000000001010
+#   Zeit:        30000 ps
+# 
+# 
+# ------------------- Testcase 5 / 28: -------------------
+#   Instruktion: sub    r0, r1, r2, lsl #2
+#   binaer:      11100000010000010000000100000010
+#   Zeit:        40000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 6 / 28: -------------------
+#   Instruktion: sub    r3, r4, r5, lsl r6
+#   binaer:      11100000010001000011011000010101
+#   Zeit:        50000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 7 / 28: -------------------
+#   Instruktion: sub    r7, r8, #16       
+#   binaer:      11100010010010000111000000010000
+#   Zeit:        60000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 8 / 28: -------------------
+#   Instruktion: sub    r15, r9, r10      
+#   binaer:      11100000010010011111000000001010
+#   Zeit:        70000 ps
+# 
+# 
+# ------------------- Testcase 9 / 28: -------------------
+#   Instruktion: mov    r0, r1, lsl #2    
+#   binaer:      11100001101000000000000100000001
+#   Zeit:        80000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 10 / 28: -------------------
+#   Instruktion: mvn    r3, r4, lsl r6    
+#   binaer:      11100001111000000011011000010100
+#   Zeit:        90000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 11 / 28: -------------------
+#   Instruktion: orr    r7, r8, #16       
+#   binaer:      11100011100010000111000000010000
+#   Zeit:        100000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 12 / 28: -------------------
+#   Instruktion: and    r15, r9, r10      
+#   binaer:      11100000000010011111000000001010
+#   Zeit:        110000 ps
+# 
+# 
+# ------------------- Testcase 13 / 28: -------------------
+#   Instruktion: adds   r0, r1, r2, lsl #2
+#   binaer:      11100000100100010000000100000010
+#   Zeit:        120000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_MEM_CC_REG_EN   fehlerhaft! 
+#   AIC_WB_CC_REG_EN    fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_WB_PSR_SET_CC   fehlerhaft! 
+#   AIC_WB_PSR_ER       fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 14 / 28: -------------------
+#   Instruktion: adds   r3, r4, r5, lsl r6
+#   binaer:      11100000100101000011011000010101
+#   Zeit:        130000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_MEM_CC_REG_EN   fehlerhaft! 
+#   AIC_WB_CC_REG_EN    fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_WB_PSR_SET_CC   fehlerhaft! 
+#   AIC_WB_PSR_ER       fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 15 / 28: -------------------
+#   Instruktion: adds   r7, r8, #16       
+#   binaer:      11100010100110000111000000010000
+#   Zeit:        140000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_MEM_CC_REG_EN   fehlerhaft! 
+#   AIC_WB_CC_REG_EN    fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_WB_PSR_SET_CC   fehlerhaft! 
+#   AIC_WB_PSR_ER       fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 16 / 28: -------------------
+#   Instruktion: adds   r15, r9, r10      
+#   binaer:      11100000100110011111000000001010
+#   Zeit:        150000 ps
+# 
+# 
+# ------------------- Testcase 17 / 28: -------------------
+#   Instruktion: subs   r0, r1, r2, lsl #2
+#   binaer:      11100000010100010000000100000010
+#   Zeit:        160000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_MEM_CC_REG_EN   fehlerhaft! 
+#   AIC_WB_CC_REG_EN    fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_WB_PSR_SET_CC   fehlerhaft! 
+#   AIC_WB_PSR_ER       fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 18 / 28: -------------------
+#   Instruktion: subs   r3, r4, r5, lsl r6
+#   binaer:      11100000010101000011011000010101
+#   Zeit:        170000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_MEM_CC_REG_EN   fehlerhaft! 
+#   AIC_WB_CC_REG_EN    fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_WB_PSR_SET_CC   fehlerhaft! 
+#   AIC_WB_PSR_ER       fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 19 / 28: -------------------
+#   Instruktion: subs   r7, r8, #16       
+#   binaer:      11100010010110000111000000010000
+#   Zeit:        180000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_MEM_CC_REG_EN   fehlerhaft! 
+#   AIC_WB_CC_REG_EN    fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_WB_PSR_SET_CC   fehlerhaft! 
+#   AIC_WB_PSR_ER       fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 20 / 28: -------------------
+#   Instruktion: subs   pc, lr            
+#   binaer:      11100000010111111111000000001110
+#   Zeit:        190000 ps
+# 
+# 
+# ------------------- Testcase 21 / 28: -------------------
+#   Instruktion: cmp    r0, r1, lsl #2    
+#   binaer:      11100001010100000000000100000001
+#   Zeit:        200000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 22 / 28: -------------------
+#   Instruktion: cmn    r3, r4, lsl r6    
+#   binaer:      11100001011100110000011000010100
+#   Zeit:        210000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 23 / 28: -------------------
+#   Instruktion: tst    r7, #16           
+#   binaer:      11100011000101110000000000010000
+#   Zeit:        220000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 24 / 28: -------------------
+#   Instruktion: teq    r15, r10          
+#   binaer:      11100001001111110000000000001010
+#   Zeit:        230000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 25 / 28: -------------------
+#   Instruktion: cmp    r7, #16           
+#   binaer:      11100011010101110000000000010000
+#   Zeit:        240000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 26 / 28: -------------------
+#   Instruktion: cmn    r15, r11          
+#   binaer:      11100001011111110000000000001011
+#   Zeit:        250000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 27 / 28: -------------------
+#   Instruktion: tst    r0, r1, lsl #2    
+#   binaer:      11100001000100000000000100000001
+#   Zeit:        260000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 28 / 28: -------------------
+#   Instruktion: teq    r3, r4, lsl r6    
+#   binaer:      11100001001100110000011000010100
+#   Zeit:        270000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------------ Ergebnis: ----------------------
+# Erfolgreiche Testcases: 5 / 28
+# Fehlerhafte Signale:    107
+# 
+# ** Failure:  EOT (END OF TEST) - Diese Fehlermeldung stoppt den Simulator unabhaengig von tatsaechlich aufgetretenen Fehlern!
+#    Time: 280 ns  Iteration: 0  Process: /armarithinstructionctrl_tb/tb File: ./src/ArmArithInstructionCtrl_tb.vhd
+# Break in Process tb at ./src/ArmArithInstructionCtrl_tb.vhd line 210
+vcom -work ./work/ ./src/ArmArithInstructionCtrl.vhd
+# QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package ArmTypes
+# -- Compiling entity ArmArithInstructionCtrl
+# -- Compiling architecture behave of ArmArithInstructionCtrl
+run -all
+vsim -voptargs=+acc work.armarithinstructionctrl_tb
+# vsim -voptargs=+acc work.armarithinstructionctrl_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.armtypes(body)
+# Loading arm_sim_lib.armtypes(body)
+# Loading work.armarithinstructionctrl_tb(bench)
+# Loading work.armarithinstructionctrl(behave)
+# Loading arm_sim_lib.armcoarseinstructiondecoder(behave)
+# Loading arm_sim_lib.armarithinstructionctrl(behave)
+run -all
+# ------------------- Testcase 1 / 28: -------------------
+#   Instruktion: add    r0, r1, r2, lsl #2
+#   binaer:      11100000100000010000000100000010
+#   Zeit:        0 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+# 
+# ------------------- Testcase 2 / 28: -------------------
+#   Instruktion: add    r3, r4, r5, lsl r6
+#   binaer:      11100000100001000011011000010101
+#   Zeit:        10000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+# 
+# ------------------- Testcase 3 / 28: -------------------
+#   Instruktion: add    r7, r8, #16       
+#   binaer:      11100010100010000111000000010000
+#   Zeit:        20000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+# 
+# ------------------- Testcase 4 / 28: -------------------
+#   Instruktion: add    r15, r9, r10      
+#   binaer:      11100000100010011111000000001010
+#   Zeit:        30000 ps
+# 
+# 
+# ------------------- Testcase 5 / 28: -------------------
+#   Instruktion: sub    r0, r1, r2, lsl #2
+#   binaer:      11100000010000010000000100000010
+#   Zeit:        40000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 6 / 28: -------------------
+#   Instruktion: sub    r3, r4, r5, lsl r6
+#   binaer:      11100000010001000011011000010101
+#   Zeit:        50000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 7 / 28: -------------------
+#   Instruktion: sub    r7, r8, #16       
+#   binaer:      11100010010010000111000000010000
+#   Zeit:        60000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 8 / 28: -------------------
+#   Instruktion: sub    r15, r9, r10      
+#   binaer:      11100000010010011111000000001010
+#   Zeit:        70000 ps
+# 
+# 
+# ------------------- Testcase 9 / 28: -------------------
+#   Instruktion: mov    r0, r1, lsl #2    
+#   binaer:      11100001101000000000000100000001
+#   Zeit:        80000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 10 / 28: -------------------
+#   Instruktion: mvn    r3, r4, lsl r6    
+#   binaer:      11100001111000000011011000010100
+#   Zeit:        90000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 11 / 28: -------------------
+#   Instruktion: orr    r7, r8, #16       
+#   binaer:      11100011100010000111000000010000
+#   Zeit:        100000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 12 / 28: -------------------
+#   Instruktion: and    r15, r9, r10      
+#   binaer:      11100000000010011111000000001010
+#   Zeit:        110000 ps
+# 
+# 
+# ------------------- Testcase 13 / 28: -------------------
+#   Instruktion: adds   r0, r1, r2, lsl #2
+#   binaer:      11100000100100010000000100000010
+#   Zeit:        120000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_MEM_CC_REG_EN   fehlerhaft! 
+#   AIC_WB_CC_REG_EN    fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_WB_PSR_SET_CC   fehlerhaft! 
+#   AIC_WB_PSR_ER       fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 14 / 28: -------------------
+#   Instruktion: adds   r3, r4, r5, lsl r6
+#   binaer:      11100000100101000011011000010101
+#   Zeit:        130000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_MEM_CC_REG_EN   fehlerhaft! 
+#   AIC_WB_CC_REG_EN    fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_WB_PSR_SET_CC   fehlerhaft! 
+#   AIC_WB_PSR_ER       fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 15 / 28: -------------------
+#   Instruktion: adds   r7, r8, #16       
+#   binaer:      11100010100110000111000000010000
+#   Zeit:        140000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_MEM_CC_REG_EN   fehlerhaft! 
+#   AIC_WB_CC_REG_EN    fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_WB_PSR_SET_CC   fehlerhaft! 
+#   AIC_WB_PSR_ER       fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 16 / 28: -------------------
+#   Instruktion: adds   r15, r9, r10      
+#   binaer:      11100000100110011111000000001010
+#   Zeit:        150000 ps
+# 
+# 
+# ------------------- Testcase 17 / 28: -------------------
+#   Instruktion: subs   r0, r1, r2, lsl #2
+#   binaer:      11100000010100010000000100000010
+#   Zeit:        160000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_MEM_CC_REG_EN   fehlerhaft! 
+#   AIC_WB_CC_REG_EN    fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_WB_PSR_SET_CC   fehlerhaft! 
+#   AIC_WB_PSR_ER       fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 18 / 28: -------------------
+#   Instruktion: subs   r3, r4, r5, lsl r6
+#   binaer:      11100000010101000011011000010101
+#   Zeit:        170000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_MEM_CC_REG_EN   fehlerhaft! 
+#   AIC_WB_CC_REG_EN    fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_WB_PSR_SET_CC   fehlerhaft! 
+#   AIC_WB_PSR_ER       fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 19 / 28: -------------------
+#   Instruktion: subs   r7, r8, #16       
+#   binaer:      11100010010110000111000000010000
+#   Zeit:        180000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_MEM_CC_REG_EN   fehlerhaft! 
+#   AIC_WB_CC_REG_EN    fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_WB_PSR_SET_CC   fehlerhaft! 
+#   AIC_WB_PSR_ER       fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 20 / 28: -------------------
+#   Instruktion: subs   pc, lr            
+#   binaer:      11100000010111111111000000001110
+#   Zeit:        190000 ps
+# 
+# 
+# ------------------- Testcase 21 / 28: -------------------
+#   Instruktion: cmp    r0, r1, lsl #2    
+#   binaer:      11100001010100000000000100000001
+#   Zeit:        200000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 22 / 28: -------------------
+#   Instruktion: cmn    r3, r4, lsl r6    
+#   binaer:      11100001011100110000011000010100
+#   Zeit:        210000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 23 / 28: -------------------
+#   Instruktion: tst    r7, #16           
+#   binaer:      11100011000101110000000000010000
+#   Zeit:        220000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 24 / 28: -------------------
+#   Instruktion: teq    r15, r10          
+#   binaer:      11100001001111110000000000001010
+#   Zeit:        230000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 25 / 28: -------------------
+#   Instruktion: cmp    r7, #16           
+#   binaer:      11100011010101110000000000010000
+#   Zeit:        240000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 26 / 28: -------------------
+#   Instruktion: cmn    r15, r11          
+#   binaer:      11100001011111110000000000001011
+#   Zeit:        250000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 27 / 28: -------------------
+#   Instruktion: tst    r0, r1, lsl #2    
+#   binaer:      11100001000100000000000100000001
+#   Zeit:        260000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------- Testcase 28 / 28: -------------------
+#   Instruktion: teq    r3, r4, lsl r6    
+#   binaer:      11100001001100110000011000010100
+#   Zeit:        270000 ps
+# 
+#   AIC_IF_IAR_INC      fehlerhaft! 
+#   AIC_WB_IAR_LOAD     fehlerhaft! 
+#   AIC_DELAY           fehlerhaft! 
+#   AIC_ARM_NEXT_STATE  fehlerhaft! 
+# 
+# ------------------------ Ergebnis: ----------------------
+# Erfolgreiche Testcases: 5 / 28
+# Fehlerhafte Signale:    107
+# 
+# ** Failure:  EOT (END OF TEST) - Diese Fehlermeldung stoppt den Simulator unabhaengig von tatsaechlich aufgetretenen Fehlern!
+#    Time: 280 ns  Iteration: 0  Process: /armarithinstructionctrl_tb/tb File: ./src/ArmArithInstructionCtrl_tb.vhd
+# Break in Process tb at ./src/ArmArithInstructionCtrl_tb.vhd line 210
+vcom -work ./work/ ./src/ArmArithInstructionCtrl.vhd
+# QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package ArmTypes
+# -- Compiling entity ArmArithInstructionCtrl
+# -- Compiling architecture behave of ArmArithInstructionCtrl
+vsim -voptargs=+acc work.armarithinstructionctrl_tb
+# vsim -voptargs=+acc work.armarithinstructionctrl_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.armtypes(body)
+# Loading arm_sim_lib.armtypes(body)
+# Loading work.armarithinstructionctrl_tb(bench)
+# Loading work.armarithinstructionctrl(behave)
+# Loading arm_sim_lib.armcoarseinstructiondecoder(behave)
+# Loading arm_sim_lib.armarithinstructionctrl(behave)
+run -all
+# ------------------- Testcase 1 / 28: -------------------
+#   Instruktion: add    r0, r1, r2, lsl #2
+#   binaer:      11100000100000010000000100000010
+#   Zeit:        0 ps
+# 
+# 
+# ------------------- Testcase 2 / 28: -------------------
+#   Instruktion: add    r3, r4, r5, lsl r6
+#   binaer:      11100000100001000011011000010101
+#   Zeit:        10000 ps
+# 
+# 
+# ------------------- Testcase 3 / 28: -------------------
+#   Instruktion: add    r7, r8, #16       
+#   binaer:      11100010100010000111000000010000
+#   Zeit:        20000 ps
+# 
+# 
+# ------------------- Testcase 4 / 28: -------------------
+#   Instruktion: add    r15, r9, r10      
+#   binaer:      11100000100010011111000000001010
+#   Zeit:        30000 ps
+# 
+# 
+# ------------------- Testcase 5 / 28: -------------------
+#   Instruktion: sub    r0, r1, r2, lsl #2
+#   binaer:      11100000010000010000000100000010
+#   Zeit:        40000 ps
+# 
+# 
+# ------------------- Testcase 6 / 28: -------------------
+#   Instruktion: sub    r3, r4, r5, lsl r6
+#   binaer:      11100000010001000011011000010101
+#   Zeit:        50000 ps
+# 
+# 
+# ------------------- Testcase 7 / 28: -------------------
+#   Instruktion: sub    r7, r8, #16       
+#   binaer:      11100010010010000111000000010000
+#   Zeit:        60000 ps
+# 
+# 
+# ------------------- Testcase 8 / 28: -------------------
+#   Instruktion: sub    r15, r9, r10      
+#   binaer:      11100000010010011111000000001010
+#   Zeit:        70000 ps
+# 
+# 
+# ------------------- Testcase 9 / 28: -------------------
+#   Instruktion: mov    r0, r1, lsl #2    
+#   binaer:      11100001101000000000000100000001
+#   Zeit:        80000 ps
+# 
+# 
+# ------------------- Testcase 10 / 28: -------------------
+#   Instruktion: mvn    r3, r4, lsl r6    
+#   binaer:      11100001111000000011011000010100
+#   Zeit:        90000 ps
+# 
+# 
+# ------------------- Testcase 11 / 28: -------------------
+#   Instruktion: orr    r7, r8, #16       
+#   binaer:      11100011100010000111000000010000
+#   Zeit:        100000 ps
+# 
+# 
+# ------------------- Testcase 12 / 28: -------------------
+#   Instruktion: and    r15, r9, r10      
+#   binaer:      11100000000010011111000000001010
+#   Zeit:        110000 ps
+# 
+# 
+# ------------------- Testcase 13 / 28: -------------------
+#   Instruktion: adds   r0, r1, r2, lsl #2
+#   binaer:      11100000100100010000000100000010
+#   Zeit:        120000 ps
+# 
+# 
+# ------------------- Testcase 14 / 28: -------------------
+#   Instruktion: adds   r3, r4, r5, lsl r6
+#   binaer:      11100000100101000011011000010101
+#   Zeit:        130000 ps
+# 
+# 
+# ------------------- Testcase 15 / 28: -------------------
+#   Instruktion: adds   r7, r8, #16       
+#   binaer:      11100010100110000111000000010000
+#   Zeit:        140000 ps
+# 
+# 
+# ------------------- Testcase 16 / 28: -------------------
+#   Instruktion: adds   r15, r9, r10      
+#   binaer:      11100000100110011111000000001010
+#   Zeit:        150000 ps
+# 
+# 
+# ------------------- Testcase 17 / 28: -------------------
+#   Instruktion: subs   r0, r1, r2, lsl #2
+#   binaer:      11100000010100010000000100000010
+#   Zeit:        160000 ps
+# 
+# 
+# ------------------- Testcase 18 / 28: -------------------
+#   Instruktion: subs   r3, r4, r5, lsl r6
+#   binaer:      11100000010101000011011000010101
+#   Zeit:        170000 ps
+# 
+# 
+# ------------------- Testcase 19 / 28: -------------------
+#   Instruktion: subs   r7, r8, #16       
+#   binaer:      11100010010110000111000000010000
+#   Zeit:        180000 ps
+# 
+# 
+# ------------------- Testcase 20 / 28: -------------------
+#   Instruktion: subs   pc, lr            
+#   binaer:      11100000010111111111000000001110
+#   Zeit:        190000 ps
+# 
+# 
+# ------------------- Testcase 21 / 28: -------------------
+#   Instruktion: cmp    r0, r1, lsl #2    
+#   binaer:      11100001010100000000000100000001
+#   Zeit:        200000 ps
+# 
+# 
+# ------------------- Testcase 22 / 28: -------------------
+#   Instruktion: cmn    r3, r4, lsl r6    
+#   binaer:      11100001011100110000011000010100
+#   Zeit:        210000 ps
+# 
+# 
+# ------------------- Testcase 23 / 28: -------------------
+#   Instruktion: tst    r7, #16           
+#   binaer:      11100011000101110000000000010000
+#   Zeit:        220000 ps
+# 
+# 
+# ------------------- Testcase 24 / 28: -------------------
+#   Instruktion: teq    r15, r10          
+#   binaer:      11100001001111110000000000001010
+#   Zeit:        230000 ps
+# 
+# 
+# ------------------- Testcase 25 / 28: -------------------
+#   Instruktion: cmp    r7, #16           
+#   binaer:      11100011010101110000000000010000
+#   Zeit:        240000 ps
+# 
+# 
+# ------------------- Testcase 26 / 28: -------------------
+#   Instruktion: cmn    r15, r11          
+#   binaer:      11100001011111110000000000001011
+#   Zeit:        250000 ps
+# 
+# 
+# ------------------- Testcase 27 / 28: -------------------
+#   Instruktion: tst    r0, r1, lsl #2    
+#   binaer:      11100001000100000000000100000001
+#   Zeit:        260000 ps
+# 
+# 
+# ------------------- Testcase 28 / 28: -------------------
+#   Instruktion: teq    r3, r4, lsl r6    
+#   binaer:      11100001001100110000011000010100
+#   Zeit:        270000 ps
+# 
+# 
+# ------------------------ Ergebnis: ----------------------
+# Erfolgreiche Testcases: 28 / 28
+# Fehlerhafte Signale:    0
+# 
+# ** Failure:  EOT (END OF TEST) - Diese Fehlermeldung stoppt den Simulator unabhaengig von tatsaechlich aufgetretenen Fehlern!
+#    Time: 280 ns  Iteration: 0  Process: /armarithinstructionctrl_tb/tb File: ./src/ArmArithInstructionCtrl_tb.vhd
+# Break in Process tb at ./src/ArmArithInstructionCtrl_tb.vhd line 210
+vcom -work ./work/ ./src/ArmArithInstructionCtrl.vhd
+# QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package ArmTypes
+# -- Compiling entity ArmArithInstructionCtrl
+# -- Compiling architecture behave of ArmArithInstructionCtrl
+vsim -voptargs=+acc work.armarithinstructionctrl_tb
+# vsim -voptargs=+acc work.armarithinstructionctrl_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.armtypes(body)
+# Loading arm_sim_lib.armtypes(body)
+# Loading work.armarithinstructionctrl_tb(bench)
+# Loading work.armarithinstructionctrl(behave)
+# Loading arm_sim_lib.armcoarseinstructiondecoder(behave)
+# Loading arm_sim_lib.armarithinstructionctrl(behave)
+run -all
+# ------------------- Testcase 1 / 28: -------------------
+#   Instruktion: add    r0, r1, r2, lsl #2
+#   binaer:      11100000100000010000000100000010
+#   Zeit:        0 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 2 / 28: -------------------
+#   Instruktion: add    r3, r4, r5, lsl r6
+#   binaer:      11100000100001000011011000010101
+#   Zeit:        10000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 3 / 28: -------------------
+#   Instruktion: add    r7, r8, #16       
+#   binaer:      11100010100010000111000000010000
+#   Zeit:        20000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 4 / 28: -------------------
+#   Instruktion: add    r15, r9, r10      
+#   binaer:      11100000100010011111000000001010
+#   Zeit:        30000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 5 / 28: -------------------
+#   Instruktion: sub    r0, r1, r2, lsl #2
+#   binaer:      11100000010000010000000100000010
+#   Zeit:        40000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 6 / 28: -------------------
+#   Instruktion: sub    r3, r4, r5, lsl r6
+#   binaer:      11100000010001000011011000010101
+#   Zeit:        50000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 7 / 28: -------------------
+#   Instruktion: sub    r7, r8, #16       
+#   binaer:      11100010010010000111000000010000
+#   Zeit:        60000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 8 / 28: -------------------
+#   Instruktion: sub    r15, r9, r10      
+#   binaer:      11100000010010011111000000001010
+#   Zeit:        70000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 9 / 28: -------------------
+#   Instruktion: mov    r0, r1, lsl #2    
+#   binaer:      11100001101000000000000100000001
+#   Zeit:        80000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 10 / 28: -------------------
+#   Instruktion: mvn    r3, r4, lsl r6    
+#   binaer:      11100001111000000011011000010100
+#   Zeit:        90000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 11 / 28: -------------------
+#   Instruktion: orr    r7, r8, #16       
+#   binaer:      11100011100010000111000000010000
+#   Zeit:        100000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 12 / 28: -------------------
+#   Instruktion: and    r15, r9, r10      
+#   binaer:      11100000000010011111000000001010
+#   Zeit:        110000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 13 / 28: -------------------
+#   Instruktion: adds   r0, r1, r2, lsl #2
+#   binaer:      11100000100100010000000100000010
+#   Zeit:        120000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 14 / 28: -------------------
+#   Instruktion: adds   r3, r4, r5, lsl r6
+#   binaer:      11100000100101000011011000010101
+#   Zeit:        130000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 15 / 28: -------------------
+#   Instruktion: adds   r7, r8, #16       
+#   binaer:      11100010100110000111000000010000
+#   Zeit:        140000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 16 / 28: -------------------
+#   Instruktion: adds   r15, r9, r10      
+#   binaer:      11100000100110011111000000001010
+#   Zeit:        150000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 17 / 28: -------------------
+#   Instruktion: subs   r0, r1, r2, lsl #2
+#   binaer:      11100000010100010000000100000010
+#   Zeit:        160000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 18 / 28: -------------------
+#   Instruktion: subs   r3, r4, r5, lsl r6
+#   binaer:      11100000010101000011011000010101
+#   Zeit:        170000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 19 / 28: -------------------
+#   Instruktion: subs   r7, r8, #16       
+#   binaer:      11100010010110000111000000010000
+#   Zeit:        180000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 20 / 28: -------------------
+#   Instruktion: subs   pc, lr            
+#   binaer:      11100000010111111111000000001110
+#   Zeit:        190000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 21 / 28: -------------------
+#   Instruktion: cmp    r0, r1, lsl #2    
+#   binaer:      11100001010100000000000100000001
+#   Zeit:        200000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 22 / 28: -------------------
+#   Instruktion: cmn    r3, r4, lsl r6    
+#   binaer:      11100001011100110000011000010100
+#   Zeit:        210000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 23 / 28: -------------------
+#   Instruktion: tst    r7, #16           
+#   binaer:      11100011000101110000000000010000
+#   Zeit:        220000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 24 / 28: -------------------
+#   Instruktion: teq    r15, r10          
+#   binaer:      11100001001111110000000000001010
+#   Zeit:        230000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 25 / 28: -------------------
+#   Instruktion: cmp    r7, #16           
+#   binaer:      11100011010101110000000000010000
+#   Zeit:        240000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 26 / 28: -------------------
+#   Instruktion: cmn    r15, r11          
+#   binaer:      11100001011111110000000000001011
+#   Zeit:        250000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 27 / 28: -------------------
+#   Instruktion: tst    r0, r1, lsl #2    
+#   binaer:      11100001000100000000000100000001
+#   Zeit:        260000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 28 / 28: -------------------
+#   Instruktion: teq    r3, r4, lsl r6    
+#   binaer:      11100001001100110000011000010100
+#   Zeit:        270000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------------ Ergebnis: ----------------------
+# Erfolgreiche Testcases: 0 / 28
+# Fehlerhafte Signale:    28
+# 
+# ** Failure:  EOT (END OF TEST) - Diese Fehlermeldung stoppt den Simulator unabhaengig von tatsaechlich aufgetretenen Fehlern!
+#    Time: 280 ns  Iteration: 0  Process: /armarithinstructionctrl_tb/tb File: ./src/ArmArithInstructionCtrl_tb.vhd
+# Break in Process tb at ./src/ArmArithInstructionCtrl_tb.vhd line 210
+vsim -voptargs=+acc work.armarithinstructionctrl_tb
+# vsim -voptargs=+acc work.armarithinstructionctrl_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.armtypes(body)
+# Loading arm_sim_lib.armtypes(body)
+# Loading work.armarithinstructionctrl_tb(bench)
+# Loading work.armarithinstructionctrl(behave)
+# Loading arm_sim_lib.armcoarseinstructiondecoder(behave)
+# Loading arm_sim_lib.armarithinstructionctrl(behave)
+run -all
+# ------------------- Testcase 1 / 28: -------------------
+#   Instruktion: add    r0, r1, r2, lsl #2
+#   binaer:      11100000100000010000000100000010
+#   Zeit:        0 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 2 / 28: -------------------
+#   Instruktion: add    r3, r4, r5, lsl r6
+#   binaer:      11100000100001000011011000010101
+#   Zeit:        10000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 3 / 28: -------------------
+#   Instruktion: add    r7, r8, #16       
+#   binaer:      11100010100010000111000000010000
+#   Zeit:        20000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 4 / 28: -------------------
+#   Instruktion: add    r15, r9, r10      
+#   binaer:      11100000100010011111000000001010
+#   Zeit:        30000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 5 / 28: -------------------
+#   Instruktion: sub    r0, r1, r2, lsl #2
+#   binaer:      11100000010000010000000100000010
+#   Zeit:        40000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 6 / 28: -------------------
+#   Instruktion: sub    r3, r4, r5, lsl r6
+#   binaer:      11100000010001000011011000010101
+#   Zeit:        50000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 7 / 28: -------------------
+#   Instruktion: sub    r7, r8, #16       
+#   binaer:      11100010010010000111000000010000
+#   Zeit:        60000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 8 / 28: -------------------
+#   Instruktion: sub    r15, r9, r10      
+#   binaer:      11100000010010011111000000001010
+#   Zeit:        70000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 9 / 28: -------------------
+#   Instruktion: mov    r0, r1, lsl #2    
+#   binaer:      11100001101000000000000100000001
+#   Zeit:        80000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 10 / 28: -------------------
+#   Instruktion: mvn    r3, r4, lsl r6    
+#   binaer:      11100001111000000011011000010100
+#   Zeit:        90000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 11 / 28: -------------------
+#   Instruktion: orr    r7, r8, #16       
+#   binaer:      11100011100010000111000000010000
+#   Zeit:        100000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 12 / 28: -------------------
+#   Instruktion: and    r15, r9, r10      
+#   binaer:      11100000000010011111000000001010
+#   Zeit:        110000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 13 / 28: -------------------
+#   Instruktion: adds   r0, r1, r2, lsl #2
+#   binaer:      11100000100100010000000100000010
+#   Zeit:        120000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 14 / 28: -------------------
+#   Instruktion: adds   r3, r4, r5, lsl r6
+#   binaer:      11100000100101000011011000010101
+#   Zeit:        130000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 15 / 28: -------------------
+#   Instruktion: adds   r7, r8, #16       
+#   binaer:      11100010100110000111000000010000
+#   Zeit:        140000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 16 / 28: -------------------
+#   Instruktion: adds   r15, r9, r10      
+#   binaer:      11100000100110011111000000001010
+#   Zeit:        150000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 17 / 28: -------------------
+#   Instruktion: subs   r0, r1, r2, lsl #2
+#   binaer:      11100000010100010000000100000010
+#   Zeit:        160000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 18 / 28: -------------------
+#   Instruktion: subs   r3, r4, r5, lsl r6
+#   binaer:      11100000010101000011011000010101
+#   Zeit:        170000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 19 / 28: -------------------
+#   Instruktion: subs   r7, r8, #16       
+#   binaer:      11100010010110000111000000010000
+#   Zeit:        180000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 20 / 28: -------------------
+#   Instruktion: subs   pc, lr            
+#   binaer:      11100000010111111111000000001110
+#   Zeit:        190000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 21 / 28: -------------------
+#   Instruktion: cmp    r0, r1, lsl #2    
+#   binaer:      11100001010100000000000100000001
+#   Zeit:        200000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 22 / 28: -------------------
+#   Instruktion: cmn    r3, r4, lsl r6    
+#   binaer:      11100001011100110000011000010100
+#   Zeit:        210000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 23 / 28: -------------------
+#   Instruktion: tst    r7, #16           
+#   binaer:      11100011000101110000000000010000
+#   Zeit:        220000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 24 / 28: -------------------
+#   Instruktion: teq    r15, r10          
+#   binaer:      11100001001111110000000000001010
+#   Zeit:        230000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 25 / 28: -------------------
+#   Instruktion: cmp    r7, #16           
+#   binaer:      11100011010101110000000000010000
+#   Zeit:        240000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 26 / 28: -------------------
+#   Instruktion: cmn    r15, r11          
+#   binaer:      11100001011111110000000000001011
+#   Zeit:        250000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 27 / 28: -------------------
+#   Instruktion: tst    r0, r1, lsl #2    
+#   binaer:      11100001000100000000000100000001
+#   Zeit:        260000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------- Testcase 28 / 28: -------------------
+#   Instruktion: teq    r3, r4, lsl r6    
+#   binaer:      11100001001100110000011000010100
+#   Zeit:        270000 ps
+# 
+#   AIC_WB_IAR_MUX_CTRL fehlerhaft! 
+# 
+# ------------------------ Ergebnis: ----------------------
+# Erfolgreiche Testcases: 0 / 28
+# Fehlerhafte Signale:    28
+# 
+# ** Failure:  EOT (END OF TEST) - Diese Fehlermeldung stoppt den Simulator unabhaengig von tatsaechlich aufgetretenen Fehlern!
+#    Time: 280 ns  Iteration: 0  Process: /armarithinstructionctrl_tb/tb File: ./src/ArmArithInstructionCtrl_tb.vhd
+# Break in Process tb at ./src/ArmArithInstructionCtrl_tb.vhd line 210
+vcom -work ./work/ ./src/ArmArithInstructionCtrl.vhd
+# QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package ArmTypes
+# -- Compiling entity ArmArithInstructionCtrl
+# -- Compiling architecture behave of ArmArithInstructionCtrl
+vsim -voptargs=+acc work.armarithinstructionctrl_tb
+# vsim -voptargs=+acc work.armarithinstructionctrl_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.armtypes(body)
+# Loading arm_sim_lib.armtypes(body)
+# Loading work.armarithinstructionctrl_tb(bench)
+# Loading work.armarithinstructionctrl(behave)
+# Loading arm_sim_lib.armcoarseinstructiondecoder(behave)
+# Loading arm_sim_lib.armarithinstructionctrl(behave)
+run -all
+# ------------------- Testcase 1 / 28: -------------------
+#   Instruktion: add    r0, r1, r2, lsl #2
+#   binaer:      11100000100000010000000100000010
+#   Zeit:        0 ps
+# 
+# 
+# ------------------- Testcase 2 / 28: -------------------
+#   Instruktion: add    r3, r4, r5, lsl r6
+#   binaer:      11100000100001000011011000010101
+#   Zeit:        10000 ps
+# 
+# 
+# ------------------- Testcase 3 / 28: -------------------
+#   Instruktion: add    r7, r8, #16       
+#   binaer:      11100010100010000111000000010000
+#   Zeit:        20000 ps
+# 
+# 
+# ------------------- Testcase 4 / 28: -------------------
+#   Instruktion: add    r15, r9, r10      
+#   binaer:      11100000100010011111000000001010
+#   Zeit:        30000 ps
+# 
+# 
+# ------------------- Testcase 5 / 28: -------------------
+#   Instruktion: sub    r0, r1, r2, lsl #2
+#   binaer:      11100000010000010000000100000010
+#   Zeit:        40000 ps
+# 
+# 
+# ------------------- Testcase 6 / 28: -------------------
+#   Instruktion: sub    r3, r4, r5, lsl r6
+#   binaer:      11100000010001000011011000010101
+#   Zeit:        50000 ps
+# 
+# 
+# ------------------- Testcase 7 / 28: -------------------
+#   Instruktion: sub    r7, r8, #16       
+#   binaer:      11100010010010000111000000010000
+#   Zeit:        60000 ps
+# 
+# 
+# ------------------- Testcase 8 / 28: -------------------
+#   Instruktion: sub    r15, r9, r10      
+#   binaer:      11100000010010011111000000001010
+#   Zeit:        70000 ps
+# 
+# 
+# ------------------- Testcase 9 / 28: -------------------
+#   Instruktion: mov    r0, r1, lsl #2    
+#   binaer:      11100001101000000000000100000001
+#   Zeit:        80000 ps
+# 
+# 
+# ------------------- Testcase 10 / 28: -------------------
+#   Instruktion: mvn    r3, r4, lsl r6    
+#   binaer:      11100001111000000011011000010100
+#   Zeit:        90000 ps
+# 
+# 
+# ------------------- Testcase 11 / 28: -------------------
+#   Instruktion: orr    r7, r8, #16       
+#   binaer:      11100011100010000111000000010000
+#   Zeit:        100000 ps
+# 
+# 
+# ------------------- Testcase 12 / 28: -------------------
+#   Instruktion: and    r15, r9, r10      
+#   binaer:      11100000000010011111000000001010
+#   Zeit:        110000 ps
+# 
+# 
+# ------------------- Testcase 13 / 28: -------------------
+#   Instruktion: adds   r0, r1, r2, lsl #2
+#   binaer:      11100000100100010000000100000010
+#   Zeit:        120000 ps
+# 
+# 
+# ------------------- Testcase 14 / 28: -------------------
+#   Instruktion: adds   r3, r4, r5, lsl r6
+#   binaer:      11100000100101000011011000010101
+#   Zeit:        130000 ps
+# 
+# 
+# ------------------- Testcase 15 / 28: -------------------
+#   Instruktion: adds   r7, r8, #16       
+#   binaer:      11100010100110000111000000010000
+#   Zeit:        140000 ps
+# 
+# 
+# ------------------- Testcase 16 / 28: -------------------
+#   Instruktion: adds   r15, r9, r10      
+#   binaer:      11100000100110011111000000001010
+#   Zeit:        150000 ps
+# 
+# 
+# ------------------- Testcase 17 / 28: -------------------
+#   Instruktion: subs   r0, r1, r2, lsl #2
+#   binaer:      11100000010100010000000100000010
+#   Zeit:        160000 ps
+# 
+# 
+# ------------------- Testcase 18 / 28: -------------------
+#   Instruktion: subs   r3, r4, r5, lsl r6
+#   binaer:      11100000010101000011011000010101
+#   Zeit:        170000 ps
+# 
+# 
+# ------------------- Testcase 19 / 28: -------------------
+#   Instruktion: subs   r7, r8, #16       
+#   binaer:      11100010010110000111000000010000
+#   Zeit:        180000 ps
+# 
+# 
+# ------------------- Testcase 20 / 28: -------------------
+#   Instruktion: subs   pc, lr            
+#   binaer:      11100000010111111111000000001110
+#   Zeit:        190000 ps
+# 
+# 
+# ------------------- Testcase 21 / 28: -------------------
+#   Instruktion: cmp    r0, r1, lsl #2    
+#   binaer:      11100001010100000000000100000001
+#   Zeit:        200000 ps
+# 
+# 
+# ------------------- Testcase 22 / 28: -------------------
+#   Instruktion: cmn    r3, r4, lsl r6    
+#   binaer:      11100001011100110000011000010100
+#   Zeit:        210000 ps
+# 
+# 
+# ------------------- Testcase 23 / 28: -------------------
+#   Instruktion: tst    r7, #16           
+#   binaer:      11100011000101110000000000010000
+#   Zeit:        220000 ps
+# 
+# 
+# ------------------- Testcase 24 / 28: -------------------
+#   Instruktion: teq    r15, r10          
+#   binaer:      11100001001111110000000000001010
+#   Zeit:        230000 ps
+# 
+# 
+# ------------------- Testcase 25 / 28: -------------------
+#   Instruktion: cmp    r7, #16           
+#   binaer:      11100011010101110000000000010000
+#   Zeit:        240000 ps
+# 
+# 
+# ------------------- Testcase 26 / 28: -------------------
+#   Instruktion: cmn    r15, r11          
+#   binaer:      11100001011111110000000000001011
+#   Zeit:        250000 ps
+# 
+# 
+# ------------------- Testcase 27 / 28: -------------------
+#   Instruktion: tst    r0, r1, lsl #2    
+#   binaer:      11100001000100000000000100000001
+#   Zeit:        260000 ps
+# 
+# 
+# ------------------- Testcase 28 / 28: -------------------
+#   Instruktion: teq    r3, r4, lsl r6    
+#   binaer:      11100001001100110000011000010100
+#   Zeit:        270000 ps
+# 
+# 
+# ------------------------ Ergebnis: ----------------------
+# Erfolgreiche Testcases: 28 / 28
+# Fehlerhafte Signale:    0
+# 
+# ** Failure:  EOT (END OF TEST) - Diese Fehlermeldung stoppt den Simulator unabhaengig von tatsaechlich aufgetretenen Fehlern!
+#    Time: 280 ns  Iteration: 0  Process: /armarithinstructionctrl_tb/tb File: ./src/ArmArithInstructionCtrl_tb.vhd
+# Break in Process tb at ./src/ArmArithInstructionCtrl_tb.vhd line 210
+vcom -work ./work/ ./src/ArmArithInstructionCtrl.vhd
+# QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package ArmTypes
+# -- Compiling entity ArmArithInstructionCtrl
+# -- Compiling architecture behave of ArmArithInstructionCtrl
+vsim -voptargs=+acc work.armarithinstructionctrl_tb
+# vsim -voptargs=+acc work.armarithinstructionctrl_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.armtypes(body)
+# Loading arm_sim_lib.armtypes(body)
+# Loading work.armarithinstructionctrl_tb(bench)
+# Loading work.armarithinstructionctrl(behave)
+# Loading arm_sim_lib.armcoarseinstructiondecoder(behave)
+# Loading arm_sim_lib.armarithinstructionctrl(behave)
+run -all
+# ------------------- Testcase 1 / 28: -------------------
+#   Instruktion: add    r0, r1, r2, lsl #2
+#   binaer:      11100000100000010000000100000010
+#   Zeit:        0 ps
+# 
+# 
+# ------------------- Testcase 2 / 28: -------------------
+#   Instruktion: add    r3, r4, r5, lsl r6
+#   binaer:      11100000100001000011011000010101
+#   Zeit:        10000 ps
+# 
+# 
+# ------------------- Testcase 3 / 28: -------------------
+#   Instruktion: add    r7, r8, #16       
+#   binaer:      11100010100010000111000000010000
+#   Zeit:        20000 ps
+# 
+# 
+# ------------------- Testcase 4 / 28: -------------------
+#   Instruktion: add    r15, r9, r10      
+#   binaer:      11100000100010011111000000001010
+#   Zeit:        30000 ps
+# 
+# 
+# ------------------- Testcase 5 / 28: -------------------
+#   Instruktion: sub    r0, r1, r2, lsl #2
+#   binaer:      11100000010000010000000100000010
+#   Zeit:        40000 ps
+# 
+# 
+# ------------------- Testcase 6 / 28: -------------------
+#   Instruktion: sub    r3, r4, r5, lsl r6
+#   binaer:      11100000010001000011011000010101
+#   Zeit:        50000 ps
+# 
+# 
+# ------------------- Testcase 7 / 28: -------------------
+#   Instruktion: sub    r7, r8, #16       
+#   binaer:      11100010010010000111000000010000
+#   Zeit:        60000 ps
+# 
+# 
+# ------------------- Testcase 8 / 28: -------------------
+#   Instruktion: sub    r15, r9, r10      
+#   binaer:      11100000010010011111000000001010
+#   Zeit:        70000 ps
+# 
+# 
+# ------------------- Testcase 9 / 28: -------------------
+#   Instruktion: mov    r0, r1, lsl #2    
+#   binaer:      11100001101000000000000100000001
+#   Zeit:        80000 ps
+# 
+# 
+# ------------------- Testcase 10 / 28: -------------------
+#   Instruktion: mvn    r3, r4, lsl r6    
+#   binaer:      11100001111000000011011000010100
+#   Zeit:        90000 ps
+# 
+# 
+# ------------------- Testcase 11 / 28: -------------------
+#   Instruktion: orr    r7, r8, #16       
+#   binaer:      11100011100010000111000000010000
+#   Zeit:        100000 ps
+# 
+# 
+# ------------------- Testcase 12 / 28: -------------------
+#   Instruktion: and    r15, r9, r10      
+#   binaer:      11100000000010011111000000001010
+#   Zeit:        110000 ps
+# 
+# 
+# ------------------- Testcase 13 / 28: -------------------
+#   Instruktion: adds   r0, r1, r2, lsl #2
+#   binaer:      11100000100100010000000100000010
+#   Zeit:        120000 ps
+# 
+# 
+# ------------------- Testcase 14 / 28: -------------------
+#   Instruktion: adds   r3, r4, r5, lsl r6
+#   binaer:      11100000100101000011011000010101
+#   Zeit:        130000 ps
+# 
+# 
+# ------------------- Testcase 15 / 28: -------------------
+#   Instruktion: adds   r7, r8, #16       
+#   binaer:      11100010100110000111000000010000
+#   Zeit:        140000 ps
+# 
+# 
+# ------------------- Testcase 16 / 28: -------------------
+#   Instruktion: adds   r15, r9, r10      
+#   binaer:      11100000100110011111000000001010
+#   Zeit:        150000 ps
+# 
+# 
+# ------------------- Testcase 17 / 28: -------------------
+#   Instruktion: subs   r0, r1, r2, lsl #2
+#   binaer:      11100000010100010000000100000010
+#   Zeit:        160000 ps
+# 
+# 
+# ------------------- Testcase 18 / 28: -------------------
+#   Instruktion: subs   r3, r4, r5, lsl r6
+#   binaer:      11100000010101000011011000010101
+#   Zeit:        170000 ps
+# 
+# 
+# ------------------- Testcase 19 / 28: -------------------
+#   Instruktion: subs   r7, r8, #16       
+#   binaer:      11100010010110000111000000010000
+#   Zeit:        180000 ps
+# 
+# 
+# ------------------- Testcase 20 / 28: -------------------
+#   Instruktion: subs   pc, lr            
+#   binaer:      11100000010111111111000000001110
+#   Zeit:        190000 ps
+# 
+# 
+# ------------------- Testcase 21 / 28: -------------------
+#   Instruktion: cmp    r0, r1, lsl #2    
+#   binaer:      11100001010100000000000100000001
+#   Zeit:        200000 ps
+# 
+# 
+# ------------------- Testcase 22 / 28: -------------------
+#   Instruktion: cmn    r3, r4, lsl r6    
+#   binaer:      11100001011100110000011000010100
+#   Zeit:        210000 ps
+# 
+# 
+# ------------------- Testcase 23 / 28: -------------------
+#   Instruktion: tst    r7, #16           
+#   binaer:      11100011000101110000000000010000
+#   Zeit:        220000 ps
+# 
+# 
+# ------------------- Testcase 24 / 28: -------------------
+#   Instruktion: teq    r15, r10          
+#   binaer:      11100001001111110000000000001010
+#   Zeit:        230000 ps
+# 
+# 
+# ------------------- Testcase 25 / 28: -------------------
+#   Instruktion: cmp    r7, #16           
+#   binaer:      11100011010101110000000000010000
+#   Zeit:        240000 ps
+# 
+# 
+# ------------------- Testcase 26 / 28: -------------------
+#   Instruktion: cmn    r15, r11          
+#   binaer:      11100001011111110000000000001011
+#   Zeit:        250000 ps
+# 
+# 
+# ------------------- Testcase 27 / 28: -------------------
+#   Instruktion: tst    r0, r1, lsl #2    
+#   binaer:      11100001000100000000000100000001
+#   Zeit:        260000 ps
+# 
+# 
+# ------------------- Testcase 28 / 28: -------------------
+#   Instruktion: teq    r3, r4, lsl r6    
+#   binaer:      11100001001100110000011000010100
+#   Zeit:        270000 ps
+# 
+# 
+# ------------------------ Ergebnis: ----------------------
+# Erfolgreiche Testcases: 28 / 28
+# Fehlerhafte Signale:    0
+# 
+# ** Failure:  EOT (END OF TEST) - Diese Fehlermeldung stoppt den Simulator unabhaengig von tatsaechlich aufgetretenen Fehlern!
+#    Time: 280 ns  Iteration: 0  Process: /armarithinstructionctrl_tb/tb File: ./src/ArmArithInstructionCtrl_tb.vhd
+# Break in Process tb at ./src/ArmArithInstructionCtrl_tb.vhd line 210
+vcom -work ./work/ ./src/ArmArithInstructionCtrl.vhd
+# QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package ArmTypes
+# -- Compiling entity ArmArithInstructionCtrl
+# -- Compiling architecture behave of ArmArithInstructionCtrl
+vsim -voptargs=+acc work.armarithinstructionctrl_tb
+# vsim -voptargs=+acc work.armarithinstructionctrl_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.armtypes(body)
+# Loading arm_sim_lib.armtypes(body)
+# Loading work.armarithinstructionctrl_tb(bench)
+# Loading work.armarithinstructionctrl(behave)
+# Loading arm_sim_lib.armcoarseinstructiondecoder(behave)
+# Loading arm_sim_lib.armarithinstructionctrl(behave)
+run -all
+# ------------------- Testcase 1 / 28: -------------------
+#   Instruktion: add    r0, r1, r2, lsl #2
+#   binaer:      11100000100000010000000100000010
+#   Zeit:        0 ps
+# 
+# 
+# ------------------- Testcase 2 / 28: -------------------
+#   Instruktion: add    r3, r4, r5, lsl r6
+#   binaer:      11100000100001000011011000010101
+#   Zeit:        10000 ps
+# 
+# 
+# ------------------- Testcase 3 / 28: -------------------
+#   Instruktion: add    r7, r8, #16       
+#   binaer:      11100010100010000111000000010000
+#   Zeit:        20000 ps
+# 
+# 
+# ------------------- Testcase 4 / 28: -------------------
+#   Instruktion: add    r15, r9, r10      
+#   binaer:      11100000100010011111000000001010
+#   Zeit:        30000 ps
+# 
+# 
+# ------------------- Testcase 5 / 28: -------------------
+#   Instruktion: sub    r0, r1, r2, lsl #2
+#   binaer:      11100000010000010000000100000010
+#   Zeit:        40000 ps
+# 
+# 
+# ------------------- Testcase 6 / 28: -------------------
+#   Instruktion: sub    r3, r4, r5, lsl r6
+#   binaer:      11100000010001000011011000010101
+#   Zeit:        50000 ps
+# 
+# 
+# ------------------- Testcase 7 / 28: -------------------
+#   Instruktion: sub    r7, r8, #16       
+#   binaer:      11100010010010000111000000010000
+#   Zeit:        60000 ps
+# 
+# 
+# ------------------- Testcase 8 / 28: -------------------
+#   Instruktion: sub    r15, r9, r10      
+#   binaer:      11100000010010011111000000001010
+#   Zeit:        70000 ps
+# 
+# 
+# ------------------- Testcase 9 / 28: -------------------
+#   Instruktion: mov    r0, r1, lsl #2    
+#   binaer:      11100001101000000000000100000001
+#   Zeit:        80000 ps
+# 
+# 
+# ------------------- Testcase 10 / 28: -------------------
+#   Instruktion: mvn    r3, r4, lsl r6    
+#   binaer:      11100001111000000011011000010100
+#   Zeit:        90000 ps
+# 
+# 
+# ------------------- Testcase 11 / 28: -------------------
+#   Instruktion: orr    r7, r8, #16       
+#   binaer:      11100011100010000111000000010000
+#   Zeit:        100000 ps
+# 
+# 
+# ------------------- Testcase 12 / 28: -------------------
+#   Instruktion: and    r15, r9, r10      
+#   binaer:      11100000000010011111000000001010
+#   Zeit:        110000 ps
+# 
+# 
+# ------------------- Testcase 13 / 28: -------------------
+#   Instruktion: adds   r0, r1, r2, lsl #2
+#   binaer:      11100000100100010000000100000010
+#   Zeit:        120000 ps
+# 
+# 
+# ------------------- Testcase 14 / 28: -------------------
+#   Instruktion: adds   r3, r4, r5, lsl r6
+#   binaer:      11100000100101000011011000010101
+#   Zeit:        130000 ps
+# 
+# 
+# ------------------- Testcase 15 / 28: -------------------
+#   Instruktion: adds   r7, r8, #16       
+#   binaer:      11100010100110000111000000010000
+#   Zeit:        140000 ps
+# 
+# 
+# ------------------- Testcase 16 / 28: -------------------
+#   Instruktion: adds   r15, r9, r10      
+#   binaer:      11100000100110011111000000001010
+#   Zeit:        150000 ps
+# 
+# 
+# ------------------- Testcase 17 / 28: -------------------
+#   Instruktion: subs   r0, r1, r2, lsl #2
+#   binaer:      11100000010100010000000100000010
+#   Zeit:        160000 ps
+# 
+# 
+# ------------------- Testcase 18 / 28: -------------------
+#   Instruktion: subs   r3, r4, r5, lsl r6
+#   binaer:      11100000010101000011011000010101
+#   Zeit:        170000 ps
+# 
+# 
+# ------------------- Testcase 19 / 28: -------------------
+#   Instruktion: subs   r7, r8, #16       
+#   binaer:      11100010010110000111000000010000
+#   Zeit:        180000 ps
+# 
+# 
+# ------------------- Testcase 20 / 28: -------------------
+#   Instruktion: subs   pc, lr            
+#   binaer:      11100000010111111111000000001110
+#   Zeit:        190000 ps
+# 
+# 
+# ------------------- Testcase 21 / 28: -------------------
+#   Instruktion: cmp    r0, r1, lsl #2    
+#   binaer:      11100001010100000000000100000001
+#   Zeit:        200000 ps
+# 
+# 
+# ------------------- Testcase 22 / 28: -------------------
+#   Instruktion: cmn    r3, r4, lsl r6    
+#   binaer:      11100001011100110000011000010100
+#   Zeit:        210000 ps
+# 
+# 
+# ------------------- Testcase 23 / 28: -------------------
+#   Instruktion: tst    r7, #16           
+#   binaer:      11100011000101110000000000010000
+#   Zeit:        220000 ps
+# 
+# 
+# ------------------- Testcase 24 / 28: -------------------
+#   Instruktion: teq    r15, r10          
+#   binaer:      11100001001111110000000000001010
+#   Zeit:        230000 ps
+# 
+# 
+# ------------------- Testcase 25 / 28: -------------------
+#   Instruktion: cmp    r7, #16           
+#   binaer:      11100011010101110000000000010000
+#   Zeit:        240000 ps
+# 
+# 
+# ------------------- Testcase 26 / 28: -------------------
+#   Instruktion: cmn    r15, r11          
+#   binaer:      11100001011111110000000000001011
+#   Zeit:        250000 ps
+# 
+# 
+# ------------------- Testcase 27 / 28: -------------------
+#   Instruktion: tst    r0, r1, lsl #2    
+#   binaer:      11100001000100000000000100000001
+#   Zeit:        260000 ps
+# 
+# 
+# ------------------- Testcase 28 / 28: -------------------
+#   Instruktion: teq    r3, r4, lsl r6    
+#   binaer:      11100001001100110000011000010100
+#   Zeit:        270000 ps
+# 
+# 
+# ------------------------ Ergebnis: ----------------------
+# Erfolgreiche Testcases: 28 / 28
+# Fehlerhafte Signale:    0
+# 
+# ** Failure:  EOT (END OF TEST) - Diese Fehlermeldung stoppt den Simulator unabhaengig von tatsaechlich aufgetretenen Fehlern!
+#    Time: 280 ns  Iteration: 0  Process: /armarithinstructionctrl_tb/tb File: ./src/ArmArithInstructionCtrl_tb.vhd
+# Break in Process tb at ./src/ArmArithInstructionCtrl_tb.vhd line 210
+vcom -work ./work/ ./src/ArmArithInstructionCtrl.vhd
+# QuestaSim-64 vcom 10.2c_5 Compiler 2013.11 Nov 19 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package ArmTypes
+# -- Compiling entity ArmArithInstructionCtrl
+# -- Compiling architecture behave of ArmArithInstructionCtrl
+vsim -voptargs=+acc work.armarithinstructionctrl_tb
+# vsim -voptargs=+acc work.armarithinstructionctrl_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.armtypes(body)
+# Loading arm_sim_lib.armtypes(body)
+# Loading work.armarithinstructionctrl_tb(bench)
+# Loading work.armarithinstructionctrl(behave)
+# Loading arm_sim_lib.armcoarseinstructiondecoder(behave)
+# Loading arm_sim_lib.armarithinstructionctrl(behave)
+run -all
+# ------------------- Testcase 1 / 28: -------------------
+#   Instruktion: add    r0, r1, r2, lsl #2
+#   binaer:      11100000100000010000000100000010
+#   Zeit:        0 ps
+# 
+# 
+# ------------------- Testcase 2 / 28: -------------------
+#   Instruktion: add    r3, r4, r5, lsl r6
+#   binaer:      11100000100001000011011000010101
+#   Zeit:        10000 ps
+# 
+# 
+# ------------------- Testcase 3 / 28: -------------------
+#   Instruktion: add    r7, r8, #16       
+#   binaer:      11100010100010000111000000010000
+#   Zeit:        20000 ps
+# 
+# 
+# ------------------- Testcase 4 / 28: -------------------
+#   Instruktion: add    r15, r9, r10      
+#   binaer:      11100000100010011111000000001010
+#   Zeit:        30000 ps
+# 
+# 
+# ------------------- Testcase 5 / 28: -------------------
+#   Instruktion: sub    r0, r1, r2, lsl #2
+#   binaer:      11100000010000010000000100000010
+#   Zeit:        40000 ps
+# 
+# 
+# ------------------- Testcase 6 / 28: -------------------
+#   Instruktion: sub    r3, r4, r5, lsl r6
+#   binaer:      11100000010001000011011000010101
+#   Zeit:        50000 ps
+# 
+# 
+# ------------------- Testcase 7 / 28: -------------------
+#   Instruktion: sub    r7, r8, #16       
+#   binaer:      11100010010010000111000000010000
+#   Zeit:        60000 ps
+# 
+# 
+# ------------------- Testcase 8 / 28: -------------------
+#   Instruktion: sub    r15, r9, r10      
+#   binaer:      11100000010010011111000000001010
+#   Zeit:        70000 ps
+# 
+# 
+# ------------------- Testcase 9 / 28: -------------------
+#   Instruktion: mov    r0, r1, lsl #2    
+#   binaer:      11100001101000000000000100000001
+#   Zeit:        80000 ps
+# 
+# 
+# ------------------- Testcase 10 / 28: -------------------
+#   Instruktion: mvn    r3, r4, lsl r6    
+#   binaer:      11100001111000000011011000010100
+#   Zeit:        90000 ps
+# 
+# 
+# ------------------- Testcase 11 / 28: -------------------
+#   Instruktion: orr    r7, r8, #16       
+#   binaer:      11100011100010000111000000010000
+#   Zeit:        100000 ps
+# 
+# 
+# ------------------- Testcase 12 / 28: -------------------
+#   Instruktion: and    r15, r9, r10      
+#   binaer:      11100000000010011111000000001010
+#   Zeit:        110000 ps
+# 
+# 
+# ------------------- Testcase 13 / 28: -------------------
+#   Instruktion: adds   r0, r1, r2, lsl #2
+#   binaer:      11100000100100010000000100000010
+#   Zeit:        120000 ps
+# 
+# 
+# ------------------- Testcase 14 / 28: -------------------
+#   Instruktion: adds   r3, r4, r5, lsl r6
+#   binaer:      11100000100101000011011000010101
+#   Zeit:        130000 ps
+# 
+# 
+# ------------------- Testcase 15 / 28: -------------------
+#   Instruktion: adds   r7, r8, #16       
+#   binaer:      11100010100110000111000000010000
+#   Zeit:        140000 ps
+# 
+# 
+# ------------------- Testcase 16 / 28: -------------------
+#   Instruktion: adds   r15, r9, r10      
+#   binaer:      11100000100110011111000000001010
+#   Zeit:        150000 ps
+# 
+# 
+# ------------------- Testcase 17 / 28: -------------------
+#   Instruktion: subs   r0, r1, r2, lsl #2
+#   binaer:      11100000010100010000000100000010
+#   Zeit:        160000 ps
+# 
+# 
+# ------------------- Testcase 18 / 28: -------------------
+#   Instruktion: subs   r3, r4, r5, lsl r6
+#   binaer:      11100000010101000011011000010101
+#   Zeit:        170000 ps
+# 
+# 
+# ------------------- Testcase 19 / 28: -------------------
+#   Instruktion: subs   r7, r8, #16       
+#   binaer:      11100010010110000111000000010000
+#   Zeit:        180000 ps
+# 
+# 
+# ------------------- Testcase 20 / 28: -------------------
+#   Instruktion: subs   pc, lr            
+#   binaer:      11100000010111111111000000001110
+#   Zeit:        190000 ps
+# 
+# 
+# ------------------- Testcase 21 / 28: -------------------
+#   Instruktion: cmp    r0, r1, lsl #2    
+#   binaer:      11100001010100000000000100000001
+#   Zeit:        200000 ps
+# 
+# 
+# ------------------- Testcase 22 / 28: -------------------
+#   Instruktion: cmn    r3, r4, lsl r6    
+#   binaer:      11100001011100110000011000010100
+#   Zeit:        210000 ps
+# 
+# 
+# ------------------- Testcase 23 / 28: -------------------
+#   Instruktion: tst    r7, #16           
+#   binaer:      11100011000101110000000000010000
+#   Zeit:        220000 ps
+# 
+# 
+# ------------------- Testcase 24 / 28: -------------------
+#   Instruktion: teq    r15, r10          
+#   binaer:      11100001001111110000000000001010
+#   Zeit:        230000 ps
+# 
+# 
+# ------------------- Testcase 25 / 28: -------------------
+#   Instruktion: cmp    r7, #16           
+#   binaer:      11100011010101110000000000010000
+#   Zeit:        240000 ps
+# 
+# 
+# ------------------- Testcase 26 / 28: -------------------
+#   Instruktion: cmn    r15, r11          
+#   binaer:      11100001011111110000000000001011
+#   Zeit:        250000 ps
+# 
+# 
+# ------------------- Testcase 27 / 28: -------------------
+#   Instruktion: tst    r0, r1, lsl #2    
+#   binaer:      11100001000100000000000100000001
+#   Zeit:        260000 ps
+# 
+# 
+# ------------------- Testcase 28 / 28: -------------------
+#   Instruktion: teq    r3, r4, lsl r6    
+#   binaer:      11100001001100110000011000010100
+#   Zeit:        270000 ps
+# 
+# 
+# ------------------------ Ergebnis: ----------------------
+# Erfolgreiche Testcases: 28 / 28
+# Fehlerhafte Signale:    0
+# 
+# ** Failure:  EOT (END OF TEST) - Diese Fehlermeldung stoppt den Simulator unabhaengig von tatsaechlich aufgetretenen Fehlern!
+#    Time: 280 ns  Iteration: 0  Process: /armarithinstructionctrl_tb/tb File: ./src/ArmArithInstructionCtrl_tb.vhd
+# Break in Process tb at ./src/ArmArithInstructionCtrl_tb.vhd line 210
