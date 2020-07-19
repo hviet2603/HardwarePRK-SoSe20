@@ -53,7 +53,7 @@ package ArmConfiguration is
 --	Groesse des Programmspeichers in Byte, bestimmt, wie viele Byte durch den
 --	Systemcontroller nachgeladen werden.
 --------------------------------------------------------------------------------
-    constant ARM_PROG_MEM_SIZE : unsigned := to_unsigned(16384,32);
+    constant ARM_PROG_MEM_SIZE : unsigned := to_unsigned(128,32);
 --------------------------------------------------------------------------------
 --	Angabe, ob der Systemcontroller ein in den Speicher geladenes
 --	Programm wieder auslesen und ueber die serielle Schnittstelle
