@@ -51,11 +51,10 @@ signal Rn_reg: std_logic_vector(3 downto 0);
 signal Rd_reg: std_logic_vector(3 downto 0);
 signal Rs_reg: std_logic_vector(3 downto 0);
 signal Rm_reg: std_logic_vector(3 downto 0);
-signal operand_2: std_logic_vector(11 downto 0);
 signal immediate: std_logic_vector(7 downto 0);
 
 signal branch: std_logic;
-signal s_bit: std_logic;
+signal s_Bit: std_logic;
 signal test_or_compare_instr: std_logic;
 
 begin
@@ -66,13 +65,12 @@ Rn_reg <= AIC_INSTRUCTION(19 downto 16);
 Rd_reg <= AIC_INSTRUCTION(15 downto 12);
 Rs_reg <= AIC_INSTRUCTION(11 downto 8);
 Rm_reg <= AIC_INSTRUCTION(3 downto 0);
-operand_2 <= AIC_INSTRUCTION(11 downto 0);
 immediate <= AIC_INSTRUCTION(7 downto 0);
 
 branch <= '1' when Rd_reg = PC; -- PC: R15 "1111", defined in ArmTypes
-s_bit <= AIC_INSTRUCTION(20);
-test_or_compare_instr <= '1' when instruction_opcode = OP_TST or instruction_opcode = OP_TEQ or instruction_opcode = OP_CMP or instruction_opcode = OP_CMN else
-			  '0'																	     ;
+s_Bit <= AIC_INSTRUCTION(20);
+test_or_compare_instr <= '1' when opcode = OP_TST or opcode = OP_TEQ or opcode = OP_CMP or opcode = OP_CMN else
+			  '0'											   ;
 
 -- Instruction Decode - ReadPort A: read from Rn 
 AIC_ID_R_PORT_A_ADDR <= Rn_reg;
@@ -81,7 +79,7 @@ AIC_ID_R_PORT_A_ADDR <= Rn_reg;
 AIC_ID_R_PORT_B_ADDR <= Rm_reg;
 AIC_ID_IMMEDIATE <= x"000000" & immediate;
 AIC_ID_OPB_MUX_CTRL <= '0' when AIC_DECODED_VECTOR = CD_ARITH_REGISTER else 
-			'1'                                                 ; --CD_ARITH_IMMEDIATE
+			'1'                                                 ; -- CD_ARITH_IMMEDIATE
 			
 -- Instruction Decode - ReadPort C: read from Rs
 AIC_ID_R_PORT_C_ADDR <= Rs_reg;
@@ -98,17 +96,47 @@ AIC_ID_REGS_USED <=  "001" when AIC_DECODED_VECTOR = CD_ARITH_IMMEDIATE         
                      "111" when AIC_DECODED_VECTOR = CD_ARITH_REGISTER_REGISTER else  -- OpC, OpB, OpA              
                      "000"                                                          ;
                      
--- 
-AIC_MEM_RES_REG_EN <= '1' when not test_or_compare_instr else 
+-- Pipelining: Enable Signal for Forwarding Register, by Test and Compare the Register Memory should not be changed
+AIC_MEM_RES_REG_EN <= '1' when not test_or_compare_instr else  -- MEM_RES Register 
                       '0'				       ;
-AIC_WB_RES_REG_EN <= '1' when not test_or_compare_instr else 
+AIC_WB_RES_REG_EN <= '1' when not test_or_compare_instr else   -- WB_RES Register
                      '0'                                    ;
-AIC_WB_W_PORT_A_EN <= '1' when not test_or_compare_instr else
-                      '0'                                    ;
-         
+AIC_WB_W_PORT_A_EN <= '1' when not test_or_compare_instr else  -- Write on Port A
+                      '0'                                    ;              
 
+-- Branching
+--AIC_WB_IAR_MUX_CTRL <= '0';
+AIC_IF_IAR_INC <= '1' when not branch else  -- When not Branching: new PC = PC + 1
+                  '0'                     ;
+AIC_WB_IAR_LOAD <= '1' when branch else     -- When Branching: jump to the Branch Address
+                   '0'                 ;
+AIC_DELAY <= "10" when branch else	      -- When Branching: wait for 3 Tacts (2,1,0)  
+             "00"                    ;
+AIC_ARM_NEXT_STATE <= STATE_WAIT_TO_FETCH when branch else  -- Next State
+                      STATE_DECODE                        ;
 
-
-
+-- Update the program status register
+PSR_UPDATE: process (test_or_compare_instr, s_Bit, branch) 
+begin
+	-- Default
+	AIC_WB_PSR_EN <= '0';
+	AIC_MEM_CC_REG_EN <= '0';
+	AIC_WB_CC_REG_EN <= '0';
+	AIC_WB_PSR_SET_CC <= '0';
+	AIC_WB_PSR_ER <= '0';
+	-- s bit is set -> update PSR
+	if s_Bit then
+		AIC_WB_PSR_EN <= '1';
+		if branch and not test_or_compare_instr then
+			AIC_WB_PSR_ER <= '1'; -- Mode changed: Return from exception handling
+		else
+			-- enable Update condition code
+			AIC_WB_PSR_SET_CC <= '1';
+			-- enable CC Forwarding 
+			AIC_MEM_CC_REG_EN <= '1'; 
+			AIC_WB_CC_REG_EN <= '1';
+		end if;
+	end if;
+end process PSR_UPDATE;           
 
 end architecture behave;
