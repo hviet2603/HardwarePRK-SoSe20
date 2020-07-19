@@ -98,11 +98,11 @@ AIC_ID_REGS_USED <=  "001" when AIC_DECODED_VECTOR = CD_ARITH_IMMEDIATE         
                      "000"                                                          ;
                      
 -- Pipelining: Enable Signal for Forwarding Register, by Test and Compare the Register Memory should not be changed
-AIC_MEM_RES_REG_EN <= '1' when not test_or_compare_instr else  -- MEM_RES Register 
+AIC_MEM_RES_REG_EN <= '1' when test_or_compare_instr = '0' else  -- MEM_RES Register 
                       '0'				       ;
-AIC_WB_RES_REG_EN <= '1' when not test_or_compare_instr else   -- WB_RES Register
+AIC_WB_RES_REG_EN <= '1' when test_or_compare_instr = '0' else   -- WB_RES Register
                      '0'                                    ;
-AIC_WB_W_PORT_A_EN <= '1' when not test_or_compare_instr else  -- Write on Port A
+AIC_WB_W_PORT_A_EN <= '1' when test_or_compare_instr = '0' else  -- Write on Port A
                       '0'                                    ;
 
 -- MUX Ctrl in WB 
@@ -115,13 +115,13 @@ AIC_WB_IAR_MUX_CTRL <= '1' when AIC_DECODED_VECTOR = CD_LOAD_STORE_MULTIPLE or  
               
 
 -- Branching
-AIC_IF_IAR_INC <= '1' when not branch else  -- When not Branching: new PC = PC + 1
+AIC_IF_IAR_INC <= '1' when branch = '0' else  -- When not Branching: new PC = PC + 1
                   '0'                     ;
-AIC_WB_IAR_LOAD <= '1' when branch else     -- When Branching: jump to the Branch Address
+AIC_WB_IAR_LOAD <= '1' when branch = '1' else     -- When Branching: jump to the Branch Address
                    '0'                 ;
-AIC_DELAY <= "10" when branch else	      -- When Branching: wait for 3 Tacts (2,1,0)  
+AIC_DELAY <= "10" when branch = '1' else	      -- When Branching: wait for 3 Tacts (2,1,0)  
              "00"                    ;
-AIC_ARM_NEXT_STATE <= STATE_WAIT_TO_FETCH when branch else  -- Next State
+AIC_ARM_NEXT_STATE <= STATE_WAIT_TO_FETCH when branch = '1' else  -- Next State
                       STATE_DECODE                        ;
 
 -- Update the program status register
@@ -134,9 +134,9 @@ begin
 	AIC_WB_PSR_SET_CC <= '0';
 	AIC_WB_PSR_ER <= '0';
 	-- s bit is set -> update PSR
-	if s_Bit then
+	if s_Bit = '1' then
 		AIC_WB_PSR_EN <= '1';
-		if branch and not test_or_compare_instr then
+		if branch = '1' and test_or_compare_instr = '0' then
 			AIC_WB_PSR_ER <= '1'; -- Mode changed: Return from exception handling
 		else
 		  -- enable Update condition code

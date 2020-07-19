@@ -28,8 +28,8 @@ use work.ArmMultiplier;
 --Fuer Synthese auskommentieren!
  library ARM_SIM_LIB;
 -- Simulationsmodelle vorgegebener Komponenten:
-	use ARM_SIM_LIB.ArmProgramStatusRegister;
-	use ARM_SIM_LIB.ArmWordManipulation;
+--	use ARM_SIM_LIB.ArmProgramStatusRegister;
+--	use ARM_SIM_LIB.ArmWordManipulation;
 
 -- Simulationsmodelle selbst implementierter Komponenten
 --	use ARM_SIM_LIB.ArmInstructionAddressRegister;

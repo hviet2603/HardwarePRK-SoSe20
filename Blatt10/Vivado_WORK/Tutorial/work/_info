@@ -52,7 +52,7 @@ R14
 !i10b 1
 !i111 1
 Earmarithinstructionctrl
-Z16 w1595158580
+Z16 w1595171770
 R1
 R3
 R4
@@ -65,9 +65,9 @@ VD9mem4aAngH6ob_bVicXF3
 !s100 1gI:dIE8;73Nl8:[AKodb3
 R8
 33
-Z19 !s110 1595166109
+Z19 !s110 1595178275
 !i10b 1
-Z20 !s108 1595166109.668568
+Z20 !s108 1595178274.547502
 Z21 !s90 -reportprogress|300|-work|./work/|./src/ArmArithInstructionCtrl.vhd|./src/ArmArithInstructionCtrl_tb.vhd|./src/ArmConditionCheck.vhd|./src/ArmConfiguration.vhd|./src/ArmControlPath.vhd|./src/ArmCopDecoder.vhd|./src/ArmCore.vhd|./src/ArmCore_tb.vhd|./src/ArmDelayShiftRegister.vhd|./src/ArmFilePaths.vhd|./src/ArmGlobalProbes.vhd|./src/ArmShiftRecoder.vhd|./src/ArmTop.vhd|./src/ArmTop_tb.vhd|./src/ArmTypes.vhd|./src/TB_Tools.vhd|
 Z22 !s107 ./src/TB_Tools.vhd|./src/ArmTypes.vhd|./src/ArmTop_tb.vhd|./src/ArmTop.vhd|./src/ArmShiftRecoder.vhd|./src/ArmGlobalProbes.vhd|./src/ArmFilePaths.vhd|./src/ArmDelayShiftRegister.vhd|./src/ArmCore_tb.vhd|./src/ArmCore.vhd|./src/ArmCopDecoder.vhd|./src/ArmControlPath.vhd|./src/ArmConfiguration.vhd|./src/ArmConditionCheck.vhd|./src/ArmArithInstructionCtrl_tb.vhd|./src/ArmArithInstructionCtrl.vhd|
 !i111 1
@@ -80,8 +80,8 @@ R4
 Z23 DEx4 work 23 armarithinstructionctrl 0 22 D9mem4aAngH6ob_bVicXF3
 l60
 L47
-Z24 Vcde1KLFNmPZ9U^oYbl;``1
-Z25 !s100 za;N>N4Io1iE<lIL4JET32
+V<dD>Xd?67DQiWmohTdmBf2
+!s100 :nELQY^fk^zLF21i:g1S83
 R8
 33
 R19
@@ -93,19 +93,19 @@ R22
 R13
 R14
 Earmarithinstructionctrl_tb
-Z26 w1595153635
-Z27 DEx11 arm_sim_lib 27 armcoarseinstructiondecoder 0 22 WUJWL5coA=Z;A?;g_eiJL2
-Z28 DPx11 arm_sim_lib 8 armtypes 0 22 E>lHlUa=IgUHPG<?QOkBY1
-Z29 DEx11 arm_sim_lib 23 armarithinstructionctrl 0 22 @^6G=WfJ=^`led76i_T[^3
+Z24 w1595153635
+Z25 DEx11 arm_sim_lib 27 armcoarseinstructiondecoder 0 22 WUJWL5coA=Z;A?;g_eiJL2
+Z26 DPx11 arm_sim_lib 8 armtypes 0 22 E>lHlUa=IgUHPG<?QOkBY1
+Z27 DEx11 arm_sim_lib 23 armarithinstructionctrl 0 22 @^6G=WfJ=^`led76i_T[^3
 R23
 R1
-Z30 DPx4 ieee 16 std_logic_textio 0 22 E=LR>a2bb_I?VV>QDdAdh3
+Z28 DPx4 ieee 16 std_logic_textio 0 22 E=LR>a2bb_I?VV>QDdAdh3
 R2
 R3
 R4
 R5
-Z31 8./src/ArmArithInstructionCtrl_tb.vhd
-Z32 F./src/ArmArithInstructionCtrl_tb.vhd
+Z29 8./src/ArmArithInstructionCtrl_tb.vhd
+Z30 F./src/ArmArithInstructionCtrl_tb.vhd
 l0
 L18
 VGfZ[Sg7FPUcNFiXlD6lL62
@@ -121,20 +121,20 @@ R22
 R13
 R14
 Abench
-R29
 R27
+R25
 R23
-R28
+R26
 R1
-R30
+R28
 R2
 R3
 R4
-Z33 DEx4 work 26 armarithinstructionctrl_tb 0 22 GfZ[Sg7FPUcNFiXlD6lL62
+Z31 DEx4 work 26 armarithinstructionctrl_tb 0 22 GfZ[Sg7FPUcNFiXlD6lL62
 l89
 L21
-Z34 VL<82dOhg97h9DOoOQBT<C2
-Z35 !s100 2[0NJ<;UMZg<;AMNZ@aKg1
+Z32 VL<82dOhg97h9DOoOQBT<C2
+Z33 !s100 2[0NJ<;UMZg<;AMNZ@aKg1
 R8
 33
 R19
@@ -146,15 +146,15 @@ R22
 R13
 R14
 Earmbarrelshifter
-Z36 w1593342332
+Z34 w1593342332
 R2
-Z37 DEx4 work 3 mux 0 22 ;<Y`_naa3LUhHl45CVWDX3
-Z38 DPx4 ieee 9 math_real 0 22 X1eFklFj<NHn@4Wz7P8j:2
+Z35 DEx4 work 3 mux 0 22 ;<Y`_naa3LUhHl45CVWDX3
+Z36 DPx4 ieee 9 math_real 0 22 X1eFklFj<NHn@4Wz7P8j:2
 R3
 R4
 R5
-Z39 8./src/subSrc/ArmBarrelShifter.vhd
-Z40 F./src/subSrc/ArmBarrelShifter.vhd
+Z37 8./src/subSrc/ArmBarrelShifter.vhd
+Z38 F./src/subSrc/ArmBarrelShifter.vhd
 l0
 L14
 VPT0iY@;OoE=H:d1;Z3Xh72
@@ -170,12 +170,12 @@ R14
 !i10b 1
 !i111 1
 Astructure
-R37
+R35
 R2
-R38
+R36
 R3
 R4
-Z41 DEx4 work 16 armbarrelshifter 0 22 PT0iY@;OoE=H:d1;Z3Xh72
+Z39 DEx4 work 16 armbarrelshifter 0 22 PT0iY@;OoE=H:d1;Z3Xh72
 l42
 L34
 V>DcH]OjHVOcNaoJ`56?f=3
@@ -191,12 +191,12 @@ R14
 !i10b 1
 !i111 1
 Earmbypassctrl
-Z42 w1594495197
+Z40 w1594495197
 R3
 R4
 R5
-Z43 8./src/subSrc/ArmBypassCtrl.vhd
-Z44 F./src/subSrc/ArmBypassCtrl.vhd
+Z41 8./src/subSrc/ArmBypassCtrl.vhd
+Z42 F./src/subSrc/ArmBypassCtrl.vhd
 l0
 L13
 Vi=@DUYWH]oa[f^R5Ek3=a2
@@ -230,17 +230,17 @@ R14
 !i10b 1
 !i111 1
 Earmchipselectgenerator
-Z45 w1592083396
+Z43 w1592083396
 R1
 R2
-Z46 DPx4 work 16 armconfiguration 0 22 EF<0L=C<II;Of7fY1]i;W2
-Z47 DPx4 ieee 18 std_logic_unsigned 0 22 @_jbHPR7i^Jh?`2fDCO`m3
-Z48 DPx4 ieee 15 std_logic_arith 0 22 I`lKR?Ob>E^B_e2VdVLiQ0
+Z44 DPx4 work 16 armconfiguration 0 22 EF<0L=C<II;Of7fY1]i;W2
+Z45 DPx4 ieee 18 std_logic_unsigned 0 22 @_jbHPR7i^Jh?`2fDCO`m3
+Z46 DPx4 ieee 15 std_logic_arith 0 22 I`lKR?Ob>E^B_e2VdVLiQ0
 R3
 R4
 R5
-Z49 8./src/subSrc/ArmChipSelectGenerator.vhd
-Z50 F./src/subSrc/ArmChipSelectGenerator.vhd
+Z47 8./src/subSrc/ArmChipSelectGenerator.vhd
+Z48 F./src/subSrc/ArmChipSelectGenerator.vhd
 l0
 L30
 VG@Yg6BZG^JDjOjkAd^:1D0
@@ -258,12 +258,12 @@ R14
 Abehave
 R1
 R2
+R44
+R45
 R46
-R47
-R48
 R3
 R4
-Z51 DEx4 work 22 armchipselectgenerator 0 22 G@Yg6BZG^JDjOjkAd^:1D0
+Z49 DEx4 work 22 armchipselectgenerator 0 22 G@Yg6BZG^JDjOjkAd^:1D0
 l70
 L46
 VGHndQLEmKVG25I]D9`:Sn2
@@ -275,34 +275,34 @@ R11
 R12
 R13
 R14
-Z52 !s100 ZPV6k`eDOezW@ehLNo=@o1
+Z50 !s100 ZPV6k`eDOezW@ehLNo=@o1
 !i10b 1
 !i111 1
 Earmclkgen
-Z53 w1592085320
-Z54 DPx6 unisim 11 vcomponents 0 22 SYSOKGISeekDd@RQ<SSU60
+Z51 w1592085320
+Z52 DPx6 unisim 11 vcomponents 0 22 SYSOKGISeekDd@RQ<SSU60
 R3
 R4
 R5
-Z55 8./src/subSrc/ArmClkGen_sim_netlist.vhdl
-Z56 F./src/subSrc/ArmClkGen_sim_netlist.vhdl
+Z53 8./src/subSrc/ArmClkGen_sim_netlist.vhdl
+Z54 F./src/subSrc/ArmClkGen_sim_netlist.vhdl
 l0
 L177
 V7N<BX[Xg@7@[3n;IFP^930
 R8
 33
-Z57 !s110 1595165638
-Z58 !s108 1595165638.569674
-Z59 !s90 -reportprogress|300|-work|./work/|./src/subSrc/ArmClkGen_sim_netlist.vhdl|
-Z60 !s107 ./src/subSrc/ArmClkGen_sim_netlist.vhdl|
+Z55 !s110 1595165638
+Z56 !s108 1595165638.569674
+Z57 !s90 -reportprogress|300|-work|./work/|./src/subSrc/ArmClkGen_sim_netlist.vhdl|
+Z58 !s107 ./src/subSrc/ArmClkGen_sim_netlist.vhdl|
 R13
 R14
 !s100 8S`iC]DF5W0b3]_i]=edg3
 !i10b 1
 !i111 1
 Astructure
-Z61 DEx4 work 27 armclkgen_armclkgen_clk_wiz 0 22 7Y1GOPm3>OL6Jf;;^0@no2
-R54
+Z59 DEx4 work 27 armclkgen_armclkgen_clk_wiz 0 22 7Y1GOPm3>OL6Jf;;^0@no2
+R52
 R3
 R4
 DEx4 work 9 armclkgen 0 22 7N<BX[Xg@7@[3n;IFP^930
@@ -311,64 +311,64 @@ L189
 V^S9[U[IWzEWb_:WPi<`=T0
 R8
 33
+R55
+R56
 R57
 R58
-R59
-R60
 R13
 R14
 !s100 bL3KX5NSgQfoTU8VQUTz92
 !i10b 1
 !i111 1
 Earmclkgen_armclkgen_clk_wiz
-R53
-R54
+R51
+R52
 R3
 R4
 R5
-R55
-R56
+R53
+R54
 l0
 L17
 V7Y1GOPm3>OL6Jf;;^0@no2
 R8
 33
+R55
+R56
 R57
 R58
-R59
-R60
 R13
 R14
 !s100 WzaCaW8KoRgh]XS0<d>JK2
 !i10b 1
 !i111 1
 Astructure
-R54
+R52
 R3
 R4
-R61
+R59
 l62
 L29
 V@5P3VU2c093N?I=VX3KMS1
 R8
 33
+R55
+R56
 R57
 R58
-R59
-R60
 R13
 R14
 !s100 m>eV@WnZ>d_Gg=8C^4QNJ1
 !i10b 1
 !i111 1
 Earmcoarseinstructiondecoder
-Z62 w1592510268
+Z60 w1592510268
 R1
 R3
 R4
 R5
-Z63 8./src/subSrc/ArmCoarseInstructionDecoder.vhd
-Z64 F./src/subSrc/ArmCoarseInstructionDecoder.vhd
+Z61 8./src/subSrc/ArmCoarseInstructionDecoder.vhd
+Z62 F./src/subSrc/ArmCoarseInstructionDecoder.vhd
 l0
 L38
 V<ga;h2T<4P`:A_<N;O3B@2
@@ -403,13 +403,13 @@ R14
 !i10b 1
 !i111 1
 Earmconditioncheck
-R26
+R24
 R1
 R3
 R4
 R5
-Z65 8./src/ArmConditionCheck.vhd
-Z66 F./src/ArmConditionCheck.vhd
+Z63 8./src/ArmConditionCheck.vhd
+Z64 F./src/ArmConditionCheck.vhd
 l0
 L19
 V;RWdg[PL>>?[:RCQ`EzlM0
@@ -428,11 +428,11 @@ Abehave
 R1
 R3
 R4
-Z67 DEx4 work 17 armconditioncheck 0 22 ;RWdg[PL>>?[:RCQ`EzlM0
+Z65 DEx4 work 17 armconditioncheck 0 22 ;RWdg[PL>>?[:RCQ`EzlM0
 l28
 L27
-Z68 VP7;RhlR:0EMhke_o[VRUT2
-Z69 !s100 _=5BQA1?R157@7z>=i`M[1
+Z66 VP7;RhlR:0EMhke_o[VRUT2
+Z67 !s100 _=5BQA1?R157@7z>=i`M[1
 R8
 33
 R19
@@ -445,9 +445,9 @@ R13
 R14
 Parmconfiguration
 R1
-Z70 DBx4 ieee 11 numeric_std 4 body 22 cf[UOE3Dlcl>8doRh?HSd2
+Z68 DBx4 ieee 11 numeric_std 4 body 22 cf[UOE3Dlcl>8doRh?HSd2
 R3
-Z71 DBx4 ieee 14 std_logic_1164 4 body 22 1]3]Sd[BH]a?RU=65;HdL3
+Z69 DBx4 ieee 14 std_logic_1164 4 body 22 1]3]Sd[BH]a?RU=65;HdL3
 w1595165979
 R5
 8./src/ArmConfiguration.vhd
@@ -467,24 +467,24 @@ R22
 R13
 R14
 Earmcontrolpath
-Z72 w1595163081
-Z73 DPx4 work 24 armregaddresstranslation 0 22 mg>PM[R@1[?Wh@Io];E@51
-R46
-Z74 DPx4 work 15 armglobalprobes 0 22 PN5ccPZSJkQjiDA66@21^3
+Z70 w1595163081
+Z71 DPx4 work 24 armregaddresstranslation 0 22 mg>PM[R@1[?Wh@Io];E@51
+R44
+Z72 DPx4 work 15 armglobalprobes 0 22 PN5ccPZSJkQjiDA66@21^3
 R1
 R2
 R3
 R4
 R5
-Z75 8./src/ArmControlPath.vhd
-Z76 F./src/ArmControlPath.vhd
+Z73 8./src/ArmControlPath.vhd
+Z74 F./src/ArmControlPath.vhd
 l0
 L29
 V:;LlTMIXJM?AF[:LS3@n_1
 !s100 DQNSSDVSf2Rd[Be:SmLo20
 R8
 33
-R19
+Z75 !s110 1595178276
 !i10b 1
 R20
 R21
@@ -493,21 +493,21 @@ R22
 R13
 R14
 Abehave
-R73
-R46
-R74
+R71
+R44
+R72
 R1
 R2
 R3
 R4
-Z77 DEx4 work 14 armcontrolpath 0 22 :;LlTMIXJM?AF[:LS3@n_1
+Z76 DEx4 work 14 armcontrolpath 0 22 :;LlTMIXJM?AF[:LS3@n_1
 l444
 L105
-Z78 V6jRC<VPoI_D8OneoZdYQ03
-Z79 !s100 RMoR0eDG[08k?b_0e;M1H1
+Z77 V6jRC<VPoI_D8OneoZdYQ03
+Z78 !s100 RMoR0eDG[08k?b_0e;M1H1
 R8
 33
-R19
+R75
 !i10b 1
 R20
 R21
@@ -516,20 +516,20 @@ R22
 R13
 R14
 Earmcopdecoder
-R26
+R24
 R1
 R3
 R4
 R5
-Z80 8./src/ArmCopDecoder.vhd
-Z81 F./src/ArmCopDecoder.vhd
+Z79 8./src/ArmCopDecoder.vhd
+Z80 F./src/ArmCopDecoder.vhd
 l0
 L22
 VzCLAUWKmoAzgSl?P=bM@g3
 !s100 ]ejl8Y;H1Q]bU9a?a>LC93
 R8
 33
-R19
+R75
 !i10b 1
 R20
 R21
@@ -541,14 +541,14 @@ Abehavioral
 R1
 R3
 R4
-Z82 DEx4 work 13 armcopdecoder 0 22 zCLAUWKmoAzgSl?P=bM@g3
+Z81 DEx4 work 13 armcopdecoder 0 22 zCLAUWKmoAzgSl?P=bM@g3
 l39
 L29
-Z83 VKUD>IM<;N[eJ?=n:>KE9o3
-Z84 !s100 fc8CG6;@ekS2bb:L;a]]h2
+Z82 VKUD>IM<;N[eJ?=n:>KE9o3
+Z83 !s100 fc8CG6;@ekS2bb:L;a]]h2
 R8
 33
-R19
+R75
 !i10b 1
 R20
 R21
@@ -557,23 +557,23 @@ R22
 R13
 R14
 Earmcore
-R26
-R74
-R46
+R24
+R72
+R44
 R1
 R2
 R3
 R4
 R5
-Z85 8./src/ArmCore.vhd
-Z86 F./src/ArmCore.vhd
+Z84 8./src/ArmCore.vhd
+Z85 F./src/ArmCore.vhd
 l0
 L36
 V1EQd0R0AA^c6b3342iKH;0
 !s100 ^DCFaPR]DZOONlE^8@^=^0
 R8
 33
-R19
+R75
 !i10b 1
 R20
 R21
@@ -582,26 +582,26 @@ R22
 R13
 R14
 Abehave
-Z87 DPx11 arm_sim_lib 16 armconfiguration 0 22 gbYN=j<5nk69^dD3od@JF1
-R28
-R38
-Z88 DEx4 work 11 armdatapath 0 22 GQel`GB?jm5OXf;N9]5Gm2
-R73
-R77
-R74
-R46
+Z86 DPx11 arm_sim_lib 16 armconfiguration 0 22 gbYN=j<5nk69^dD3od@JF1
+R26
+R36
+Z87 DEx4 work 11 armdatapath 0 22 GQel`GB?jm5OXf;N9]5Gm2
+R71
+R76
+R72
+R44
 R1
 R2
 R3
 R4
-Z89 DEx4 work 7 armcore 0 22 1EQd0R0AA^c6b3342iKH;0
+Z88 DEx4 work 7 armcore 0 22 1EQd0R0AA^c6b3342iKH;0
 l138
 L67
-Z90 VQOcFiN]3i=?G=UoCh83281
-Z91 !s100 _Xmkl`j>_hEU`lGn=n1303
+Z89 VQOcFiN]3i=?G=UoCh83281
+Z90 !s100 _Xmkl`j>_hEU`lGn=n1303
 R8
 33
-R19
+Z91 !s110 1595178277
 !i10b 1
 R20
 R21
@@ -610,14 +610,14 @@ R22
 R13
 R14
 Earmcore_tb
-R26
-R73
-R74
+R24
+R71
+R72
 Z92 DPx4 work 12 armfilepaths 0 22 ^M3cdLUMT=kAO2d=TcdPT3
-R46
+R44
 R1
 Z93 DPx4 work 8 tb_tools 0 22 kb8U95ZF54@A>gS0]W5]80
-R30
+R28
 R2
 R4
 R3
@@ -630,7 +630,7 @@ V4eWgSHa?meS]DjH:ZaLzS2
 !s100 4RO5A6LzA50aND0^2G@l[0
 R8
 33
-R19
+R91
 !i10b 1
 R20
 R21
@@ -639,14 +639,14 @@ R22
 R13
 R14
 Abehave
-R89
-R73
-R74
+R88
+R71
+R72
 R92
-R46
+R44
 R1
 R93
-R30
+R28
 R2
 R4
 R3
@@ -657,7 +657,7 @@ Z97 V72z[JC0`:;VX?`BAHT55;1
 Z98 !s100 AzG`7AGKXDf??OCQfL0;j3
 R8
 33
-R19
+R91
 !i10b 1
 R20
 R21
@@ -668,19 +668,19 @@ R14
 Earmdatapath
 Z99 w1595162674
 Z100 DEx11 arm_sim_lib 19 armwordmanipulation 0 22 []14o`<=6j^ETN921a7aF1
-R87
-R28
+R86
+R26
 Z101 DEx11 arm_sim_lib 24 armprogramstatusregister 0 22 9BAcmjf_Me7D=YBIY07>82
 Z102 DEx4 work 13 armmultiplier 0 22 MY8PI;jg8_@;i3n8A8>@32
 R15
-R38
+R36
 Z103 DEx4 work 10 armshifter 0 22 ;LX2j_<WKdZg1jS8B[UdC1
-R73
+R71
 Z104 DEx4 work 10 armregfile 0 22 PB7jbXi[ScBZ>OnDTVibP2
 Z105 DEx4 work 18 armdatareplication 0 22 Ea8b3W3l@jnzdh]ZQ[O4b1
 Z106 DEx4 work 29 arminstructionaddressregister 0 22 46JkIgZn1jaXBn1U4Tb[M3
-R74
-R46
+R72
+R44
 R1
 R2
 R3
@@ -703,17 +703,17 @@ R14
 !i10b 1
 !i111 1
 Astructure
-R87
-R28
-R38
-R73
-R74
-R46
+R86
+R26
+R36
+R71
+R72
+R44
 R1
 R2
 R3
 R4
-R88
+R87
 l363
 L149
 V23:;HUGG=D`aZU@LWZ[HE1
@@ -770,7 +770,7 @@ R14
 !i10b 1
 !i111 1
 Earmdelayshiftregister
-R26
+R24
 R3
 R4
 R5
@@ -782,7 +782,7 @@ V=HWKM<P7[ffEhKkzzkMAa1
 Z114 !s100 ]PFA5^b2VLe1Mol`e:EH01
 R8
 33
-R19
+R91
 !i10b 1
 R20
 R21
@@ -800,7 +800,7 @@ Z116 VNHVOa_`=iGgM48YDkEXkQ1
 Z117 !s100 zg4AcI>4W0XH2Z>zTMiPO2
 R8
 33
-R19
+R91
 !i10b 1
 R20
 R21
@@ -819,7 +819,7 @@ V^M3cdLUMT=kAO2d=TcdPT3
 !s100 39kgEWFK5odLAl6[Vl^o20
 R8
 33
-R19
+R91
 !i10b 1
 R20
 R21
@@ -835,7 +835,7 @@ Z121 V:KDda@KOQR3;9f3NFBRIA1
 Z122 !s100 WJG<MiEm`bgnS@D:zISW:2
 R8
 33
-R19
+R91
 !i10b 1
 R20
 R21
@@ -847,8 +847,8 @@ nbody
 Parmglobalprobes
 R1
 R3
-R71
-R26
+R69
+R24
 R5
 Z123 8./src/ArmGlobalProbes.vhd
 Z124 F./src/ArmGlobalProbes.vhd
@@ -859,7 +859,7 @@ VPN5ccPZSJkQjiDA66@21^3
 R8
 33
 b1
-R19
+R91
 !i10b 1
 R20
 R21
@@ -868,17 +868,17 @@ R22
 R13
 R14
 Bbody
-R74
+R72
 R1
 R3
-R71
+R69
 l0
 L159
 Z125 VYjM2THmF<B>dD9RY94U9a2
 Z126 !s100 iVgjYeoEZdW0PibKQW;MQ3
 R8
 33
-R19
+R91
 !i10b 1
 R20
 R21
@@ -973,7 +973,7 @@ Earmmeminterface
 Z133 w1590802311
 R1
 R2
-R46
+R44
 R3
 R4
 R5
@@ -997,7 +997,7 @@ Abehave
 Z136 DEx4 work 13 armramb_4kx32 0 22 CQOd>AcAG;<kWT<[N[bCk0
 R1
 R2
-R46
+R44
 R3
 R4
 Z137 DEx4 work 15 armmeminterface 0 22 bcW:IIf;`?DC=l6Y7C5g;3
@@ -1120,7 +1120,7 @@ R14
 !i10b 1
 !i111 1
 Abehavioral
-R38
+R36
 Z147 DEx4 work 12 armramb_4kx8 0 22 j;RKaCIbJFj[I3MeEzi`61
 R2
 R3
@@ -1143,7 +1143,7 @@ R14
 Earmramb_4kx8
 Z148 w1590596727
 R2
-R38
+R36
 R3
 R4
 R5
@@ -1165,7 +1165,7 @@ Z151 !s100 z_J1_CWW>Gg4[i7F]SKRQ1
 !i111 1
 Abehavioral
 R2
-R38
+R36
 R3
 R4
 R147
@@ -1248,7 +1248,7 @@ R14
 !i10b 1
 !i111 1
 Bbody
-R73
+R71
 R1
 R3
 R4
@@ -1270,9 +1270,9 @@ nbody
 Earmregfile
 R156
 R2
-R46
-R74
-R73
+R44
+R72
+R71
 R3
 R4
 R1
@@ -1295,9 +1295,9 @@ R14
 !i111 1
 Abehave
 R2
-R46
-R74
-R73
+R44
+R72
+R71
 R3
 R4
 R1
@@ -1360,7 +1360,7 @@ R14
 Earmrs232interface
 Z164 w1592148385
 R2
-R46
+R44
 R1
 R3
 R4
@@ -1384,7 +1384,7 @@ R14
 Abehave
 Z167 DEx4 work 20 armwaitstategenasync 0 22 B;h[^dXb83<0QM57CI_<Y1
 R2
-R46
+R44
 R1
 R3
 R4
@@ -1404,9 +1404,9 @@ R14
 !i10b 1
 !i111 1
 Earmshifter
+R34
 R36
-R38
-R41
+R39
 R1
 R2
 R3
@@ -1429,8 +1429,8 @@ R14
 !i10b 1
 !i111 1
 Abehave
-R41
-R38
+R39
+R36
 R1
 R2
 R3
@@ -1451,7 +1451,7 @@ R14
 !i10b 1
 !i111 1
 Earmshiftrecoder
-R26
+R24
 R1
 R3
 R4
@@ -1464,7 +1464,7 @@ V4[WCkQfC8^X?l054Qf8zd0
 !s100 G<Tni<28]44W8_@VAW9ER3
 R8
 33
-R19
+R91
 !i10b 1
 R20
 R21
@@ -1483,7 +1483,7 @@ Z174 VZ9ia9z4WS7QXgn=R8[=<f3
 Z175 !s100 ^]>3M=WmWEKAk`jKd>E6d0
 R8
 33
-R19
+R91
 !i10b 1
 R20
 R21
@@ -1492,9 +1492,9 @@ R22
 R13
 R14
 Earmswitchdebounce
-R45
+R43
 R1
-R46
+R44
 R2
 R3
 R4
@@ -1518,7 +1518,7 @@ R14
 Abehave
 R167
 R1
-R46
+R44
 R2
 R3
 R4
@@ -1538,14 +1538,14 @@ R14
 !i10b 1
 !i111 1
 Earmsystemcontroller
-R45
-R54
-R74
+R43
+R52
+R72
 R1
 R2
 R3
 R4
-R46
+R44
 R5
 Z179 8./src/subSrc/ArmSystemController.vhd
 Z180 F./src/subSrc/ArmSystemController.vhd
@@ -1564,13 +1564,13 @@ R14
 !i10b 1
 !i111 1
 Abehave
-R54
-R74
+R52
+R72
 R1
 R2
 R3
 R4
-R46
+R44
 Z181 DEx4 work 19 armsystemcontroller 0 22 <VeaQh20S9?XX]c47?9P43
 l117
 L69
@@ -1587,11 +1587,11 @@ Z182 !s100 @hT`eN_DlJF`njHn@PAPe1
 !i10b 1
 !i111 1
 Earmtop
-R26
+R24
 R2
-R46
+R44
 R1
-R74
+R72
 R3
 R4
 R5
@@ -1603,7 +1603,7 @@ VY21jC<6iV[WP;[W1Y5CV30
 !s100 h6O<2OG:lYY@c7a>h`e652
 R8
 33
-R19
+R91
 !i10b 1
 R20
 R21
@@ -1613,9 +1613,9 @@ R13
 R14
 Abehave
 R2
-R46
+R44
 R1
-R74
+R72
 R3
 R4
 Z185 DEx4 work 6 armtop 0 22 Y21jC<6iV[WP;[W1Y5CV30
@@ -1625,7 +1625,7 @@ Z186 VKF<A01lg8[=[@m02206aa3
 Z187 !s100 <o27?4ZND_d:zVJEVK5oO3
 R8
 33
-R19
+R91
 !i10b 1
 R20
 R21
@@ -1634,13 +1634,13 @@ R22
 R13
 R14
 Earmtop_tb
-R26
-R74
+R24
+R72
 R92
 R93
 R1
-R46
-R30
+R44
+R28
 R2
 R3
 R4
@@ -1653,7 +1653,7 @@ V3Dn=fV[FVV>K]6`;ZCkGi1
 !s100 nm]:7P<`DUI_73>dVWBik2
 R8
 33
-R19
+R91
 !i10b 1
 R20
 R21
@@ -1662,12 +1662,12 @@ R22
 R13
 R14
 Atestbench
-R74
+R72
 R92
 R93
 R1
-R46
-R30
+R44
+R28
 R2
 R3
 R4
@@ -1678,7 +1678,7 @@ Z191 V[g03YRXOeGO:WDIIA_G`i3
 Z192 !s100 VEk;KB]f`L;ZD]0^UEb@F3
 R8
 33
-R19
+R91
 !i10b 1
 R20
 R21
@@ -1688,8 +1688,8 @@ R13
 R14
 Parmtypes
 R3
-R71
-R26
+R69
+R24
 R5
 Z193 8./src/ArmTypes.vhd
 Z194 F./src/ArmTypes.vhd
@@ -1700,7 +1700,7 @@ Z195 !s100 3h7cSYlT9?Y0ZonFG2C=@1
 R8
 33
 b1
-R19
+R91
 !i10b 1
 R20
 R21
@@ -1711,14 +1711,14 @@ R14
 Bbody
 R1
 R3
-R71
+R69
 l0
 L413
 Z196 V_1bC;H0CNk?O949EW6]Ef1
 Z197 !s100 5lWP:KmD=fJkIhzQOLmWz0
 R8
 33
-R19
+R91
 !i10b 1
 R20
 R21
@@ -1729,16 +1729,16 @@ R14
 nbody
 Earmuncoretop
 Z198 w1592143281
-R54
-R74
+R52
+R72
 R181
-R47
-R48
-R51
+R45
+R46
+R49
 R178
 R137
 R2
-R46
+R44
 R1
 R3
 R4
@@ -1761,12 +1761,12 @@ R14
 !i10b 1
 !i111 1
 Abehave
-R54
-R74
-R47
-R48
-R2
+R52
+R72
+R45
 R46
+R2
+R44
 R1
 R3
 R4
@@ -1850,7 +1850,7 @@ R14
 Astructure
 R3
 R4
-R37
+R35
 l15
 L13
 VIggBR[YZ>jW30Gnd[Q6M@2
@@ -1867,13 +1867,13 @@ R14
 !i111 1
 Ptb_tools
 R92
-R46
+R44
 R1
-R30
-R70
-R71
+R28
+R68
+R69
 R3
-R26
+R24
 R5
 Z209 8./src/TB_Tools.vhd
 Z210 F./src/TB_Tools.vhd
@@ -1884,7 +1884,7 @@ Vkb8U95ZF54@A>gS0]W5]80
 R8
 33
 b1
-R19
+R91
 !i10b 1
 R20
 R21
@@ -1895,11 +1895,11 @@ R14
 Bbody
 R93
 R92
-R46
+R44
 R1
-R30
-R70
-R71
+R28
+R68
+R69
 R3
 l0
 L164
@@ -1907,7 +1907,7 @@ Z211 V[f4kmkX`D;LPJS=K6SNbS1
 Z212 !s100 C[X60FXPhT4Eg_4k]T[Wh1
 R8
 33
-R19
+R91
 !i10b 1
 R20
 R21

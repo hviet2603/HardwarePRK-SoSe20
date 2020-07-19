@@ -2,24 +2,38 @@
 # Vivado v2017.3 (64-bit)
 # SW Build 2018833 on Wed Oct  4 19:58:07 MDT 2017
 # IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
-# Start of session at: Sun Jul 12 18:42:26 2020
-# Process ID: 6820
+# Start of session at: Sun Jul 19 16:25:06 2020
+# Process ID: 4533
 # Current directory: /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20
 # Command line: vivado
 # Log file: /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/vivado.log
 # Journal file: /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt09/Vivado_WORK/Tutorial/HWP9/HWP9.xpr
+create_project HWP10 /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt10/Vivado_WORK/Tutorial/HWP10 -part xc7a35tcpg236-1
+set_property target_language VHDL [current_project]
+add_files -norecurse {/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt10/Vivado_WORK/Tutorial/src/subSrc/ArmProgramStatusRegister.edf /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt10/Vivado_WORK/Tutorial/src/subSrc/ArmWordManipulation.edf}
+add_files -norecurse {/afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt10/Vivado_WORK/Tutorial/src/subSrc/ArmRegaddressTranslation.vhd /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt10/Vivado_WORK/Tutorial/src/subSrc/ArmRS232Interface.vhd /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt10/Vivado_WORK/Tutorial/src/subSrc/ArmRegfile.vhd /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt10/Vivado_WORK/Tutorial/src/subSrc/MUX.vhd /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt10/Vivado_WORK/Tutorial/src/subSrc/ArmWaitStateGenAsync.vhd /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt10/Vivado_WORK/Tutorial/src/subSrc/ArmMemInterface.vhd /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt10/Vivado_WORK/Tutorial/src/ArmArithInstructionCtrl.vhd /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt10/Vivado_WORK/Tutorial/src/subSrc/ArmChipSelectGenerator.vhd /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt10/Vivado_WORK/Tutorial/src/subSrc/ArmRegisterBitAdder.vhd /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt10/Vivado_WORK/Tutorial/src/ArmCore.vhd /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt10/Vivado_WORK/Tutorial/src/ArmConfiguration.vhd /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt10/Vivado_WORK/Tutorial/src/ArmShiftRecoder.vhd /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt10/Vivado_WORK/Tutorial/src/ArmTypes.vhd /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt10/Vivado_WORK/Tutorial/src/subSrc/ArmRAMB_4kx8.vhd /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt10/Vivado_WORK/Tutorial/src/subSrc/ArmRamBuffer.vhd /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt10/Vivado_WORK/Tutorial/src/subSrc/ArmSystemController.vhd /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt10/Vivado_WORK/Tutorial/src/ArmDelayShiftRegister.vhd /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt10/Vivado_WORK/Tutorial/src/subSrc/ArmBarrelShifter.vhd /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt10/Vivado_WORK/Tutorial/src/ArmConditionCheck.vhd /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt10/Vivado_WORK/Tutorial/src/subSrc/ArmRAMB_4kx32.vhd /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt10/Vivado_WORK/Tutorial/src/ArmTop.vhd /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt10/Vivado_WORK/Tutorial/src/ArmCopDecoder.vhd /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt10/Vivado_WORK/Tutorial/src/subSrc/ArmDataPath.vhd /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt10/Vivado_WORK/Tutorial/src/subSrc/ArmCoarseInstructionDecoder.vhd /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt10/Vivado_WORK/Tutorial/src/subSrc/ArmSwitchDebounce.vhd /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt10/Vivado_WORK/Tutorial/src/subSrc/ArmInstructionAddressRegister.vhd /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt10/Vivado_WORK/Tutorial/src/subSrc/ArmMultiplier.vhd /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt10/Vivado_WORK/Tutorial/src/subSrc/ArmBypassCtrl.vhd /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt10/Vivado_WORK/Tutorial/src/subSrc/ArmClkGen_sim_netlist.vhdl /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt10/Vivado_WORK/Tutorial/src/ArmControlPath.vhd /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt10/Vivado_WORK/Tutorial/src/subSrc/ArmDataReplication.vhd /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt10/Vivado_WORK/Tutorial/src/subSrc/ArmALU.vhd /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt10/Vivado_WORK/Tutorial/src/subSrc/ArmPriorityVectorFilter.vhd /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt10/Vivado_WORK/Tutorial/src/ArmFilePaths.vhd /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt10/Vivado_WORK/Tutorial/src/ArmGlobalProbes.vhd /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt10/Vivado_WORK/Tutorial/src/subSrc/ArmShifter.vhd /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt10/Vivado_WORK/Tutorial/src/subSrc/ArmUncoreTop.vhd /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt10/Vivado_WORK/Tutorial/src/subSrc/ArmLdmStmNextAddress.vhd}
+add_files -fileset constrs_1 -norecurse /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt10/Vivado_WORK/Tutorial/src/ArmTop.xdc
 update_compile_order -fileset sources_1
-add_files -norecurse /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt09/Vivado_WORK/Tutorial/src/ArmBypassCtrl.vhd
 update_compile_order -fileset sources_1
-# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
-set_property source_mgmt_mode None [current_project]
-set_property top ArmBypassCtrl [current_fileset]
-# Re-enabling previously disabled source management mode.
-set_property source_mgmt_mode All [current_project]
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+close_project
+open_project /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt05/Vivado_WORK/Tutorial/vivado_project/HWP5/HWP5.xpr
+update_compile_order -fileset sources_1
+close_project
+open_project /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt10/Vivado_WORK/Tutorial/HWP10/HWP10.xpr
 update_compile_order -fileset sources_1
 reset_run synth_1
 launch_runs synth_1 -jobs 2
 wait_on_run synth_1
+export_ip_user_files -of_objects  [get_files /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt10/Vivado_WORK/Tutorial/src/subSrc/ArmClkGen_sim_netlist.vhdl] -no_script -reset -force -quiet
+remove_files  /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt10/Vivado_WORK/Tutorial/src/subSrc/ArmClkGen_sim_netlist.vhdl
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+reset_run synth_1

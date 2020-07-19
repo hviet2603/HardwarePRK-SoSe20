@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:07 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Sun Jul 19 18:08:25 2020
+# Process ID: 3514
+# Current directory: /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt10/Vivado_WORK/Tutorial/HWP10/HWP10.runs/synth_1
+# Command line: vivado -log ArmTop.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ArmTop.tcl
+# Log file: /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt10/Vivado_WORK/Tutorial/HWP10/HWP10.runs/synth_1/ArmTop.vds
+# Journal file: /afs/tu-berlin.de/home/v/vincenthp2603/irb-ubuntu/HardwarePratikum/HardwarePRK-SoSe20/Blatt10/Vivado_WORK/Tutorial/HWP10/HWP10.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source ArmTop.tcl -notrace
